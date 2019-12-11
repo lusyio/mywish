@@ -1,0 +1,11 @@
+.Authorization {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.AuthorizationWrapper {
+    width: 600px;
+}
