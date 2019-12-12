@@ -5,7 +5,7 @@ import Button from "../UI/Button/Button";
 const AuthorizationBlock = props => {
     return (
         <div className={classes.AuthorizationBlock}>
-            {props.userName ?
+            {props.isLoggedIn ?
                 <React.Fragment>
                 <h1>Вы вошли как {props.userName}</h1>
                     <img src={props.userImageUrl} alt=""/>
@@ -13,11 +13,7 @@ const AuthorizationBlock = props => {
                 :
                 <React.Fragment>
                     <h1>Авторизация</h1>
-                    <Button
-                        onClick={props.signIn}
-                    >
-                        Войти с Google
-                    </Button>
+                    <Button onClick={props.signInGoogle}>Войти с помощью Google</Button>
                 </React.Fragment>
             }
 
