@@ -14,7 +14,7 @@ const TaskList = props => {
                 return task.sectionId === props.sectionId
                     ?
                     <Draggable key={index} draggableId={task.taskId.toString()} index={index}>
-                        {provided => (
+                        {(provided, snapshot) => (
                             <Task
                                 provided={provided}
                                 innerRef={provided.innerRef}
@@ -22,6 +22,7 @@ const TaskList = props => {
                                 taskId={task.taskId}
                                 taskName={task.taskName}
                                 index={index}
+                                isDragging={snapshot.isDragging}
                             >
                             </Task>
                         )}
