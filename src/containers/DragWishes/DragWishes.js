@@ -54,10 +54,7 @@ class DragWishes extends Component {
             return;
         }
 
-        const sectionOut = this.state.sections.section[Number(source.droppableId) - 1];
         const tasks = [...this.state.sections.tasks];
-        // tasks.splice(Number(source.index), 1);
-        // tasks.splice(Number(destination.index), 0, Number(draggableId));
 
         const section = [...this.state.sections.section];
 
@@ -70,19 +67,11 @@ class DragWishes extends Component {
         const sections = {
             section,
             tasks
-        }
+        };
 
         this.setState({
             sections: sections
         })
-
-        console.log('tasks', this.state.sections.tasks)
-
-        // console.log(sectionOut);
-        // console.log(tasks);
-        // console.log(section);
-        console.log(sections);
-        console.log(Number(draggableId));
 
     };
 
