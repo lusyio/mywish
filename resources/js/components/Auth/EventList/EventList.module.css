@@ -1,15 +1,18 @@
-.AuthList {
+.EventList {
     padding-bottom: 10px;
     padding-top: 30px;
     border-bottom: 1px solid #393939;
     display: flex;
+    max-width: 612px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.AuthList img{
+.EventList img{
     margin-right: 38px;
 }
 
-.AuthList > p {
+.EventList > p {
     font-weight: 300;
     font-size: 20px;
     line-height: 24px;
@@ -17,11 +20,11 @@
     margin-bottom: 5px;
 }
 
-.AuthList > p > strong {
+.EventList > p > strong {
     font-weight: bold;
 }
 
-.AuthList > p > span {
+.EventList > p > span {
     font-weight: 300;
     font-size: 12px;
     line-height: 24px;

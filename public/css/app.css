@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+p{
+    margin-top: 0;
+}
+
 .Layout {
     height: 100vh;
     display: -webkit-box;

@@ -14,7 +14,7 @@
     text-align: center;
 }
 
-.Auth > div > p {
+.Auth .AuthHeader {
     font-weight: 300;
     font-size: 20px;
     line-height: 24px;
@@ -22,7 +22,7 @@
     color: #FFFFFF;
 }
 
-.Auth > div > p:last-of-type{
+.Auth .AuthHeader:last-of-type {
     margin-bottom: 70px;
 }
 
@@ -33,4 +33,18 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
+    color: #fff;
+}
+
+.Container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.Container > div {
+    width: 100%;
+    max-width: 1015px;
+    display: flex;
 }

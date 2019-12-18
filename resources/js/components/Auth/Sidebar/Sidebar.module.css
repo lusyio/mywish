@@ -1,0 +1,50 @@
+.Sidebar {
+    max-width: 270px;
+    width: 100%;
+    margin-right: 50px;
+    padding-top: 50px;
+}
+
+.SidebarHeader {
+    font-size: 20px;
+    line-height: 24px;
+    color: #CC9969;
+    margin-bottom: 35px;
+}
+
+.Sidebar > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Sidebar > ul > li {
+    border-bottom: 1px solid #393939;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.Sidebar .Empty {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+.Sidebar > ul > li > a {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.Sidebar > ul > li > span {
+    display: block;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: #B9B5B4;
+}
