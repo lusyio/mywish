@@ -13,4 +13,5 @@ require('laravel-mix-react-css-modules');
  */
 
 mix.react('resources/js/app.js', 'public/js')
+    .version()
     .reactCSSModules('[path]__[name]___[hash:base64]');
