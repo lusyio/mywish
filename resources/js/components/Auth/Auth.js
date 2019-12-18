@@ -178,6 +178,8 @@ export default class Auth extends Component {
                             <p>Авторизуйтесь с помощью соц.сетей и составьте свой список подарков!</p>
                             <FacebookLogin
                                 appId='563234647569569'
+                                version='5.0'
+                                language='ru_RU'
                                 autoLoad={false}
                                 fields="name,email"
                                 callback={this.responseFacebook}
