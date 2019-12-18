@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+require('laravel-mix-react-css-modules');
 
 /*
  |--------------------------------------------------------------------------
@@ -12,4 +13,4 @@ const mix = require('laravel-mix');
  */
 
 mix.react('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+    .reactCSSModules('[path]__[name]___[hash:base64]');
