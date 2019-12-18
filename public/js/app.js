@@ -52096,9 +52096,10 @@ function (_Component) {
     _defineProperty(_assertThisInitialized(_this), "responseFacebook", function (response) {
       console.log(response); // отправка данных авторизации
 
-      axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/', {
+      axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/auth', {
         "social": 'fb',
         "name": response.name,
+        "url": "",
         "token": response.accessToken,
         "socialUserId": response.userId
       }).then(function (res) {
@@ -52110,7 +52111,7 @@ function (_Component) {
         return console.log('error', res);
       });
 
-      if (_this.state.userId !== '' && _this.state.tokenAuth !== '') {
+      if (_this.state.userId !== null && _this.state.tokenAuth !== '') {
         _this.setState({
           isLoggedIn: true
         });

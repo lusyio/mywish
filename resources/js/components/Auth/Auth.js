@@ -96,7 +96,7 @@ export default class Auth extends Component {
 
         console.log(response);
         // отправка данных авторизации
-        axios.post('/auth', {
+        axios.post('/api/auth', {
             "social": 'fb',
             "name": response.name,
             "url": "",
