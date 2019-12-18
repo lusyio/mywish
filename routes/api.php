@@ -13,6 +13,27 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::post('/auth', function (Request $request) {
+
+    $user = new \App\User();
+    if (isset($request->social)) {
+        switch ($request->social) {
+            case 'fb':
+                $user->fb_id = $request->socialUserId;
+                $user->fb_token = $request->token;
+                $user->name = $request->name;
+                break;
+            default:
+                return json_encode(['error' => true]);
+        }
+        $user->api_token = Str::random(60);
+        $user->save();
+        $result = [
+            'userId' => $user->id,
+            'tokenAuth' => $user->api_token,
+        ];
+        return json_encode($result);
+    } else {
+        return json_encode(['error' => true]);
+    }
 });
