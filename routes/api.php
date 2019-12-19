@@ -19,21 +19,28 @@ Route::post('/auth', function (Request $request) {
     if (isset($request->social)) {
         switch ($request->social) {
             case 'fb':
-                $user->fb_id = $request->socialUserId;
-                $user->fb_token = $request->token;
-                $user->name = $request->name;
+                $user = \App\User::where('fb_id', $request->socialUserId)->first();
+                if (is_null($user)) {
+                    $user = new \App\User();
+                    $user->fb_id = $request->socialUserId;
+                    $user->fb_token = $request->token;
+                    $user->name = $request->name;
+                } else {
+                    $user->fb_token = $request->token;
+                }
                 break;
             default:
-                return json_encode(['error' => true]);
+                return json_encode(['error' => 'unknown social']);
         }
         $user->api_token = Str::random(60);
         $user->save();
         $result = [
+            'error' => '',
             'userId' => $user->id,
             'tokenAuth' => $user->api_token,
         ];
         return json_encode($result);
     } else {
-        return json_encode(['error' => true]);
+        return json_encode(['error' => 'no social']);
     }
 });
