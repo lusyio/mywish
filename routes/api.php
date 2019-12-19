@@ -25,6 +25,12 @@ Route::post('/auth', function (Request $request) {
                     $user->fb_id = $request->socialUserId;
                     $user->fb_token = $request->token;
                     $user->name = $request->name;
+                    $newList = new \App\WishList();
+                    $newList->user_id = $user->id;
+                    $newList->name = 'Ваш первый список';
+                    $newList->background_id = 1;
+                    $newList->generateUrl();
+                    $newList->save();
                 } else {
                     $user->fb_token = $request->token;
                 }
@@ -44,3 +50,104 @@ Route::post('/auth', function (Request $request) {
         return json_encode(['error' => 'no social']);
     }
 });
+
+Route::post('/list/add', function (Request $request) {
+    $user = \App\User::where('id', $request->userId)->first();
+    $newList = new \App\WishList();
+    $newList->user_id = $request->userId;
+    $newList->name = 'Новый список';
+    $newList->background_id = 1;
+    $newList->generateUrl();
+    $newList->save();
+    return json_encode($newList->getResponse());
+})->middleware(\App\Http\Middleware\CheckAuthToken::class);
+
+Route::post('/list/update', function (Request $request) {
+    $list = \App\WishList::where('id', $request->id)->where('user_id', $request->userId)->first();
+    if (is_null($list)) {
+        return json_encode(['error' => 'no lists']);
+    }
+    $list->name = $request->name;
+    $list->background = $request->background;
+    $list->save();
+    return json_encode(['error' => '', 'status' => 'ok']);
+
+})->middleware(\App\Http\Middleware\CheckAuthToken::class);
+
+Route::post('/list/delete', function (Request $request) {
+    $list = \App\WishList::where('id', $request->id)->where('user_id', $request->userId)->first();
+    if (is_null($list)) {
+        return json_encode(['error' => 'no lists']);
+    }
+    $list->delete();
+    return json_encode(['error' => '', 'status' => 'ok']);
+
+})->middleware(\App\Http\Middleware\CheckAuthToken::class);
+
+Route::post('/item/add', function (Request $request) {
+    $list = \App\WishList::where('id', $request->listId)->where('user_id', $request->userId)->first();
+    if (is_null($list)) {
+        return json_encode(['error' => 'no lists']);
+    }
+    $item = new \App\WishListItem();
+    $item->wish_list_id = $request->listId;
+    $item->name = '';
+    $item->image_url = '';
+    $item->url = '';
+    $item->save();
+    return json_encode($item->getResponse());
+})->middleware(\App\Http\Middleware\CheckAuthToken::class);
+
+Route::post('/item/update', function (Request $request) {
+    $item = \App\WishListItem::where('id', $request->id)->where('user_id', $request->userId)->first();
+    if (is_null($item)) {
+        return json_encode(['error' => 'no lists']);
+    }
+    $item->name = $request->name;
+    $item->image_url = $request->picture;
+    $item->url = $request->url;
+    $item->save();
+    return json_encode($item->getResponse());
+})->middleware(\App\Http\Middleware\CheckAuthToken::class);
+
+Route::post('/item/delete', function (Request $request) {
+    $item = \App\WishListItem::where('id', $request->id)->where('user_id', $request->userId)->first();
+    if (is_null($item)) {
+        return json_encode(['error' => 'no lists']);
+    }
+    $item->delete();
+    return json_encode(['error' => '', 'status' => 'ok']);
+})->middleware(\App\Http\Middleware\CheckAuthToken::class);
+
+Route::post('/lists', function (Request $request) {
+    $user = \App\User::where('id', $request->userId)->first();
+    $lists = $user->listWishLists->sortByDesc('updated_at');
+    $result = [
+        'count' => $lists->count(),
+        'defaultListId' => 0,
+        'items' => [],
+    ];
+    foreach ($lists as $list) {
+        $result['items'][] = $list->getResponse();
+    }
+    if ($result['items'] > 0) {
+        $result['defaultListId'] = $result['items'][0]['id'];
+    }
+    return json_encode($result);
+})->middleware(\App\Http\Middleware\CheckAuthToken::class);
+
+Route::get('/list/{link}', function ($link) {
+    $list = \App\WishList::withTrashed()->where('url', $link)->first();
+    if (!is_null($list)) {
+        if (!$list->trashed()){
+            return json_encode(['status' => 'ok', 'wishList' => $list->getResponse()]);
+        } else {
+            return json_encode(['status' => 'deleted', 'wishList' => []]);
+        }
+    } else {
+        return json_encode(['status' => 'none', 'wishList' => []]);
+    }
+    var_dump($list->trashed());
+});
+
+
