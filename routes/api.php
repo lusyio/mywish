@@ -43,7 +43,7 @@ Route::post('/auth', function (Request $request) {
         $result = [
             'error' => '',
             'userId' => $user->id,
-            'tokenAuth' => $user->api_token,
+            'authToken' => $user->api_token,
         ];
         return json_encode($result);
     } else {
