@@ -117,11 +117,13 @@ Route::post('/item/add', function (Request $request) {
 
 Route::post('/item/update', function (Request $request) {
     $item = \App\WishListItem::where('id', $request->id)->first();
-    if (is_null($item) || $item->list()->value('user_id') != $request->userId) {
+    if (is_null($item) || is_null(\App\WishList::where('id', $item->wish_list_id)->where('user_id', $request->userId)->first())) {
         return json_encode(['error' => 'no lists']);
     }
     $item->name = $request->name;
-    $item->image_url = $request->file('picture')->store('images');
+    if (!is_null($request->file('picture'))) {
+        $item->image_url = $request->file('picture')->store('images');
+    }
     $item->url = $request->url;
     $item->image_url;
     $item->save();
@@ -130,7 +132,7 @@ Route::post('/item/update', function (Request $request) {
 
 Route::post('/item/delete', function (Request $request) {
     $item = \App\WishListItem::where('id', $request->id)->first();
-    if (is_null($item) || $item->list()->value('user_id') != $request->userId) {
+    if (is_null($item) || is_null(\App\WishList::where('id', $item->wish_list_id)->where('user_id', $request->userId)->first())) {
         return json_encode(['error' => 'no lists']);
     }
     $item->delete();
