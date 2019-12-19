@@ -120,8 +120,9 @@ Route::post('/item/update', function (Request $request) {
         return json_encode(['error' => 'no lists']);
     }
     $item->name = $request->name;
-    $item->image_url = $request->picture;
+    $item->image_url = $request->file('image')->store('images');
     $item->url = $request->url;
+    $item->image_url;
     $item->save();
     return json_encode($item->getResponse());
 })->middleware(\App\Http\Middleware\CheckAuthToken::class);
