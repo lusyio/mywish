@@ -130,8 +130,10 @@ export default class Auth extends Component {
                 })
                     .then(res => {
                         if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+                            const state = {...this.state};
+                            state.lists = res.data.lists;
                             this.setState({
-                                lists: res.data.lists
+                                state
                             })
                         } else {
                             this.setState({
@@ -190,12 +192,6 @@ export default class Auth extends Component {
             })
                 .then((res) => {
                     if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
-                        const lists = {...this.state.lists};
-                        const currentList = lists.items.find(item => item.id === listId);
-                        currentList.wishItems.push(res);
-                        this.setState({
-                            lists
-                        });
                     } else {
                         this.setState({
                             authToken: '',

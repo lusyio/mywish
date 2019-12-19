@@ -3,7 +3,7 @@ import WishItem from "./WishItem/WishItem";
 
 const WishList = props => {
     let renderWishItems =
-        props.wishItems.map((wish) => {
+        props.wishItems.map((wish, index) => {
             return (
                 <WishItem
                     onChangeWishName={props.onChangeWishName}

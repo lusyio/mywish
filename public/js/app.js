@@ -52177,8 +52177,12 @@ function (_Component) {
           'authToken': _this.state.authToken
         }).then(function (res) {
           if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+            var state = _objectSpread({}, _this.state);
+
+            state.lists = res.data.lists;
+
             _this.setState({
-              lists: res.data.lists
+              state: state
             });
           } else {
             _this.setState({
@@ -52230,18 +52234,7 @@ function (_Component) {
           'authToken': _this.state.authToken,
           'listId': listId
         }).then(function (res) {
-          if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
-            var lists = _objectSpread({}, _this.state.lists);
-
-            var currentList = lists.items.find(function (item) {
-              return item.id === listId;
-            });
-            currentList.wishItems.push(res);
-
-            _this.setState({
-              lists: lists
-            });
-          } else {
+          if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {} else {
             _this.setState({
               authToken: '',
               userId: null,
@@ -52258,16 +52251,15 @@ function (_Component) {
             "picture": "https://ireplace.ru/images/watermarked/1/thumbnails/1308/1144/detailed/0/MMEF2_AV2_32wp-2p.jpg"
           }).then(function (res) {
             if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
-              var _lists = _objectSpread({}, _this.state.lists);
+              var lists = _objectSpread({}, _this.state.lists);
 
-              var _currentList = _lists.items.find(function (item) {
+              var currentList = lists.items.find(function (item) {
                 return item.id === listId;
               });
-
-              _currentList.wishItems.push(res);
+              currentList.wishItems.push(res);
 
               _this.setState({
-                lists: _lists
+                lists: lists
               });
             } else {
               _this.setState({
@@ -52809,7 +52801,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var WishList = function WishList(props) {
-  var renderWishItems = props.wishItems.map(function (wish) {
+  var renderWishItems = props.wishItems.map(function (wish, index) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishItem_WishItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
       onChangeWishName: props.onChangeWishName,
       onChangeWishUrl: props.onChangeWishUrl,
