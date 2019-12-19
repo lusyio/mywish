@@ -34,7 +34,7 @@ Route::post('/auth', function (Request $request) {
                     $newList->generateUrl();
                     $newList->save();
                     $event = new \App\Event();
-                    $event->action = 'join';
+                    $event->action = 'user';
                     $event->user_id = $user->id;
                     $event->save();
                 } else {
@@ -83,7 +83,7 @@ Route::post('/list/update', function (Request $request) {
     $list->save();
     if ($list->name != 'Новый список' && $addEvent) {
         $event = new \App\Event();
-        $event->action = 'new';
+        $event->action = 'list';
         $event->user_id = $request->userId;
         $event->wish_list_id = $list->id;
         $event->save();
@@ -163,7 +163,6 @@ Route::get('/list/{link}', function ($link) {
     } else {
         return json_encode(['status' => 'none', 'wishList' => []]);
     }
-    var_dump($list->trashed());
 });
 
 Route::post('/share', function (Request $request) {
@@ -175,10 +174,24 @@ Route::post('/share', function (Request $request) {
         return json_encode(['error' => 'wrong social']);
     }
     $event = new \App\Event();
-    $event->action = 'share';
+    $event->action = $request->social;
     $event->user_id = $request->userId;
     $event->wish_list_id = $list->id;
-    $event->social_network = $request->social;
     $event->save();
     return json_encode(['error' => '', 'status' => 'ok']);
 })->middleware(\App\Http\Middleware\CheckAuthToken::class);
+
+Route::get('/events', function () {
+    $eventsCount = \App\Event::count();
+    $events = \App\Event::orderBy('updated_at', 'desc')
+        ->take(5)
+        ->get();
+    $result = [
+        'count' => $eventsCount,
+        'events' => [],
+    ];
+    foreach ($events as $event) {
+        $result['events'][] = $event->getResponse();
+    }
+    return $result;
+});
