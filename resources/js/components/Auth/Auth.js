@@ -131,11 +131,13 @@ export default class Auth extends Component {
                 })
                     .then(res => {
                         if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
-                            this.setState(() => {
-                                return {lists: res.data.lists}
+                            const lists = {...this.state.lists};
+                            lists.items = res.data.items;
+                            lists.count = res.data.count;
+                            lists.defaultListId = res.data.defaultListId;
+                            this.setState({
+                                lists
                             })
-                            console.log(res.data.lists)
-                            console.log(this.state.lists)
                         } else {
                             this.setState({
                                 authToken: '',

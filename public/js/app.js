@@ -52179,14 +52179,15 @@ function (_Component) {
           'authToken': _this.state.authToken
         }).then(function (res) {
           if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
-            _this.setState(function () {
-              return {
-                lists: res.data.lists
-              };
-            });
+            var lists = _objectSpread({}, _this.state.lists);
 
-            console.log(res.data.lists);
-            console.log(_this.state.lists);
+            lists.items = res.data.items;
+            lists.count = res.data.count;
+            lists.defaultListId = res.data.defaultListId;
+
+            _this.setState({
+              lists: lists
+            });
           } else {
             _this.setState({
               authToken: '',
