@@ -114,7 +114,7 @@ export default class Auth extends Component {
             "token": response.accessToken,
             "socialUserId": response.userId,
         })
-            .then(res => {
+            .then((res) => {
                 console.log(res.userId)
                 console.log(res.authToken)
                 this.setState({
@@ -122,7 +122,7 @@ export default class Auth extends Component {
                     authToken: res.authToken
                 });
 
-            }, res => console.log('error', res));
+            }, (res) => console.log('error', res));
         console.log(this.state.userId, this.state.authToken);
         if (this.state.userId !== null && this.state.authToken !== '') {
             this.setState({
@@ -132,7 +132,7 @@ export default class Auth extends Component {
                 'userId': this.state.userId,
                 'authToken': this.state.authToken
             })
-                .then(res => {
+                .then((res) => {
                     if (res.error === '' || typeof res['error'] !== "undefined") {
                         this.setState({
                             lists: res.lists
@@ -144,7 +144,7 @@ export default class Auth extends Component {
                             isLoggedIn: false
                         })
                     }
-                }, res => console.log('error', res));
+                }, (res) => console.log('error', res));
         }
     };
 
