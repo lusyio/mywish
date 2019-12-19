@@ -185,7 +185,7 @@ export default class Auth extends Component {
     };
 
     deleteWishHandler = (listId, id) => {
-        axios.get('/api/item/delete', {
+        axios.post('/api/item/delete', {
             userId: this.state.userId,
             authToken: this.state.authToken,
             id: id

@@ -52145,7 +52145,7 @@ function (_Component) {
           }]
         }]
       },
-      isLoggedIn: true,
+      isLoggedIn: false,
       userId: null,
       authToken: '',
       name: '',
@@ -52229,7 +52229,7 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "deleteWishHandler", function (listId, id) {
-      axios__WEBPACK_IMPORTED_MODULE_7___default.a.get('/api/item/delete', {
+      axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/item/delete', {
         userId: _this.state.userId,
         authToken: _this.state.authToken,
         id: id
