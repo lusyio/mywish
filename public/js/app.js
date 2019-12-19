@@ -52100,7 +52100,7 @@ function (_Component) {
       wishUrlControl: '',
       showNewWish: false,
       lists: {
-        selectedList: 2,
+        defaultListId: 2,
         count: 2,
         items: [{
           id: 1,
@@ -52144,7 +52144,7 @@ function (_Component) {
           }]
         }]
       },
-      isLoggedIn: true,
+      isLoggedIn: false,
       userId: null,
       authToken: '',
       name: '',
@@ -52159,28 +52159,26 @@ function (_Component) {
         "name": response.name,
         "url": "",
         "token": response.accessToken,
-        "socialUserId": response.userId
+        "socialUserId": response.userID
       }).then(function (res) {
         _this.setState({
-          userId: res.userId,
-          authToken: res.authToken
+          userId: res.data.userId,
+          authToken: res.data.authToken
         });
-      }, function (res) {
-        return console.log('error', res);
-      });
 
-      if (_this.state.userId !== null && _this.state.authToken !== '') {
-        _this.setState({
-          isLoggedIn: true
-        });
+        if (res.data.userId !== null && res.data.authToken !== '') {
+          _this.setState({
+            isLoggedIn: true
+          });
+        }
 
         axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/lists', {
           'userId': _this.state.userId,
           'authToken': _this.state.authToken
         }).then(function (res) {
-          if (res.error === '' || typeof res['error'] !== "undefined") {
+          if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
             _this.setState({
-              lists: res.lists
+              lists: res.data.lists
             });
           } else {
             _this.setState({
@@ -52192,13 +52190,15 @@ function (_Component) {
         }, function (res) {
           return console.log('error', res);
         });
-      }
+      }, function (res) {
+        return console.log('error', res);
+      });
     });
 
     _defineProperty(_assertThisInitialized(_this), "selectListHandler", function (id) {
       var lists = _objectSpread({}, _this.state.lists);
 
-      lists.selectedList = id;
+      lists.defaultListId = id;
 
       _this.setState({
         lists: lists
@@ -52230,7 +52230,7 @@ function (_Component) {
           'authToken': _this.state.authToken,
           'listId': listId
         }).then(function (res) {
-          if (res.error === '' || typeof res['error'] !== "undefined") {
+          if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
             var lists = _objectSpread({}, _this.state.lists);
 
             var currentList = lists.items.find(function (item) {
@@ -52248,35 +52248,37 @@ function (_Component) {
               isLoggedIn: false
             });
           }
-        }, function (res) {
-          return console.log('error', res);
-        });
-        axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/item/update', {
-          "userId": _this.state.userId,
-          "authToken": _this.state.authToken,
-          "id": id,
-          "name": _this.state.wishNameControl,
-          "url": _this.state.wishUrlControl,
-          "picture": "https://ireplace.ru/images/watermarked/1/thumbnails/1308/1144/detailed/0/MMEF2_AV2_32wp-2p.jpg"
-        }).then(function (res) {
-          if (res.error === '' || typeof res['error'] !== "undefined") {
-            var lists = _objectSpread({}, _this.state.lists);
 
-            var currentList = lists.items.find(function (item) {
-              return item.id === listId;
-            });
-            currentList.wishItems.push(res);
+          axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/item/update', {
+            "userId": _this.state.userId,
+            "authToken": _this.state.authToken,
+            "id": id,
+            "name": _this.state.wishNameControl,
+            "url": _this.state.wishUrlControl,
+            "picture": "https://ireplace.ru/images/watermarked/1/thumbnails/1308/1144/detailed/0/MMEF2_AV2_32wp-2p.jpg"
+          }).then(function (res) {
+            if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+              var _lists = _objectSpread({}, _this.state.lists);
 
-            _this.setState({
-              lists: lists
-            });
-          } else {
-            _this.setState({
-              authToken: '',
-              userId: null,
-              isLoggedIn: false
-            });
-          }
+              var _currentList = _lists.items.find(function (item) {
+                return item.id === listId;
+              });
+
+              _currentList.wishItems.push(res);
+
+              _this.setState({
+                lists: _lists
+              });
+            } else {
+              _this.setState({
+                authToken: '',
+                userId: null,
+                isLoggedIn: false
+              });
+            }
+          }, function (res) {
+            return console.log('error', res);
+          });
         }, function (res) {
           return console.log('error', res);
         });
@@ -52294,8 +52296,8 @@ function (_Component) {
     value: function componentDidMount() {// axios.get('/api/events')
       //     .then(res => {
       //         this.setState({
-      //             count: res.count,
-      //             events: res.events
+      //             count: res.data.count,
+      //             events: res.data.events
       //         })
       //     }, res => console.log('error', res))
     }
@@ -52313,14 +52315,14 @@ function (_Component) {
       //         this.state.events.map((events, index) => {
       //             eventsId.push(events.id)
       //         });
-      //         res.events.map((events) => {
+      //         res.data.events.map((events) => {
       //             resId.push(events.id)
       //         });
       //
       //         if (compare(eventsId, resId)) {
       //             this.setState({
-      //                 count: res.count,
-      //                 events: res.events
+      //                 count: res.data.count,
+      //                 events: res.data.events
       //             })
       //         }
       //     }, res => console.log('error', res)), 30000);
@@ -52571,7 +52573,7 @@ var ListCard = function ListCard(props) {
 
   if (props.lists.count !== 0) {
     renderList = props.lists.items.map(function (list) {
-      return list.id === props.lists.selectedList ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishList_WishList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      return list.id === props.lists.defaultListId ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishList_WishList__WEBPACK_IMPORTED_MODULE_2__["default"], {
         addNewWish: props.addNewWish,
         showNewWishToggle: props.showNewWishToggle,
         onChangeWishUrl: props.onChangeWishUrl,

@@ -112,7 +112,7 @@ export default class Auth extends Component {
             "name": response.name,
             "url": "",
             "token": response.accessToken,
-            "socialUserId": response.userId,
+            "socialUserId": response.userID,
         })
             .then(res => {
                 this.setState({
