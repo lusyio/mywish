@@ -70,8 +70,7 @@ Route::post('/list/update', function (Request $request) {
     $list->name = $request->name;
     $list->background = $request->background;
     $list->save();
-    return json_encode(['error' => '', 'status' => 'ok']);
-
+    return json_encode($list->getResponse());
 })->middleware(\App\Http\Middleware\CheckAuthToken::class);
 
 Route::post('/list/delete', function (Request $request) {
@@ -81,7 +80,6 @@ Route::post('/list/delete', function (Request $request) {
     }
     $list->delete();
     return json_encode(['error' => '', 'status' => 'ok']);
-
 })->middleware(\App\Http\Middleware\CheckAuthToken::class);
 
 Route::post('/item/add', function (Request $request) {
@@ -149,5 +147,3 @@ Route::get('/list/{link}', function ($link) {
     }
     var_dump($list->trashed());
 });
-
-
