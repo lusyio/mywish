@@ -192,7 +192,7 @@ export default class Auth extends Component {
                 'listId': listId
             })
                 .then((res) => {
-                    if (res.error === '' || typeof res['error'] !== "undefined") {
+                    if (res.data.error === '' || typeof res.data['error'] !== "undefined") {
                         const lists = {...this.state.lists};
                         const currentList = lists.items.find(item => item.id === listId);
                         currentList.wishItems.push(res);
@@ -216,7 +216,7 @@ export default class Auth extends Component {
                 "picture": "https://ireplace.ru/images/watermarked/1/thumbnails/1308/1144/detailed/0/MMEF2_AV2_32wp-2p.jpg"
             })
                 .then((res) => {
-                    if (res.error === '' || typeof res['error'] !== "undefined") {
+                    if (res.data.error === '' || typeof res.data['error'] !== "undefined") {
                         const lists = {...this.state.lists};
                         const currentList = lists.items.find(item => item.id === listId);
                         currentList.wishItems.push(res);
