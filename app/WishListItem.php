@@ -12,7 +12,7 @@ class WishListItem extends Model
         $result = [
             'id' => $this->id,
             'title' => $this->name,
-            'url' => strtotime($this->updated_at),
+            'url' => $this->url,
             'order' => $this->order,
             'listId' => $this->wish_list_id,
             'picture' => $this->image_url,
