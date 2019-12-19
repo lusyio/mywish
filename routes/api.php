@@ -33,6 +33,10 @@ Route::post('/auth', function (Request $request) {
                     $newList->background_id = 1;
                     $newList->generateUrl();
                     $newList->save();
+                    $event = new \App\Event();
+                    $event->action = 'join';
+                    $event->user_id = $user->id;
+                    $event->save();
                 } else {
                     $user->fb_token = $request->token;
                     $user->api_token = Str::random(60);
@@ -69,9 +73,21 @@ Route::post('/list/update', function (Request $request) {
     if (is_null($list)) {
         return json_encode(['error' => 'no lists']);
     }
+    if ($list->name == 'Новый список') {
+        $addEvent = true;
+    } else {
+        $addEvent = false;
+    }
     $list->name = $request->name;
     $list->background = $request->background;
     $list->save();
+    if ($list->name != 'Новый список' && $addEvent) {
+        $event = new \App\Event();
+        $event->action = 'new';
+        $event->user_id = $request->userId;
+        $event->wish_list_id = $list->id;
+        $event->save();
+    }
     return json_encode($list->getResponse());
 })->middleware(\App\Http\Middleware\CheckAuthToken::class);
 
@@ -149,3 +165,20 @@ Route::get('/list/{link}', function ($link) {
     }
     var_dump($list->trashed());
 });
+
+Route::post('/share', function (Request $request) {
+    $list = \App\WishList::where('id', $request->id)->where('user_id', $request->userId)->first();
+    if (is_null($list)) {
+        return json_encode(['error' => 'no lists']);
+    }
+    if (!in_array($request->social, ['fb', 'vk', 'ok'])) {
+        return json_encode(['error' => 'wrong social']);
+    }
+    $event = new \App\Event();
+    $event->action = 'share';
+    $event->user_id = $request->userId;
+    $event->wish_list_id = $list->id;
+    $event->social_network = $request->social;
+    $event->save();
+    return json_encode(['error' => '', 'status' => 'ok']);
+})->middleware(\App\Http\Middleware\CheckAuthToken::class);
