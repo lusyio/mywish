@@ -52301,7 +52301,7 @@ function (_Component) {
 
           if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
             _this.setState({
-              newWishId: res.date.id
+              newWishId: res.data.id
             });
 
             axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/item/update', {

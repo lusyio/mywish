@@ -235,7 +235,7 @@ export default class Auth extends Component {
                     formData.append('image', this.state.file);
                     if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
                         this.setState({
-                            newWishId: res.date.id
+                            newWishId: res.data.id
                         });
                         axios.post('/api/item/update', {
                             "userId": this.state.userId,
