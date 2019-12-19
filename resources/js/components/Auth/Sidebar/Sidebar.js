@@ -2,7 +2,6 @@ import React from 'react'
 import classes from './Sidebar.module.css'
 
 const Sidebar = props => {
-
     let renderList;
 
     if (props.lists.count !== 0) {

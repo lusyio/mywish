@@ -9,7 +9,7 @@ const ListCard = props => {
     if (props.lists.count !== 0) {
         renderList =
             props.lists.items.map((list) => {
-                return list.id === props.lists.selectedList ? (
+                return list.id === props.lists.defaultListId ? (
                         <WishList
                             addNewWish={props.addNewWish}
                             showNewWishToggle={props.showNewWishToggle}

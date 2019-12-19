@@ -42,7 +42,7 @@ export default class Auth extends Component {
         showNewWish: false,
 
         lists: {
-            selectedList: 2,
+            defaultListId: 2,
             count: 2,
             items: [
                 {
@@ -146,7 +146,7 @@ export default class Auth extends Component {
 
     selectListHandler = (id) => {
         const lists = {...this.state.lists};
-        lists.selectedList = id;
+        lists.defaultListId = id;
         this.setState({
             lists
         });
