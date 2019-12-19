@@ -11,3 +11,7 @@
     background: #FFFFFF;
     padding: 64px 106px 58px 106px;
 }
+
+.ListCard .Empty {
+    text-align: center;
+}
