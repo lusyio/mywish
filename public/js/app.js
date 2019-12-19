@@ -2081,11 +2081,12 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1 {\n\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1 {\n    font-weight: normal;\n    font-size: 14px;\n    line-height: 16px;\n    color: #FFFFFF;\n    background: #F2523A;\n    border-radius: 10px;\n    padding: 17px 32px;\n    min-width: 168px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___25ICslRRtRBzhINllQO7p- {\n    background: #B9B5B4;\n    border-radius: 10px;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"Button": "resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1"
+	"Button": "resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1",
+	"secondary": "resources-js-components-UI-Button-__Button-module___25ICslRRtRBzhINllQO7p-"
 };
 
 /***/ }),
@@ -51979,6 +51980,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ListCard_ListCard__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ListCard/ListCard */ "./resources/js/components/Auth/ListCard/ListCard.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -52047,8 +52052,8 @@ function (_Component) {
         type: 'list',
         time: 1576658122
       }],
-      selectedList: 2,
       lists: {
+        selectedList: 2,
         count: 2,
         items: [{
           id: 1,
@@ -52090,7 +52095,7 @@ function (_Component) {
       },
       isLoggedIn: true,
       userId: null,
-      tokenAuth: null,
+      authToken: '',
       name: null,
       email: null
     });
@@ -52107,24 +52112,45 @@ function (_Component) {
       }).then(function (res) {
         _this.setState({
           userId: res.userId,
-          tokenAuth: res.tokenAuth
+          authToken: res.authToken
         });
-
-        axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/list');
       }, function (res) {
         return console.log('error', res);
       });
 
-      if (_this.state.userId !== null && _this.state.tokenAuth !== '') {
+      if (_this.state.userId !== null && _this.state.authToken !== '') {
         _this.setState({
           isLoggedIn: true
+        });
+
+        axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/lists', {
+          'userId': _this.state.userId,
+          'authToken': _this.state.authToken
+        }).then(function (res) {
+          if (res.error === '') {
+            _this.setState({
+              lists: res.lists
+            });
+          } else {
+            _this.setState({
+              authToken: '',
+              userId: null,
+              isLoggedIn: false
+            });
+          }
+        }, function (res) {
+          return console.log('error', res);
         });
       }
     });
 
     _defineProperty(_assertThisInitialized(_this), "selectListHandler", function (id) {
+      var lists = _objectSpread({}, _this.state.lists);
+
+      lists.selectedList = id;
+
       _this.setState({
-        selectedList: id
+        lists: lists
       });
     });
 
@@ -52178,7 +52204,6 @@ function (_Component) {
           onClick: this.selectListHandler,
           lists: this.state.lists
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListCard_ListCard__WEBPACK_IMPORTED_MODULE_9__["default"], {
-          selectedList: this.state.selectedList,
           lists: this.state.lists
         })));
       } else {
@@ -52410,7 +52435,7 @@ var ListCard = function ListCard(props) {
 
   if (props.lists.count !== 0) {
     renderList = props.lists.items.map(function (list) {
-      return list.id === props.selectedList ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishList_WishList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      return list.id === props.lists.selectedList ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishList_WishList__WEBPACK_IMPORTED_MODULE_2__["default"], {
         key: list.id,
         wishItems: list.wishItems
       }) : null;

@@ -36,8 +36,8 @@ export default class Auth extends Component {
                 time: 1576658122
             },
         ],
-        selectedList: 2,
         lists: {
+            selectedList: 2,
             count: 2,
             items: [
                 {
@@ -88,7 +88,7 @@ export default class Auth extends Component {
         },
         isLoggedIn: true,
         userId: null,
-        tokenAuth: '',
+        authToken: '',
         name: null,
         email: null,
     };
@@ -107,18 +107,18 @@ export default class Auth extends Component {
             .then(res => {
                 this.setState({
                     userId: res.userId,
-                    tokenAuth: res.tokenAuth
+                    authToken: res.authToken
                 });
 
             }, res => console.log('error', res));
 
-        if (this.state.userId !== null && this.state.tokenAuth !== '') {
+        if (this.state.userId !== null && this.state.authToken !== '') {
             this.setState({
                 isLoggedIn: true
             });
             axios.post('/lists', {
                 'userId': this.state.userId,
-                'tokenAuth': this.state.tokenAuth
+                'authToken': this.state.authToken
             })
                 .then(res => {
                     if (res.error === '') {
@@ -127,7 +127,7 @@ export default class Auth extends Component {
                         })
                     } else {
                         this.setState({
-                            tokenAuth: '',
+                            authToken: '',
                             userId: null,
                             isLoggedIn: false
                         })
@@ -137,8 +137,10 @@ export default class Auth extends Component {
     };
 
     selectListHandler = (id) => {
+        let lists = {...this.state.lists};
+        lists.selectedList = id;
         this.setState({
-            selectedList: id
+            lists
         });
     };
 
@@ -188,7 +190,6 @@ export default class Auth extends Component {
                             lists={this.state.lists}
                         />
                         <ListCard
-                            selectedList={this.state.selectedList}
                             lists={this.state.lists}
                         />
                     </div>
