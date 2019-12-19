@@ -97,7 +97,7 @@ export default class Auth extends Component {
             ]
         },
         file: null,
-        isLoggedIn: true,
+        isLoggedIn: false,
         userId: null,
         authToken: '',
         name: '',
@@ -131,13 +131,13 @@ export default class Auth extends Component {
                 })
                     .then(res => {
                         if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
-                            // const lists = {...this.state.lists};
-                            // lists.items = res.data.items;
-                            // lists.count = res.data.count;
-                            // lists.defaultListId = res.data.defaultListId;
-                            // this.setState({
-                            //     lists
-                            // })
+                            const lists = {...this.state.lists};
+                            lists.items = res.data.items;
+                            lists.count = res.data.count;
+                            lists.defaultListId = res.data.defaultListId;
+                            this.setState({
+                                lists
+                            })
                         } else {
                             this.setState({
                                 authToken: '',
