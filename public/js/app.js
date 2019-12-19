@@ -52098,6 +52098,7 @@ function (_Component) {
       }],
       wishNameControl: '',
       wishUrlControl: '',
+      newWishId: null,
       showNewWish: false,
       lists: {
         defaultListId: 2,
@@ -52144,6 +52145,7 @@ function (_Component) {
           }]
         }]
       },
+      pictures: ['https://ireplace.ru/images/watermarked/1/thumbnails/1308/1144/detailed/0/MMEF2_AV2_32wp-2p.jpg'],
       isLoggedIn: false,
       userId: null,
       authToken: '',
@@ -52227,50 +52229,54 @@ function (_Component) {
       });
     });
 
-    _defineProperty(_assertThisInitialized(_this), "addNewWishHandler", function (listId, id) {
+    _defineProperty(_assertThisInitialized(_this), "addNewWishHandler", function (listId) {
       if (_this.state.wishNameControl !== '') {
         axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/item/add', {
           'userId': _this.state.userId,
           'authToken': _this.state.authToken,
           'listId': listId
         }).then(function (res) {
-          if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {} else {
+          if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+            _this.setState({
+              newWishId: res.date.id
+            });
+
+            axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/item/update', {
+              "userId": _this.state.userId,
+              "authToken": _this.state.authToken,
+              "id": _this.state.newWishId,
+              "name": _this.state.wishNameControl,
+              "url": _this.state.wishUrlControl,
+              "picture": 0
+            }).then(function (res) {
+              if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+                var lists = _objectSpread({}, _this.state.lists);
+
+                var currentList = lists.items.find(function (item) {
+                  return item.id === listId;
+                });
+                currentList.wishItems.push(res);
+
+                _this.setState({
+                  lists: lists
+                });
+              } else {
+                _this.setState({
+                  authToken: '',
+                  userId: null,
+                  isLoggedIn: false
+                });
+              }
+            }, function (res) {
+              return console.log('error', res);
+            });
+          } else {
             _this.setState({
               authToken: '',
               userId: null,
               isLoggedIn: false
             });
           }
-
-          axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/item/update', {
-            "userId": _this.state.userId,
-            "authToken": _this.state.authToken,
-            "id": id,
-            "name": _this.state.wishNameControl,
-            "url": _this.state.wishUrlControl,
-            "picture": "https://ireplace.ru/images/watermarked/1/thumbnails/1308/1144/detailed/0/MMEF2_AV2_32wp-2p.jpg"
-          }).then(function (res) {
-            if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
-              var lists = _objectSpread({}, _this.state.lists);
-
-              var currentList = lists.items.find(function (item) {
-                return item.id === listId;
-              });
-              currentList.wishItems.push(res);
-
-              _this.setState({
-                lists: lists
-              });
-            } else {
-              _this.setState({
-                authToken: '',
-                userId: null,
-                isLoggedIn: false
-              });
-            }
-          }, function (res) {
-            return console.log('error', res);
-          });
         }, function (res) {
           return console.log('error', res);
         });
@@ -52329,6 +52335,7 @@ function (_Component) {
           onClick: this.selectListHandler,
           lists: this.state.lists
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListCard_ListCard__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          pictures: this.state.pictures,
           addNewWish: this.addNewWishHandler,
           onChangeWishUrl: this.onChangeWishUrlHandler,
           onChangeWishName: this.onChangeWishNameHandler,
@@ -52566,6 +52573,8 @@ var ListCard = function ListCard(props) {
   if (props.lists.count !== 0) {
     renderList = props.lists.items.map(function (list) {
       return list.id === props.lists.defaultListId ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishList_WishList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        pictures: props.pictures,
+        newWishId: props.newWishId,
         addNewWish: props.addNewWish,
         showNewWishToggle: props.showNewWishToggle,
         onChangeWishUrl: props.onChangeWishUrl,
@@ -52668,7 +52677,7 @@ var WishItem = function WishItem(props) {
       }
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishWidget_WishWidget__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
       onClick: function onClick() {
-        return props.addNewWish(props.listId, props.id);
+        return props.addNewWish(props.listId, props.newWishId);
       },
       type: "widget"
     }, "ADD"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -52679,7 +52688,7 @@ var WishItem = function WishItem(props) {
     renderWishItem = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItem
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      src: props.picture,
+      src: props.pictures,
       alt: props.title
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Title
@@ -52803,6 +52812,7 @@ __webpack_require__.r(__webpack_exports__);
 var WishList = function WishList(props) {
   var renderWishItems = props.wishItems.map(function (wish, index) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishItem_WishItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      pictures: props.pictures[wish.picture],
       onChangeWishName: props.onChangeWishName,
       onChangeWishUrl: props.onChangeWishUrl,
       listId: props.listId,
@@ -52814,6 +52824,7 @@ var WishList = function WishList(props) {
     });
   });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, renderWishItems, props.showNewWish ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishItem_WishItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    id: props.newWishId,
     showNewWishToggle: props.showNewWishToggle,
     onChangeWishName: props.onChangeWishName,
     onChangeWishUrl: props.onChangeWishUrl,

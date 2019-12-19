@@ -39,6 +39,7 @@ export default class Auth extends Component {
 
         wishNameControl: '',
         wishUrlControl: '',
+        newWishId: null,
         showNewWish: false,
 
         lists: {
@@ -95,6 +96,9 @@ export default class Auth extends Component {
                 }
             ]
         },
+        pictures: [
+            'https://ireplace.ru/images/watermarked/1/thumbnails/1308/1144/detailed/0/MMEF2_AV2_32wp-2p.jpg'
+        ],
 
         isLoggedIn: false,
         userId: null,
@@ -183,7 +187,7 @@ export default class Auth extends Component {
         })
     };
 
-    addNewWishHandler = (listId, id) => {
+    addNewWishHandler = (listId) => {
         if (this.state.wishNameControl !== '') {
             axios.post('/api/item/add', {
                 'userId': this.state.userId,
@@ -192,6 +196,33 @@ export default class Auth extends Component {
             })
                 .then((res) => {
                     if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+                        this.setState({
+                            newWishId: res.date.id
+                        });
+                        axios.post('/api/item/update', {
+                            "userId": this.state.userId,
+                            "authToken": this.state.authToken,
+                            "id": this.state.newWishId,
+                            "name": this.state.wishNameControl,
+                            "url": this.state.wishUrlControl,
+                            "picture": 0
+                        })
+                            .then((res) => {
+                                if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+                                    const lists = {...this.state.lists};
+                                    const currentList = lists.items.find(item => item.id === listId);
+                                    currentList.wishItems.push(res);
+                                    this.setState({
+                                        lists
+                                    });
+                                } else {
+                                    this.setState({
+                                        authToken: '',
+                                        userId: null,
+                                        isLoggedIn: false
+                                    })
+                                }
+                            }, res => console.log('error', res))
                     } else {
                         this.setState({
                             authToken: '',
@@ -199,30 +230,7 @@ export default class Auth extends Component {
                             isLoggedIn: false
                         })
                     }
-                    axios.post('/api/item/update', {
-                        "userId": this.state.userId,
-                        "authToken": this.state.authToken,
-                        "id": id,
-                        "name": this.state.wishNameControl,
-                        "url": this.state.wishUrlControl,
-                        "picture": "https://ireplace.ru/images/watermarked/1/thumbnails/1308/1144/detailed/0/MMEF2_AV2_32wp-2p.jpg"
-                    })
-                        .then((res) => {
-                            if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
-                                const lists = {...this.state.lists};
-                                const currentList = lists.items.find(item => item.id === listId);
-                                currentList.wishItems.push(res);
-                                this.setState({
-                                    lists
-                                });
-                            } else {
-                                this.setState({
-                                    authToken: '',
-                                    userId: null,
-                                    isLoggedIn: false
-                                })
-                            }
-                        }, res => console.log('error', res))
+
                 }, res => console.log('error', res));
         } else {
             console.log('заполните поля навзания желания')
@@ -264,6 +272,7 @@ export default class Auth extends Component {
                             lists={this.state.lists}
                         />
                         <ListCard
+                            pictures={this.state.pictures}
                             addNewWish={this.addNewWishHandler}
                             onChangeWishUrl={this.onChangeWishUrlHandler}
                             onChangeWishName={this.onChangeWishNameHandler}

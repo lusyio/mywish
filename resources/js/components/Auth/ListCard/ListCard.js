@@ -11,6 +11,8 @@ const ListCard = props => {
             props.lists.items.map((list) => {
                 return list.id === props.lists.defaultListId ? (
                         <WishList
+                            pictures={props.pictures}
+                            newWishId={props.newWishId}
                             addNewWish={props.addNewWish}
                             showNewWishToggle={props.showNewWishToggle}
                             onChangeWishUrl={props.onChangeWishUrl}

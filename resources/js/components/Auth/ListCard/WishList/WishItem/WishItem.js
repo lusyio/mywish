@@ -17,7 +17,7 @@ const WishItem = props => {
                         <Input maxLength='255' onChange={event => props.onChangeWishUrl(event)}/>
                     </div>
                     <WishWidget>
-                        <Button onClick={() => props.addNewWish(props.listId, props.id)} type='widget'>ADD</Button>
+                        <Button onClick={() => props.addNewWish(props.listId, props.newWishId)} type='widget'>ADD</Button>
                         <Button onClick={props.showNewWishToggle} type='widget'>DEL</Button>
                     </WishWidget>
                 </div>
@@ -26,7 +26,7 @@ const WishItem = props => {
         renderWishItem =
             <React.Fragment>
                 <div className={classes.WishItem}>
-                    <img src={props.picture} alt={props.title}/>
+                    <img src={props.pictures} alt={props.title}/>
                     <div>
                         <p className={classes.Title}>{props.title}</p>
                         <a href={props.url}>{props.url}</a>
