@@ -11,13 +11,14 @@ const WishItem = props => {
         renderWishItem =
             <React.Fragment>
                 <div className={classes.WishItem}>
-                    <Input type='file'/>
+                    <Input onChange={event => props.uploadImg(event)} type='file'/>
                     <div>
                         <Input maxLength='100' onChange={event => props.onChangeWishName(event)}/>
                         <Input maxLength='255' onChange={event => props.onChangeWishUrl(event)}/>
                     </div>
                     <WishWidget>
-                        <Button onClick={() => props.addNewWish(props.listId, props.newWishId)} type='widget'>ADD</Button>
+                        <Button onClick={() => props.addNewWish(props.listId, props.newWishId)}
+                                type='widget'>ADD</Button>
                         <Button onClick={props.showNewWishToggle} type='widget'>DEL</Button>
                     </WishWidget>
                 </div>

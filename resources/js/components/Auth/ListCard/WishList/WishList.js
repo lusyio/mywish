@@ -24,6 +24,7 @@ const WishList = props => {
             {renderWishItems}
             {props.showNewWish ?
                 <WishItem
+                    uploadImg={props.uploadImg}
                     id={props.newWishId}
                     showNewWishToggle={props.showNewWishToggle}
                     onChangeWishName={props.onChangeWishName}

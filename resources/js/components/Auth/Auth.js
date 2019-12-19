@@ -96,7 +96,7 @@ export default class Auth extends Component {
                 }
             ]
         },
-
+        file: null,
         isLoggedIn: false,
         userId: null,
         authToken: '',
@@ -131,11 +131,11 @@ export default class Auth extends Component {
                 })
                     .then(res => {
                         if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
-                            const state = {...this.state};
-                            state.lists = res.data.lists;
-                            this.setState({
-                                state
+                            this.setState(() => {
+                                return {lists: res.data.lists}
                             })
+                            console.log(res.data.lists)
+                            console.log(this.state.lists)
                         } else {
                             this.setState({
                                 authToken: '',
@@ -172,17 +172,26 @@ export default class Auth extends Component {
         //     }, res => console.log('error', res))
     }
 
-    onChangeWishUrlHandler = (event) => {
+    onChangeWishUrlHandler = event => {
         this.setState({
             wishUrlControl: event.target.value
         })
     };
 
-    onChangeWishNameHandler = (event) => {
+    onChangeWishNameHandler = event => {
         this.setState({
             wishNameControl: event.target.value
         })
     };
+
+    uploadImgHandler = event => {
+        this.setState(
+            {
+                file: event.target.files[0]
+            }
+        )
+    }
+
 
     deleteWishHandler = (listId, id) => {
         axios.post('/api/item/delete', {
@@ -220,6 +229,8 @@ export default class Auth extends Component {
                 'listId': listId
             })
                 .then((res) => {
+                    const formData = new FormData();
+                    formData.append('image', this.state.file);
                     if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
                         this.setState({
                             newWishId: res.date.id
@@ -230,7 +241,7 @@ export default class Auth extends Component {
                             "id": this.state.newWishId,
                             "name": this.state.wishNameControl,
                             "url": this.state.wishUrlControl,
-                            "picture": 0
+                            "picture": formData
                         })
                             .then((res) => {
                                 if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
@@ -297,6 +308,7 @@ export default class Auth extends Component {
                             lists={this.state.lists}
                         />
                         <ListCard
+                            uploadImg={this.uploadImgHandler}
                             deleteWish={this.deleteWishHandler}
                             addNewWish={this.addNewWishHandler}
                             onChangeWishUrl={this.onChangeWishUrlHandler}

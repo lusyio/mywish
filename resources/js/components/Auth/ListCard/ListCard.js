@@ -11,6 +11,7 @@ const ListCard = props => {
             props.lists.items.map((list) => {
                 return list.id === props.lists.defaultListId ? (
                         <WishList
+                            uploadImg={props.uploadImg}
                             deleteWish={props.deleteWish}
                             newWishId={props.newWishId}
                             addNewWish={props.addNewWish}

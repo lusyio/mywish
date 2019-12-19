@@ -52145,6 +52145,7 @@ function (_Component) {
           }]
         }]
       },
+      file: null,
       isLoggedIn: false,
       userId: null,
       authToken: '',
@@ -52178,13 +52179,14 @@ function (_Component) {
           'authToken': _this.state.authToken
         }).then(function (res) {
           if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
-            var state = _objectSpread({}, _this.state);
-
-            state.lists = res.data.lists;
-
-            _this.setState({
-              state: state
+            _this.setState(function () {
+              return {
+                lists: res.data.lists
+              };
             });
+
+            console.log(res.data.lists);
+            console.log(_this.state.lists);
           } else {
             _this.setState({
               authToken: '',
@@ -52225,6 +52227,12 @@ function (_Component) {
     _defineProperty(_assertThisInitialized(_this), "onChangeWishNameHandler", function (event) {
       _this.setState({
         wishNameControl: event.target.value
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "uploadImgHandler", function (event) {
+      _this.setState({
+        file: event.target.files[0]
       });
     });
 
@@ -52287,6 +52295,9 @@ function (_Component) {
           'authToken': _this.state.authToken,
           'listId': listId
         }).then(function (res) {
+          var formData = new FormData();
+          formData.append('image', _this.state.file);
+
           if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
             _this.setState({
               newWishId: res.date.id
@@ -52298,7 +52309,7 @@ function (_Component) {
               "id": _this.state.newWishId,
               "name": _this.state.wishNameControl,
               "url": _this.state.wishUrlControl,
-              "picture": 0
+              "picture": formData
             }).then(function (res) {
               if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
                 var lists = _objectSpread({}, _this.state.lists);
@@ -52386,6 +52397,7 @@ function (_Component) {
           onClick: this.selectListHandler,
           lists: this.state.lists
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListCard_ListCard__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          uploadImg: this.uploadImgHandler,
           deleteWish: this.deleteWishHandler,
           addNewWish: this.addNewWishHandler,
           onChangeWishUrl: this.onChangeWishUrlHandler,
@@ -52624,6 +52636,7 @@ var ListCard = function ListCard(props) {
   if (props.lists.count !== 0) {
     renderList = props.lists.items.map(function (list) {
       return list.id === props.lists.defaultListId ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishList_WishList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        uploadImg: props.uploadImg,
         deleteWish: props.deleteWish,
         newWishId: props.newWishId,
         addNewWish: props.addNewWish,
@@ -52715,6 +52728,9 @@ var WishItem = function WishItem(props) {
     renderWishItem = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItem
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Input_Input__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      onChange: function onChange(event) {
+        return props.uploadImg(event);
+      },
       type: "file"
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Input_Input__WEBPACK_IMPORTED_MODULE_2__["default"], {
       maxLength: "100",
@@ -52878,6 +52894,7 @@ var WishList = function WishList(props) {
     });
   });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, renderWishItems, props.showNewWish ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishItem_WishItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    uploadImg: props.uploadImg,
     id: props.newWishId,
     showNewWishToggle: props.showNewWishToggle,
     onChangeWishName: props.onChangeWishName,
