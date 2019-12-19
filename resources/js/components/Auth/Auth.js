@@ -117,33 +117,31 @@ export default class Auth extends Component {
             .then(res => {
                 this.setState({
                     userId: res.data.userId,
-                    authToken: res.data.authToken
+                    authToken: res.data.authToken,
                 });
-
+                if (res.data.userId !== null && res.data.authToken !== '') {
+                    this.setState({
+                        isLoggedIn: true
+                    })
+                }
             }, res => console.log('error', res));
-        console.log(this.state.userId, this.state.authToken);
-        if (this.state.userId !== null && this.state.authToken !== '') {
-            this.setState({
-                isLoggedIn: true
-            });
-            axios.post('/api/lists', {
-                'userId': this.state.userId,
-                'authToken': this.state.authToken
-            })
-                .then(res => {
-                    if (res.data.error === '' || typeof res.data['error'] !== "undefined") {
-                        this.setState({
-                            lists: res.lists
-                        })
-                    } else {
-                        this.setState({
-                            authToken: '',
-                            userId: null,
-                            isLoggedIn: false
-                        })
-                    }
-                }, res => console.log('error', res));
-        }
+        axios.post('/api/lists', {
+            'userId': this.state.userId,
+            'authToken': this.state.authToken
+        })
+            .then(res => {
+                if (res.data.error === '' || typeof res.data['error'] !== "undefined") {
+                    this.setState({
+                        lists: res.data.lists
+                    })
+                } else {
+                    this.setState({
+                        authToken: '',
+                        userId: null,
+                        isLoggedIn: false
+                    })
+                }
+            }, res => console.log('error', res));
     };
 
     selectListHandler = (id) => {
@@ -165,8 +163,8 @@ export default class Auth extends Component {
         // axios.get('/api/events')
         //     .then(res => {
         //         this.setState({
-        //             count: res.count,
-        //             events: res.events
+        //             count: res.data.count,
+        //             events: res.data.events
         //         })
         //     }, res => console.log('error', res))
     }
@@ -248,14 +246,14 @@ export default class Auth extends Component {
         //         this.state.events.map((events, index) => {
         //             eventsId.push(events.id)
         //         });
-        //         res.events.map((events) => {
+        //         res.data.events.map((events) => {
         //             resId.push(events.id)
         //         });
         //
         //         if (compare(eventsId, resId)) {
         //             this.setState({
-        //                 count: res.count,
-        //                 events: res.events
+        //                 count: res.data.count,
+        //                 events: res.data.events
         //             })
         //         }
         //     }, res => console.log('error', res)), 30000);
