@@ -128,7 +128,7 @@ Route::post('/lists', function (Request $request) {
     foreach ($lists as $list) {
         $result['items'][] = $list->getResponse();
     }
-    if ($result['items'] > 0) {
+    if (count($result['items']) > 0) {
         $result['defaultListId'] = $result['items'][0]['id'];
     }
     return json_encode($result);
