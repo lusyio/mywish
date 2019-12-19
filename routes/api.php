@@ -25,6 +25,8 @@ Route::post('/auth', function (Request $request) {
                     $user->fb_id = $request->socialUserId;
                     $user->fb_token = $request->token;
                     $user->name = $request->name;
+                    $user->api_token = Str::random(60);
+                    $user->save();
                     $newList = new \App\WishList();
                     $newList->user_id = $user->id;
                     $newList->name = 'Ваш первый список';
@@ -33,13 +35,13 @@ Route::post('/auth', function (Request $request) {
                     $newList->save();
                 } else {
                     $user->fb_token = $request->token;
+                    $user->api_token = Str::random(60);
+                    $user->save();
                 }
                 break;
             default:
                 return json_encode(['error' => 'unknown social']);
         }
-        $user->api_token = Str::random(60);
-        $user->save();
         $result = [
             'error' => '',
             'userId' => $user->id,
