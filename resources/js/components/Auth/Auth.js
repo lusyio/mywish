@@ -124,23 +124,23 @@ export default class Auth extends Component {
                         isLoggedIn: true
                     })
                 }
-            }, res => console.log('error', res));
-        axios.post('/api/lists', {
-            'userId': this.state.userId,
-            'authToken': this.state.authToken
-        })
-            .then(res => {
-                if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
-                    this.setState({
-                        lists: res.data.lists
-                    })
-                } else {
-                    this.setState({
-                        authToken: '',
-                        userId: null,
-                        isLoggedIn: false
-                    })
-                }
+                axios.post('/api/lists', {
+                    'userId': this.state.userId,
+                    'authToken': this.state.authToken
+                })
+                    .then(res => {
+                        if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+                            this.setState({
+                                lists: res.data.lists
+                            })
+                        } else {
+                            this.setState({
+                                authToken: '',
+                                userId: null,
+                                isLoggedIn: false
+                            })
+                        }
+                    }, res => console.log('error', res));
             }, res => console.log('error', res));
     };
 
@@ -170,7 +170,6 @@ export default class Auth extends Component {
     }
 
     onChangeWishUrlHandler = (event) => {
-
         this.setState({
             wishUrlControl: event.target.value
         })
@@ -204,31 +203,31 @@ export default class Auth extends Component {
                             isLoggedIn: false
                         })
                     }
+                    axios.post('/api/item/update', {
+                        "userId": this.state.userId,
+                        "authToken": this.state.authToken,
+                        "id": id,
+                        "name": this.state.wishNameControl,
+                        "url": this.state.wishUrlControl,
+                        "picture": "https://ireplace.ru/images/watermarked/1/thumbnails/1308/1144/detailed/0/MMEF2_AV2_32wp-2p.jpg"
+                    })
+                        .then((res) => {
+                            if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+                                const lists = {...this.state.lists};
+                                const currentList = lists.items.find(item => item.id === listId);
+                                currentList.wishItems.push(res);
+                                this.setState({
+                                    lists
+                                });
+                            } else {
+                                this.setState({
+                                    authToken: '',
+                                    userId: null,
+                                    isLoggedIn: false
+                                })
+                            }
+                        }, res => console.log('error', res))
                 }, res => console.log('error', res));
-            axios.post('/api/item/update', {
-                "userId": this.state.userId,
-                "authToken": this.state.authToken,
-                "id": id,
-                "name": this.state.wishNameControl,
-                "url": this.state.wishUrlControl,
-                "picture": "https://ireplace.ru/images/watermarked/1/thumbnails/1308/1144/detailed/0/MMEF2_AV2_32wp-2p.jpg"
-            })
-                .then((res) => {
-                    if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
-                        const lists = {...this.state.lists};
-                        const currentList = lists.items.find(item => item.id === listId);
-                        currentList.wishItems.push(res);
-                        this.setState({
-                            lists
-                        });
-                    } else {
-                        this.setState({
-                            authToken: '',
-                            userId: null,
-                            isLoggedIn: false
-                        })
-                    }
-                }, res => console.log('error', res))
         } else {
             console.log('заполните поля навзания желания')
         }
