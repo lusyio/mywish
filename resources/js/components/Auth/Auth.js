@@ -96,11 +96,8 @@ export default class Auth extends Component {
                 }
             ]
         },
-        pictures: [
-            'https://ireplace.ru/images/watermarked/1/thumbnails/1308/1144/detailed/0/MMEF2_AV2_32wp-2p.jpg'
-        ],
 
-        isLoggedIn: false,
+        isLoggedIn: true,
         userId: null,
         authToken: '',
         name: '',
@@ -185,6 +182,34 @@ export default class Auth extends Component {
         this.setState({
             wishNameControl: event.target.value
         })
+    };
+
+    deleteWishHandler = (listId, id) => {
+        axios.get('/api/item/delete', {
+            userId: this.state.userId,
+            authToken: this.state.authToken,
+            id: id
+        })
+            .then(res => {
+                if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+                    const lists = {...this.state.lists};
+                    const currentList = lists.items.find(item => item.id === listId);
+                    const currentWish = currentList.wishItems.find(wish => wish.id === id);
+                    for (const prop of Object.getOwnPropertyNames(currentWish)) {
+                        delete currentWish[prop];
+                    }
+                    this.setState({
+                        lists
+                    })
+                } else {
+                    this.setState({
+                        authToken: '',
+                        userId: null,
+                        isLoggedIn: false
+                    })
+                }
+
+            })
     };
 
     addNewWishHandler = (listId) => {
@@ -272,7 +297,7 @@ export default class Auth extends Component {
                             lists={this.state.lists}
                         />
                         <ListCard
-                            pictures={this.state.pictures}
+                            deleteWish={this.deleteWishHandler}
                             addNewWish={this.addNewWishHandler}
                             onChangeWishUrl={this.onChangeWishUrlHandler}
                             onChangeWishName={this.onChangeWishNameHandler}

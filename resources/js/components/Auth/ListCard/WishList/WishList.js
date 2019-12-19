@@ -6,7 +6,7 @@ const WishList = props => {
         props.wishItems.map((wish, index) => {
             return (
                 <WishItem
-                    pictures={props.pictures[wish.picture]}
+                    deleteWish={props.deleteWish}
                     onChangeWishName={props.onChangeWishName}
                     onChangeWishUrl={props.onChangeWishUrl}
                     listId={props.listId}

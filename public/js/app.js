@@ -52145,8 +52145,7 @@ function (_Component) {
           }]
         }]
       },
-      pictures: ['https://ireplace.ru/images/watermarked/1/thumbnails/1308/1144/detailed/0/MMEF2_AV2_32wp-2p.jpg'],
-      isLoggedIn: false,
+      isLoggedIn: true,
       userId: null,
       authToken: '',
       name: '',
@@ -52226,6 +52225,58 @@ function (_Component) {
     _defineProperty(_assertThisInitialized(_this), "onChangeWishNameHandler", function (event) {
       _this.setState({
         wishNameControl: event.target.value
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "deleteWishHandler", function (listId, id) {
+      axios__WEBPACK_IMPORTED_MODULE_7___default.a.get('/api/item/delete', {
+        userId: _this.state.userId,
+        authToken: _this.state.authToken,
+        id: id
+      }).then(function (res) {
+        if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+          var lists = _objectSpread({}, _this.state.lists);
+
+          var currentList = lists.items.find(function (item) {
+            return item.id === listId;
+          });
+          var currentWish = currentList.wishItems.find(function (wish) {
+            return wish.id === id;
+          });
+          var _iteratorNormalCompletion = true;
+          var _didIteratorError = false;
+          var _iteratorError = undefined;
+
+          try {
+            for (var _iterator = Object.getOwnPropertyNames(currentWish)[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+              var prop = _step.value;
+              delete currentWish[prop];
+            }
+          } catch (err) {
+            _didIteratorError = true;
+            _iteratorError = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+                _iterator["return"]();
+              }
+            } finally {
+              if (_didIteratorError) {
+                throw _iteratorError;
+              }
+            }
+          }
+
+          _this.setState({
+            lists: lists
+          });
+        } else {
+          _this.setState({
+            authToken: '',
+            userId: null,
+            isLoggedIn: false
+          });
+        }
       });
     });
 
@@ -52335,7 +52386,7 @@ function (_Component) {
           onClick: this.selectListHandler,
           lists: this.state.lists
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListCard_ListCard__WEBPACK_IMPORTED_MODULE_9__["default"], {
-          pictures: this.state.pictures,
+          deleteWish: this.deleteWishHandler,
           addNewWish: this.addNewWishHandler,
           onChangeWishUrl: this.onChangeWishUrlHandler,
           onChangeWishName: this.onChangeWishNameHandler,
@@ -52573,7 +52624,7 @@ var ListCard = function ListCard(props) {
   if (props.lists.count !== 0) {
     renderList = props.lists.items.map(function (list) {
       return list.id === props.lists.defaultListId ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishList_WishList__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        pictures: props.pictures,
+        deleteWish: props.deleteWish,
         newWishId: props.newWishId,
         addNewWish: props.addNewWish,
         showNewWishToggle: props.showNewWishToggle,
@@ -52688,7 +52739,7 @@ var WishItem = function WishItem(props) {
     renderWishItem = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItem
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      src: props.pictures,
+      src: props.picture,
       alt: props.title
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Title
@@ -52697,6 +52748,9 @@ var WishItem = function WishItem(props) {
     }, props.url)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishWidget_WishWidget__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
       type: "widget"
     }, "CNG"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      onClick: function onClick() {
+        return props.deleteWish(props.listId, props.id);
+      },
       type: "widget"
     }, "DEL"))));
   }
@@ -52812,7 +52866,7 @@ __webpack_require__.r(__webpack_exports__);
 var WishList = function WishList(props) {
   var renderWishItems = props.wishItems.map(function (wish, index) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishItem_WishItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      pictures: props.pictures[wish.picture],
+      deleteWish: props.deleteWish,
       onChangeWishName: props.onChangeWishName,
       onChangeWishUrl: props.onChangeWishUrl,
       listId: props.listId,
