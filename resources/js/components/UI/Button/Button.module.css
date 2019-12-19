@@ -9,6 +9,36 @@
     min-width: 168px;
 }
 
+.Button:hover {
+    cursor: pointer;
+}
+
+.Button:focus {
+    outline: none;
+}
+
+.Button.showNewWish {
+    display: block;
+    margin: 30px auto 0;
+    background: transparent;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 16px;
+    color: #000000;
+    padding: 0;
+    border: 0;
+}
+
+.Button.widget{
+    color: #8A8A8A;
+    padding: 0;
+    border: none;
+    display: block;
+    background: transparent;
+    width: 35px;
+    min-width: unset;
+}
+
 .Button.secondary {
     background: #B9B5B4;
     border-radius: 10px;

@@ -11,6 +11,12 @@ const ListCard = props => {
             props.lists.items.map((list) => {
                 return list.id === props.lists.selectedList ? (
                         <WishList
+                            addNewWish={props.addNewWish}
+                            showNewWishToggle={props.showNewWishToggle}
+                            onChangeWishUrl={props.onChangeWishUrl}
+                            onChangeWishName={props.onChangeWishName}
+                            listId={list.id}
+                            showNewWish={props.showNewWish}
                             key={list.id}
                             wishItems={list.wishItems}
                         />
@@ -31,6 +37,12 @@ const ListCard = props => {
         <div className={classes.ListCard}>
             <div className={classes.ListCardBody}>
                 {renderList}
+                <Button
+                    type='showNewWish'
+                    onClick={props.showNewWishToggle}
+                >
+                    Добавить еще желание
+                </Button>
             </div>
         </div>
     )

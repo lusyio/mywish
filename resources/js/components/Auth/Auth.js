@@ -36,6 +36,11 @@ export default class Auth extends Component {
                 time: 1576658122
             },
         ],
+
+        wishNameControl: '',
+        wishUrlControl: '',
+        showNewWish: false,
+
         lists: {
             selectedList: 2,
             count: 2,
@@ -51,11 +56,13 @@ export default class Auth extends Component {
                     wishItems: [
                         {
                             id: 1,
+                            listId: 1,
                             title: "Смартфон",
                             url: "https://app.swaggerhub.com/apis-docs/igor0u/mywish/1.0.0-oas3#/default/post_lists",
                         },
                         {
-                            id: 1,
+                            id: 2,
+                            listId: 1,
                             title: "Новый смайртфон",
                             url: "https://app.swaggerhub.com/apis-docs/igor0u/mywish/1.0.0-oas3#/default/post_lists",
                         }
@@ -71,13 +78,15 @@ export default class Auth extends Component {
                     createdAt: 1200,
                     wishItems: [
                         {
-                            id: 2,
+                            id: 3,
+                            listId: 2,
                             title: "Смартфон",
                             url: "https://app.swaggerhub.com/apis-docs/igor0u/mywish/1.0.0-oas3#/default/post_lists",
                             picture: 'https://ireplace.ru/images/watermarked/1/thumbnails/1308/1144/detailed/0/MMEF2_AV2_32wp-2p.jpg'
                         },
                         {
-                            id: 2,
+                            id: 4,
+                            listId: 2,
                             title: "Новый смайртфон",
                             url: "https://app.swaggerhub.com/apis-docs/igor0u/mywish/1.0.0-oas3#/default/post_lists",
                             picture: 'https://ireplace.ru/images/watermarked/1/thumbnails/1308/1144/detailed/0/MMEF2_AV2_32wp-2p.jpg'
@@ -86,11 +95,12 @@ export default class Auth extends Component {
                 }
             ]
         },
+
         isLoggedIn: true,
         userId: null,
         authToken: '',
-        name: null,
-        email: null,
+        name: '',
+        email: '',
     };
 
     responseFacebook = (response) => {
@@ -116,12 +126,12 @@ export default class Auth extends Component {
             this.setState({
                 isLoggedIn: true
             });
-            axios.post('/lists', {
+            axios.post('/api/lists', {
                 'userId': this.state.userId,
                 'authToken': this.state.authToken
             })
                 .then(res => {
-                    if (res.error === '') {
+                    if (res.error === '' || typeof res['error'] !== "undefined") {
                         this.setState({
                             lists: res.lists
                         })
@@ -137,16 +147,22 @@ export default class Auth extends Component {
     };
 
     selectListHandler = (id) => {
-        let lists = {...this.state.lists};
+        const lists = {...this.state.lists};
         lists.selectedList = id;
         this.setState({
             lists
         });
     };
 
+    showNewWishToggle = () => {
+        this.setState({
+            showNewWish: !this.state.showNewWish
+        })
+    };
+
     // Получаю начальные данные eventov. count и event записываю в соответствующие state
     componentDidMount() {
-        // axios.get('/events')
+        // axios.get('/api/events')
         //     .then(res => {
         //         this.setState({
         //             count: res.count,
@@ -155,12 +171,77 @@ export default class Auth extends Component {
         //     }, res => console.log('error', res))
     }
 
+    onChangeWishUrlHandler = (event) => {
+
+        this.setState({
+            wishUrlControl: event.target.value
+        })
+    };
+
+    onChangeWishNameHandler = (event) => {
+        this.setState({
+            wishNameControl: event.target.value
+        })
+    };
+
+    addNewWishHandler = (listId, id) => {
+        if (this.state.wishNameControl !== '') {
+            axios.post('/api/item/add', {
+                'userId': this.state.userId,
+                'authToken': this.state.authToken,
+                'listId': listId
+            })
+                .then((res) => {
+                    if (res.error === '' || typeof res['error'] !== "undefined") {
+                        const lists = {...this.state.lists};
+                        const currentList = lists.items.find(item => item.id === listId);
+                        currentList.wishItems.push(res);
+                        this.setState({
+                            lists
+                        });
+                    } else {
+                        this.setState({
+                            authToken: '',
+                            userId: null,
+                            isLoggedIn: false
+                        })
+                    }
+                }, res => console.log('error', res));
+            axios.post('/api/item/update', {
+                "userId": this.state.userId,
+                "authToken": this.state.authToken,
+                "id": id,
+                "name": this.state.wishNameControl,
+                "url": this.state.wishUrlControl,
+                "picture": "https://ireplace.ru/images/watermarked/1/thumbnails/1308/1144/detailed/0/MMEF2_AV2_32wp-2p.jpg"
+            })
+                .then((res) => {
+                    if (res.error === '' || typeof res['error'] !== "undefined") {
+                        const lists = {...this.state.lists};
+                        const currentList = lists.items.find(item => item.id === listId);
+                        currentList.wishItems.push(res);
+                        this.setState({
+                            lists
+                        });
+                    } else {
+                        this.setState({
+                            authToken: '',
+                            userId: null,
+                            isLoggedIn: false
+                        })
+                    }
+                }, res => console.log('error', res))
+        } else {
+            console.log('заполните поля навзания желания')
+        }
+    };
+
     render() {
         function compare(eventsIds, resIds) {
             return eventsIds.length === resIds.length && eventsIds.every((v, i) => v === resIds[i])
         }
 
-        // setTimeout(() => axios.get('/events')
+        // setTimeout(() => axios.get('/api/events')
         //     .then(res => {
         //         let eventsId = [];
         //         let resId = [];
@@ -190,6 +271,11 @@ export default class Auth extends Component {
                             lists={this.state.lists}
                         />
                         <ListCard
+                            addNewWish={this.addNewWishHandler}
+                            onChangeWishUrl={this.onChangeWishUrlHandler}
+                            onChangeWishName={this.onChangeWishNameHandler}
+                            showNewWish={this.state.showNewWish}
+                            showNewWishToggle={this.showNewWishToggle}
                             lists={this.state.lists}
                         />
                     </div>

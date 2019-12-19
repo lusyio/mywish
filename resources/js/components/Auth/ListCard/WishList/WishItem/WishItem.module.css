@@ -3,6 +3,11 @@
     max-width: 480px;
     padding: 20px 10px;
     border-bottom: 1px solid #F0F0F0;
+    position: relative;
+}
+
+.WishItem > div {
+    width: 100%;
 }
 
 .WishItem > img {
