@@ -52146,7 +52146,7 @@ function (_Component) {
         }]
       },
       file: null,
-      isLoggedIn: false,
+      isLoggedIn: true,
       userId: null,
       authToken: '',
       name: '',
@@ -52178,16 +52178,13 @@ function (_Component) {
           'userId': _this.state.userId,
           'authToken': _this.state.authToken
         }).then(function (res) {
-          if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
-            var lists = _objectSpread({}, _this.state.lists);
-
-            lists.items = res.data.items;
-            lists.count = res.data.count;
-            lists.defaultListId = res.data.defaultListId;
-
-            _this.setState({
-              lists: lists
-            });
+          if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {// const lists = {...this.state.lists};
+            // lists.items = res.data.items;
+            // lists.count = res.data.count;
+            // lists.defaultListId = res.data.defaultListId;
+            // this.setState({
+            //     lists
+            // })
           } else {
             _this.setState({
               authToken: '',
@@ -52232,6 +52229,8 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "uploadImgHandler", function (event) {
+      event.preventDefault();
+
       _this.setState({
         file: event.target.files[0]
       });
@@ -52297,7 +52296,12 @@ function (_Component) {
           'listId': listId
         }).then(function (res) {
           var formData = new FormData();
-          formData.append('image', _this.state.file);
+          formData.append('file', _this.state.file);
+          formData.append('userId', _this.state.userId);
+          formData.append('authToken', _this.state.authToken);
+          formData.append('id', _this.state.newWishId);
+          formData.append('name', _this.state.wishNameControl);
+          formData.append('url', _this.state.wishUrlControl);
 
           if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
             _this.setState({
@@ -52305,12 +52309,7 @@ function (_Component) {
             });
 
             axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/item/update', {
-              "userId": _this.state.userId,
-              "authToken": _this.state.authToken,
-              "id": _this.state.newWishId,
-              "name": _this.state.wishNameControl,
-              "url": _this.state.wishUrlControl,
-              "picture": formData
+              formData: formData
             }).then(function (res) {
               if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
                 var lists = _objectSpread({}, _this.state.lists);

@@ -97,7 +97,7 @@ export default class Auth extends Component {
             ]
         },
         file: null,
-        isLoggedIn: false,
+        isLoggedIn: true,
         userId: null,
         authToken: '',
         name: '',
@@ -131,13 +131,13 @@ export default class Auth extends Component {
                 })
                     .then(res => {
                         if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
-                            const lists = {...this.state.lists};
-                            lists.items = res.data.items;
-                            lists.count = res.data.count;
-                            lists.defaultListId = res.data.defaultListId;
-                            this.setState({
-                                lists
-                            })
+                            // const lists = {...this.state.lists};
+                            // lists.items = res.data.items;
+                            // lists.count = res.data.count;
+                            // lists.defaultListId = res.data.defaultListId;
+                            // this.setState({
+                            //     lists
+                            // })
                         } else {
                             this.setState({
                                 authToken: '',
@@ -187,12 +187,13 @@ export default class Auth extends Component {
     };
 
     uploadImgHandler = event => {
+        event.preventDefault();
         this.setState(
             {
                 file: event.target.files[0]
             }
         )
-    }
+    };
 
 
     deleteWishHandler = (listId, id) => {
@@ -232,18 +233,19 @@ export default class Auth extends Component {
             })
                 .then((res) => {
                     const formData = new FormData();
-                    formData.append('image', this.state.file);
+                    formData.append('file', this.state.file);
+                    formData.append('userId', this.state.userId);
+                    formData.append('authToken', this.state.authToken);
+                    formData.append('id', this.state.newWishId);
+                    formData.append('name', this.state.wishNameControl);
+                    formData.append('url', this.state.wishUrlControl);
+
                     if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
                         this.setState({
                             newWishId: res.data.id
                         });
                         axios.post('/api/item/update', {
-                            "userId": this.state.userId,
-                            "authToken": this.state.authToken,
-                            "id": this.state.newWishId,
-                            "name": this.state.wishNameControl,
-                            "url": this.state.wishUrlControl,
-                            "picture": formData
+                            formData
                         })
                             .then((res) => {
                                 if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
