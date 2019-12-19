@@ -115,8 +115,8 @@ Route::post('/item/add', function (Request $request) {
 })->middleware(\App\Http\Middleware\CheckAuthToken::class);
 
 Route::post('/item/update', function (Request $request) {
-    $item = \App\WishListItem::where('id', $request->id)->where('user_id', $request->userId)->first();
-    if (is_null($item)) {
+    $item = \App\WishListItem::where('id', $request->id)->first();
+    if (is_null($item) || $item->user()->value('id') != $request->userId) {
         return json_encode(['error' => 'no lists']);
     }
     $item->name = $request->name;
@@ -128,8 +128,8 @@ Route::post('/item/update', function (Request $request) {
 })->middleware(\App\Http\Middleware\CheckAuthToken::class);
 
 Route::post('/item/delete', function (Request $request) {
-    $item = \App\WishListItem::where('id', $request->id)->where('user_id', $request->userId)->first();
-    if (is_null($item)) {
+    $item = \App\WishListItem::where('id', $request->id)->first();
+    if (is_null($item) || $item->user()->value('id') != $request->userId) {
         return json_encode(['error' => 'no lists']);
     }
     $item->delete();
