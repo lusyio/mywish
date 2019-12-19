@@ -20,8 +20,8 @@ class WishListItem extends Model
         return $result;
     }
 
-    public function user()
+    public function list()
     {
-        return $this->hasOneThrough('App\User', 'App\WishList');
+        return $this->belongsTo('App\WishList');
     }
 }

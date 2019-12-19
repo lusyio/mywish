@@ -110,17 +110,18 @@ Route::post('/item/add', function (Request $request) {
     $item->name = '';
     $item->image_url = '';
     $item->url = '';
+    $item->order = 0;
     $item->save();
     return json_encode($item->getResponse());
 })->middleware(\App\Http\Middleware\CheckAuthToken::class);
 
 Route::post('/item/update', function (Request $request) {
     $item = \App\WishListItem::where('id', $request->id)->first();
-    if (is_null($item) || $item->user()->value('id') != $request->userId) {
+    if (is_null($item) || $item->list()->value('user_id') != $request->userId) {
         return json_encode(['error' => 'no lists']);
     }
     $item->name = $request->name;
-    $item->image_url = $request->file('image')->store('images');
+    $item->image_url = $request->file('picture')->store('images');
     $item->url = $request->url;
     $item->image_url;
     $item->save();
@@ -129,7 +130,7 @@ Route::post('/item/update', function (Request $request) {
 
 Route::post('/item/delete', function (Request $request) {
     $item = \App\WishListItem::where('id', $request->id)->first();
-    if (is_null($item) || $item->user()->value('id') != $request->userId) {
+    if (is_null($item) || $item->list()->value('user_id') != $request->userId) {
         return json_encode(['error' => 'no lists']);
     }
     $item->delete();
