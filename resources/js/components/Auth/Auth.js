@@ -115,13 +115,15 @@ export default class Auth extends Component {
             "socialUserId": response.userId,
         })
             .then(res => {
+                console.log(res.userId)
+                console.log(res.authToken)
                 this.setState({
                     userId: res.userId,
                     authToken: res.authToken
                 });
 
             }, res => console.log('error', res));
-
+        console.log(this.state.userId, this.state.authToken);
         if (this.state.userId !== null && this.state.authToken !== '') {
             this.setState({
                 isLoggedIn: true
