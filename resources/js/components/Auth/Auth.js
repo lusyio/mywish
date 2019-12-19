@@ -88,7 +88,7 @@ export default class Auth extends Component {
         },
         isLoggedIn: true,
         userId: null,
-        tokenAuth: null,
+        tokenAuth: '',
         name: null,
         email: null,
     };
@@ -108,22 +108,38 @@ export default class Auth extends Component {
                 this.setState({
                     userId: res.userId,
                     tokenAuth: res.tokenAuth
-                })
+                });
+
             }, res => console.log('error', res));
 
         if (this.state.userId !== null && this.state.tokenAuth !== '') {
             this.setState({
                 isLoggedIn: true
             });
+            axios.post('/lists', {
+                'userId': this.state.userId,
+                'tokenAuth': this.state.tokenAuth
+            })
+                .then(res => {
+                    if (res.error === '') {
+                        this.setState({
+                            lists: res.lists
+                        })
+                    } else {
+                        this.setState({
+                            tokenAuth: '',
+                            userId: null,
+                            isLoggedIn: false
+                        })
+                    }
+                }, res => console.log('error', res));
         }
     };
 
     selectListHandler = (id) => {
         this.setState({
             selectedList: id
-        })
-        console.log(this.state.lists.selectedList);
-
+        });
     };
 
     // Получаю начальные данные eventov. count и event записываю в соответствующие state

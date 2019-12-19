@@ -52109,6 +52109,8 @@ function (_Component) {
           userId: res.userId,
           tokenAuth: res.tokenAuth
         });
+
+        axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/list');
       }, function (res) {
         return console.log('error', res);
       });
@@ -52124,8 +52126,6 @@ function (_Component) {
       _this.setState({
         selectedList: id
       });
-
-      console.log(_this.state.lists.selectedList);
     });
 
     return _this;
