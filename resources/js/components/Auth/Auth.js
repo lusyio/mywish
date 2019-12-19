@@ -232,20 +232,18 @@ export default class Auth extends Component {
                 'listId': listId
             })
                 .then((res) => {
-                    const formData = new FormData();
-                    formData.append('file', this.state.file);
-                    formData.append('userId', this.state.userId);
-                    formData.append('authToken', this.state.authToken);
-                    formData.append('id', this.state.newWishId);
-                    formData.append('name', this.state.wishNameControl);
-                    formData.append('url', this.state.wishUrlControl);
 
                     if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
                         this.setState({
                             newWishId: res.data.id
                         });
                         axios.post('/api/item/update', {
-                            formData
+                            'userId': this.state.userId,
+                            'authToken': this.state.authToken,
+                            'id': this.state.newWishId,
+                            'name': this.state.wishNameControl,
+                            'url' : this.state.wishUrlControl,
+                            'picture' : this.state.file
                         })
                             .then((res) => {
                                 if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
