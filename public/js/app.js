@@ -1929,12 +1929,13 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME {\n    max-width: 690px;\n    width: 100%;\n    padding: 10px;\n    background: darkred;\n    border-radius: 15px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME > .resources-js-components-Auth-ListCard-__ListCard-module___1N8mMA49NsMdLyLyZ3-MTN {\n    border-radius: 15px;\n    background: #FFFFFF;\n    padding: 64px 106px 58px 106px;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME {\n    max-width: 690px;\n    width: 100%;\n    padding: 10px;\n    background: darkred;\n    border-radius: 15px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME > .resources-js-components-Auth-ListCard-__ListCard-module___1N8mMA49NsMdLyLyZ3-MTN {\n    border-radius: 15px;\n    background: #FFFFFF;\n    padding: 64px 106px 58px 106px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME .resources-js-components-Auth-ListCard-__ListCard-module___rEw1U5JhC0rWymBwgVXLd {\n    text-align: center;\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"ListCard": "resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME",
-	"ListCardBody": "resources-js-components-Auth-ListCard-__ListCard-module___1N8mMA49NsMdLyLyZ3-MTN"
+	"ListCardBody": "resources-js-components-Auth-ListCard-__ListCard-module___1N8mMA49NsMdLyLyZ3-MTN",
+	"Empty": "resources-js-components-Auth-ListCard-__ListCard-module___rEw1U5JhC0rWymBwgVXLd"
 };
 
 /***/ }),
@@ -2017,7 +2018,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".resources-js-components-__Layout-module___31qtXvQPIVwI_HzHzsk5HP {\n    min-height: 100vh;\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    font-family: 'Roboto', sans-serif;\n    background: url('/imgbg.jpg');\n}\n\n.resources-js-components-__Layout-module___31qtXvQPIVwI_HzHzsk5HP main {\n    display: flex;\n    flex-direction: column;\n    flex-grow: 1;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-__Layout-module___31qtXvQPIVwI_HzHzsk5HP {\n    min-height: 100vh;\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    font-family: 'Roboto', sans-serif;\n    background: url('/imgbg.jpg');\n    background: #393939;\n}\n\n.resources-js-components-__Layout-module___31qtXvQPIVwI_HzHzsk5HP main {\n    display: flex;\n    flex-direction: column;\n    flex-grow: 1;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -52046,11 +52047,12 @@ function (_Component) {
         type: 'list',
         time: 1576658122
       }],
+      selectedList: 2,
       lists: {
         count: 2,
         items: [{
           id: 1,
-          name: 'Новый список',
+          name: 'Новый список1',
           updatedAt: 1213,
           background: 1,
           userId: 123,
@@ -52067,7 +52069,7 @@ function (_Component) {
           }]
         }, {
           id: 2,
-          name: 'Новый список',
+          name: 'Новый список2',
           updatedAt: 1213,
           background: 1,
           userId: 123,
@@ -52086,7 +52088,7 @@ function (_Component) {
           }]
         }]
       },
-      isLoggedIn: false,
+      isLoggedIn: true,
       userId: null,
       tokenAuth: null,
       name: null,
@@ -52116,6 +52118,14 @@ function (_Component) {
           isLoggedIn: true
         });
       }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "selectListHandler", function (id) {
+      _this.setState({
+        selectedList: id
+      });
+
+      console.log(_this.state.lists.selectedList);
     });
 
     return _this;
@@ -52165,8 +52175,10 @@ function (_Component) {
         authContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: _Auth_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Container
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_8__["default"], {
+          onClick: this.selectListHandler,
           lists: this.state.lists
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListCard_ListCard__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          selectedList: this.state.selectedList,
           lists: this.state.lists
         })));
       } else {
@@ -52178,6 +52190,8 @@ function (_Component) {
           className: _Auth_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.AuthHeader
         }, "\u041F\u043E\u0434\u0441\u043A\u0430\u0436\u0438\u0442\u0435 \u0412\u0430\u0448\u0438\u043C \u0431\u043B\u0438\u0437\u043A\u0438\u043C, \u0434\u0440\u0443\u0437\u044C\u044F\u043C, \u043A\u043E\u043B\u043B\u0435\u0433\u0430\u043C, \u0447\u0442\u043E\u0431\u044B \u0412\u044B \u0445\u043E\u0442\u0435\u043B\u0438 \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0432 \u043F\u043E\u0434\u0430\u0440\u043E\u043A! \u0421\u043E\u0441\u0442\u0430\u0432\u044C\u0442\u0435 \u0441\u0432\u043E\u0439 \u0441\u043F\u0438\u0441\u043E\u043A \u0438 \u043F\u043E\u0434\u0435\u043B\u0438\u0442\u0435\u0441\u044C \u0438\u043C!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Card_Card__WEBPACK_IMPORTED_MODULE_4__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u0443\u0439\u0442\u0435\u0441\u044C \u0441 \u043F\u043E\u043C\u043E\u0449\u044C\u044E \u0441\u043E\u0446.\u0441\u0435\u0442\u0435\u0439 \u0438 \u0441\u043E\u0441\u0442\u0430\u0432\u044C\u0442\u0435 \u0441\u0432\u043E\u0439 \u0441\u043F\u0438\u0441\u043E\u043A \u043F\u043E\u0434\u0430\u0440\u043A\u043E\u0432!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_facebook_login__WEBPACK_IMPORTED_MODULE_3___default.a, {
           appId: "563234647569569",
+          version: "5.0",
+          language: "ru_RU",
           autoLoad: false,
           fields: "name,email",
           callback: this.responseFacebook,
@@ -52385,21 +52399,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ListCard.module.css */ "./resources/js/components/Auth/ListCard/ListCard.module.css");
 /* harmony import */ var _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_ListCard_module_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _WishList_WishList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./WishList/WishList */ "./resources/js/components/Auth/ListCard/WishList/WishList.js");
+/* harmony import */ var _UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../UI/Button/Button */ "./resources/js/components/UI/Button/Button.js");
+
 
 
 
 
 var ListCard = function ListCard(props) {
+  var renderList;
+
+  if (props.lists.count !== 0) {
+    renderList = props.lists.items.map(function (list) {
+      return list.id === props.selectedList ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishList_WishList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        key: list.id,
+        wishItems: list.wishItems
+      }) : null;
+    });
+  } else {
+    renderList = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Empty
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0423 \u0432\u0430\u0441 \u0435\u0449\u0435 \u043D\u0435\u0442 \u043D\u0435 \u043E\u0434\u043D\u043E\u0433\u043E \u0441\u043F\u0438\u0441\u043A\u0430"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], null, "\u0421\u043E\u0437\u0434\u0430\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A"));
+  }
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListCard
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListCardBody
-  }, props.lists.items.map(function (list) {
-    return list.id === 2 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishList_WishList__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      key: list.id,
-      wishItems: list.wishItems
-    }) : null;
-  })));
+  }, renderList));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (ListCard);
@@ -52552,7 +52578,10 @@ var Sidebar = function Sidebar(props) {
   if (props.lists.count !== 0) {
     renderList = props.lists.items.map(function (list, index) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        key: index
+        key: index,
+        onClick: function onClick() {
+          return props.onClick(list.id);
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, list.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u0421\u043F\u0438\u0441\u043E\u043A \u0441\u043E\u0437\u0434\u0430\u043D ", list.createdAt));
     });
   } else {
@@ -53025,7 +53054,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/user/Desktop/mywish/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/mastekator/Desktop/mywish/resources/js/app.js */"./resources/js/app.js");
 
 
 /***/ })

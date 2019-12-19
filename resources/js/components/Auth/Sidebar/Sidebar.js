@@ -9,7 +9,7 @@ const Sidebar = props => {
         renderList =
             props.lists.items.map((list, index) => {
                 return (
-                    <li key={index}>
+                    <li key={index} onClick={() => props.onClick(list.id)}>
                         <a>{list.name}</a>
                         <span>Список создан {list.createdAt}</span>
                     </li>

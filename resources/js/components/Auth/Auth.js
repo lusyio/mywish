@@ -36,12 +36,13 @@ export default class Auth extends Component {
                 time: 1576658122
             },
         ],
+        selectedList: 2,
         lists: {
             count: 2,
             items: [
                 {
                     id: 1,
-                    name: 'Новый список',
+                    name: 'Новый список1',
                     updatedAt: 1213,
                     background: 1,
                     userId: 123,
@@ -62,7 +63,7 @@ export default class Auth extends Component {
                 },
                 {
                     id: 2,
-                    name: 'Новый список',
+                    name: 'Новый список2',
                     updatedAt: 1213,
                     background: 1,
                     userId: 123,
@@ -85,7 +86,7 @@ export default class Auth extends Component {
                 }
             ]
         },
-        isLoggedIn: false,
+        isLoggedIn: true,
         userId: null,
         tokenAuth: null,
         name: null,
@@ -115,6 +116,14 @@ export default class Auth extends Component {
                 isLoggedIn: true
             });
         }
+    };
+
+    selectListHandler = (id) => {
+        this.setState({
+            selectedList: id
+        })
+        console.log(this.state.lists.selectedList);
+
     };
 
     // Получаю начальные данные eventov. count и event записываю в соответствующие state
@@ -159,9 +168,11 @@ export default class Auth extends Component {
                 <div className={classes.Container}>
                     <div>
                         <Sidebar
+                            onClick={this.selectListHandler}
                             lists={this.state.lists}
                         />
                         <ListCard
+                            selectedList={this.state.selectedList}
                             lists={this.state.lists}
                         />
                     </div>
