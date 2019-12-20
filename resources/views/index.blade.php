@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="referrer" content="no-referrer" />
         <script src="https://apis.google.com/js/platform.js" type="text/javascript"></script>
-        <title>Laravel</title>
+        <title>MyWish</title>
         <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
     </head>
     <body>
