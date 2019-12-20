@@ -52178,9 +52178,6 @@ function (_Component) {
         }]
       },
       file: null,
-      isLoggedIn: false,
-      userId: null,
-      authToken: '',
       name: '',
       email: ''
     });
@@ -52195,41 +52192,32 @@ function (_Component) {
         "token": response.accessToken,
         "socialUserId": response.userID
       }).then(function (res) {
-        _this.setState({
-          userId: res.data.userId,
-          authToken: res.data.authToken
-        });
+        localStorage.setItem('userId', res.data.userId);
+        localStorage.setItem('authToken', res.data.authToken);
 
-        if (res.data.userId !== null && res.data.authToken !== '') {
-          _this.setState({
-            isLoggedIn: true
+        if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== '') {
+          axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/lists', {
+            'userId': _this.state.userId,
+            'authToken': _this.state.authToken
+          }).then(function (res) {
+            if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
+              var lists = _objectSpread({}, _this.state.lists);
+
+              lists.items = res.data.items;
+              lists.count = res.data.count;
+              lists.defaultListId = res.data.defaultListId;
+
+              _this.setState({
+                lists: lists
+              });
+            } else {
+              localStorage.setItem('userId', null);
+              localStorage.setItem('authToken', '');
+            }
+          }, function (res) {
+            return console.log('error', res);
           });
         }
-
-        axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/lists', {
-          'userId': _this.state.userId,
-          'authToken': _this.state.authToken
-        }).then(function (res) {
-          if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
-            var lists = _objectSpread({}, _this.state.lists);
-
-            lists.items = res.data.items;
-            lists.count = res.data.count;
-            lists.defaultListId = res.data.defaultListId;
-
-            _this.setState({
-              lists: lists
-            });
-          } else {
-            _this.setState({
-              authToken: '',
-              userId: null,
-              isLoggedIn: false
-            });
-          }
-        }, function (res) {
-          return console.log('error', res);
-        });
       }, function (res) {
         return console.log('error', res);
       });
@@ -52273,8 +52261,8 @@ function (_Component) {
 
     _defineProperty(_assertThisInitialized(_this), "deleteWishHandler", function (listId, id) {
       axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/item/delete', {
-        userId: _this.state.userId,
-        authToken: _this.state.authToken,
+        userId: localStorage.getItem('userId'),
+        authToken: localStorage.getItem('authToken'),
         id: id
       }).then(function (res) {
         if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
@@ -52314,11 +52302,8 @@ function (_Component) {
             lists: lists
           });
         } else {
-          _this.setState({
-            authToken: '',
-            userId: null,
-            isLoggedIn: false
-          });
+          localStorage.setItem('userId', null);
+          localStorage.setItem('authToken', '');
         }
       });
     });
@@ -52326,8 +52311,8 @@ function (_Component) {
     _defineProperty(_assertThisInitialized(_this), "addNewWishHandler", function (listId) {
       if (_this.state.wishNameControl !== '') {
         axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/item/add', {
-          'userId': _this.state.userId,
-          'authToken': _this.state.authToken,
+          'userId': localStorage.getItem('userId'),
+          'authToken': localStorage.getItem('authToken'),
           'listId': listId
         }).then(function (res) {
           if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
@@ -52336,8 +52321,8 @@ function (_Component) {
             });
 
             var formData = new FormData();
-            formData.append('userId', _this.state.userId);
-            formData.append('authToken', _this.state.authToken);
+            formData.append('userId', localStorage.getItem('userId'));
+            formData.append('authToken', localStorage.getItem('authToken'));
             formData.append('id', _this.state.newWishId);
             formData.append('name', _this.state.wishNameControl);
             formData.append('url', _this.state.wishUrlControl);
@@ -52363,21 +52348,15 @@ function (_Component) {
                   showNewWish: false
                 });
               } else {
-                _this.setState({
-                  authToken: '',
-                  userId: null,
-                  isLoggedIn: false
-                });
+                localStorage.setItem('userId', null);
+                localStorage.setItem('authToken', '');
               }
             }, function (res) {
               return console.log('error', res);
             });
           } else {
-            _this.setState({
-              authToken: '',
-              userId: null,
-              isLoggedIn: false
-            });
+            localStorage.setItem('userId', null);
+            localStorage.setItem('authToken', '');
           }
         }, function (res) {
           return console.log('error', res);
@@ -52389,8 +52368,8 @@ function (_Component) {
 
     _defineProperty(_assertThisInitialized(_this), "addListHandler", function () {
       axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/list/add', {
-        "userId": _this.state.userId,
-        "authToken": _this.state.authToken
+        "userId": localStorage.getItem('userId'),
+        "authToken": localStorage.getItem('authToken')
       }).then(function (res) {
         if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
           var lists = _objectSpread({}, _this.state.lists);
@@ -52401,11 +52380,8 @@ function (_Component) {
             lists: lists
           });
         } else {
-          _this.setState({
-            authToken: '',
-            userId: null,
-            isLoggedIn: false
-          });
+          localStorage.setItem('userId', null);
+          localStorage.setItem('authToken', '');
         }
       }, function (res) {
         return console.log('error', res);
@@ -52418,22 +52394,27 @@ function (_Component) {
       });
 
       axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/list/update', {
-        "userId": _this.state.userId,
-        "authToken": _this.state.authToken,
+        "userId": localStorage.getItem('userId'),
+        "authToken": localStorage.getItem('authToken'),
         "id": listId,
         "name": name,
         "backgroundNumber": index
       }).then(function (res) {
-        var lists = _objectSpread({}, _this.state.lists);
+        if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+          var lists = _objectSpread({}, _this.state.lists);
 
-        var currentList = lists.items.find(function (item) {
-          return item.id === listId;
-        });
-        currentList.backgroundNumber = res.data.backgroundNumber;
+          var currentList = lists.items.find(function (item) {
+            return item.id === listId;
+          });
+          currentList.backgroundNumber = res.data.backgroundNumber;
 
-        _this.setState({
-          lists: lists
-        });
+          _this.setState({
+            lists: lists
+          });
+        } else {
+          localStorage.setItem('userId', null);
+          localStorage.setItem('authToken', '');
+        }
       }, function (res) {
         return console.log('error', res);
       });
@@ -52442,23 +52423,28 @@ function (_Component) {
     _defineProperty(_assertThisInitialized(_this), "onBlurListTitleHandler", function (listId, name, bgId) {
       if (_this.state.showNewListTitle) {
         axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/list/update', {
-          "userId": _this.state.userId,
-          "authToken": _this.state.authToken,
+          "userId": localStorage.getItem('userId'),
+          "authToken": localStorage.getItem('authToken'),
           "id": listId,
           "name": _this.state.listNameControl,
           "backgroundNumber": bgId
         }).then(function (res) {
-          var lists = _objectSpread({}, _this.state.lists);
+          if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+            var lists = _objectSpread({}, _this.state.lists);
 
-          var currentList = lists.items.find(function (item) {
-            return item.id === listId;
-          });
-          currentList.name = res.data.name;
+            var currentList = lists.items.find(function (item) {
+              return item.id === listId;
+            });
+            currentList.name = res.data.name;
 
-          _this.setState({
-            lists: lists,
-            showNewListTitle: false
-          });
+            _this.setState({
+              lists: lists,
+              showNewListTitle: false
+            });
+          } else {
+            localStorage.setItem('userId', null);
+            localStorage.setItem('authToken', '');
+          }
         }, function (res) {
           return console.log('error', res);
         });
@@ -52494,7 +52480,7 @@ function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      if (!this.state.isLoggedIn) {
+      if (localStorage.getItem('userId') === null && localStorage.getItem('authToken') === '') {
         axios__WEBPACK_IMPORTED_MODULE_7___default.a.get('/api/events').then(function (res) {
           _this2.setState({
             count: res.data.count,
@@ -52516,7 +52502,7 @@ function (_Component) {
         });
       }
 
-      if (!this.state.isLoggedIn) {
+      if (localStorage.getItem('userId') === null && localStorage.getItem('authToken') === '') {
         setTimeout(function () {
           return axios__WEBPACK_IMPORTED_MODULE_7___default.a.get('/api/events').then(function (res) {
             var eventsId = [];
@@ -52544,7 +52530,7 @@ function (_Component) {
 
       var authContent;
 
-      if (this.state.isLoggedIn) {
+      if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== '') {
         authContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: _Auth_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Container
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -53027,7 +53013,7 @@ var WishItem = function WishItem(props) {
     renderWishItem = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItem
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      src: 'mywish.su/public/' + props.picture,
+      src: props.picture,
       alt: props.title
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Title

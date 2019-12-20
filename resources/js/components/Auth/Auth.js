@@ -129,9 +129,9 @@ export default class Auth extends Component {
                 localStorage.setItem('authToken', res.data.authToken);
                 if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== '') {
                     axios.post('/api/lists', {
-                        'userId': this.state.userId,
-                        'authToken': this.state.authToken
-                    })
+                        'userId': localStorage.getItem('userId'),
+                        'authToken': localStorage.getItem('authToken')
+                })
                         .then(res => {
                             if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
                                 const lists = {...this.state.lists};
