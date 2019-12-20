@@ -52176,7 +52176,7 @@ function (_Component) {
         }]
       },
       file: null,
-      isLoggedIn: true,
+      isLoggedIn: false,
       userId: null,
       authToken: '',
       name: '',
@@ -52431,9 +52431,9 @@ function (_Component) {
 
         axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/list/update', {
           "userId": _this.state.userId,
-          "authToken": name,
+          "authToken": _this.state.authToken,
           "id": listId,
-          "name": _this.state.listNameControl,
+          "name": name,
           "backgroundNumber": _this.state.newBackgroundNumber
         }).then(function (res) {
           var lists = _objectSpread({}, _this.state.lists);
