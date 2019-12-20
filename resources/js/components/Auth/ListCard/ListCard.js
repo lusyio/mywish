@@ -15,7 +15,7 @@ const ListCard = props => {
         renderList =
             props.lists.items.map((list) => {
                 return list.id === props.lists.defaultListId ? (
-                        <div className={classes.ListCard} style={{background: `url(${props.background[list.backgroundNumber]})`}}>
+                        <div key={list.id} className={classes.ListCard} style={{background: `url(${props.background[list.backgroundNumber]})`}}>
                             <div className={classes.ListCardBody}>
                                 <ColorPicker
                                     listId={list.id}

@@ -52833,6 +52833,7 @@ var ListCard = function ListCard(props) {
   if (props.lists.count !== 0) {
     renderList = props.lists.items.map(function (list) {
       return list.id === props.lists.defaultListId ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        key: list.id,
         className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListCard,
         style: {
           background: "url(".concat(props.background[list.backgroundNumber], ")")
