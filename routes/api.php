@@ -41,10 +41,10 @@ Route::post('/auth', function (Request $request) {
                     $event->user_id = $user->id;
                     $event->save();
                 } else {
+                    $user->fb_token = $request->token;
                     if(!$user->verifyFbToken()) {
                         return json_encode(['error' => 'invalid token']);
                     }
-                    $user->fb_token = $request->token;
                     $user->api_token = Str::random(60);
                     $user->save();
                 }
