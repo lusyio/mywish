@@ -27,7 +27,7 @@ const WishItem = props => {
         renderWishItem =
             <React.Fragment>
                 <div className={classes.WishItem}>
-                    <img src={'mywish.su/public/' + props.picture} alt={props.title}/>
+                    <img src={props.picture} alt={props.title}/>
                     <div>
                         <p className={classes.Title}>{props.title}</p>
                         <a href={props.url}>{props.url}</a>
