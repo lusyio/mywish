@@ -17,6 +17,7 @@ Route::post('/auth', function (Request $request) {
 
     $user = new \App\User();
     if (isset($request->social)) {
+        $isRegistered = false;
         switch ($request->social) {
             case 'fb':
                 $user = \App\User::where('fb_id', $request->socialUserId)->first();
@@ -30,16 +31,7 @@ Route::post('/auth', function (Request $request) {
                     $user->name = $request->name;
                     $user->api_token = Str::random(60);
                     $user->save();
-                    $newList = new \App\WishList();
-                    $newList->user_id = $user->id;
-                    $newList->name = 'Ваш первый список';
-                    $newList->background_id = 0;
-                    $newList->generateUrl();
-                    $newList->save();
-                    $event = new \App\Event();
-                    $event->action = 'user';
-                    $event->user_id = $user->id;
-                    $event->save();
+                    $isRegistered = true;
                 } else {
                     $user->fb_token = $request->token;
                     if(!$user->verifyFbToken()) {
@@ -49,8 +41,42 @@ Route::post('/auth', function (Request $request) {
                     $user->save();
                 }
                 break;
+            case 'vk':
+                $user = \App\User::where('vk_id', $request->socialUserId)->first();
+                if (is_null($user)) {
+                    $user = new \App\User();
+                    $user->vk_id = $request->socialUserId;
+                    $user->vk_token = $request->token;
+                    if(!$user->verifyVkToken()) {
+                        return json_encode(['error' => 'invalid token']);
+                    }
+                    $user->name = $request->name;
+                    $user->api_token = Str::random(60);
+                    $user->save();
+                    $isRegistered = true;
+                } else {
+                    $user->vk_token = $request->token;
+                    if(!$user->verifyVkToken()) {
+                        return json_encode(['error' => 'invalid token']);
+                    }
+                    $user->api_token = Str::random(60);
+                    $user->save();
+                }
+                break;
             default:
                 return json_encode(['error' => 'unknown social']);
+        }
+        if ($isRegistered) {
+            $newList = new \App\WishList();
+            $newList->user_id = $user->id;
+            $newList->name = 'Ваш первый список';
+            $newList->background_id = 0;
+            $newList->generateUrl();
+            $newList->save();
+            $event = new \App\Event();
+            $event->action = 'user';
+            $event->user_id = $user->id;
+            $event->save();
         }
         $result = [
             'error' => '',
@@ -87,7 +113,7 @@ Route::post('/list/update', function (Request $request) {
     $list->name = $request->name;
     $list->background_id = $request->backgroundNumber;
     $list->save();
-    if (($list->name != 'Новый список' || $list->name == 'Ваш первый список') && $addEvent) {
+    if (($list->name != 'Новый список' && $list->name != 'Ваш первый список') && $addEvent) {
         $event = new \App\Event();
         $event->action = 'list';
         $event->user_id = $request->userId;
