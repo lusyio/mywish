@@ -53151,7 +53151,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var WishList = function WishList(props) {
-  var renderWishItems = props.wishItems.map(function (wish, index) {
+  var renderWishItems = props.wishItems.map(function (wish) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishItem_WishItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
       deleteWish: props.deleteWish,
       onChangeWishName: props.onChangeWishName,
@@ -53165,6 +53165,7 @@ var WishList = function WishList(props) {
     });
   });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, renderWishItems, props.showNewWish ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishItem_WishItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    key: "edit",
     uploadImg: props.uploadImg,
     id: props.newWishId,
     showNewWishToggle: props.showNewWishToggle,

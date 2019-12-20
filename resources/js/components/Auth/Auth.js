@@ -269,7 +269,7 @@ export default class Auth extends Component {
                                 if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
                                     const lists = {...this.state.lists};
                                     const currentList = lists.items.find(item => item.id === listId);
-                                    currentList.wishItems.push(res);
+                                    currentList.wishItems.push(res.data);
                                     this.setState({
                                         lists
                                     });
