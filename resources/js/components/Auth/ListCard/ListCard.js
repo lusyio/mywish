@@ -19,8 +19,8 @@ const ListCard = props => {
                     let header = <p onClick={event => props.showNewListTitleToggle(event)}
                                     className={classes.CardHeader}>{list.name}</p>
                     if (props.showNewListTitle) {
-                        header = <Input onChange={event => props.onChangeListTitle(event)}
-                                        onBlur={event => props.onBlurListTitle(event, list.id, list.name)}
+                        header = <Input onChange={event => props.onChangeListTitle(event, list.id)}
+                                        onBlur={() => props.onBlurListTitle(list.id, list.name, list.backgroundNumber)}
                                         value={list.name} addClass='inputHeader'/>
                     }
                     return (

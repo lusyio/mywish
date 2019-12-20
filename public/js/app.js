@@ -52178,7 +52178,7 @@ function (_Component) {
         }]
       },
       file: null,
-      isLoggedIn: false,
+      isLoggedIn: true,
       userId: null,
       authToken: '',
       name: '',
@@ -52412,63 +52412,69 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "onPickColorHandler", function (index, listId, name) {
-      if (_this.state.newBackgroundNumber !== index) {
-        _this.setState({
-          newBackgroundNumber: index
-        });
-
-        axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/list/update', {
-          "userId": _this.state.userId,
-          "authToken": _this.state.authToken,
-          "id": listId,
-          "name": name,
-          "backgroundNumber": _this.state.newBackgroundNumber
-        }).then(function (res) {
-          var lists = _objectSpread({}, _this.state.lists);
-
-          var currentList = lists.items.find(function (item) {
-            return item.id === listId;
-          });
-          currentList.backgroundNumber = res.data.backgroundNumber;
-
-          _this.setState({
-            lists: lists
-          });
-        }, function (res) {
-          return console.log('error', res);
-        });
-      }
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "onBlurListTitleHandler", function (event, listId, name) {
-      if (name !== _this.state.listNameControl) {
-        console.log('changed');
-        axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/list/update', {
-          "userId": _this.state.userId,
-          "authToken": _this.state.authToken,
-          "id": listId,
-          "name": _this.state.listNameControl,
-          "backgroundNumber": _this.state.newBackgroundNumber
-        }).then(function (res) {
-          var lists = _objectSpread({}, _this.state.lists);
-
-          var currentList = lists.items.find(function (item) {
-            return item.id === listId;
-          });
-          currentList.name = res.data.name;
-
-          _this.setState({
-            lists: lists,
-            showNewListTitle: false
-          });
-        }, function (res) {
-          return console.log('error', res);
-        });
-      }
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "onChangeListTitleHandler", function (event) {
       _this.setState({
+        newBackgroundNumber: index
+      });
+
+      axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/list/update', {
+        "userId": _this.state.userId,
+        "authToken": _this.state.authToken,
+        "id": listId,
+        "name": name,
+        "backgroundNumber": _this.state.newBackgroundNumber
+      }).then(function (res) {
+        var lists = _objectSpread({}, _this.state.lists);
+
+        var currentList = lists.items.find(function (item) {
+          return item.id === listId;
+        });
+        currentList.backgroundNumber = res.data.backgroundNumber;
+
+        _this.setState({
+          lists: lists
+        });
+      }, function (res) {
+        return console.log('error', res);
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "onBlurListTitleHandler", function (listId, name, bgId) {
+      console.log(_this.state.listNameControl);
+      console.log(name);
+      console.log(bgId);
+      axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/list/update', {
+        "userId": _this.state.userId,
+        "authToken": _this.state.authToken,
+        "id": listId,
+        "name": _this.state.listNameControl,
+        "backgroundNumber": bgId
+      }).then(function (res) {
+        var lists = _objectSpread({}, _this.state.lists);
+
+        var currentList = lists.items.find(function (item) {
+          return item.id === listId;
+        });
+        currentList.name = res.data.name;
+
+        _this.setState({
+          lists: lists,
+          showNewListTitle: false
+        });
+      }, function (res) {
+        return console.log('error', res);
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "onChangeListTitleHandler", function (event, listId) {
+      var lists = _objectSpread({}, _this.state.lists);
+
+      var currentList = lists.items.find(function (item) {
+        return item.id === listId;
+      });
+      currentList.name = event.target.value;
+
+      _this.setState({
+        lists: lists,
         listNameControl: event.target.value
       });
     });
@@ -52879,10 +52885,10 @@ var ListCard = function ListCard(props) {
         if (props.showNewListTitle) {
           header = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Input_Input__WEBPACK_IMPORTED_MODULE_5__["default"], {
             onChange: function onChange(event) {
-              return props.onChangeListTitle(event);
+              return props.onChangeListTitle(event, list.id);
             },
-            onBlur: function onBlur(event) {
-              return props.onBlurListTitle(event, list.id, list.name);
+            onBlur: function onBlur() {
+              return props.onBlurListTitle(list.id, list.name, list.backgroundNumber);
             },
             value: list.name,
             addClass: "inputHeader"

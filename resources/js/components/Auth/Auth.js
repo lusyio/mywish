@@ -109,7 +109,7 @@ export default class Auth extends Component {
             ]
         },
         file: null,
-        isLoggedIn: false,
+        isLoggedIn: true,
         userId: null,
         authToken: '',
         name: '',
@@ -318,53 +318,55 @@ export default class Auth extends Component {
     };
 
     onPickColorHandler = (index, listId, name) => {
-        if (this.state.newBackgroundNumber !== index) {
-            this.setState({
-                newBackgroundNumber: index
-            });
-            axios.post('/api/list/update', {
-                "userId": this.state.userId,
-                "authToken": this.state.authToken,
-                "id": listId,
-                "name": name,
-                "backgroundNumber": this.state.newBackgroundNumber
-            })
-                .then((res) => {
-                    const lists = {...this.state.lists};
-                    const currentList = lists.items.find(item => item.id === listId);
-                    currentList.backgroundNumber = res.data.backgroundNumber;
-                    this.setState({
-                        lists
-                    })
-                }, (res) => console.log('error', res))
-
-        }
-    };
-
-    onBlurListTitleHandler = (event, listId, name) => {
-        if (name !== this.state.listNameControl) {
-            console.log('changed')
-            axios.post('/api/list/update', {
-                "userId": this.state.userId,
-                "authToken": this.state.authToken,
-                "id": listId,
-                "name": this.state.listNameControl,
-                "backgroundNumber": this.state.newBackgroundNumber
-            })
-                .then((res) => {
-                    const lists = {...this.state.lists};
-                    const currentList = lists.items.find(item => item.id === listId);
-                    currentList.name = res.data.name;
-                    this.setState({
-                        lists,
-                        showNewListTitle: false
-                    })
-                }, (res) => console.log('error', res))
-        }
-    };
-
-    onChangeListTitleHandler = (event) => {
         this.setState({
+            newBackgroundNumber: index
+        });
+        axios.post('/api/list/update', {
+            "userId": this.state.userId,
+            "authToken": this.state.authToken,
+            "id": listId,
+            "name": name,
+            "backgroundNumber": this.state.newBackgroundNumber
+        })
+            .then((res) => {
+                const lists = {...this.state.lists};
+                const currentList = lists.items.find(item => item.id === listId);
+                currentList.backgroundNumber = res.data.backgroundNumber;
+                this.setState({
+                    lists
+                })
+            }, (res) => console.log('error', res))
+
+    };
+
+    onBlurListTitleHandler = (listId, name, bgId) => {
+        console.log(this.state.listNameControl)
+        console.log(name)
+        console.log(bgId)
+        axios.post('/api/list/update', {
+            "userId": this.state.userId,
+            "authToken": this.state.authToken,
+            "id": listId,
+            "name": this.state.listNameControl,
+            "backgroundNumber": bgId
+        })
+            .then((res) => {
+                const lists = {...this.state.lists};
+                const currentList = lists.items.find(item => item.id === listId);
+                currentList.name = res.data.name;
+                this.setState({
+                    lists,
+                    showNewListTitle: false
+                })
+            }, (res) => console.log('error', res))
+    };
+
+    onChangeListTitleHandler = (event, listId) => {
+        const lists = {...this.state.lists};
+        const currentList = lists.items.find(item => item.id === listId);
+        currentList.name = event.target.value;
+        this.setState({
+            lists,
             listNameControl: event.target.value
         })
     };
