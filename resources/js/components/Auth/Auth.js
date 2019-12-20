@@ -338,9 +338,9 @@ export default class Auth extends Component {
             });
             axios.post('/api/list/update', {
                 "userId": this.state.userId,
-                "authToken": name,
+                "authToken": this.state.authToken,
                 "id": listId,
-                "name": this.state.listNameControl,
+                "name": name,
                 "backgroundNumber": this.state.newBackgroundNumber
             })
                 .then((res) => {
