@@ -30,7 +30,7 @@ Route::post('/auth', function (Request $request) {
                     $newList = new \App\WishList();
                     $newList->user_id = $user->id;
                     $newList->name = 'Ваш первый список';
-                    $newList->background_id = 1;
+                    $newList->background_id = 0;
                     $newList->generateUrl();
                     $newList->save();
                     $event = new \App\Event();
@@ -62,7 +62,7 @@ Route::post('/list/add', function (Request $request) {
     $newList = new \App\WishList();
     $newList->user_id = $request->userId;
     $newList->name = 'Новый список';
-    $newList->background_id = 1;
+    $newList->background_id = 0;
     $newList->generateUrl();
     $newList->save();
     return json_encode($newList->getResponse());
@@ -73,20 +73,22 @@ Route::post('/list/update', function (Request $request) {
     if (is_null($list)) {
         return json_encode(['error' => 'no lists']);
     }
-    if ($list->name == 'Новый список') {
+    if ($list->title_changed == 0) {
         $addEvent = true;
     } else {
         $addEvent = false;
     }
     $list->name = $request->name;
-    $list->background = $request->background;
+    $list->background = $request->backgroundNumber;
     $list->save();
-    if ($list->name != 'Новый список' && $addEvent) {
+    if (($list->name != 'Новый список' || $list->name == 'Ваш первый список') && $addEvent) {
         $event = new \App\Event();
         $event->action = 'list';
         $event->user_id = $request->userId;
         $event->wish_list_id = $list->id;
         $event->save();
+        $list->title_changed = 1;
+        $list->save();
     }
     return json_encode($list->getResponse());
 })->middleware(\App\Http\Middleware\CheckAuthToken::class);
@@ -177,10 +179,13 @@ Route::post('/share', function (Request $request) {
     if (!in_array($request->social, ['fb', 'vk', 'ok'])) {
         return json_encode(['error' => 'wrong social']);
     }
-    $event = new \App\Event();
-    $event->action = $request->social;
-    $event->user_id = $request->userId;
-    $event->wish_list_id = $list->id;
+    $event = \App\Event::where('user_id', $request->userId)->where('action', $request->social)->first();
+    if (is_null($event)) {
+        $event = new \App\Event();
+        $event->action = $request->social;
+        $event->user_id = $request->userId;
+        $event->wish_list_id = $list->id;
+    }
     $event->save();
     return json_encode(['error' => '', 'status' => 'ok']);
 })->middleware(\App\Http\Middleware\CheckAuthToken::class);
