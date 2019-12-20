@@ -26,3 +26,13 @@
     padding: 5px;
     margin-right: 20px;
 }
+
+.Input[type='radio'] {
+    visibility: hidden;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    position: relative;
+    z-index: 5;
+}
+

@@ -40,7 +40,7 @@ export default class Auth extends Component {
         wishNameControl: '',
         wishUrlControl: '',
         listNameControl: '',
-        newBackgroundNumber: null,
+        newBackgroundNumber: 0,
         background: [
             '/images/bg1.jpg',
             '/images/bg2.jpg',
@@ -310,7 +310,7 @@ export default class Auth extends Component {
                         "authToken": this.state.authToken,
                         "id": this.state.newListId,
                         "name": this.state.listNameControl,
-                        "backgroundNumber": this.state.backgroundNumber
+                        "backgroundNumber": this.state.newBackgroundNumber
                     })
                         .then((res) => {
                             const lists = {...this.state.lists};
@@ -329,6 +329,30 @@ export default class Auth extends Component {
 
 
             }, (res) => console.log('error', res))
+    };
+
+    onPickColorHandler = (index, listId) => {
+        if (this.state.newBackgroundNumber !== index) {
+            this.setState({
+                newBackgroundNumber: index
+            });
+            axios.post('/api/list/update', {
+                "userId": this.state.userId,
+                "authToken": this.state.authToken,
+                "id": listId,
+                "name": this.state.listNameControl,
+                "backgroundNumber": this.state.newBackgroundNumber
+            })
+                .then((res) => {
+                    const lists = {...this.state.lists};
+                    const currentList = lists.items.find(item => item.id === listId);
+                    currentList.backgroundNumber = res.data.backgroundNumber;
+                    this.setState({
+                        lists
+                    })
+                }, (res) => console.log('error', res))
+
+        }
     };
 
     render() {
@@ -369,6 +393,7 @@ export default class Auth extends Component {
                             lists={this.state.lists}
                         />
                         <ListCard
+                            onPickColor={this.onPickColorHandler}
                             background={this.state.background}
                             uploadImg={this.uploadImgHandler}
                             deleteWish={this.deleteWishHandler}

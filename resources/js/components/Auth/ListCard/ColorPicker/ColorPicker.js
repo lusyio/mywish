@@ -1,18 +1,26 @@
 import React from 'react'
 import classes from './ColorPicker.module.css'
+import Button from "../../../UI/Button/Button";
 
 const ColorPicker = props => {
-    console.log(props.background);
+    let colors =
+        props.background.map((color, index) => (
+                <div key={color} style={{background: `url(${color})`}}>
+                    <Button
+                        onClick={() => props.onPickColor(index, props.listId)}
+                        type='colorPicker'
+                    />
+                </div>
+            )
+        );
     return (
         <div className={classes.ColorPicker}>
             <p>Выберите оформление подложки</p>
-            {props.background.forEach((color, index) => (
-                    <div style={{background: color[index]}}>
-                    </div>
-                )
-            )}
+            <div className={classes.ColorPickerBody}>
+                {colors}
+            </div>
         </div>
     )
-}
+};
 
 export default ColorPicker

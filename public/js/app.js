@@ -1929,11 +1929,12 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../node_module
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H {\n    display: flex;\n    flex-wrap: wrap;\n    max-width: 320px;\n    margin: 0 auto 60px auto;\n    justify-content: center;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H > div {\n    margin-left: 15px;\n    margin-bottom: 15px;\n    border-radius: 10px;\n    width: 50px;\n    height: 50px;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H > p {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #000000;\n    margin-bottom: 30px;\n    text-align: center;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H {\n    max-width: 320px;\n    margin: 0 auto 60px auto;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___ZZnLgCZCKhEMXzaeM28Ir > div {\n    margin-right: 15px;\n    margin-bottom: 15px;\n    border-radius: 10px;\n    width: 50px;\n    height: 50px;\n    position: relative;\n    z-index: 1;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___ZZnLgCZCKhEMXzaeM28Ir > div:nth-of-type(5) {\n    margin-right: 0;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H > .resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___ZZnLgCZCKhEMXzaeM28Ir {\n    display: flex;\n    flex-wrap: wrap;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H > p {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #000000;\n    margin-bottom: 30px;\n    text-align: center;\n    display: block;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"ColorPicker": "resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H"
+	"ColorPicker": "resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H",
+	"ColorPickerBody": "resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___ZZnLgCZCKhEMXzaeM28Ir"
 };
 
 /***/ }),
@@ -2123,13 +2124,14 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1 {\n    font-weight: normal;\n    font-size: 14px;\n    line-height: 16px;\n    color: #FFFFFF;\n    background: #F2523A;\n    border-radius: 10px;\n    padding: 17px 32px;\n    min-width: 168px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1:hover {\n    cursor: pointer;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1:focus {\n    outline: none;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___3HSjOBpwWqEfyCyrwJ0e46 {\n    display: block;\n    margin: 30px auto 0;\n    background: transparent;\n    font-weight: 300;\n    font-size: 16px;\n    line-height: 16px;\n    color: #000000;\n    padding: 0;\n    border: 0;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5 {\n    display: block;\n    background: transparent;\n    padding: 0;\n    border: 0;\n    font-weight: 300;\n    font-size: 16px;\n    line-height: 16px;\n    color: #B9B5B4;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5:hover {\n    color: #FFFFFF;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt {\n    color: #8A8A8A;\n    padding: 0;\n    border: none;\n    display: block;\n    background: transparent;\n    width: 35px;\n    min-width: unset;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___25ICslRRtRBzhINllQO7p- {\n    background: #B9B5B4;\n    border-radius: 10px;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1 {\n    font-weight: normal;\n    font-size: 14px;\n    line-height: 16px;\n    color: #FFFFFF;\n    background: #F2523A;\n    border-radius: 10px;\n    padding: 17px 32px;\n    min-width: 168px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1:hover {\n    cursor: pointer;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1:focus {\n    outline: none;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___3HSjOBpwWqEfyCyrwJ0e46 {\n    display: block;\n    margin: 30px auto 0;\n    background: transparent;\n    font-weight: 300;\n    font-size: 16px;\n    line-height: 16px;\n    color: #000000;\n    padding: 0;\n    border: 0;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5 {\n    display: block;\n    background: transparent;\n    padding: 0;\n    border: 0;\n    font-weight: 300;\n    font-size: 16px;\n    line-height: 16px;\n    color: #B9B5B4;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1wM9KuXPlFAE6qlnGd71BF{\n    width: 50px;\n    height: 50px;\n    background: transparent;\n    border: 0;\n    padding: 0;\n    margin: 0;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5:hover {\n    color: #FFFFFF;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt {\n    color: #8A8A8A;\n    padding: 0;\n    border: none;\n    display: block;\n    background: transparent;\n    width: 35px;\n    min-width: unset;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___25ICslRRtRBzhINllQO7p- {\n    background: #B9B5B4;\n    border-radius: 10px;\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"Button": "resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1",
 	"showNewWish": "resources-js-components-UI-Button-__Button-module___3HSjOBpwWqEfyCyrwJ0e46",
 	"addListSidebar": "resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5",
+	"colorPicker": "resources-js-components-UI-Button-__Button-module___1wM9KuXPlFAE6qlnGd71BF",
 	"widget": "resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt",
 	"secondary": "resources-js-components-UI-Button-__Button-module___25ICslRRtRBzhINllQO7p-"
 };
@@ -2148,7 +2150,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J {\n    background: #ECECEC;\n    border-radius: 10px;\n    padding: 17px 23px;\n    margin-bottom: 10px;\n    display: block;\n    box-shadow: none;\n    width: 100%;\n    border: none;\n    box-sizing: border-box;\n    height: 50px;\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #8A8A8A;\n}\n\n.resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J:focus{\n    box-shadow: none;\n    outline: none;\n}\n\n.resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J[type='file'] {\n    width: 110px;\n    height: 110px;\n    padding: 5px;\n    margin-right: 20px;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J {\n    background: #ECECEC;\n    border-radius: 10px;\n    padding: 17px 23px;\n    margin-bottom: 10px;\n    display: block;\n    box-shadow: none;\n    width: 100%;\n    border: none;\n    box-sizing: border-box;\n    height: 50px;\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #8A8A8A;\n}\n\n.resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J:focus{\n    box-shadow: none;\n    outline: none;\n}\n\n.resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J[type='file'] {\n    width: 110px;\n    height: 110px;\n    padding: 5px;\n    margin-right: 20px;\n}\n\n.resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J[type='radio'] {\n    visibility: hidden;\n    width: 50px;\n    height: 50px;\n    margin: 0;\n    position: relative;\n    z-index: 5;\n}\n\n", ""]);
 
 // exports
 exports.locals = {
@@ -52121,7 +52123,7 @@ function (_Component) {
       wishNameControl: '',
       wishUrlControl: '',
       listNameControl: '',
-      newBackgroundNumber: null,
+      newBackgroundNumber: 0,
       background: ['/images/bg1.jpg', '/images/bg2.jpg', '/images/bg3.jpg', '/images/bg4.jpg', '/images/bg5.jpg'],
       newWishId: null,
       newListId: null,
@@ -52396,7 +52398,7 @@ function (_Component) {
             "authToken": _this.state.authToken,
             "id": _this.state.newListId,
             "name": _this.state.listNameControl,
-            "backgroundNumber": _this.state.backgroundNumber
+            "backgroundNumber": _this.state.newBackgroundNumber
           }).then(function (res) {
             var lists = _objectSpread({}, _this.state.lists);
 
@@ -52416,6 +52418,35 @@ function (_Component) {
       }, function (res) {
         return console.log('error', res);
       });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "onPickColorHandler", function (index, listId) {
+      if (_this.state.newBackgroundNumber !== index) {
+        _this.setState({
+          newBackgroundNumber: index
+        });
+
+        axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/list/update', {
+          "userId": _this.state.userId,
+          "authToken": _this.state.authToken,
+          "id": listId,
+          "name": _this.state.listNameControl,
+          "backgroundNumber": _this.state.newBackgroundNumber
+        }).then(function (res) {
+          var lists = _objectSpread({}, _this.state.lists);
+
+          var currentList = lists.items.find(function (item) {
+            return item.id === listId;
+          });
+          currentList.backgroundNumber = res.data.backgroundNumber;
+
+          _this.setState({
+            lists: lists
+          });
+        }, function (res) {
+          return console.log('error', res);
+        });
+      }
     });
 
     return _this;
@@ -52485,6 +52516,7 @@ function (_Component) {
           onClick: this.selectListHandler,
           lists: this.state.lists
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListCard_ListCard__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          onPickColor: this.onPickColorHandler,
           background: this.state.background,
           uploadImg: this.uploadImgHandler,
           deleteWish: this.deleteWishHandler,
@@ -52712,20 +52744,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _ColorPicker_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ColorPicker.module.css */ "./resources/js/components/Auth/ListCard/ColorPicker/ColorPicker.module.css");
 /* harmony import */ var _ColorPicker_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_ColorPicker_module_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _UI_Button_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../UI/Button/Button */ "./resources/js/components/UI/Button/Button.js");
+
 
 
 
 var ColorPicker = function ColorPicker(props) {
-  console.log(props.background);
+  var colors = props.background.map(function (color, index) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      key: color,
+      style: {
+        background: "url(".concat(color, ")")
+      }
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      onClick: function onClick() {
+        return props.onPickColor(index, props.listId);
+      },
+      type: "colorPicker"
+    }));
+  });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _ColorPicker_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ColorPicker
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u043E\u0444\u043E\u0440\u043C\u043B\u0435\u043D\u0438\u0435 \u043F\u043E\u0434\u043B\u043E\u0436\u043A\u0438"), props.background.forEach(function (color, index) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      style: {
-        background: color[index]
-      }
-    });
-  }));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u043E\u0444\u043E\u0440\u043C\u043B\u0435\u043D\u0438\u0435 \u043F\u043E\u0434\u043B\u043E\u0436\u043A\u0438"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _ColorPicker_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ColorPickerBody
+  }, colors));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (ColorPicker);
@@ -52791,13 +52833,15 @@ var ListCard = function ListCard(props) {
   if (props.lists.count !== 0) {
     renderList = props.lists.items.map(function (list) {
       return list.id === props.lists.defaultListId ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListCard
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListCardBody,
+        className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListCard,
         style: {
-          background: list.backgroundNumber
+          background: "url(".concat(props.background[list.backgroundNumber], ")")
         }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListCardBody
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ColorPicker_ColorPicker__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        listId: list.id,
+        onPickColor: props.onPickColor,
         background: props.background
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishList_WishList__WEBPACK_IMPORTED_MODULE_2__["default"], {
         uploadImg: props.uploadImg,
@@ -53587,6 +53631,7 @@ var Input = function Input(props) {
   var inputType = props.type || 'text';
   var cls = [_Input_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Input];
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    name: props.name,
     maxLength: props.maxLength,
     className: cls.join(' '),
     type: inputType,

@@ -7,6 +7,7 @@ const Input = props =>{
 
     return(
         <input
+            name={props.name}
             maxLength={props.maxLength}
             className={cls.join(' ')}
             type={inputType}

@@ -15,10 +15,12 @@ const ListCard = props => {
         renderList =
             props.lists.items.map((list) => {
                 return list.id === props.lists.defaultListId ? (
-                        <div className={classes.ListCard}>
-                            <div className={classes.ListCardBody} style={{background: list.backgroundNumber}}>
+                        <div className={classes.ListCard} style={{background: `url(${props.background[list.backgroundNumber]})`}}>
+                            <div className={classes.ListCardBody}>
                                 <ColorPicker
-                                background={props.background}
+                                    listId={list.id}
+                                    onPickColor={props.onPickColor}
+                                    background={props.background}
                                 />
                                 <WishList
                                     uploadImg={props.uploadImg}
