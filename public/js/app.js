@@ -1951,12 +1951,13 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME {\n    max-width: 690px;\n    width: 100%;\n    padding: 10px;\n    background: darkred;\n    border-radius: 15px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME > .resources-js-components-Auth-ListCard-__ListCard-module___1N8mMA49NsMdLyLyZ3-MTN {\n    border-radius: 15px;\n    background: #FFFFFF;\n    padding: 64px 106px 58px 106px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME.resources-js-components-Auth-ListCard-__ListCard-module___rEw1U5JhC0rWymBwgVXLd {\n    text-align: center;\n    background: url('/images/bg3.jpg');\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME {\n    max-width: 690px;\n    width: 100%;\n    padding: 10px;\n    background: darkred;\n    border-radius: 15px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME > .resources-js-components-Auth-ListCard-__ListCard-module___1N8mMA49NsMdLyLyZ3-MTN {\n    border-radius: 15px;\n    background: #FFFFFF;\n    padding: 64px 106px 58px 106px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME .resources-js-components-Auth-ListCard-__ListCard-module___2UEDZrcEy8tsnP_Ug3Q_5E{\n    font-weight: bold;\n    font-size: 36px;\n    line-height: 24px;\n    text-align: center;\n    color: #000000;\n    margin-bottom: 35px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME.resources-js-components-Auth-ListCard-__ListCard-module___rEw1U5JhC0rWymBwgVXLd {\n    text-align: center;\n    background: url('/images/bg3.jpg');\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"ListCard": "resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME",
 	"ListCardBody": "resources-js-components-Auth-ListCard-__ListCard-module___1N8mMA49NsMdLyLyZ3-MTN",
+	"CardHeader": "resources-js-components-Auth-ListCard-__ListCard-module___2UEDZrcEy8tsnP_Ug3Q_5E",
 	"Empty": "resources-js-components-Auth-ListCard-__ListCard-module___rEw1U5JhC0rWymBwgVXLd"
 };
 
@@ -2124,7 +2125,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1 {\n    font-weight: normal;\n    font-size: 14px;\n    line-height: 16px;\n    color: #FFFFFF;\n    background: #F2523A;\n    border-radius: 10px;\n    padding: 17px 32px;\n    min-width: 168px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1:hover {\n    cursor: pointer;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1:focus {\n    outline: none;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___3HSjOBpwWqEfyCyrwJ0e46 {\n    display: block;\n    margin: 30px auto 0;\n    background: transparent;\n    font-weight: 300;\n    font-size: 16px;\n    line-height: 16px;\n    color: #000000;\n    padding: 0;\n    border: 0;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5 {\n    display: block;\n    background: transparent;\n    padding: 0;\n    border: 0;\n    font-weight: 300;\n    font-size: 16px;\n    line-height: 16px;\n    color: #B9B5B4;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1wM9KuXPlFAE6qlnGd71BF{\n    width: 50px;\n    height: 50px;\n    background: transparent;\n    border: 0;\n    padding: 0;\n    margin: 0;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5:hover {\n    color: #FFFFFF;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt {\n    color: #8A8A8A;\n    padding: 0;\n    border: none;\n    display: block;\n    background: transparent;\n    width: 35px;\n    min-width: unset;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___25ICslRRtRBzhINllQO7p- {\n    background: #B9B5B4;\n    border-radius: 10px;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1 {\n    font-weight: normal;\n    font-size: 14px;\n    line-height: 16px;\n    color: #FFFFFF;\n    background: #F2523A;\n    border-radius: 10px;\n    padding: 17px 32px;\n    min-width: 168px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1:hover {\n    cursor: pointer;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1:focus {\n    outline: none;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___3HSjOBpwWqEfyCyrwJ0e46 {\n    display: block;\n    margin: 30px auto 0;\n    background: transparent;\n    font-weight: 300;\n    font-size: 16px;\n    line-height: 16px;\n    color: #000000;\n    padding: 0;\n    border: 0;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5 {\n    display: block;\n    background: transparent;\n    padding: 0;\n    border: 0;\n    font-weight: 300;\n    font-size: 16px;\n    line-height: 16px;\n    color: #B9B5B4;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1wM9KuXPlFAE6qlnGd71BF {\n    width: 50px;\n    height: 50px;\n    background: transparent;\n    border: 0;\n    padding: 0;\n    margin: 0;\n    min-width: unset;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5:hover {\n    color: #FFFFFF;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt {\n    color: #8A8A8A;\n    padding: 0;\n    border: none;\n    display: block;\n    background: transparent;\n    width: 35px;\n    min-width: unset;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___25ICslRRtRBzhINllQO7p- {\n    background: #B9B5B4;\n    border-radius: 10px;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -52175,7 +52176,7 @@ function (_Component) {
         }]
       },
       file: null,
-      isLoggedIn: false,
+      isLoggedIn: true,
       userId: null,
       authToken: '',
       name: '',
@@ -52207,7 +52208,7 @@ function (_Component) {
           'userId': _this.state.userId,
           'authToken': _this.state.authToken
         }).then(function (res) {
-          if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+          if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
             var lists = _objectSpread({}, _this.state.lists);
 
             lists.items = res.data.items;
@@ -52384,29 +52385,31 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "addListHandler", function () {
+      // axios.post('/api/list/update', {
+      //     "userId": this.state.userId,
+      //     "authToken": this.state.authToken,
+      //     "id": this.state.newListId,
+      //     "name": this.state.listNameControl,
+      //     "backgroundNumber": this.state.newBackgroundNumber
+      // })
+      //     .then((res) => {
+      //         const lists = {...this.state.lists};
+      //         lists.items.push(res.data);
+      //         this.setState({
+      //             lists
+      //         })
+      //     })
       axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/list/add', {
         "userId": _this.state.userId,
         "authToken": _this.state.authToken
       }).then(function (res) {
         if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+          var lists = _objectSpread({}, _this.state.lists);
+
+          lists.items.push(res.data);
+
           _this.setState({
-            newListId: res.data.id
-          });
-
-          axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/list/update', {
-            "userId": _this.state.userId,
-            "authToken": _this.state.authToken,
-            "id": _this.state.newListId,
-            "name": _this.state.listNameControl,
-            "backgroundNumber": _this.state.newBackgroundNumber
-          }).then(function (res) {
-            var lists = _objectSpread({}, _this.state.lists);
-
-            lists.items.push(res.data);
-
-            _this.setState({
-              lists: lists
-            });
+            lists: lists
           });
         } else {
           _this.setState({
@@ -52420,7 +52423,7 @@ function (_Component) {
       });
     });
 
-    _defineProperty(_assertThisInitialized(_this), "onPickColorHandler", function (index, listId) {
+    _defineProperty(_assertThisInitialized(_this), "onPickColorHandler", function (index, listId, name) {
       if (_this.state.newBackgroundNumber !== index) {
         _this.setState({
           newBackgroundNumber: index
@@ -52428,7 +52431,7 @@ function (_Component) {
 
         axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/list/update', {
           "userId": _this.state.userId,
-          "authToken": _this.state.authToken,
+          "authToken": name,
           "id": listId,
           "name": _this.state.listNameControl,
           "backgroundNumber": _this.state.newBackgroundNumber
@@ -52758,7 +52761,7 @@ var ColorPicker = function ColorPicker(props) {
       }
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
       onClick: function onClick() {
-        return props.onPickColor(index, props.listId);
+        return props.onPickColor(index, props.listId, props.name);
       },
       type: "colorPicker"
     }));
@@ -52840,7 +52843,10 @@ var ListCard = function ListCard(props) {
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListCardBody
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ColorPicker_ColorPicker__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.CardHeader
+      }, list.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ColorPicker_ColorPicker__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        name: list.name,
         listId: list.id,
         onPickColor: props.onPickColor,
         background: props.background

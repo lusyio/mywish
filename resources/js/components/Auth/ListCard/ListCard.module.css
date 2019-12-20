@@ -12,6 +12,15 @@
     padding: 64px 106px 58px 106px;
 }
 
+.ListCard .CardHeader{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 35px;
+}
+
 .ListCard.Empty {
     text-align: center;
     background: url('/images/bg3.jpg');
