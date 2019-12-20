@@ -5,7 +5,7 @@ import Button from "../../../UI/Button/Button";
 const ColorPicker = props => {
     let colors =
         props.background.map((color, index) => (
-                <div key={color} style={{background: `url(${color})`}}>
+                <div key={index} style={{background: `url(${color})`}}>
                     <Button
                         onClick={() => props.onPickColor(index, props.listId, props.name)}
                         type='colorPicker'

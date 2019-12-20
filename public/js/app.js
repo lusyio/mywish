@@ -52178,7 +52178,7 @@ function (_Component) {
         }]
       },
       file: null,
-      isLoggedIn: true,
+      isLoggedIn: false,
       userId: null,
       authToken: '',
       name: '',
@@ -52439,30 +52439,29 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "onBlurListTitleHandler", function (listId, name, bgId) {
-      console.log(_this.state.listNameControl);
-      console.log(name);
-      console.log(bgId);
-      axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/list/update', {
-        "userId": _this.state.userId,
-        "authToken": _this.state.authToken,
-        "id": listId,
-        "name": _this.state.listNameControl,
-        "backgroundNumber": bgId
-      }).then(function (res) {
-        var lists = _objectSpread({}, _this.state.lists);
+      if (_this.state.showNewListTitle) {
+        axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/list/update', {
+          "userId": _this.state.userId,
+          "authToken": _this.state.authToken,
+          "id": listId,
+          "name": _this.state.listNameControl,
+          "backgroundNumber": bgId
+        }).then(function (res) {
+          var lists = _objectSpread({}, _this.state.lists);
 
-        var currentList = lists.items.find(function (item) {
-          return item.id === listId;
-        });
-        currentList.name = res.data.name;
+          var currentList = lists.items.find(function (item) {
+            return item.id === listId;
+          });
+          currentList.name = res.data.name;
 
-        _this.setState({
-          lists: lists,
-          showNewListTitle: false
+          _this.setState({
+            lists: lists,
+            showNewListTitle: false
+          });
+        }, function (res) {
+          return console.log('error', res);
         });
-      }, function (res) {
-        return console.log('error', res);
-      });
+      }
     });
 
     _defineProperty(_assertThisInitialized(_this), "onChangeListTitleHandler", function (event, listId) {
@@ -52792,7 +52791,7 @@ __webpack_require__.r(__webpack_exports__);
 var ColorPicker = function ColorPicker(props) {
   var colors = props.background.map(function (color, index) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      key: color,
+      key: index,
       style: {
         background: "url(".concat(color, ")")
       }

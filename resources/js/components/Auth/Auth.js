@@ -326,7 +326,7 @@ export default class Auth extends Component {
             "authToken": this.state.authToken,
             "id": listId,
             "name": name,
-            "backgroundNumber": this.state.newBackgroundNumber
+            "backgroundNumber": index
         })
             .then((res) => {
                 const lists = {...this.state.lists};
@@ -340,25 +340,24 @@ export default class Auth extends Component {
     };
 
     onBlurListTitleHandler = (listId, name, bgId) => {
-        console.log(this.state.listNameControl)
-        console.log(name)
-        console.log(bgId)
-        axios.post('/api/list/update', {
-            "userId": this.state.userId,
-            "authToken": this.state.authToken,
-            "id": listId,
-            "name": this.state.listNameControl,
-            "backgroundNumber": bgId
-        })
-            .then((res) => {
-                const lists = {...this.state.lists};
-                const currentList = lists.items.find(item => item.id === listId);
-                currentList.name = res.data.name;
-                this.setState({
-                    lists,
-                    showNewListTitle: false
-                })
-            }, (res) => console.log('error', res))
+        if (this.state.showNewListTitle) {
+            axios.post('/api/list/update', {
+                "userId": this.state.userId,
+                "authToken": this.state.authToken,
+                "id": listId,
+                "name": this.state.listNameControl,
+                "backgroundNumber": bgId
+            })
+                .then((res) => {
+                    const lists = {...this.state.lists};
+                    const currentList = lists.items.find(item => item.id === listId);
+                    currentList.name = res.data.name;
+                    this.setState({
+                        lists,
+                        showNewListTitle: false
+                    })
+                }, (res) => console.log('error', res))
+        }
     };
 
     onChangeListTitleHandler = (event, listId) => {
