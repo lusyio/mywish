@@ -1951,7 +1951,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME {\n    max-width: 690px;\n    width: 100%;\n    padding: 10px;\n    background: darkred;\n    border-radius: 15px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME > .resources-js-components-Auth-ListCard-__ListCard-module___1N8mMA49NsMdLyLyZ3-MTN {\n    border-radius: 15px;\n    background: #FFFFFF;\n    padding: 64px 106px 58px 106px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME .resources-js-components-Auth-ListCard-__ListCard-module___2UEDZrcEy8tsnP_Ug3Q_5E{\n    font-weight: bold;\n    font-size: 36px;\n    line-height: 24px;\n    text-align: center;\n    color: #000000;\n    margin-bottom: 35px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME.resources-js-components-Auth-ListCard-__ListCard-module___rEw1U5JhC0rWymBwgVXLd {\n    text-align: center;\n    background: url('/images/bg3.jpg');\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME {\n    max-width: 690px;\n    width: 100%;\n    padding: 10px;\n    background: darkred;\n    border-radius: 15px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME > .resources-js-components-Auth-ListCard-__ListCard-module___1N8mMA49NsMdLyLyZ3-MTN {\n    border-radius: 15px;\n    background: #FFFFFF;\n    padding: 64px 106px 58px 106px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME .resources-js-components-Auth-ListCard-__ListCard-module___2UEDZrcEy8tsnP_Ug3Q_5E{\n    font-weight: bold;\n    font-size: 36px;\n    text-align: center;\n    color: #000000;\n    margin-bottom: 35px;\n    display: block;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME.resources-js-components-Auth-ListCard-__ListCard-module___rEw1U5JhC0rWymBwgVXLd {\n    text-align: center;\n    background: url('/images/bg3.jpg');\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -1975,7 +1975,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../node_mod
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq {\n    display: flex;\n    max-width: 480px;\n    padding: 20px 10px;\n    border-bottom: 1px solid #F0F0F0;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > div {\n    width: 100%;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > img {\n    padding: 5px;\n    margin-right: 20px;\n    width: 110px;\n    height: 110px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0 {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 21px;\n    color: #000000;\n    padding-top: 25px;\n    padding-right: 60px;\n    margin-bottom: 10px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #BABABA;\n    display: block;\n    margin-bottom: 25px;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq {\n    display: flex;\n    max-width: 480px;\n    padding: 20px 10px;\n    border-bottom: 1px solid #F0F0F0;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > div {\n    width: 100%;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > img {\n    padding: 5px;\n    margin-right: 20px;\n    width: 110px;\n    min-width: 110px;\n    height: 110px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0 {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 21px;\n    color: #000000;\n    padding-top: 25px;\n    padding-right: 60px;\n    margin-bottom: 10px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #BABABA;\n    display: block;\n    margin-bottom: 25px;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -2151,11 +2151,12 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J {\n    background: #ECECEC;\n    border-radius: 10px;\n    padding: 17px 23px;\n    margin-bottom: 10px;\n    display: block;\n    box-shadow: none;\n    width: 100%;\n    border: none;\n    box-sizing: border-box;\n    height: 50px;\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #8A8A8A;\n}\n\n.resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J:focus{\n    box-shadow: none;\n    outline: none;\n}\n\n.resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J[type='file'] {\n    width: 110px;\n    height: 110px;\n    padding: 5px;\n    margin-right: 20px;\n}\n\n.resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J[type='radio'] {\n    visibility: hidden;\n    width: 50px;\n    height: 50px;\n    margin: 0;\n    position: relative;\n    z-index: 5;\n}\n\n", ""]);
+exports.push([module.i, ".resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J {\n    background: #ECECEC;\n    border-radius: 10px;\n    padding: 17px 23px;\n    margin-bottom: 10px;\n    display: block;\n    box-shadow: none;\n    width: 100%;\n    border: none;\n    box-sizing: border-box;\n    height: 50px;\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #8A8A8A;\n}\n\n.resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J:focus {\n    box-shadow: none;\n    outline: none;\n}\n\n.resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J[type='file'] {\n    width: 110px;\n    height: 110px;\n    padding: 5px;\n    margin-right: 20px;\n}\n\n.resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J.resources-js-components-UI-Input-__Input-module___k6u9IdcVxGwczdg0tTWV5 {\n    background: transparent;\n    font-weight: bold;\n    font-size: 36px;\n    text-align: center;\n    color: #000000;\n    margin-bottom: 35px;\n    padding: 0;\n    height: unset;\n}\n\n.resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J[type='radio'] {\n    visibility: hidden;\n    width: 50px;\n    height: 50px;\n    margin: 0;\n    position: relative;\n    z-index: 5;\n}\n\n", ""]);
 
 // exports
 exports.locals = {
-	"Input": "resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J"
+	"Input": "resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J",
+	"inputHeader": "resources-js-components-UI-Input-__Input-module___k6u9IdcVxGwczdg0tTWV5"
 };
 
 /***/ }),
@@ -52124,11 +52125,12 @@ function (_Component) {
       wishNameControl: '',
       wishUrlControl: '',
       listNameControl: '',
-      newBackgroundNumber: 0,
+      newBackgroundNumber: null,
       background: ['/images/bg1.jpg', '/images/bg2.jpg', '/images/bg3.jpg', '/images/bg4.jpg', '/images/bg5.jpg'],
       newWishId: null,
       newListId: null,
       showNewWish: false,
+      showNewListTitle: false,
       lists: {
         defaultListId: 2,
         count: 2,
@@ -52385,20 +52387,6 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "addListHandler", function () {
-      // axios.post('/api/list/update', {
-      //     "userId": this.state.userId,
-      //     "authToken": this.state.authToken,
-      //     "id": this.state.newListId,
-      //     "name": this.state.listNameControl,
-      //     "backgroundNumber": this.state.newBackgroundNumber
-      // })
-      //     .then((res) => {
-      //         const lists = {...this.state.lists};
-      //         lists.items.push(res.data);
-      //         this.setState({
-      //             lists
-      //         })
-      //     })
       axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/list/add', {
         "userId": _this.state.userId,
         "authToken": _this.state.authToken
@@ -52450,6 +52438,45 @@ function (_Component) {
           return console.log('error', res);
         });
       }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "onBlurListTitleHandler", function (event, listId, name) {
+      if (name !== _this.state.listNameControl) {
+        console.log('changed');
+        axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/list/update', {
+          "userId": _this.state.userId,
+          "authToken": _this.state.authToken,
+          "id": listId,
+          "name": _this.state.listNameControl,
+          "backgroundNumber": _this.state.newBackgroundNumber
+        }).then(function (res) {
+          var lists = _objectSpread({}, _this.state.lists);
+
+          var currentList = lists.items.find(function (item) {
+            return item.id === listId;
+          });
+          currentList.name = res.data.name;
+
+          _this.setState({
+            lists: lists,
+            showNewListTitle: false
+          });
+        }, function (res) {
+          return console.log('error', res);
+        });
+      }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "onChangeListTitleHandler", function (event) {
+      _this.setState({
+        listNameControl: event.target.value
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "showNewListTitleToggleHandler", function () {
+      _this.setState({
+        showNewListTitle: !_this.state.showNewListTitle
+      });
     });
 
     return _this;
@@ -52519,6 +52546,10 @@ function (_Component) {
           onClick: this.selectListHandler,
           lists: this.state.lists
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListCard_ListCard__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          onBlurListTitle: this.onBlurListTitleHandler,
+          onChangeListTitle: this.onChangeListTitleHandler,
+          showNewListTitleToggle: this.showNewListTitleToggleHandler,
+          showNewListTitle: this.state.showNewListTitle,
           onPickColor: this.onPickColorHandler,
           background: this.state.background,
           uploadImg: this.uploadImgHandler,
@@ -52823,6 +52854,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _WishList_WishList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./WishList/WishList */ "./resources/js/components/Auth/ListCard/WishList/WishList.js");
 /* harmony import */ var _UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../UI/Button/Button */ "./resources/js/components/UI/Button/Button.js");
 /* harmony import */ var _ColorPicker_ColorPicker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ColorPicker/ColorPicker */ "./resources/js/components/Auth/ListCard/ColorPicker/ColorPicker.js");
+/* harmony import */ var _UI_Input_Input__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../UI/Input/Input */ "./resources/js/components/UI/Input/Input.js");
+
 
 
 
@@ -52835,37 +52868,57 @@ var ListCard = function ListCard(props) {
 
   if (props.lists.count !== 0) {
     renderList = props.lists.items.map(function (list) {
-      return list.id === props.lists.defaultListId ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        key: list.id,
-        className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListCard,
-        style: {
-          background: "url(".concat(props.background[list.backgroundNumber], ")")
+      if (list.id === props.lists.defaultListId) {
+        var header = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          onClick: function onClick(event) {
+            return props.showNewListTitleToggle(event);
+          },
+          className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.CardHeader
+        }, list.name);
+
+        if (props.showNewListTitle) {
+          header = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Input_Input__WEBPACK_IMPORTED_MODULE_5__["default"], {
+            onChange: function onChange(event) {
+              return props.onChangeListTitle(event);
+            },
+            onBlur: function onBlur(event) {
+              return props.onBlurListTitle(event, list.id, list.name);
+            },
+            value: list.name,
+            addClass: "inputHeader"
+          });
         }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListCardBody
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.CardHeader
-      }, list.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ColorPicker_ColorPicker__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        name: list.name,
-        listId: list.id,
-        onPickColor: props.onPickColor,
-        background: props.background
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishList_WishList__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        uploadImg: props.uploadImg,
-        deleteWish: props.deleteWish,
-        newWishId: props.newWishId,
-        addNewWish: props.addNewWish,
-        showNewWishToggle: props.showNewWishToggle,
-        onChangeWishUrl: props.onChangeWishUrl,
-        onChangeWishName: props.onChangeWishName,
-        listId: list.id,
-        showNewWish: props.showNewWish,
-        key: list.id,
-        wishItems: list.wishItems
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        type: "showNewWish",
-        onClick: props.showNewWishToggle
-      }, "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0435\u0449\u0435 \u0436\u0435\u043B\u0430\u043D\u0438\u0435"))) : null;
+
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          key: list.id,
+          className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListCard,
+          style: {
+            background: "url(".concat(props.background[list.backgroundNumber], ")")
+          }
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListCardBody
+        }, header, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ColorPicker_ColorPicker__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          name: list.name,
+          listId: list.id,
+          onPickColor: props.onPickColor,
+          background: props.background
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishList_WishList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          uploadImg: props.uploadImg,
+          deleteWish: props.deleteWish,
+          newWishId: props.newWishId,
+          addNewWish: props.addNewWish,
+          showNewWishToggle: props.showNewWishToggle,
+          onChangeWishUrl: props.onChangeWishUrl,
+          onChangeWishName: props.onChangeWishName,
+          listId: list.id,
+          showNewWish: props.showNewWish,
+          key: list.id,
+          wishItems: list.wishItems
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          type: "showNewWish",
+          onClick: props.showNewWishToggle
+        }, "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0435\u0449\u0435 \u0436\u0435\u043B\u0430\u043D\u0438\u0435")));
+      }
     });
   } else {
     renderList = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -53636,8 +53689,10 @@ __webpack_require__.r(__webpack_exports__);
 
 var Input = function Input(props) {
   var inputType = props.type || 'text';
-  var cls = [_Input_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Input];
+  var cls = [_Input_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Input, _Input_module_css__WEBPACK_IMPORTED_MODULE_1___default.a[props.addClass]];
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    onFocus: props.onFocus,
+    onBlur: props.onBlur,
     name: props.name,
     maxLength: props.maxLength,
     className: cls.join(' '),

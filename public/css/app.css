@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-p{
+p {
     margin-top: 0;
 }
 
@@ -22,7 +22,7 @@ p{
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-            flex-direction: column;
+    flex-direction: column;
 }
 
 .Layout main {
@@ -30,7 +30,7 @@ p{
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-            flex-direction: column;
+    flex-direction: column;
     -webkit-box-flex: 1;
-            flex-grow: 1;
+    flex-grow: 1;
 }
