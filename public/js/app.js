@@ -52359,7 +52359,8 @@ function (_Component) {
                 currentList.wishItems.push(res.data);
 
                 _this.setState({
-                  lists: lists
+                  lists: lists,
+                  showNewWish: false
                 });
               } else {
                 _this.setState({
@@ -53026,7 +53027,7 @@ var WishItem = function WishItem(props) {
     renderWishItem = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItem
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      src: props.picture,
+      src: 'mywish.su/' + props.picture,
       alt: props.title
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Title
