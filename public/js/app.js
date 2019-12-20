@@ -52421,7 +52421,7 @@ function (_Component) {
         "authToken": _this.state.authToken,
         "id": listId,
         "name": name,
-        "backgroundNumber": _this.state.newBackgroundNumber
+        "backgroundNumber": index
       }).then(function (res) {
         var lists = _objectSpread({}, _this.state.lists);
 

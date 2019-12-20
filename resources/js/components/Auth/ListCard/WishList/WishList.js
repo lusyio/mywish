@@ -3,8 +3,7 @@ import WishItem from "./WishItem/WishItem";
 
 const WishList = props => {
     let renderWishItems =
-        props.wishItems.map((wish, index) => {
-            return (
+        props.wishItems.map((wish) => (
                 <WishItem
                     deleteWish={props.deleteWish}
                     onChangeWishName={props.onChangeWishName}
@@ -17,13 +16,13 @@ const WishList = props => {
                     picture={wish.picture}
                 />
             )
-        })
-
+        );
     return (
         <React.Fragment>
             {renderWishItems}
             {props.showNewWish ?
                 <WishItem
+                    key='edit'
                     uploadImg={props.uploadImg}
                     id={props.newWishId}
                     showNewWishToggle={props.showNewWishToggle}
