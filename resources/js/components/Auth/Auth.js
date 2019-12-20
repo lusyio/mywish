@@ -109,9 +109,6 @@ export default class Auth extends Component {
             ]
         },
         file: null,
-        isLoggedIn: false,
-        userId: null,
-        authToken: '',
         name: '',
         email: '',
     };
@@ -128,36 +125,28 @@ export default class Auth extends Component {
             "socialUserId": response.userID,
         })
             .then(res => {
-                this.setState({
-                    userId: res.data.userId,
-                    authToken: res.data.authToken,
-                });
-                if (res.data.userId !== null && res.data.authToken !== '') {
-                    this.setState({
-                        isLoggedIn: true
-                    })
-                }
-                axios.post('/api/lists', {
-                    'userId': this.state.userId,
-                    'authToken': this.state.authToken
+                localStorage.setItem('userId', res.data.userId);
+                localStorage.setItem('authToken', res.data.authToken);
+                if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== '') {
+                    axios.post('/api/lists', {
+                        'userId': localStorage.getItem('userId'),
+                        'authToken': localStorage.getItem('authToken')
                 })
-                    .then(res => {
-                        if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
-                            const lists = {...this.state.lists};
-                            lists.items = res.data.items;
-                            lists.count = res.data.count;
-                            lists.defaultListId = res.data.defaultListId;
-                            this.setState({
-                                lists
-                            })
-                        } else {
-                            this.setState({
-                                authToken: '',
-                                userId: null,
-                                isLoggedIn: false
-                            })
-                        }
-                    }, res => console.log('error', res));
+                        .then(res => {
+                            if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
+                                const lists = {...this.state.lists};
+                                lists.items = res.data.items;
+                                lists.count = res.data.count;
+                                lists.defaultListId = res.data.defaultListId;
+                                this.setState({
+                                    lists
+                                })
+                            } else {
+                                localStorage.setItem('userId', null);
+                                localStorage.setItem('authToken', '');
+                            }
+                        }, res => console.log('error', res));
+                }
             }, res => console.log('error', res));
     };
 
@@ -177,7 +166,7 @@ export default class Auth extends Component {
 
     // Получаю начальные данные eventov. count и event записываю в соответствующие state
     componentDidMount() {
-        if (!this.state.isLoggedIn) {
+        if (localStorage.getItem('userId') === null && localStorage.getItem('authToken') === '') {
             axios.get('/api/events')
                 .then(res => {
                     this.setState({
@@ -211,8 +200,8 @@ export default class Auth extends Component {
 
     deleteWishHandler = (listId, id) => {
         axios.post('/api/item/delete', {
-            userId: this.state.userId,
-            authToken: this.state.authToken,
+            userId: localStorage.getItem('userId'),
+            authToken: localStorage.getItem('authToken'),
             id: id
         })
             .then(res => {
@@ -227,11 +216,8 @@ export default class Auth extends Component {
                         lists
                     })
                 } else {
-                    this.setState({
-                        authToken: '',
-                        userId: null,
-                        isLoggedIn: false
-                    })
+                    localStorage.setItem('userId', null);
+                    localStorage.setItem('authToken', '');
                 }
 
             })
@@ -240,8 +226,8 @@ export default class Auth extends Component {
     addNewWishHandler = (listId) => {
         if (this.state.wishNameControl !== '') {
             axios.post('/api/item/add', {
-                'userId': this.state.userId,
-                'authToken': this.state.authToken,
+                'userId': localStorage.getItem('userId'),
+                'authToken': localStorage.getItem('authToken'),
                 'listId': listId
             })
                 .then((res) => {
@@ -251,8 +237,8 @@ export default class Auth extends Component {
                             newWishId: res.data.id
                         });
                         const formData = new FormData();
-                        formData.append('userId', this.state.userId);
-                        formData.append('authToken', this.state.authToken);
+                        formData.append('userId', localStorage.getItem('userId'));
+                        formData.append('authToken', localStorage.getItem('authToken'));
                         formData.append('id', this.state.newWishId);
                         formData.append('name', this.state.wishNameControl);
                         formData.append('url', this.state.wishUrlControl);
@@ -269,24 +255,19 @@ export default class Auth extends Component {
                                 if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
                                     const lists = {...this.state.lists};
                                     const currentList = lists.items.find(item => item.id === listId);
-                                    currentList.wishItems.push(res);
+                                    currentList.wishItems.push(res.data);
                                     this.setState({
-                                        lists
+                                        lists,
+                                        showNewWish: false
                                     });
                                 } else {
-                                    this.setState({
-                                        authToken: '',
-                                        userId: null,
-                                        isLoggedIn: false
-                                    })
+                                    localStorage.setItem('userId', null);
+                                    localStorage.setItem('authToken', '');
                                 }
                             }, res => console.log('error', res))
                     } else {
-                        this.setState({
-                            authToken: '',
-                            userId: null,
-                            isLoggedIn: false
-                        })
+                        localStorage.setItem('userId', null);
+                        localStorage.setItem('authToken', '');
                     }
 
                 }, res => console.log('error', res));
@@ -297,8 +278,8 @@ export default class Auth extends Component {
 
     addListHandler = () => {
         axios.post('/api/list/add', {
-            "userId": this.state.userId,
-            "authToken": this.state.authToken
+            "userId": localStorage.getItem('userId'),
+            "authToken": localStorage.getItem('authToken')
         })
             .then((res) => {
                 if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
@@ -308,11 +289,8 @@ export default class Auth extends Component {
                         lists
                     })
                 } else {
-                    this.setState({
-                        authToken: '',
-                        userId: null,
-                        isLoggedIn: false
-                    })
+                    localStorage.setItem('userId', null);
+                    localStorage.setItem('authToken', '');
                 }
             }, (res) => console.log('error', res))
     };
@@ -322,43 +300,52 @@ export default class Auth extends Component {
             newBackgroundNumber: index
         });
         axios.post('/api/list/update', {
-            "userId": this.state.userId,
-            "authToken": this.state.authToken,
+            "userId": localStorage.getItem('userId'),
+            "authToken": localStorage.getItem('authToken'),
             "id": listId,
             "name": name,
-            "backgroundNumber": this.state.newBackgroundNumber
+            "backgroundNumber": index
         })
             .then((res) => {
-                const lists = {...this.state.lists};
-                const currentList = lists.items.find(item => item.id === listId);
-                currentList.backgroundNumber = res.data.backgroundNumber;
-                this.setState({
-                    lists
-                })
+                if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+                    const lists = {...this.state.lists};
+                    const currentList = lists.items.find(item => item.id === listId);
+                    currentList.backgroundNumber = res.data.backgroundNumber;
+                    this.setState({
+                        lists
+                    })
+                } else {
+                    localStorage.setItem('userId', null);
+                    localStorage.setItem('authToken', '');
+                }
             }, (res) => console.log('error', res))
 
     };
 
     onBlurListTitleHandler = (listId, name, bgId) => {
-        console.log(this.state.listNameControl)
-        console.log(name)
-        console.log(bgId)
-        axios.post('/api/list/update', {
-            "userId": this.state.userId,
-            "authToken": this.state.authToken,
-            "id": listId,
-            "name": this.state.listNameControl,
-            "backgroundNumber": bgId
-        })
-            .then((res) => {
-                const lists = {...this.state.lists};
-                const currentList = lists.items.find(item => item.id === listId);
-                currentList.name = res.data.name;
-                this.setState({
-                    lists,
-                    showNewListTitle: false
-                })
-            }, (res) => console.log('error', res))
+        if (this.state.showNewListTitle) {
+            axios.post('/api/list/update', {
+                "userId": localStorage.getItem('userId'),
+                "authToken": localStorage.getItem('authToken'),
+                "id": listId,
+                "name": this.state.listNameControl,
+                "backgroundNumber": bgId
+            })
+                .then((res) => {
+                    if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+                        const lists = {...this.state.lists};
+                        const currentList = lists.items.find(item => item.id === listId);
+                        currentList.name = res.data.name;
+                        this.setState({
+                            lists,
+                            showNewListTitle: false
+                        })
+                    } else {
+                        localStorage.setItem('userId', null);
+                        localStorage.setItem('authToken', '');
+                    }
+                }, (res) => console.log('error', res))
+        }
     };
 
     onChangeListTitleHandler = (event, listId) => {
@@ -382,7 +369,7 @@ export default class Auth extends Component {
             return eventsIds.length === resIds.length && eventsIds.every((v, i) => v === resIds[i])
         }
 
-        if (!this.state.isLoggedIn) {
+        if (localStorage.getItem('userId') === null && localStorage.getItem('authToken') === '') {
             setTimeout(() => axios.get('/api/events')
                 .then(res => {
                     let eventsId = [];
@@ -405,7 +392,7 @@ export default class Auth extends Component {
 
         let authContent;
 
-        if (this.state.isLoggedIn) {
+        if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== '') {
             authContent =
                 <div className={classes.Container}>
                     <div>
