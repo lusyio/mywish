@@ -22,7 +22,7 @@ class WishList extends Model
             'id' => $this->id,
             'name' => $this->name,
             'updatedAt' => strtotime($this->updated_at),
-            'background' => $this->background_id,
+            'backgroundNumber' => $this->background_id,
             'userId' => $this->user_id,
             'userName' => $this->user->value('name'),
             'createdAt' => strtotime($this->created_at),
