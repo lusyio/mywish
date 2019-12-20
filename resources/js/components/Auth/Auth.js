@@ -165,13 +165,13 @@ export default class Auth extends Component {
 
     // Получаю начальные данные eventov. count и event записываю в соответствующие state
     componentDidMount() {
-        // axios.get('/api/events')
-        //     .then(res => {
-        //         this.setState({
-        //             count: res.data.count,
-        //             events: res.data.events
-        //         })
-        //     }, res => console.log('error', res))
+        axios.get('/api/events')
+            .then(res => {
+                this.setState({
+                    count: res.data.count,
+                    events: res.data.events
+                })
+            }, res => console.log('error', res))
     }
 
     onChangeWishUrlHandler = event => {
@@ -237,14 +237,21 @@ export default class Auth extends Component {
                         this.setState({
                             newWishId: res.data.id
                         });
-                        axios.post('/api/item/update', {
-                            'userId': this.state.userId,
-                            'authToken': this.state.authToken,
-                            'id': this.state.newWishId,
-                            'name': this.state.wishNameControl,
-                            'url' : this.state.wishUrlControl,
-                            'picture' : this.state.file
-                        })
+                        const formData = new FormData();
+                        formData.append('userId', this.state.userId);
+                        formData.append('authToken', this.state.authToken);
+                        formData.append('id', this.state.newWishId);
+                        formData.append('name', this.state.wishNameControl);
+                        formData.append('url', this.state.wishUrlControl);
+                        formData.append('picture', this.state.file);
+
+                        axios({
+                                method: 'post',
+                                url: '/api/item/update',
+                                data: formData,
+                                headers: {'Content-Type': 'multipart/form-data'}
+                            },
+                        )
                             .then((res) => {
                                 if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
                                     const lists = {...this.state.lists};
@@ -280,24 +287,24 @@ export default class Auth extends Component {
             return eventsIds.length === resIds.length && eventsIds.every((v, i) => v === resIds[i])
         }
 
-        // setTimeout(() => axios.get('/api/events')
-        //     .then(res => {
-        //         let eventsId = [];
-        //         let resId = [];
-        //         this.state.events.map((events, index) => {
-        //             eventsId.push(events.id)
-        //         });
-        //         res.data.events.map((events) => {
-        //             resId.push(events.id)
-        //         });
-        //
-        //         if (compare(eventsId, resId)) {
-        //             this.setState({
-        //                 count: res.data.count,
-        //                 events: res.data.events
-        //             })
-        //         }
-        //     }, res => console.log('error', res)), 30000);
+        setTimeout(() => axios.get('/api/events')
+            .then(res => {
+                let eventsId = [];
+                let resId = [];
+                this.state.events.map((events, index) => {
+                    eventsId.push(events.id)
+                });
+                res.data.events.map((events) => {
+                    resId.push(events.id)
+                });
+
+                if (compare(eventsId, resId)) {
+                    this.setState({
+                        count: res.data.count,
+                        events: res.data.events
+                    })
+                }
+            }, res => console.log('error', res)), 30000);
 
         let authContent;
 
