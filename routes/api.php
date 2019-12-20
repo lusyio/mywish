@@ -79,7 +79,7 @@ Route::post('/list/update', function (Request $request) {
         $addEvent = false;
     }
     $list->name = $request->name;
-    $list->background = $request->backgroundNumber;
+    $list->background_id = $request->backgroundNumber;
     $list->save();
     if (($list->name != 'Новый список' || $list->name == 'Ваш первый список') && $addEvent) {
         $event = new \App\Event();
