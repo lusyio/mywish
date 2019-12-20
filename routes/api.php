@@ -24,6 +24,9 @@ Route::post('/auth', function (Request $request) {
                     $user = new \App\User();
                     $user->fb_id = $request->socialUserId;
                     $user->fb_token = $request->token;
+                    if(!$user->verifyFbToken()) {
+                        return json_encode(['error' => 'invalid token']);
+                    }
                     $user->name = $request->name;
                     $user->api_token = Str::random(60);
                     $user->save();
@@ -38,6 +41,9 @@ Route::post('/auth', function (Request $request) {
                     $event->user_id = $user->id;
                     $event->save();
                 } else {
+                    if(!$user->verifyFbToken()) {
+                        return json_encode(['error' => 'invalid token']);
+                    }
                     $user->fb_token = $request->token;
                     $user->api_token = Str::random(60);
                     $user->save();
@@ -79,7 +85,7 @@ Route::post('/list/update', function (Request $request) {
         $addEvent = false;
     }
     $list->name = $request->name;
-    $list->background = $request->backgroundNumber;
+    $list->background_id = $request->backgroundNumber;
     $list->save();
     if (($list->name != 'Новый список' || $list->name == 'Ваш первый список') && $addEvent) {
         $event = new \App\Event();
