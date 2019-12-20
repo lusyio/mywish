@@ -52356,7 +52356,7 @@ function (_Component) {
                 var currentList = lists.items.find(function (item) {
                   return item.id === listId;
                 });
-                currentList.wishItems.push(res);
+                currentList.wishItems.push(res.data);
 
                 _this.setState({
                   lists: lists

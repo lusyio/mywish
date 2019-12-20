@@ -271,7 +271,8 @@ export default class Auth extends Component {
                                     const currentList = lists.items.find(item => item.id === listId);
                                     currentList.wishItems.push(res.data);
                                     this.setState({
-                                        lists
+                                        lists,
+                                        showNewWish: false
                                     });
                                 } else {
                                     this.setState({
