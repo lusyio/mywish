@@ -108,7 +108,7 @@ export default class Auth extends Component {
             ]
         },
         file: null,
-        isLoggedIn: true,
+        isLoggedIn: false,
         userId: null,
         authToken: '',
         name: '',
