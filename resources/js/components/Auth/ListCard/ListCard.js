@@ -3,6 +3,7 @@ import classes from './ListCard.module.css'
 import WishList from "./WishList/WishList";
 import Button from "../../UI/Button/Button";
 import ColorPicker from "./ColorPicker/ColorPicker";
+import Input from "../../UI/Input/Input";
 
 const ListCard = props => {
     let cls = [
@@ -14,10 +15,19 @@ const ListCard = props => {
     if (props.lists.count !== 0) {
         renderList =
             props.lists.items.map((list) => {
-                return list.id === props.lists.defaultListId ? (
-                        <div key={list.id} className={classes.ListCard} style={{background: `url(${props.background[list.backgroundNumber]})`}}>
+                if (list.id === props.lists.defaultListId) {
+                    let header = <p onClick={event => props.showNewListTitleToggle(event)}
+                                    className={classes.CardHeader}>{list.name}</p>
+                    if (props.showNewListTitle) {
+                        header = <Input onChange={event => props.onChangeListTitle(event)}
+                                        onBlur={event => props.onBlurListTitle(event, list.id, list.name)}
+                                        value={list.name} addClass='inputHeader'/>
+                    }
+                    return (
+                        <div key={list.id} className={classes.ListCard}
+                             style={{background: `url(${props.background[list.backgroundNumber]})`}}>
                             <div className={classes.ListCardBody}>
-                                <p className={classes.CardHeader}>{list.name}</p>
+                                {header}
                                 <ColorPicker
                                     name={list.name}
                                     listId={list.id}
@@ -46,8 +56,7 @@ const ListCard = props => {
                             </div>
                         </div>
                     )
-                    :
-                    null
+                }
             })
     } else {
         renderList =

@@ -40,7 +40,7 @@ export default class Auth extends Component {
         wishNameControl: '',
         wishUrlControl: '',
         listNameControl: '',
-        newBackgroundNumber: 0,
+        newBackgroundNumber: null,
         background: [
             '/images/bg1.jpg',
             '/images/bg2.jpg',
@@ -51,6 +51,7 @@ export default class Auth extends Component {
         newWishId: null,
         newListId: null,
         showNewWish: false,
+        showNewListTitle: false,
 
         lists: {
             defaultListId: 2,
@@ -208,7 +209,6 @@ export default class Auth extends Component {
         )
     };
 
-
     deleteWishHandler = (listId, id) => {
         axios.post('/api/item/delete', {
             userId: this.state.userId,
@@ -296,20 +296,6 @@ export default class Auth extends Component {
     };
 
     addListHandler = () => {
-        // axios.post('/api/list/update', {
-        //     "userId": this.state.userId,
-        //     "authToken": this.state.authToken,
-        //     "id": this.state.newListId,
-        //     "name": this.state.listNameControl,
-        //     "backgroundNumber": this.state.newBackgroundNumber
-        // })
-        //     .then((res) => {
-        //         const lists = {...this.state.lists};
-        //         lists.items.push(res.data);
-        //         this.setState({
-        //             lists
-        //         })
-        //     })
         axios.post('/api/list/add', {
             "userId": this.state.userId,
             "authToken": this.state.authToken
@@ -355,6 +341,40 @@ export default class Auth extends Component {
         }
     };
 
+    onBlurListTitleHandler = (event, listId, name) => {
+        if (name !== this.state.listNameControl) {
+            console.log('changed')
+            axios.post('/api/list/update', {
+                "userId": this.state.userId,
+                "authToken": this.state.authToken,
+                "id": listId,
+                "name": this.state.listNameControl,
+                "backgroundNumber": this.state.newBackgroundNumber
+            })
+                .then((res) => {
+                    const lists = {...this.state.lists};
+                    const currentList = lists.items.find(item => item.id === listId);
+                    currentList.name = res.data.name;
+                    this.setState({
+                        lists,
+                        showNewListTitle: false
+                    })
+                }, (res) => console.log('error', res))
+        }
+    };
+
+    onChangeListTitleHandler = (event) => {
+        this.setState({
+            listNameControl: event.target.value
+        })
+    };
+
+    showNewListTitleToggleHandler = () => {
+        this.setState({
+            showNewListTitle: !this.state.showNewListTitle
+        })
+    };
+
     render() {
         function compare(eventsIds, resIds) {
             return eventsIds.length === resIds.length && eventsIds.every((v, i) => v === resIds[i])
@@ -393,6 +413,10 @@ export default class Auth extends Component {
                             lists={this.state.lists}
                         />
                         <ListCard
+                            onBlurListTitle={this.onBlurListTitleHandler}
+                            onChangeListTitle={this.onChangeListTitleHandler}
+                            showNewListTitleToggle={this.showNewListTitleToggleHandler}
+                            showNewListTitle={this.state.showNewListTitle}
                             onPickColor={this.onPickColorHandler}
                             background={this.state.background}
                             uploadImg={this.uploadImgHandler}

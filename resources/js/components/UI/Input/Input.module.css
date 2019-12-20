@@ -15,7 +15,7 @@
     color: #8A8A8A;
 }
 
-.Input:focus{
+.Input:focus {
     box-shadow: none;
     outline: none;
 }
@@ -25,6 +25,17 @@
     height: 110px;
     padding: 5px;
     margin-right: 20px;
+}
+
+.Input.inputHeader {
+    background: transparent;
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 35px;
+    padding: 0;
+    height: unset;
 }
 
 .Input[type='radio'] {
