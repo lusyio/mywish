@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './Sidebar.module.css'
+import Button from "../../UI/Button/Button";
 
 const Sidebar = props => {
     let renderList;
@@ -27,6 +28,9 @@ const Sidebar = props => {
             <p className={classes.SidebarHeader}>Мои списки желаний:</p>
             <ul>
                 {renderList}
+                <li>
+                    <Button onClick={props.addList} type='addListSidebar'>Добавить еще список</Button>
+                </li>
             </ul>
         </nav>
     )

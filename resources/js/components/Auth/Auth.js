@@ -39,7 +39,17 @@ export default class Auth extends Component {
 
         wishNameControl: '',
         wishUrlControl: '',
+        listNameControl: '',
+        newBackgroundNumber: null,
+        background: [
+            '/images/bg1.jpg',
+            '/images/bg2.jpg',
+            '/images/bg3.jpg',
+            '/images/bg4.jpg',
+            '/images/bg5.jpg',
+        ],
         newWishId: null,
+        newListId: null,
         showNewWish: false,
 
         lists: {
@@ -54,6 +64,7 @@ export default class Auth extends Component {
                     userId: 123,
                     userName: "Иван петров",
                     createdAt: 1200,
+                    backgroundNumber: 0,
                     wishItems: [
                         {
                             id: 1,
@@ -165,13 +176,15 @@ export default class Auth extends Component {
 
     // Получаю начальные данные eventov. count и event записываю в соответствующие state
     componentDidMount() {
-        axios.get('/api/events')
-            .then(res => {
-                this.setState({
-                    count: res.data.count,
-                    events: res.data.events
-                })
-            }, res => console.log('error', res))
+        if (!this.state.isLoggedIn) {
+            axios.get('/api/events')
+                .then(res => {
+                    this.setState({
+                        count: res.data.count,
+                        events: res.data.events
+                    })
+                }, res => console.log('error', res))
+        }
     }
 
     onChangeWishUrlHandler = event => {
@@ -282,29 +295,67 @@ export default class Auth extends Component {
         }
     };
 
+    addListHandler = () => {
+        axios.post('/api/list/add', {
+            "userId": this.state.userId,
+            "authToken": this.state.authToken
+        })
+            .then((res) => {
+                if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+                    this.setState({
+                        newListId: res.data.id
+                    });
+                    axios.post('/api/list/update', {
+                        "userId": this.state.userId,
+                        "authToken": this.state.authToken,
+                        "id": this.state.newListId,
+                        "name": this.state.listNameControl,
+                        "backgroundNumber": this.state.backgroundNumber
+                    })
+                        .then((res) => {
+                            const lists = {...this.state.lists};
+                            lists.items.push(res.data);
+                            this.setState({
+                                lists
+                            })
+                        })
+                } else {
+                    this.setState({
+                        authToken: '',
+                        userId: null,
+                        isLoggedIn: false
+                    })
+                }
+
+
+            }, (res) => console.log('error', res))
+    };
+
     render() {
         function compare(eventsIds, resIds) {
             return eventsIds.length === resIds.length && eventsIds.every((v, i) => v === resIds[i])
         }
 
-        setTimeout(() => axios.get('/api/events')
-            .then(res => {
-                let eventsId = [];
-                let resId = [];
-                this.state.events.map((events, index) => {
-                    eventsId.push(events.id)
-                });
-                res.data.events.map((events) => {
-                    resId.push(events.id)
-                });
+        if (!this.state.isLoggedIn) {
+            setTimeout(() => axios.get('/api/events')
+                .then(res => {
+                    let eventsId = [];
+                    let resId = [];
+                    this.state.events.map((events, index) => {
+                        eventsId.push(events.id)
+                    });
+                    res.data.events.map((events) => {
+                        resId.push(events.id)
+                    });
 
-                if (compare(eventsId, resId)) {
-                    this.setState({
-                        count: res.data.count,
-                        events: res.data.events
-                    })
-                }
-            }, res => console.log('error', res)), 30000);
+                    if (compare(eventsId, resId)) {
+                        this.setState({
+                            count: res.data.count,
+                            events: res.data.events
+                        })
+                    }
+                }, res => console.log('error', res)), 30000);
+        }
 
         let authContent;
 
@@ -313,10 +364,12 @@ export default class Auth extends Component {
                 <div className={classes.Container}>
                     <div>
                         <Sidebar
+                            addList={this.addListHandler}
                             onClick={this.selectListHandler}
                             lists={this.state.lists}
                         />
                         <ListCard
+                            background={this.state.background}
                             uploadImg={this.uploadImgHandler}
                             deleteWish={this.deleteWishHandler}
                             addNewWish={this.addNewWishHandler}

@@ -2,52 +2,64 @@ import React from 'react'
 import classes from './ListCard.module.css'
 import WishList from "./WishList/WishList";
 import Button from "../../UI/Button/Button";
+import ColorPicker from "./ColorPicker/ColorPicker";
 
 const ListCard = props => {
+    let cls = [
+        classes.ListCard,
+        classes.Empty
+    ];
     let renderList;
 
     if (props.lists.count !== 0) {
         renderList =
             props.lists.items.map((list) => {
                 return list.id === props.lists.defaultListId ? (
-                        <WishList
-                            uploadImg={props.uploadImg}
-                            deleteWish={props.deleteWish}
-                            newWishId={props.newWishId}
-                            addNewWish={props.addNewWish}
-                            showNewWishToggle={props.showNewWishToggle}
-                            onChangeWishUrl={props.onChangeWishUrl}
-                            onChangeWishName={props.onChangeWishName}
-                            listId={list.id}
-                            showNewWish={props.showNewWish}
-                            key={list.id}
-                            wishItems={list.wishItems}
-                        />
+                        <div className={classes.ListCard}>
+                            <div className={classes.ListCardBody} style={{background: list.backgroundNumber}}>
+                                <ColorPicker
+                                background={props.background}
+                                />
+                                <WishList
+                                    uploadImg={props.uploadImg}
+                                    deleteWish={props.deleteWish}
+                                    newWishId={props.newWishId}
+                                    addNewWish={props.addNewWish}
+                                    showNewWishToggle={props.showNewWishToggle}
+                                    onChangeWishUrl={props.onChangeWishUrl}
+                                    onChangeWishName={props.onChangeWishName}
+                                    listId={list.id}
+                                    showNewWish={props.showNewWish}
+                                    key={list.id}
+                                    wishItems={list.wishItems}
+                                />
+                                <Button
+                                    type='showNewWish'
+                                    onClick={props.showNewWishToggle}
+                                >
+                                    Добавить еще желание
+                                </Button>
+                            </div>
+                        </div>
                     )
                     :
                     null
             })
     } else {
         renderList =
-            <div className={classes.Empty}>
-                <p>У вас еще нет не одного списка</p>
-                <Button>Создать список</Button>
+            <div className={cls.join(' ')}>
+                <div className={classes.ListCardBody}>
+                    <p>У вас еще нет не одного списка</p>
+                    <Button>Создать список</Button>
+                </div>
             </div>
 
     }
 
     return (
-        <div className={classes.ListCard}>
-            <div className={classes.ListCardBody}>
-                {renderList}
-                <Button
-                    type='showNewWish'
-                    onClick={props.showNewWishToggle}
-                >
-                    Добавить еще желание
-                </Button>
-            </div>
-        </div>
+        <React.Fragment>
+            {renderList}
+        </React.Fragment>
     )
 };
 

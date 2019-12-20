@@ -1851,6 +1851,203 @@ module.exports = function isBuffer (obj) {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Auth/Auth.module.css":
+/*!**************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./resources/js/components/Auth/Auth.module.css ***!
+  \**************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".resources-js-components-Auth-__Auth-module___3ud3tbslKUlOXMt9xV5I55 {\n    display: flex;\n    justify-content: center;\n    flex-grow: 1;\n    width: 100%;\n}\n\n.resources-js-components-Auth-__Auth-module___3ud3tbslKUlOXMt9xV5I55 > div {\n    width: 100%;\n    max-width: 720px;\n}\n\n.resources-js-components-Auth-__Auth-module___3ud3tbslKUlOXMt9xV5I55 > div > h1 {\n    text-align: center;\n}\n\n.resources-js-components-Auth-__Auth-module___3ud3tbslKUlOXMt9xV5I55 .resources-js-components-Auth-__Auth-module___3bDZKK7CfZro0VNjjoPYf9 {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 24px;\n    text-align: center;\n    color: #FFFFFF;\n}\n\n.resources-js-components-Auth-__Auth-module___3ud3tbslKUlOXMt9xV5I55 .resources-js-components-Auth-__Auth-module___3bDZKK7CfZro0VNjjoPYf9:last-of-type {\n    margin-bottom: 70px;\n}\n\n.resources-js-components-Auth-__Auth-module___3ud3tbslKUlOXMt9xV5I55 .resources-js-components-Auth-__Auth-module___2MqHrwEZ4oGNzx8j_1DMGa {\n    border: 0;\n    background: #2A61A1;\n    border-radius: 5px;\n    width: 40px;\n    height: 40px;\n    cursor: pointer;\n    color: #fff;\n}\n\n.resources-js-components-Auth-__Auth-module___3n45OSesFivXl76GgpLlJN {\n    display: flex;\n    justify-content: center;\n    flex-grow: 1;\n    width: 100%;\n}\n\n.resources-js-components-Auth-__Auth-module___3n45OSesFivXl76GgpLlJN > div {\n    width: 100%;\n    max-width: 1015px;\n    display: flex;\n}\n", ""]);
+
+// exports
+exports.locals = {
+	"Auth": "resources-js-components-Auth-__Auth-module___3ud3tbslKUlOXMt9xV5I55",
+	"AuthHeader": "resources-js-components-Auth-__Auth-module___3bDZKK7CfZro0VNjjoPYf9",
+	"fbLogin": "resources-js-components-Auth-__Auth-module___2MqHrwEZ4oGNzx8j_1DMGa",
+	"Container": "resources-js-components-Auth-__Auth-module___3n45OSesFivXl76GgpLlJN"
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Auth/EventCounter/EventCounter.module.css":
+/*!***********************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./resources/js/components/Auth/EventCounter/EventCounter.module.css ***!
+  \***********************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".resources-js-components-Auth-EventCounter-__EventCounter-module___2-s_zJpolB0uCDMMy1xhUD {\n    font-weight: bold;\n    font-size: 20px;\n    line-height: 24px;\n    text-align: center;\n    color: #CC9969;\n    margin-bottom: 60px;\n}\n", ""]);
+
+// exports
+exports.locals = {
+	"EventCounter": "resources-js-components-Auth-EventCounter-__EventCounter-module___2-s_zJpolB0uCDMMy1xhUD"
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Auth/EventList/EventList.module.css":
+/*!*****************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./resources/js/components/Auth/EventList/EventList.module.css ***!
+  \*****************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A {\n    padding-bottom: 10px;\n    padding-top: 30px;\n    border-bottom: 1px solid #393939;\n    display: flex;\n    max-width: 612px;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A img{\n    margin-right: 38px;\n}\n\n.resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A > p {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 24px;\n    color: #FFFFFF;\n    margin-bottom: 5px;\n}\n\n.resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A > p > strong {\n    font-weight: bold;\n}\n\n.resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A > p > span {\n    font-weight: 300;\n    font-size: 12px;\n    line-height: 24px;\n    color: #B9B5B4;\n    display: block;\n}\n", ""]);
+
+// exports
+exports.locals = {
+	"EventList": "resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A"
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Auth/ListCard/ColorPicker/ColorPicker.module.css":
+/*!******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./resources/js/components/Auth/ListCard/ColorPicker/ColorPicker.module.css ***!
+  \******************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H {\n    display: flex;\n    flex-wrap: wrap;\n    max-width: 320px;\n    margin: 0 auto 60px auto;\n    justify-content: center;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H > div {\n    margin-left: 15px;\n    margin-bottom: 15px;\n    border-radius: 10px;\n    width: 50px;\n    height: 50px;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H > p {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #000000;\n    margin-bottom: 30px;\n    text-align: center;\n}\n", ""]);
+
+// exports
+exports.locals = {
+	"ColorPicker": "resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H"
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Auth/ListCard/ListCard.module.css":
+/*!***************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./resources/js/components/Auth/ListCard/ListCard.module.css ***!
+  \***************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME {\n    max-width: 690px;\n    width: 100%;\n    padding: 10px;\n    background: darkred;\n    border-radius: 15px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME > .resources-js-components-Auth-ListCard-__ListCard-module___1N8mMA49NsMdLyLyZ3-MTN {\n    border-radius: 15px;\n    background: #FFFFFF;\n    padding: 64px 106px 58px 106px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME.resources-js-components-Auth-ListCard-__ListCard-module___rEw1U5JhC0rWymBwgVXLd {\n    text-align: center;\n    background: url('/images/bg3.jpg');\n}\n", ""]);
+
+// exports
+exports.locals = {
+	"ListCard": "resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME",
+	"ListCardBody": "resources-js-components-Auth-ListCard-__ListCard-module___1N8mMA49NsMdLyLyZ3-MTN",
+	"Empty": "resources-js-components-Auth-ListCard-__ListCard-module___rEw1U5JhC0rWymBwgVXLd"
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Auth/ListCard/WishList/WishItem/WishItem.module.css":
+/*!*********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./resources/js/components/Auth/ListCard/WishList/WishItem/WishItem.module.css ***!
+  \*********************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq {\n    display: flex;\n    max-width: 480px;\n    padding: 20px 10px;\n    border-bottom: 1px solid #F0F0F0;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > div {\n    width: 100%;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > img {\n    padding: 5px;\n    margin-right: 20px;\n    width: 110px;\n    height: 110px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0 {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 21px;\n    color: #000000;\n    padding-top: 25px;\n    padding-right: 60px;\n    margin-bottom: 10px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #BABABA;\n    display: block;\n    margin-bottom: 25px;\n}\n", ""]);
+
+// exports
+exports.locals = {
+	"WishItem": "resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq",
+	"Title": "resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0"
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Auth/ListCard/WishList/WishItem/WishWidget/WishWidget.Module.css":
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./resources/js/components/Auth/ListCard/WishList/WishItem/WishWidget/WishWidget.Module.css ***!
+  \**********************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".resources-js-components-Auth-ListCard-WishList-WishItem-WishWidget-__WishWidget-Module___39C7Cofu3fj7geZMgFYL3t {\n    background: #F5F5F5;\n    border-radius: 5px;\n    padding: 15px 5px;\n    width: 35px !important;\n    position: absolute;\n    right: -55px;\n    top: 0;\n}\n", ""]);
+
+// exports
+exports.locals = {
+	"WishWidget": "resources-js-components-Auth-ListCard-WishList-WishItem-WishWidget-__WishWidget-Module___39C7Cofu3fj7geZMgFYL3t"
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Auth/Sidebar/Sidebar.module.css":
+/*!*************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./resources/js/components/Auth/Sidebar/Sidebar.module.css ***!
+  \*************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c {\n    max-width: 270px;\n    width: 100%;\n    margin-right: 50px;\n    padding-top: 50px;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___1ORKKbI7U6o6o2c4pA8fzC {\n    font-size: 20px;\n    line-height: 24px;\n    color: #CC9969;\n    margin-bottom: 35px;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c > ul {\n    list-style: none;\n    padding: 0;\n    margin: 0;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c > ul > li {\n    border-bottom: 1px solid #393939;\n    padding-bottom: 20px;\n    margin-bottom: 30px;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c .resources-js-components-Auth-Sidebar-__Sidebar-module___2Ma-rtndPRxup_rW3JWOZ {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 21px;\n    color: #FFFFFF;\n    margin-bottom: 0;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c > ul > li > a {\n    font-weight: bold;\n    font-size: 24px;\n    line-height: 24px;\n    color: #FFFFFF;\n    margin-bottom: 8px;\n    display: block;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c > ul > li > span {\n    display: block;\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 24px;\n    color: #B9B5B4;\n}\n", ""]);
+
+// exports
+exports.locals = {
+	"Sidebar": "resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c",
+	"SidebarHeader": "resources-js-components-Auth-Sidebar-__Sidebar-module___1ORKKbI7U6o6o2c4pA8fzC",
+	"Empty": "resources-js-components-Auth-Sidebar-__Sidebar-module___2Ma-rtndPRxup_rW3JWOZ"
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Card/Card.module.css":
+/*!**************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./resources/js/components/Card/Card.module.css ***!
+  \**************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".resources-js-components-Card-__Card-module___2VHT8TCozCqf-tIZD7cyVF {\n    background: #c4c4c4;\n    border-radius: 15px;\n    padding: 10px;\n    margin-bottom: 80px;\n}\n\n.resources-js-components-Card-__Card-module___2VHT8TCozCqf-tIZD7cyVF > div {\n    background: #FFFFFF;\n    padding: 35px 100px;\n    text-align: center;\n    border-radius: 15px;\n}\n\n.resources-js-components-Card-__Card-module___2VHT8TCozCqf-tIZD7cyVF > div > p {\n    font-weight: bold;\n    font-size: 20px;\n    line-height: 24px;\n    text-align: center;\n    color: #000000;\n    margin-bottom: 30px;\n}\n", ""]);
+
+// exports
+exports.locals = {
+	"Card": "resources-js-components-Card-__Card-module___2VHT8TCozCqf-tIZD7cyVF"
+};
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Layout.module.css":
 /*!***********************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./resources/js/components/Layout.module.css ***!
@@ -1910,6 +2107,52 @@ exports.push([module.i, ".resources-js-components-Navigation-Header-__Header-mod
 // exports
 exports.locals = {
 	"Header": "resources-js-components-Navigation-Header-__Header-module___1pjCNrEZ0XOp4TvVDaheN"
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/UI/Button/Button.module.css":
+/*!*********************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./resources/js/components/UI/Button/Button.module.css ***!
+  \*********************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1 {\n    font-weight: normal;\n    font-size: 14px;\n    line-height: 16px;\n    color: #FFFFFF;\n    background: #F2523A;\n    border-radius: 10px;\n    padding: 17px 32px;\n    min-width: 168px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1:hover {\n    cursor: pointer;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1:focus {\n    outline: none;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___3HSjOBpwWqEfyCyrwJ0e46 {\n    display: block;\n    margin: 30px auto 0;\n    background: transparent;\n    font-weight: 300;\n    font-size: 16px;\n    line-height: 16px;\n    color: #000000;\n    padding: 0;\n    border: 0;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5 {\n    display: block;\n    background: transparent;\n    padding: 0;\n    border: 0;\n    font-weight: 300;\n    font-size: 16px;\n    line-height: 16px;\n    color: #B9B5B4;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5:hover {\n    color: #FFFFFF;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt {\n    color: #8A8A8A;\n    padding: 0;\n    border: none;\n    display: block;\n    background: transparent;\n    width: 35px;\n    min-width: unset;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___25ICslRRtRBzhINllQO7p- {\n    background: #B9B5B4;\n    border-radius: 10px;\n}\n", ""]);
+
+// exports
+exports.locals = {
+	"Button": "resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1",
+	"showNewWish": "resources-js-components-UI-Button-__Button-module___3HSjOBpwWqEfyCyrwJ0e46",
+	"addListSidebar": "resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5",
+	"widget": "resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt",
+	"secondary": "resources-js-components-UI-Button-__Button-module___25ICslRRtRBzhINllQO7p-"
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/UI/Input/Input.module.css":
+/*!*******************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./resources/js/components/UI/Input/Input.module.css ***!
+  \*******************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J {\n    background: #ECECEC;\n    border-radius: 10px;\n    padding: 17px 23px;\n    margin-bottom: 10px;\n    display: block;\n    box-shadow: none;\n    width: 100%;\n    border: none;\n    box-sizing: border-box;\n    height: 50px;\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #8A8A8A;\n}\n\n.resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J:focus{\n    box-shadow: none;\n    outline: none;\n}\n\n.resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J[type='file'] {\n    width: 110px;\n    height: 110px;\n    padding: 5px;\n    margin-right: 20px;\n}\n", ""]);
+
+// exports
+exports.locals = {
+	"Input": "resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J"
 };
 
 /***/ }),
@@ -47404,6 +47647,17 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/react-facebook-login/dist/facebook-login-with-button.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/react-facebook-login/dist/facebook-login-with-button.js ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,t){ true?module.exports=t(__webpack_require__(/*! react */ "./node_modules/react/index.js")):undefined}(this,function(e){return function(e){function t(n){if(o[n])return o[n].exports;var r=o[n]={exports:{},id:n,loaded:!1};return e[n].call(r.exports,r,r.exports,t),r.loaded=!0,r.exports}var o={};return t.m=e,t.c=o,t.p="",t(0)}([function(e,t,o){e.exports=o(8)},function(e,t,o){e.exports=o(6)()},function(t,o){t.exports=e},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t["default"]=function(e,t){return decodeURIComponent(e.replace(new RegExp("^(?:.*[&\\?]"+encodeURIComponent(t).replace(/[\.\+\*]/g,"\\$&")+"(?:\\=([^&]*))?)?.*$","i"),"$1"))}},function(e,t,o){"use strict";function n(e){return e&&e.__esModule?e:{"default":e}}function r(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function i(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function a(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}Object.defineProperty(t,"__esModule",{value:!0});var s=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var o=arguments[t];for(var n in o)Object.prototype.hasOwnProperty.call(o,n)&&(e[n]=o[n])}return e},c=function(){function e(e,t){for(var o=0;o<t.length;o++){var n=t[o];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,o,n){return o&&e(t.prototype,o),n&&e(t,n),t}}(),u=o(2),l=n(u),f=o(1),p=n(f),d=o(5),b=n(d),y=o(3),h=n(y),g=function(){var e=!1;try{e=!!(window.navigator&&window.navigator.standalone||navigator.userAgent.match("CriOS")||navigator.userAgent.match(/mobile/i))}catch(t){}return e},m=function(e){function t(){var e,o,n,a;r(this,t);for(var c=arguments.length,u=Array(c),l=0;l<c;l++)u[l]=arguments[l];return o=n=i(this,(e=t.__proto__||Object.getPrototypeOf(t)).call.apply(e,[this].concat(u))),n.state={isSdkLoaded:!1,isProcessing:!1},n.responseApi=function(e){window.FB.api("/me",{locale:n.props.language,fields:n.props.fields},function(t){s(t,e),n.props.callback(t)})},n.checkLoginState=function(e){n.setStateIfMounted({isProcessing:!1}),e.authResponse?n.responseApi(e.authResponse):n.props.onFailure?n.props.onFailure({status:e.status}):n.props.callback({status:e.status})},n.checkLoginAfterRefresh=function(e){"connected"===e.status?n.checkLoginState(e):window.FB.login(function(e){return n.checkLoginState(e)},!0)},n.click=function(e){if(n.state.isSdkLoaded&&!n.state.isProcessing&&!n.props.isDisabled){n.setState({isProcessing:!0});var t=n.props,o=t.scope,r=t.appId,i=t.onClick,a=t.returnScopes,s=t.responseType,c=t.redirectUri,u=t.disableMobileRedirect,l=t.authType,f=t.state;if("function"!=typeof i||(i(e),!e.defaultPrevented)){var p={client_id:r,redirect_uri:c,state:f,return_scopes:a,scope:o,response_type:s,auth_type:l};if(n.props.isMobile&&!u)window.location.href="https://www.facebook.com/dialog/oauth"+(0,b["default"])(p);else{if(!window.FB)return void(n.props.onFailure&&n.props.onFailure({status:"facebookNotLoaded"}));window.FB.login(n.checkLoginState,{scope:o,return_scopes:a,auth_type:p.auth_type})}}}},a=o,i(n,a)}return a(t,e),c(t,[{key:"componentDidMount",value:function(){if(this._isMounted=!0,document.getElementById("facebook-jssdk"))return void this.sdkLoaded();this.setFbAsyncInit(),this.loadSdkAsynchronously();var e=document.getElementById("fb-root");e||(e=document.createElement("div"),e.id="fb-root",document.body.appendChild(e))}},{key:"componentWillReceiveProps",value:function(e){this.state.isSdkLoaded&&e.autoLoad&&!this.props.autoLoad&&window.FB.getLoginStatus(this.checkLoginAfterRefresh)}},{key:"componentWillUnmount",value:function(){this._isMounted=!1}},{key:"setStateIfMounted",value:function(e){this._isMounted&&this.setState(e)}},{key:"setFbAsyncInit",value:function(){var e=this,t=this.props,o=t.appId,n=t.xfbml,r=t.cookie,i=t.version,a=t.autoLoad;window.fbAsyncInit=function(){window.FB.init({version:"v"+i,appId:o,xfbml:n,cookie:r}),e.setStateIfMounted({isSdkLoaded:!0}),(a||e.isRedirectedFromFb())&&window.FB.getLoginStatus(e.checkLoginAfterRefresh)}}},{key:"isRedirectedFromFb",value:function(){var e=window.location.search;return(0,h["default"])(e,"code")||(0,h["default"])(e,"granted_scopes")}},{key:"sdkLoaded",value:function(){this.setState({isSdkLoaded:!0})}},{key:"loadSdkAsynchronously",value:function(){var e=this.props.language;!function(t,o,n){var r=t.getElementsByTagName(o)[0],i=r,a=r;t.getElementById(n)||(a=t.createElement(o),a.id=n,a.src="https://connect.facebook.net/"+e+"/sdk.js",i.parentNode.insertBefore(a,i))}(document,"script","facebook-jssdk")}},{key:"render",value:function o(){var o=this.props.render;if(!o)throw new Error("ReactFacebookLogin requires a render prop to render");var e={onClick:this.click,isDisabled:!!this.props.isDisabled,isProcessing:this.state.isProcessing,isSdkLoaded:this.state.isSdkLoaded};return this.props.render(e)}}]),t}(l["default"].Component);m.propTypes={isDisabled:p["default"].bool,callback:p["default"].func.isRequired,appId:p["default"].string.isRequired,xfbml:p["default"].bool,cookie:p["default"].bool,authType:p["default"].string,scope:p["default"].string,state:p["default"].string,responseType:p["default"].string,returnScopes:p["default"].bool,redirectUri:p["default"].string,autoLoad:p["default"].bool,disableMobileRedirect:p["default"].bool,isMobile:p["default"].bool,fields:p["default"].string,version:p["default"].string,language:p["default"].string,onClick:p["default"].func,onFailure:p["default"].func,render:p["default"].func.isRequired},m.defaultProps={redirectUri:"undefined"!=typeof window?window.location.href:"/",scope:"public_profile,email",returnScopes:!1,xfbml:!1,cookie:!1,authType:"",fields:"name",version:"2.3",language:"en_US",disableMobileRedirect:!1,isMobile:g(),onFailure:null,state:"facebookdirect",responseType:"code"},t["default"]=m},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t["default"]=function(e){return"?"+Object.keys(e).map(function(t){return t+"="+encodeURIComponent(e[t])}).join("&")}},function(e,t,o){"use strict";function n(){}var r=o(7);e.exports=function(){function e(e,t,o,n,i,a){if(a!==r){var s=new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");throw s.name="Invariant Violation",s}}function t(){return e}e.isRequired=e;var o={array:e,bool:e,func:e,number:e,object:e,string:e,symbol:e,any:e,arrayOf:t,element:e,instanceOf:t,node:e,objectOf:t,oneOf:t,oneOfType:t,shape:t,exact:t};return o.checkPropTypes=n,o.PropTypes=o,o}},function(e,t){"use strict";var o="SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";e.exports=o},function(e,t,o){"use strict";function n(e){return e&&e.__esModule?e:{"default":e}}function r(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function i(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function a(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}Object.defineProperty(t,"__esModule",{value:!0});var s=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var o=arguments[t];for(var n in o)Object.prototype.hasOwnProperty.call(o,n)&&(e[n]=o[n])}return e},c=function(){function e(e,t){for(var o=0;o<t.length;o++){var n=t[o];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,o,n){return o&&e(t.prototype,o),n&&e(t,n),t}}(),u=o(2),l=n(u),f=o(1),p=n(f),d=o(9),b=n(d),y=o(4),h=n(y),g=function(e){return["button","input","select","textarea","optgroup","option","fieldset"].indexOf((e+"").toLowerCase())>=0},m=function(e){function t(){return r(this,t),i(this,(t.__proto__||Object.getPrototypeOf(t)).apply(this,arguments))}return a(t,e),c(t,[{key:"style",value:function(){var e=this.constructor.defaultProps.cssClass;return this.props.cssClass===e&&l["default"].createElement("style",{dangerouslySetInnerHTML:{__html:b["default"]}})}},{key:"containerStyle",value:function(e){var t=e.isProcessing,o=e.isSdkLoaded,n=e.isDisabled,r={transition:"opacity 0.5s"};return(t||!o||n)&&(r.opacity=.6),s(r,this.props.containerStyle)}},{key:"renderOwnButton",value:function(e){var t=this.props,o=t.cssClass,n=t.size,r=t.icon,i=t.textButton,a=t.typeButton,c=t.buttonStyle,u=e.onClick,f=e.isDisabled,p="string"==typeof r,d={};return f&&g(this.props.tag)&&(d.disabled=!0),l["default"].createElement("span",{style:this.containerStyle(e)},p&&l["default"].createElement("link",{rel:"stylesheet",href:"https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"}),l["default"].createElement(this.props.tag,s({type:a,className:o+" "+n,style:c,onClick:u},d),r&&p&&l["default"].createElement("i",{className:"fa "+r}),r&&!p&&r,i),this.style())}},{key:"render",value:function(){var e=this;return l["default"].createElement(h["default"],s({},this.props,{render:function(t){return e.renderOwnButton(t)}}))}}]),t}(l["default"].Component);m.propTypes={textButton:p["default"].string,typeButton:p["default"].string,size:p["default"].string,cssClass:p["default"].string,icon:p["default"].any,containerStyle:p["default"].object,buttonStyle:p["default"].object,tag:p["default"].oneOfType([p["default"].node,p["default"].func])},m.defaultProps={textButton:"Login with Facebook",typeButton:"button",size:"metro",fields:"name",cssClass:"kep-login-facebook",tag:"button"},t["default"]=m},function(e,t,o){t=e.exports=o(10)(),t.push([e.id,".kep-login-facebook{font-family:Helvetica,sans-serif;font-weight:700;-webkit-font-smoothing:antialiased;color:#fff;cursor:pointer;display:inline-block;font-size:calc(.27548vw + 12.71074px);text-decoration:none;text-transform:uppercase;transition:background-color .3s,border-color .3s;background-color:#4c69ba;border:calc(.06887vw + .67769px) solid #4c69ba;padding:calc(.34435vw + 13.38843px) calc(.34435vw + 18.38843px)}.kep-login-facebook.small{padding:calc(.34435vw + 3.38843px) calc(.34435vw + 8.38843px)}.kep-login-facebook.medium{padding:calc(.34435vw + 8.38843px) calc(.34435vw + 13.38843px)}.kep-login-facebook.metro{border-radius:0}.kep-login-facebook .fa{margin-right:calc(.34435vw + 3.38843px)}",""]),t.locals={"kep-login-facebook":"kep-login-facebook",small:"small",medium:"medium",metro:"metro",fa:"fa"}},function(e,t){e.exports=function(){var e=[];return e.toString=function(){for(var e=[],t=0;t<this.length;t++){var o=this[t];o[2]?e.push("@media "+o[2]+"{"+o[1]+"}"):e.push(o[1])}return e.join("")},e.i=function(t,o){"string"==typeof t&&(t=[[null,t,""]]);for(var n={},r=0;r<this.length;r++){var i=this[r][0];"number"==typeof i&&(n[i]=!0)}for(r=0;r<t.length;r++){var a=t[r];"number"==typeof a[0]&&n[a[0]]||(o&&!a[2]?a[2]=o:o&&(a[2]="("+a[2]+") and ("+o+")"),e.push(a))}},e}}])});
+
+/***/ }),
+
 /***/ "./node_modules/react/cjs/react.development.js":
 /*!*****************************************************!*\
   !*** ./node_modules/react/cjs/react.development.js ***!
@@ -51771,9 +52025,1186 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
   !*** ./resources/js/components/Auth/Auth.js ***!
   \**********************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/user/Desktop/mywish/resources/js/components/Auth/Auth.js: Unexpected token, expected \";\" (240:45)\n\n\u001b[0m \u001b[90m 238 | \u001b[39m                            newWishId\u001b[33m:\u001b[39m res\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mid\u001b[0m\n\u001b[0m \u001b[90m 239 | \u001b[39m                        })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 240 | \u001b[39m                        \u001b[36mconst\u001b[39m formData \u001b[33m=\u001b[39m \u001b[33mNew\u001b[39m \u001b[33mF\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     | \u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 241 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 242 | \u001b[39m                        axios\u001b[33m.\u001b[39mpost(\u001b[32m'/api/item/update'\u001b[39m\u001b[33m,\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 243 | \u001b[39m                            \u001b[90m// 'userId': this.state.userId,\u001b[39m\u001b[0m\n    at Object.raise (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:6983:17)\n    at Object.unexpected (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:8376:16)\n    at Object.semicolon (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:8358:40)\n    at Object.parseVarStatement (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:11137:10)\n    at Object.parseStatementContent (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:10733:21)\n    at Object.parseStatement (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:10666:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:11242:25)\n    at Object.parseBlockBody (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:11229:10)\n    at Object.parseBlock (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:11213:10)\n    at Object.parseStatementContent (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:10742:21)\n    at Object.parseStatement (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:10666:17)\n    at Object.parseIfStatement (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:11020:28)\n    at Object.parseStatementContent (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:10711:21)\n    at Object.parseStatement (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:10666:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:11242:25)\n    at Object.parseBlockBody (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:11229:10)\n    at Object.parseBlock (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:11213:10)\n    at Object.parseFunctionBody (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:10232:24)\n    at Object.parseArrowExpression (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:10173:10)\n    at Object.parseParenAndDistinguishExpression (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:9799:12)\n    at Object.parseExprAtom (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:9558:21)\n    at Object.parseExprAtom (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:4097:20)\n    at Object.parseExprSubscripts (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:9213:23)\n    at Object.parseMaybeUnary (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:9193:21)\n    at Object.parseExprOps (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:9059:23)\n    at Object.parseMaybeConditional (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:9032:23)\n    at Object.parseMaybeAssign (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:8978:21)\n    at Object.parseExprListItem (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:10307:18)\n    at Object.parseCallExpressionArguments (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:9410:22)\n    at Object.parseSubscript (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:9318:29)\n    at Object.parseSubscripts (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:9234:19)\n    at Object.parseExprSubscripts (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:9223:17)\n    at Object.parseMaybeUnary (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:9193:21)\n    at Object.parseExprOps (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:9059:23)\n    at Object.parseMaybeConditional (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:9032:23)\n    at Object.parseMaybeAssign (/Users/user/Desktop/mywish/node_modules/@babel/parser/lib/index.js:8978:21)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Auth; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Auth_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Auth.module.css */ "./resources/js/components/Auth/Auth.module.css");
+/* harmony import */ var _Auth_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Auth_module_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _UI_Button_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../UI/Button/Button */ "./resources/js/components/UI/Button/Button.js");
+/* harmony import */ var react_facebook_login__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-facebook-login */ "./node_modules/react-facebook-login/dist/facebook-login-with-button.js");
+/* harmony import */ var react_facebook_login__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_facebook_login__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Card_Card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Card/Card */ "./resources/js/components/Card/Card.js");
+/* harmony import */ var _EventList_EventList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./EventList/EventList */ "./resources/js/components/Auth/EventList/EventList.js");
+/* harmony import */ var _EventCounter_EventCounter__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./EventCounter/EventCounter */ "./resources/js/components/Auth/EventCounter/EventCounter.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Sidebar/Sidebar */ "./resources/js/components/Auth/Sidebar/Sidebar.js");
+/* harmony import */ var _ListCard_ListCard__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ListCard/ListCard */ "./resources/js/components/Auth/ListCard/ListCard.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+
+
+
+
+var Auth =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Auth, _Component);
+
+  function Auth() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, Auth);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Auth)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_this), "state", {
+      count: '3',
+      events: [{
+        id: 1,
+        userName: 'Дмитрий Ласковский',
+        wishListName: 'Хочу на новый новый год',
+        type: 'vk',
+        time: 1576658122
+      }, {
+        id: 2,
+        userName: 'Дмитрий Ласковский',
+        wishListName: 'Не хочу на новый год',
+        type: 'user',
+        time: 1576658122
+      }, {
+        id: 3,
+        userName: 'Дмитрий Ласковский',
+        wishListName: 'Хочу на новый год',
+        type: 'list',
+        time: 1576658122
+      }],
+      wishNameControl: '',
+      wishUrlControl: '',
+      listNameControl: '',
+      newBackgroundNumber: null,
+      background: ['/images/bg1.jpg', '/images/bg2.jpg', '/images/bg3.jpg', '/images/bg4.jpg', '/images/bg5.jpg'],
+      newWishId: null,
+      newListId: null,
+      showNewWish: false,
+      lists: {
+        defaultListId: 2,
+        count: 2,
+        items: [{
+          id: 1,
+          name: 'Новый список1',
+          updatedAt: 1213,
+          background: 1,
+          userId: 123,
+          userName: "Иван петров",
+          createdAt: 1200,
+          backgroundNumber: 0,
+          wishItems: [{
+            id: 1,
+            listId: 1,
+            title: "Смартфон",
+            url: "https://app.swaggerhub.com/apis-docs/igor0u/mywish/1.0.0-oas3#/default/post_lists"
+          }, {
+            id: 2,
+            listId: 1,
+            title: "Новый смайртфон",
+            url: "https://app.swaggerhub.com/apis-docs/igor0u/mywish/1.0.0-oas3#/default/post_lists"
+          }]
+        }, {
+          id: 2,
+          name: 'Новый список2',
+          updatedAt: 1213,
+          background: 1,
+          userId: 123,
+          userName: "Иван петров",
+          createdAt: 1200,
+          wishItems: [{
+            id: 3,
+            listId: 2,
+            title: "Смартфон",
+            url: "https://app.swaggerhub.com/apis-docs/igor0u/mywish/1.0.0-oas3#/default/post_lists",
+            picture: 'https://ireplace.ru/images/watermarked/1/thumbnails/1308/1144/detailed/0/MMEF2_AV2_32wp-2p.jpg'
+          }, {
+            id: 4,
+            listId: 2,
+            title: "Новый смайртфон",
+            url: "https://app.swaggerhub.com/apis-docs/igor0u/mywish/1.0.0-oas3#/default/post_lists",
+            picture: 'https://ireplace.ru/images/watermarked/1/thumbnails/1308/1144/detailed/0/MMEF2_AV2_32wp-2p.jpg'
+          }]
+        }]
+      },
+      file: null,
+      isLoggedIn: false,
+      userId: null,
+      authToken: '',
+      name: '',
+      email: ''
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "responseFacebook", function (response) {
+      console.log(response); // отправка данных авторизации
+
+      axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/auth', {
+        "social": 'fb',
+        "name": response.name,
+        "url": "",
+        "token": response.accessToken,
+        "socialUserId": response.userID
+      }).then(function (res) {
+        _this.setState({
+          userId: res.data.userId,
+          authToken: res.data.authToken
+        });
+
+        if (res.data.userId !== null && res.data.authToken !== '') {
+          _this.setState({
+            isLoggedIn: true
+          });
+        }
+
+        axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/lists', {
+          'userId': _this.state.userId,
+          'authToken': _this.state.authToken
+        }).then(function (res) {
+          if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+            var lists = _objectSpread({}, _this.state.lists);
+
+            lists.items = res.data.items;
+            lists.count = res.data.count;
+            lists.defaultListId = res.data.defaultListId;
+
+            _this.setState({
+              lists: lists
+            });
+          } else {
+            _this.setState({
+              authToken: '',
+              userId: null,
+              isLoggedIn: false
+            });
+          }
+        }, function (res) {
+          return console.log('error', res);
+        });
+      }, function (res) {
+        return console.log('error', res);
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "selectListHandler", function (id) {
+      var lists = _objectSpread({}, _this.state.lists);
+
+      lists.defaultListId = id;
+
+      _this.setState({
+        lists: lists
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "showNewWishToggle", function () {
+      _this.setState({
+        showNewWish: !_this.state.showNewWish
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "onChangeWishUrlHandler", function (event) {
+      _this.setState({
+        wishUrlControl: event.target.value
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "onChangeWishNameHandler", function (event) {
+      _this.setState({
+        wishNameControl: event.target.value
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "uploadImgHandler", function (event) {
+      event.preventDefault();
+
+      _this.setState({
+        file: event.target.files[0]
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "deleteWishHandler", function (listId, id) {
+      axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/item/delete', {
+        userId: _this.state.userId,
+        authToken: _this.state.authToken,
+        id: id
+      }).then(function (res) {
+        if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+          var lists = _objectSpread({}, _this.state.lists);
+
+          var currentList = lists.items.find(function (item) {
+            return item.id === listId;
+          });
+          var currentWish = currentList.wishItems.find(function (wish) {
+            return wish.id === id;
+          });
+          var _iteratorNormalCompletion = true;
+          var _didIteratorError = false;
+          var _iteratorError = undefined;
+
+          try {
+            for (var _iterator = Object.getOwnPropertyNames(currentWish)[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+              var prop = _step.value;
+              delete currentWish[prop];
+            }
+          } catch (err) {
+            _didIteratorError = true;
+            _iteratorError = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+                _iterator["return"]();
+              }
+            } finally {
+              if (_didIteratorError) {
+                throw _iteratorError;
+              }
+            }
+          }
+
+          _this.setState({
+            lists: lists
+          });
+        } else {
+          _this.setState({
+            authToken: '',
+            userId: null,
+            isLoggedIn: false
+          });
+        }
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "addNewWishHandler", function (listId) {
+      if (_this.state.wishNameControl !== '') {
+        axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/item/add', {
+          'userId': _this.state.userId,
+          'authToken': _this.state.authToken,
+          'listId': listId
+        }).then(function (res) {
+          if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+            _this.setState({
+              newWishId: res.data.id
+            });
+
+            var formData = new FormData();
+            formData.append('userId', _this.state.userId);
+            formData.append('authToken', _this.state.authToken);
+            formData.append('id', _this.state.newWishId);
+            formData.append('name', _this.state.wishNameControl);
+            formData.append('url', _this.state.wishUrlControl);
+            formData.append('picture', _this.state.file);
+            axios__WEBPACK_IMPORTED_MODULE_7___default()({
+              method: 'post',
+              url: '/api/item/update',
+              data: formData,
+              headers: {
+                'Content-Type': 'multipart/form-data'
+              }
+            }).then(function (res) {
+              if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+                var lists = _objectSpread({}, _this.state.lists);
+
+                var currentList = lists.items.find(function (item) {
+                  return item.id === listId;
+                });
+                currentList.wishItems.push(res);
+
+                _this.setState({
+                  lists: lists
+                });
+              } else {
+                _this.setState({
+                  authToken: '',
+                  userId: null,
+                  isLoggedIn: false
+                });
+              }
+            }, function (res) {
+              return console.log('error', res);
+            });
+          } else {
+            _this.setState({
+              authToken: '',
+              userId: null,
+              isLoggedIn: false
+            });
+          }
+        }, function (res) {
+          return console.log('error', res);
+        });
+      } else {
+        console.log('заполните поля навзания желания');
+      }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "addListHandler", function () {
+      axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/list/add', {
+        "userId": _this.state.userId,
+        "authToken": _this.state.authToken
+      }).then(function (res) {
+        if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+          _this.setState({
+            newListId: res.data.id
+          });
+
+          axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/list/update', {
+            "userId": _this.state.userId,
+            "authToken": _this.state.authToken,
+            "id": _this.state.newListId,
+            "name": _this.state.listNameControl,
+            "backgroundNumber": _this.state.backgroundNumber
+          }).then(function (res) {
+            var lists = _objectSpread({}, _this.state.lists);
+
+            lists.items.push(res.data);
+
+            _this.setState({
+              lists: lists
+            });
+          });
+        } else {
+          _this.setState({
+            authToken: '',
+            userId: null,
+            isLoggedIn: false
+          });
+        }
+      }, function (res) {
+        return console.log('error', res);
+      });
+    });
+
+    return _this;
+  }
+
+  _createClass(Auth, [{
+    key: "componentDidMount",
+    // Получаю начальные данные eventov. count и event записываю в соответствующие state
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      if (!this.state.isLoggedIn) {
+        axios__WEBPACK_IMPORTED_MODULE_7___default.a.get('/api/events').then(function (res) {
+          _this2.setState({
+            count: res.data.count,
+            events: res.data.events
+          });
+        }, function (res) {
+          return console.log('error', res);
+        });
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this3 = this;
+
+      function compare(eventsIds, resIds) {
+        return eventsIds.length === resIds.length && eventsIds.every(function (v, i) {
+          return v === resIds[i];
+        });
+      }
+
+      if (!this.state.isLoggedIn) {
+        setTimeout(function () {
+          return axios__WEBPACK_IMPORTED_MODULE_7___default.a.get('/api/events').then(function (res) {
+            var eventsId = [];
+            var resId = [];
+
+            _this3.state.events.map(function (events, index) {
+              eventsId.push(events.id);
+            });
+
+            res.data.events.map(function (events) {
+              resId.push(events.id);
+            });
+
+            if (compare(eventsId, resId)) {
+              _this3.setState({
+                count: res.data.count,
+                events: res.data.events
+              });
+            }
+          }, function (res) {
+            return console.log('error', res);
+          });
+        }, 30000);
+      }
+
+      var authContent;
+
+      if (this.state.isLoggedIn) {
+        authContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: _Auth_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Container
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_8__["default"], {
+          addList: this.addListHandler,
+          onClick: this.selectListHandler,
+          lists: this.state.lists
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListCard_ListCard__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          background: this.state.background,
+          uploadImg: this.uploadImgHandler,
+          deleteWish: this.deleteWishHandler,
+          addNewWish: this.addNewWishHandler,
+          onChangeWishUrl: this.onChangeWishUrlHandler,
+          onChangeWishName: this.onChangeWishNameHandler,
+          showNewWish: this.state.showNewWish,
+          showNewWishToggle: this.showNewWishToggle,
+          lists: this.state.lists
+        })));
+      } else {
+        authContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: _Auth_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Auth
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          className: _Auth_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.AuthHeader
+        }, "MyWish - \u044D\u0442\u043E \u0441\u0435\u0440\u0432\u0438\u0441 \u0434\u043B\u044F \u0441\u043E\u0441\u0442\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0441\u043F\u0438\u0441\u043A\u0430 \u0436\u0435\u043B\u0430\u043D\u0438\u0439"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          className: _Auth_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.AuthHeader
+        }, "\u041F\u043E\u0434\u0441\u043A\u0430\u0436\u0438\u0442\u0435 \u0412\u0430\u0448\u0438\u043C \u0431\u043B\u0438\u0437\u043A\u0438\u043C, \u0434\u0440\u0443\u0437\u044C\u044F\u043C, \u043A\u043E\u043B\u043B\u0435\u0433\u0430\u043C, \u0447\u0442\u043E\u0431\u044B \u0412\u044B \u0445\u043E\u0442\u0435\u043B\u0438 \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0432 \u043F\u043E\u0434\u0430\u0440\u043E\u043A! \u0421\u043E\u0441\u0442\u0430\u0432\u044C\u0442\u0435 \u0441\u0432\u043E\u0439 \u0441\u043F\u0438\u0441\u043E\u043A \u0438 \u043F\u043E\u0434\u0435\u043B\u0438\u0442\u0435\u0441\u044C \u0438\u043C!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Card_Card__WEBPACK_IMPORTED_MODULE_4__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u0443\u0439\u0442\u0435\u0441\u044C \u0441 \u043F\u043E\u043C\u043E\u0449\u044C\u044E \u0441\u043E\u0446.\u0441\u0435\u0442\u0435\u0439 \u0438 \u0441\u043E\u0441\u0442\u0430\u0432\u044C\u0442\u0435 \u0441\u0432\u043E\u0439 \u0441\u043F\u0438\u0441\u043E\u043A \u043F\u043E\u0434\u0430\u0440\u043A\u043E\u0432!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_facebook_login__WEBPACK_IMPORTED_MODULE_3___default.a, {
+          appId: "563234647569569",
+          version: "5.0",
+          language: "ru_RU",
+          autoLoad: false,
+          fields: "name,email",
+          callback: this.responseFacebook,
+          cssClass: _Auth_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.fbLogin,
+          textButton: "FB"
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EventCounter_EventCounter__WEBPACK_IMPORTED_MODULE_6__["default"], {
+          count: this.state.count
+        }), this.state.events.map(function (event) {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EventList_EventList__WEBPACK_IMPORTED_MODULE_5__["default"], {
+            key: event.id,
+            id: event.id,
+            userName: event.userName,
+            time: event.time,
+            wishListName: event.wishListName,
+            type: event.type
+          });
+        })));
+      }
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, authContent);
+    }
+  }]);
+
+  return Auth;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Auth/Auth.module.css":
+/*!******************************************************!*\
+  !*** ./resources/js/components/Auth/Auth.module.css ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--5-1!../../../../node_modules/postcss-loader/src??ref--5-2!./Auth.module.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Auth/Auth.module.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/Auth/EventCounter/EventCounter.js":
+/*!*******************************************************************!*\
+  !*** ./resources/js/components/Auth/EventCounter/EventCounter.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _EventCounter_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EventCounter.module.css */ "./resources/js/components/Auth/EventCounter/EventCounter.module.css");
+/* harmony import */ var _EventCounter_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_EventCounter_module_css__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var EventCounter = function EventCounter(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: _EventCounter_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.EventCounter
+  }, props.count, " \u0441\u043F\u0438\u0441\u043A\u043E\u0432 \u0436\u0435\u043B\u0430\u043D\u0438\u0439 \u0443\u0436\u0435 \u0432 \u0441\u0435\u0440\u0432\u0438\u0441\u0435 MyWish");
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (EventCounter);
+
+/***/ }),
+
+/***/ "./resources/js/components/Auth/EventCounter/EventCounter.module.css":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/Auth/EventCounter/EventCounter.module.css ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--5-1!../../../../../node_modules/postcss-loader/src??ref--5-2!./EventCounter.module.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Auth/EventCounter/EventCounter.module.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/Auth/EventList/EventList.js":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/Auth/EventList/EventList.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _EventList_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EventList.module.css */ "./resources/js/components/Auth/EventList/EventList.module.css");
+/* harmony import */ var _EventList_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_EventList_module_css__WEBPACK_IMPORTED_MODULE_1__);
+
+ // import newUserImg from './newUser.svg'
+// import newWishImg from 'newWish.svg'
+// import shareImg from './share.svg'
+
+var EventList = function EventList(props) {
+  var content = null;
+  var image = null;
+  var time = props.time;
+
+  if (props.type === 'vk' || 'ok' || 'fb') {
+    // image = <img src={shareImg} alt={props.type}/>;
+    content = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0421\u043F\u0438\u0441\u043E\u043A \u043F\u043E\u0434\u0430\u0440\u043A\u043E\u0432 ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "\u201C", props.wishListName, "\u201D"), " \u043E\u043F\u0443\u0431\u043B\u0438\u043A\u043E\u0432\u0430\u043D \u0412\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u0435 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0435\u043C ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, props.userName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, time));
+  }
+
+  if (props.type === 'user') {
+    // image = <img src={newUserImg} alt={props.type}/>;
+    content = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, props.userName), " \u043F\u0440\u0438\u0441\u043E\u0435\u0434\u0438\u043D\u0438\u043B\u0441\u044F \u043A \u0441\u0435\u0440\u0432\u0438\u0441\u0443 \u0414\u043E\u0431\u0440\u043E \u043F\u043E\u0436\u0430\u043B\u043E\u0432\u0430\u0442\u044C!", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, time));
+  }
+
+  if (props.type === 'list') {
+    // image = <img src={newWishImg} alt={props.type}/>;
+    content = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, props.userName), " \u0441\u043E\u0441\u0442\u0430\u0432\u0438\u043B \u043D\u043E\u0432\u044B\u0439 \u0441\u043F\u0438\u0441\u043E\u043A \u043F\u043E\u0434\u0430\u0440\u043A\u043E\u0432 ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "\u201C", props.wishListName, "\u201D"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, time));
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _EventList_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.EventList
+  }, image, content));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (EventList);
+
+/***/ }),
+
+/***/ "./resources/js/components/Auth/EventList/EventList.module.css":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/Auth/EventList/EventList.module.css ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--5-1!../../../../../node_modules/postcss-loader/src??ref--5-2!./EventList.module.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Auth/EventList/EventList.module.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/Auth/ListCard/ColorPicker/ColorPicker.js":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/Auth/ListCard/ColorPicker/ColorPicker.js ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ColorPicker_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ColorPicker.module.css */ "./resources/js/components/Auth/ListCard/ColorPicker/ColorPicker.module.css");
+/* harmony import */ var _ColorPicker_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_ColorPicker_module_css__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var ColorPicker = function ColorPicker(props) {
+  console.log(props.background);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _ColorPicker_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ColorPicker
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u043E\u0444\u043E\u0440\u043C\u043B\u0435\u043D\u0438\u0435 \u043F\u043E\u0434\u043B\u043E\u0436\u043A\u0438"), props.background.forEach(function (color, index) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        background: color[index]
+      }
+    });
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ColorPicker);
+
+/***/ }),
+
+/***/ "./resources/js/components/Auth/ListCard/ColorPicker/ColorPicker.module.css":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/Auth/ListCard/ColorPicker/ColorPicker.module.css ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader??ref--5-1!../../../../../../node_modules/postcss-loader/src??ref--5-2!./ColorPicker.module.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Auth/ListCard/ColorPicker/ColorPicker.module.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/Auth/ListCard/ListCard.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/Auth/ListCard/ListCard.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ListCard.module.css */ "./resources/js/components/Auth/ListCard/ListCard.module.css");
+/* harmony import */ var _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_ListCard_module_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _WishList_WishList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./WishList/WishList */ "./resources/js/components/Auth/ListCard/WishList/WishList.js");
+/* harmony import */ var _UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../UI/Button/Button */ "./resources/js/components/UI/Button/Button.js");
+/* harmony import */ var _ColorPicker_ColorPicker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ColorPicker/ColorPicker */ "./resources/js/components/Auth/ListCard/ColorPicker/ColorPicker.js");
+
+
+
+
+
+
+var ListCard = function ListCard(props) {
+  var cls = [_ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListCard, _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Empty];
+  var renderList;
+
+  if (props.lists.count !== 0) {
+    renderList = props.lists.items.map(function (list) {
+      return list.id === props.lists.defaultListId ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListCard
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListCardBody,
+        style: {
+          background: list.backgroundNumber
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ColorPicker_ColorPicker__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        background: props.background
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishList_WishList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        uploadImg: props.uploadImg,
+        deleteWish: props.deleteWish,
+        newWishId: props.newWishId,
+        addNewWish: props.addNewWish,
+        showNewWishToggle: props.showNewWishToggle,
+        onChangeWishUrl: props.onChangeWishUrl,
+        onChangeWishName: props.onChangeWishName,
+        listId: list.id,
+        showNewWish: props.showNewWish,
+        key: list.id,
+        wishItems: list.wishItems
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        type: "showNewWish",
+        onClick: props.showNewWishToggle
+      }, "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0435\u0449\u0435 \u0436\u0435\u043B\u0430\u043D\u0438\u0435"))) : null;
+    });
+  } else {
+    renderList = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: cls.join(' ')
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListCardBody
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0423 \u0432\u0430\u0441 \u0435\u0449\u0435 \u043D\u0435\u0442 \u043D\u0435 \u043E\u0434\u043D\u043E\u0433\u043E \u0441\u043F\u0438\u0441\u043A\u0430"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], null, "\u0421\u043E\u0437\u0434\u0430\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A")));
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, renderList);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ListCard);
+
+/***/ }),
+
+/***/ "./resources/js/components/Auth/ListCard/ListCard.module.css":
+/*!*******************************************************************!*\
+  !*** ./resources/js/components/Auth/ListCard/ListCard.module.css ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--5-1!../../../../../node_modules/postcss-loader/src??ref--5-2!./ListCard.module.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Auth/ListCard/ListCard.module.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/Auth/ListCard/WishList/WishItem/WishItem.js":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/Auth/ListCard/WishList/WishItem/WishItem.js ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./WishItem.module.css */ "./resources/js/components/Auth/ListCard/WishList/WishItem/WishItem.module.css");
+/* harmony import */ var _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_WishItem_module_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _UI_Input_Input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../UI/Input/Input */ "./resources/js/components/UI/Input/Input.js");
+/* harmony import */ var _WishWidget_WishWidget__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./WishWidget/WishWidget */ "./resources/js/components/Auth/ListCard/WishList/WishItem/WishWidget/WishWidget.js");
+/* harmony import */ var _UI_Button_Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../UI/Button/Button */ "./resources/js/components/UI/Button/Button.js");
+
+
+
+
+
+
+var WishItem = function WishItem(props) {
+  var renderWishItem;
+
+  if (props.type === 'addNew') {
+    renderWishItem = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItem
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Input_Input__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      onChange: function onChange(event) {
+        return props.uploadImg(event);
+      },
+      type: "file"
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Input_Input__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      maxLength: "100",
+      onChange: function onChange(event) {
+        return props.onChangeWishName(event);
+      }
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Input_Input__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      maxLength: "255",
+      onChange: function onChange(event) {
+        return props.onChangeWishUrl(event);
+      }
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishWidget_WishWidget__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      onClick: function onClick() {
+        return props.addNewWish(props.listId, props.newWishId);
+      },
+      type: "widget"
+    }, "ADD"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      onClick: props.showNewWishToggle,
+      type: "widget"
+    }, "DEL"))));
+  } else {
+    renderWishItem = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItem
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: props.picture,
+      alt: props.title
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Title
+    }, props.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: props.url
+    }, props.url)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishWidget_WishWidget__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      type: "widget"
+    }, "CNG"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      onClick: function onClick() {
+        return props.deleteWish(props.listId, props.id);
+      },
+      type: "widget"
+    }, "DEL"))));
+  }
+
+  return renderWishItem;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (WishItem);
+
+/***/ }),
+
+/***/ "./resources/js/components/Auth/ListCard/WishList/WishItem/WishItem.module.css":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/Auth/ListCard/WishList/WishItem/WishItem.module.css ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../../node_modules/css-loader??ref--5-1!../../../../../../../node_modules/postcss-loader/src??ref--5-2!./WishItem.module.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Auth/ListCard/WishList/WishItem/WishItem.module.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/Auth/ListCard/WishList/WishItem/WishWidget/WishWidget.Module.css":
+/*!**************************************************************************************************!*\
+  !*** ./resources/js/components/Auth/ListCard/WishList/WishItem/WishWidget/WishWidget.Module.css ***!
+  \**************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../../../node_modules/css-loader??ref--5-1!../../../../../../../../node_modules/postcss-loader/src??ref--5-2!./WishWidget.Module.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Auth/ListCard/WishList/WishItem/WishWidget/WishWidget.Module.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/Auth/ListCard/WishList/WishItem/WishWidget/WishWidget.js":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/components/Auth/ListCard/WishList/WishItem/WishWidget/WishWidget.js ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _WishWidget_Module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./WishWidget.Module.css */ "./resources/js/components/Auth/ListCard/WishList/WishItem/WishWidget/WishWidget.Module.css");
+/* harmony import */ var _WishWidget_Module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_WishWidget_Module_css__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var WishWidget = function WishWidget(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _WishWidget_Module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishWidget
+  }, props.children);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (WishWidget);
+
+/***/ }),
+
+/***/ "./resources/js/components/Auth/ListCard/WishList/WishList.js":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/Auth/ListCard/WishList/WishList.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _WishItem_WishItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./WishItem/WishItem */ "./resources/js/components/Auth/ListCard/WishList/WishItem/WishItem.js");
+
+
+
+var WishList = function WishList(props) {
+  var renderWishItems = props.wishItems.map(function (wish, index) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishItem_WishItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      deleteWish: props.deleteWish,
+      onChangeWishName: props.onChangeWishName,
+      onChangeWishUrl: props.onChangeWishUrl,
+      listId: props.listId,
+      key: wish.id,
+      id: wish.id,
+      title: wish.title,
+      url: wish.url,
+      picture: wish.picture
+    });
+  });
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, renderWishItems, props.showNewWish ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishItem_WishItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    uploadImg: props.uploadImg,
+    id: props.newWishId,
+    showNewWishToggle: props.showNewWishToggle,
+    onChangeWishName: props.onChangeWishName,
+    onChangeWishUrl: props.onChangeWishUrl,
+    addNewWish: props.addNewWish,
+    listId: props.listId,
+    type: "addNew"
+  }) : null);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (WishList);
+
+/***/ }),
+
+/***/ "./resources/js/components/Auth/Sidebar/Sidebar.js":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/Auth/Sidebar/Sidebar.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Sidebar_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sidebar.module.css */ "./resources/js/components/Auth/Sidebar/Sidebar.module.css");
+/* harmony import */ var _Sidebar_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Sidebar_module_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _UI_Button_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../UI/Button/Button */ "./resources/js/components/UI/Button/Button.js");
+
+
+
+
+var Sidebar = function Sidebar(props) {
+  var renderList;
+
+  if (props.lists.count !== 0) {
+    renderList = props.lists.items.map(function (list, index) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        key: index,
+        onClick: function onClick() {
+          return props.onClick(list.id);
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, list.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u0421\u043F\u0438\u0441\u043E\u043A \u0441\u043E\u0437\u0434\u0430\u043D ", list.createdAt));
+    });
+  } else {
+    renderList = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: _Sidebar_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Empty
+    }, "\u0423 \u0432\u0430\u0441 \u0435\u0449\u0451 \u043D\u0435\u0442 \u043D\u0438 \u043E\u0434\u043D\u043E\u0433\u043E \u0441\u043F\u0438\u0441\u043A\u0430"));
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    className: _Sidebar_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Sidebar
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: _Sidebar_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.SidebarHeader
+  }, "\u041C\u043E\u0438 \u0441\u043F\u0438\u0441\u043A\u0438 \u0436\u0435\u043B\u0430\u043D\u0438\u0439:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, renderList, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    onClick: props.addList,
+    type: "addListSidebar"
+  }, "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0435\u0449\u0435 \u0441\u043F\u0438\u0441\u043E\u043A"))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Sidebar);
+
+/***/ }),
+
+/***/ "./resources/js/components/Auth/Sidebar/Sidebar.module.css":
+/*!*****************************************************************!*\
+  !*** ./resources/js/components/Auth/Sidebar/Sidebar.module.css ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--5-1!../../../../../node_modules/postcss-loader/src??ref--5-2!./Sidebar.module.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Auth/Sidebar/Sidebar.module.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/Card/Card.js":
+/*!**********************************************!*\
+  !*** ./resources/js/components/Card/Card.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Card_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Card.module.css */ "./resources/js/components/Card/Card.module.css");
+/* harmony import */ var _Card_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Card_module_css__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var Card = function Card(props) {
+  var cls = [_Card_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Card, _Card_module_css__WEBPACK_IMPORTED_MODULE_1___default.a[props.borderColor]];
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: cls.join(' ')
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.children));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Card);
+
+/***/ }),
+
+/***/ "./resources/js/components/Card/Card.module.css":
+/*!******************************************************!*\
+  !*** ./resources/js/components/Card/Card.module.css ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--5-1!../../../../node_modules/postcss-loader/src??ref--5-2!./Card.module.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Card/Card.module.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -52056,6 +53487,127 @@ function (_Component) {
 
 
 var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--5-1!../../../../../node_modules/postcss-loader/src??ref--5-2!./Header.module.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Navigation/Header/Header.module.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/UI/Button/Button.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/UI/Button/Button.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Button_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Button.module.css */ "./resources/js/components/UI/Button/Button.module.css");
+/* harmony import */ var _Button_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Button_module_css__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var Button = function Button(props) {
+  var cls = [_Button_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Button, _Button_module_css__WEBPACK_IMPORTED_MODULE_1___default.a[props.type]];
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: props.onClick,
+    className: cls.join(' '),
+    disabled: props.disabled
+  }, props.children);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Button);
+
+/***/ }),
+
+/***/ "./resources/js/components/UI/Button/Button.module.css":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/UI/Button/Button.module.css ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--5-1!../../../../../node_modules/postcss-loader/src??ref--5-2!./Button.module.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/UI/Button/Button.module.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/UI/Input/Input.js":
+/*!***************************************************!*\
+  !*** ./resources/js/components/UI/Input/Input.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Input_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Input.module.css */ "./resources/js/components/UI/Input/Input.module.css");
+/* harmony import */ var _Input_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Input_module_css__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var Input = function Input(props) {
+  var inputType = props.type || 'text';
+  var cls = [_Input_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Input];
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    maxLength: props.maxLength,
+    className: cls.join(' '),
+    type: inputType,
+    value: props.value,
+    onChange: props.onChange
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Input);
+
+/***/ }),
+
+/***/ "./resources/js/components/UI/Input/Input.module.css":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/UI/Input/Input.module.css ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--5-1!../../../../../node_modules/postcss-loader/src??ref--5-2!./Input.module.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/UI/Input/Input.module.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 

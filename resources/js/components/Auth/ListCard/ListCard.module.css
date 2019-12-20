@@ -12,6 +12,7 @@
     padding: 64px 106px 58px 106px;
 }
 
-.ListCard .Empty {
+.ListCard.Empty {
     text-align: center;
+    background: url('/images/bg3.jpg');
 }
