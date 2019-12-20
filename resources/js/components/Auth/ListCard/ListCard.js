@@ -17,7 +17,9 @@ const ListCard = props => {
                 return list.id === props.lists.defaultListId ? (
                         <div key={list.id} className={classes.ListCard} style={{background: `url(${props.background[list.backgroundNumber]})`}}>
                             <div className={classes.ListCardBody}>
+                                <p className={classes.CardHeader}>{list.name}</p>
                                 <ColorPicker
+                                    name={list.name}
                                     listId={list.id}
                                     onPickColor={props.onPickColor}
                                     background={props.background}

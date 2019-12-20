@@ -296,29 +296,31 @@ export default class Auth extends Component {
     };
 
     addListHandler = () => {
+        // axios.post('/api/list/update', {
+        //     "userId": this.state.userId,
+        //     "authToken": this.state.authToken,
+        //     "id": this.state.newListId,
+        //     "name": this.state.listNameControl,
+        //     "backgroundNumber": this.state.newBackgroundNumber
+        // })
+        //     .then((res) => {
+        //         const lists = {...this.state.lists};
+        //         lists.items.push(res.data);
+        //         this.setState({
+        //             lists
+        //         })
+        //     })
         axios.post('/api/list/add', {
             "userId": this.state.userId,
             "authToken": this.state.authToken
         })
             .then((res) => {
                 if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+                    const lists = {...this.state.lists};
+                    lists.items.push(res.data);
                     this.setState({
-                        newListId: res.data.id
-                    });
-                    axios.post('/api/list/update', {
-                        "userId": this.state.userId,
-                        "authToken": this.state.authToken,
-                        "id": this.state.newListId,
-                        "name": this.state.listNameControl,
-                        "backgroundNumber": this.state.newBackgroundNumber
+                        lists
                     })
-                        .then((res) => {
-                            const lists = {...this.state.lists};
-                            lists.items.push(res.data);
-                            this.setState({
-                                lists
-                            })
-                        })
                 } else {
                     this.setState({
                         authToken: '',
@@ -326,19 +328,17 @@ export default class Auth extends Component {
                         isLoggedIn: false
                     })
                 }
-
-
             }, (res) => console.log('error', res))
     };
 
-    onPickColorHandler = (index, listId) => {
+    onPickColorHandler = (index, listId, name) => {
         if (this.state.newBackgroundNumber !== index) {
             this.setState({
                 newBackgroundNumber: index
             });
             axios.post('/api/list/update', {
                 "userId": this.state.userId,
-                "authToken": this.state.authToken,
+                "authToken": name,
                 "id": listId,
                 "name": this.state.listNameControl,
                 "backgroundNumber": this.state.newBackgroundNumber
