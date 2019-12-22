@@ -130,6 +130,7 @@ Route::post('/list/delete', function (Request $request) {
     if (is_null($list)) {
         return json_encode(['error' => 'no lists']);
     }
+    $list->beforeDelete();
     $list->delete();
     return json_encode(['error' => '', 'status' => 'ok']);
 })->middleware(\App\Http\Middleware\CheckAuthToken::class);
