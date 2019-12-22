@@ -131,7 +131,7 @@ export default class Auth extends Component {
                     axios.post('/api/lists', {
                         'userId': localStorage.getItem('userId'),
                         'authToken': localStorage.getItem('authToken')
-                })
+                    })
                         .then(res => {
                             if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
                                 const lists = {...this.state.lists};
@@ -174,6 +174,25 @@ export default class Auth extends Component {
                         events: res.data.events
                     })
                 }, res => console.log('error', res))
+        } else {
+            axios.post('/api/lists', {
+                'userId': localStorage.getItem('userId'),
+                'authToken': localStorage.getItem('authToken')
+            })
+                .then(res => {
+                    if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
+                        const lists = {...this.state.lists};
+                        lists.items = res.data.items;
+                        lists.count = res.data.count;
+                        lists.defaultListId = res.data.defaultListId;
+                        this.setState({
+                            lists
+                        })
+                    } else {
+                        localStorage.setItem('userId', null);
+                        localStorage.setItem('authToken', null);
+                    }
+                }, res => console.log('error', res));
         }
     }
 

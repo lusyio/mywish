@@ -52195,10 +52195,10 @@ function (_Component) {
         localStorage.setItem('userId', res.data.userId);
         localStorage.setItem('authToken', res.data.authToken);
 
-        if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== '') {
+        if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== null) {
           axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/lists', {
-            'userId': _this.state.userId,
-            'authToken': _this.state.authToken
+            'userId': localStorage.getItem('userId'),
+            'authToken': localStorage.getItem('authToken')
           }).then(function (res) {
             if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
               var lists = _objectSpread({}, _this.state.lists);
@@ -52212,7 +52212,7 @@ function (_Component) {
               });
             } else {
               localStorage.setItem('userId', null);
-              localStorage.setItem('authToken', '');
+              localStorage.setItem('authToken', null);
             }
           }, function (res) {
             return console.log('error', res);
@@ -52303,7 +52303,7 @@ function (_Component) {
           });
         } else {
           localStorage.setItem('userId', null);
-          localStorage.setItem('authToken', '');
+          localStorage.setItem('authToken', null);
         }
       });
     });
@@ -52349,14 +52349,14 @@ function (_Component) {
                 });
               } else {
                 localStorage.setItem('userId', null);
-                localStorage.setItem('authToken', '');
+                localStorage.setItem('authToken', null);
               }
             }, function (res) {
               return console.log('error', res);
             });
           } else {
             localStorage.setItem('userId', null);
-            localStorage.setItem('authToken', '');
+            localStorage.setItem('authToken', null);
           }
         }, function (res) {
           return console.log('error', res);
@@ -52381,7 +52381,7 @@ function (_Component) {
           });
         } else {
           localStorage.setItem('userId', null);
-          localStorage.setItem('authToken', '');
+          localStorage.setItem('authToken', null);
         }
       }, function (res) {
         return console.log('error', res);
@@ -52413,7 +52413,7 @@ function (_Component) {
           });
         } else {
           localStorage.setItem('userId', null);
-          localStorage.setItem('authToken', '');
+          localStorage.setItem('authToken', null);
         }
       }, function (res) {
         return console.log('error', res);
@@ -52443,7 +52443,7 @@ function (_Component) {
             });
           } else {
             localStorage.setItem('userId', null);
-            localStorage.setItem('authToken', '');
+            localStorage.setItem('authToken', null);
           }
         }, function (res) {
           return console.log('error', res);
@@ -52480,12 +52480,34 @@ function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      if (localStorage.getItem('userId') === null && localStorage.getItem('authToken') === '') {
+      if (localStorage.getItem('userId') === null && localStorage.getItem('authToken') === null) {
         axios__WEBPACK_IMPORTED_MODULE_7___default.a.get('/api/events').then(function (res) {
           _this2.setState({
             count: res.data.count,
             events: res.data.events
           });
+        }, function (res) {
+          return console.log('error', res);
+        });
+      } else {
+        axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/lists', {
+          'userId': localStorage.getItem('userId'),
+          'authToken': localStorage.getItem('authToken')
+        }).then(function (res) {
+          if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
+            var lists = _objectSpread({}, _this2.state.lists);
+
+            lists.items = res.data.items;
+            lists.count = res.data.count;
+            lists.defaultListId = res.data.defaultListId;
+
+            _this2.setState({
+              lists: lists
+            });
+          } else {
+            localStorage.setItem('userId', null);
+            localStorage.setItem('authToken', null);
+          }
         }, function (res) {
           return console.log('error', res);
         });
@@ -52502,7 +52524,7 @@ function (_Component) {
         });
       }
 
-      if (localStorage.getItem('userId') === null && localStorage.getItem('authToken') === '') {
+      if (localStorage.getItem('userId') === null && localStorage.getItem('authToken') === null) {
         setTimeout(function () {
           return axios__WEBPACK_IMPORTED_MODULE_7___default.a.get('/api/events').then(function (res) {
             var eventsId = [];
@@ -52530,7 +52552,7 @@ function (_Component) {
 
       var authContent;
 
-      if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== '') {
+      if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== null) {
         authContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: _Auth_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Container
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -53736,7 +53758,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/user/Desktop/mywish/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/mastekator/Desktop/mywish/resources/js/app.js */"./resources/js/app.js");
 
 
 /***/ })
