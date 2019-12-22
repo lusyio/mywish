@@ -37,6 +37,16 @@ class WishList extends Model
         return $result;
     }
 
+    public function beforeDelete()
+    {
+        $wishItems = $this->listItems;
+        foreach ($wishItems as $item) {
+            $item->beforeDelete();
+            $item->delete();
+        }
+
+    }
+
     public function listItems()
     {
         return $this->hasMany('App\WishListItem');
