@@ -127,7 +127,7 @@ export default class Auth extends Component {
             .then(res => {
                 localStorage.setItem('userId', res.data.userId);
                 localStorage.setItem('authToken', res.data.authToken);
-                if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== '') {
+                if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== null) {
                     axios.post('/api/lists', {
                         'userId': localStorage.getItem('userId'),
                         'authToken': localStorage.getItem('authToken')
@@ -143,7 +143,7 @@ export default class Auth extends Component {
                                 })
                             } else {
                                 localStorage.setItem('userId', null);
-                                localStorage.setItem('authToken', '');
+                                localStorage.setItem('authToken', null);
                             }
                         }, res => console.log('error', res));
                 }
@@ -166,7 +166,7 @@ export default class Auth extends Component {
 
     // Получаю начальные данные eventov. count и event записываю в соответствующие state
     componentDidMount() {
-        if (localStorage.getItem('userId') === null && localStorage.getItem('authToken') === '') {
+        if (localStorage.getItem('userId') === null && localStorage.getItem('authToken') === null) {
             axios.get('/api/events')
                 .then(res => {
                     this.setState({
@@ -217,7 +217,7 @@ export default class Auth extends Component {
                     })
                 } else {
                     localStorage.setItem('userId', null);
-                    localStorage.setItem('authToken', '');
+                    localStorage.setItem('authToken', null);
                 }
 
             })
@@ -262,12 +262,12 @@ export default class Auth extends Component {
                                     });
                                 } else {
                                     localStorage.setItem('userId', null);
-                                    localStorage.setItem('authToken', '');
+                                    localStorage.setItem('authToken', null);
                                 }
                             }, res => console.log('error', res))
                     } else {
                         localStorage.setItem('userId', null);
-                        localStorage.setItem('authToken', '');
+                        localStorage.setItem('authToken', null);
                     }
 
                 }, res => console.log('error', res));
@@ -290,7 +290,7 @@ export default class Auth extends Component {
                     })
                 } else {
                     localStorage.setItem('userId', null);
-                    localStorage.setItem('authToken', '');
+                    localStorage.setItem('authToken', null);
                 }
             }, (res) => console.log('error', res))
     };
@@ -316,7 +316,7 @@ export default class Auth extends Component {
                     })
                 } else {
                     localStorage.setItem('userId', null);
-                    localStorage.setItem('authToken', '');
+                    localStorage.setItem('authToken', null);
                 }
             }, (res) => console.log('error', res))
 
@@ -342,7 +342,7 @@ export default class Auth extends Component {
                         })
                     } else {
                         localStorage.setItem('userId', null);
-                        localStorage.setItem('authToken', '');
+                        localStorage.setItem('authToken', null);
                     }
                 }, (res) => console.log('error', res))
         }
@@ -369,7 +369,7 @@ export default class Auth extends Component {
             return eventsIds.length === resIds.length && eventsIds.every((v, i) => v === resIds[i])
         }
 
-        if (localStorage.getItem('userId') === null && localStorage.getItem('authToken') === '') {
+        if (localStorage.getItem('userId') === null && localStorage.getItem('authToken') === null) {
             setTimeout(() => axios.get('/api/events')
                 .then(res => {
                     let eventsId = [];
@@ -392,7 +392,7 @@ export default class Auth extends Component {
 
         let authContent;
 
-        if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== '') {
+        if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== null) {
             authContent =
                 <div className={classes.Container}>
                     <div>
