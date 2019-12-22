@@ -5,6 +5,7 @@ const WishList = props => {
     let renderWishItems =
         props.wishItems.map((wish) => (
                 <WishItem
+                    widgetOff={props.widgetOff}
                     deleteWish={props.deleteWish}
                     onChangeWishName={props.onChangeWishName}
                     onChangeWishUrl={props.onChangeWishUrl}

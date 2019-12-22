@@ -1,0 +1,16 @@
+.ListPreview {
+    max-width: 690px;
+    width: 100%;
+    padding: 10px;
+    background: darkred;
+    border-radius: 15px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ListPreviewBody {
+    border-radius: 15px;
+    background: #FFFFFF;
+    padding: 64px 106px 58px 106px;
+}

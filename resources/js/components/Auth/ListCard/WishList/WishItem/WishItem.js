@@ -7,6 +7,25 @@ import Button from "../../../../UI/Button/Button";
 const WishItem = props => {
     let renderWishItem;
 
+    let widgetAddNew =
+        <WishWidget>
+            <Button onClick={() => props.addNewWish(props.listId, props.newWishId)}
+                    type='widget'>ADD</Button>
+            <Button onClick={props.showNewWishToggle} type='widget'>DEL</Button>
+        </WishWidget>;
+
+    let widgetWish =
+        <WishWidget>
+            <Button type='widget'>CNG</Button>
+            <Button onClick={() => props.deleteWish(props.listId, props.id)} type='widget'>DEL</Button>
+        </WishWidget>;
+
+    if (props.widgetOff) {
+        widgetAddNew = null;
+        widgetWish = null;
+    }
+
+
     if (props.type === 'addNew') {
         renderWishItem =
             <React.Fragment>
@@ -16,11 +35,7 @@ const WishItem = props => {
                         <Input maxLength='100' onChange={event => props.onChangeWishName(event)}/>
                         <Input maxLength='255' onChange={event => props.onChangeWishUrl(event)}/>
                     </div>
-                    <WishWidget>
-                        <Button onClick={() => props.addNewWish(props.listId, props.newWishId)}
-                                type='widget'>ADD</Button>
-                        <Button onClick={props.showNewWishToggle} type='widget'>DEL</Button>
-                    </WishWidget>
+                    {widgetAddNew}
                 </div>
             </React.Fragment>
     } else {
@@ -32,10 +47,7 @@ const WishItem = props => {
                         <p className={classes.Title}>{props.title}</p>
                         <a href={props.url}>{props.url}</a>
                     </div>
-                    <WishWidget>
-                        <Button type='widget'>CNG</Button>
-                        <Button onClick={() => props.deleteWish(props.listId, props.id)} type='widget'>DEL</Button>
-                    </WishWidget>
+                    {widgetWish}
                 </div>
             </React.Fragment>
     }

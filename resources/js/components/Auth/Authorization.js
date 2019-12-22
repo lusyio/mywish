@@ -11,6 +11,8 @@ import ListCard from "./ListCard/ListCard";
 import Modal from "../UI/Modal/Modal";
 // import VK, {Auth, Share} from "react-vk";
 import {FacebookProvider, Share} from 'react-facebook';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import ListPreview from "./ListPreview/ListPreview";
 
 export default class Authorization extends Component {
 
@@ -628,9 +630,14 @@ export default class Authorization extends Component {
         }
 
         return (
-            <React.Fragment>
-                {authContent}
-            </React.Fragment>
+            <BrowserRouter>
+                <Switch>
+                    <Route path='/' exact>
+                        {authContent}
+                    </Route>
+                    <Route path='/list/:listId' component={ListPreview} />
+                </Switch>
+            </BrowserRouter>
         )
     }
 }
