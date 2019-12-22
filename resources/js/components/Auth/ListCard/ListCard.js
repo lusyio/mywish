@@ -4,6 +4,7 @@ import WishList from "./WishList/WishList";
 import Button from "../../UI/Button/Button";
 import ColorPicker from "./ColorPicker/ColorPicker";
 import Input from "../../UI/Input/Input";
+import ListWidget from "./ListWidget/ListWidget";
 
 const ListCard = props => {
     let cls = [
@@ -54,6 +55,11 @@ const ListCard = props => {
                                     Добавить еще желание
                                 </Button>
                             </div>
+                            <ListWidget>
+                                <Button type='listWidget'>Предпросмотр</Button>
+                                <Button type='listWidget'>Рассказать друзьям</Button>
+                                <Button onClick={() => props.deleteList(list.id)} type='listWidget'>Удалить список</Button>
+                            </ListWidget>
                         </div>
                     )
                 }

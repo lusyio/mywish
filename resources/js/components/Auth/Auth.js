@@ -127,11 +127,11 @@ export default class Auth extends Component {
             .then(res => {
                 localStorage.setItem('userId', res.data.userId);
                 localStorage.setItem('authToken', res.data.authToken);
-                if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== '') {
+                if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== null) {
                     axios.post('/api/lists', {
                         'userId': localStorage.getItem('userId'),
                         'authToken': localStorage.getItem('authToken')
-                })
+                    })
                         .then(res => {
                             if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
                                 const lists = {...this.state.lists};
@@ -143,7 +143,7 @@ export default class Auth extends Component {
                                 })
                             } else {
                                 localStorage.setItem('userId', null);
-                                localStorage.setItem('authToken', '');
+                                localStorage.setItem('authToken', null);
                             }
                         }, res => console.log('error', res));
                 }
@@ -166,7 +166,7 @@ export default class Auth extends Component {
 
     // Получаю начальные данные eventov. count и event записываю в соответствующие state
     componentDidMount() {
-        if (localStorage.getItem('userId') === null && localStorage.getItem('authToken') === '') {
+        if (localStorage.getItem('userId') === null && localStorage.getItem('authToken') === null) {
             axios.get('/api/events')
                 .then(res => {
                     this.setState({
@@ -174,6 +174,25 @@ export default class Auth extends Component {
                         events: res.data.events
                     })
                 }, res => console.log('error', res))
+        } else {
+            axios.post('/api/lists', {
+                'userId': localStorage.getItem('userId'),
+                'authToken': localStorage.getItem('authToken')
+            })
+                .then(res => {
+                    if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
+                        const lists = {...this.state.lists};
+                        lists.items = res.data.items;
+                        lists.count = res.data.count;
+                        lists.defaultListId = res.data.defaultListId;
+                        this.setState({
+                            lists
+                        })
+                    } else {
+                        localStorage.setItem('userId', null);
+                        localStorage.setItem('authToken', null);
+                    }
+                }, res => console.log('error', res));
         }
     }
 
@@ -208,16 +227,18 @@ export default class Auth extends Component {
                 if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
                     const lists = {...this.state.lists};
                     const currentList = lists.items.find(item => item.id === listId);
-                    const currentWish = currentList.wishItems.find(wish => wish.id === id);
-                    for (const prop of Object.getOwnPropertyNames(currentWish)) {
-                        delete currentWish[prop];
+                    for (let i = 0; i < currentList.wishItems.length; i++) {
+                        if (currentList.wishItems[i].id === id) {
+                            currentList.wishItems.splice(i, 1);
+                            break;
+                        }
                     }
                     this.setState({
                         lists
                     })
                 } else {
                     localStorage.setItem('userId', null);
-                    localStorage.setItem('authToken', '');
+                    localStorage.setItem('authToken', null);
                 }
 
             })
@@ -262,12 +283,12 @@ export default class Auth extends Component {
                                     });
                                 } else {
                                     localStorage.setItem('userId', null);
-                                    localStorage.setItem('authToken', '');
+                                    localStorage.setItem('authToken', null);
                                 }
                             }, res => console.log('error', res))
                     } else {
                         localStorage.setItem('userId', null);
-                        localStorage.setItem('authToken', '');
+                        localStorage.setItem('authToken', null);
                     }
 
                 }, res => console.log('error', res));
@@ -290,7 +311,7 @@ export default class Auth extends Component {
                     })
                 } else {
                     localStorage.setItem('userId', null);
-                    localStorage.setItem('authToken', '');
+                    localStorage.setItem('authToken', null);
                 }
             }, (res) => console.log('error', res))
     };
@@ -316,7 +337,7 @@ export default class Auth extends Component {
                     })
                 } else {
                     localStorage.setItem('userId', null);
-                    localStorage.setItem('authToken', '');
+                    localStorage.setItem('authToken', null);
                 }
             }, (res) => console.log('error', res))
 
@@ -342,7 +363,7 @@ export default class Auth extends Component {
                         })
                     } else {
                         localStorage.setItem('userId', null);
-                        localStorage.setItem('authToken', '');
+                        localStorage.setItem('authToken', null);
                     }
                 }, (res) => console.log('error', res))
         }
@@ -364,12 +385,38 @@ export default class Auth extends Component {
         })
     };
 
+    deleteListHandler = (listId) => {
+        axios.post('/api/list/delete', {
+            "userId": localStorage.getItem('userId'),
+            "authToken": localStorage.getItem('authToken'),
+            "id": listId
+        })
+            .then(res => {
+                if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+                    const lists = {...this.state.lists};
+                    for (let i = 0; i < lists.items.length; i++) {
+                        if (lists.items[i].id === listId) {
+                            lists.items.splice(i, 1);
+                            break;
+                        }
+                    }
+                    this.setState({
+                        lists
+                    })
+                } else {
+                    localStorage.setItem('userId', null);
+                    localStorage.setItem('authToken', null);
+                }
+
+            }, res => console.log('error', res))
+    };
+
     render() {
         function compare(eventsIds, resIds) {
             return eventsIds.length === resIds.length && eventsIds.every((v, i) => v === resIds[i])
         }
 
-        if (localStorage.getItem('userId') === null && localStorage.getItem('authToken') === '') {
+        if (localStorage.getItem('userId') === null && localStorage.getItem('authToken') === null) {
             setTimeout(() => axios.get('/api/events')
                 .then(res => {
                     let eventsId = [];
@@ -392,7 +439,7 @@ export default class Auth extends Component {
 
         let authContent;
 
-        if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== '') {
+        if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== null) {
             authContent =
                 <div className={classes.Container}>
                     <div>
@@ -402,6 +449,7 @@ export default class Auth extends Component {
                             lists={this.state.lists}
                         />
                         <ListCard
+                            deleteList={this.deleteListHandler}
                             onBlurListTitle={this.onBlurListTitleHandler}
                             onChangeListTitle={this.onChangeListTitleHandler}
                             showNewListTitleToggle={this.showNewListTitleToggleHandler}
