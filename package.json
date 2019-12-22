@@ -25,8 +25,10 @@
         "@babel/plugin-proposal-class-properties": "^7.7.4",
         "extract-text-webpack-plugin": "^3.0.2",
         "laravel-mix-react-css-modules": "^1.3.0",
+        "react-facebook": "^8.1.4",
         "react-facebook-login": "^4.1.1",
-        "react-router-dom": "^5.1.2"
+        "react-router-dom": "^5.1.2",
+        "react-vk": "^5.0.2"
     },
     "babel": {
         "presets": [

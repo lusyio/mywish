@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import classes from './Auth.module.css'
+import classes from './Authorization.module.css'
 import Button from "../UI/Button/Button";
 import FacebookLogin from 'react-facebook-login';
 import Card from "../Card/Card";
@@ -8,8 +8,11 @@ import EventCounter from "./EventCounter/EventCounter";
 import axios from 'axios';
 import Sidebar from "./Sidebar/Sidebar";
 import ListCard from "./ListCard/ListCard";
+import Modal from "../UI/Modal/Modal";
+// import VK, {Auth, Share} from "react-vk";
+import {FacebookProvider, Share} from 'react-facebook';
 
-export default class Auth extends Component {
+export default class Authorization extends Component {
 
     state = {
         count: '3',
@@ -37,6 +40,10 @@ export default class Auth extends Component {
             },
         ],
 
+        deleteList: false,
+        tempListId: null,
+        tempListName: '',
+        shareList: false,
         wishNameControl: '',
         wishUrlControl: '',
         listNameControl: '',
@@ -149,6 +156,42 @@ export default class Auth extends Component {
                 }
             }, res => console.log('error', res));
     };
+
+    responseVk = (response) => {
+        console.log(response);
+        // отправка данных авторизации
+        axios.post('/api/auth', {
+            "social": 'fb',
+            "name": response.name,
+            "url": "",
+            "token": response.accessToken,
+            "socialUserId": response.userID,
+        })
+            .then(res => {
+                localStorage.setItem('userId', res.data.userId);
+                localStorage.setItem('authToken', res.data.authToken);
+                if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== null) {
+                    axios.post('/api/lists', {
+                        'userId': localStorage.getItem('userId'),
+                        'authToken': localStorage.getItem('authToken')
+                    })
+                        .then(res => {
+                            if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
+                                const lists = {...this.state.lists};
+                                lists.items = res.data.items;
+                                lists.count = res.data.count;
+                                lists.defaultListId = res.data.defaultListId;
+                                this.setState({
+                                    lists
+                                })
+                            } else {
+                                localStorage.setItem('userId', null);
+                                localStorage.setItem('authToken', null);
+                            }
+                        }, res => console.log('error', res));
+                }
+            }, res => console.log('error', res));
+    }
 
     selectListHandler = (id) => {
         const lists = {...this.state.lists};
@@ -385,23 +428,25 @@ export default class Auth extends Component {
         })
     };
 
-    deleteListHandler = (listId) => {
+    deleteListHandler = () => {
         axios.post('/api/list/delete', {
             "userId": localStorage.getItem('userId'),
             "authToken": localStorage.getItem('authToken'),
-            "id": listId
+            "id": this.state.tempListId
         })
             .then(res => {
                 if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
                     const lists = {...this.state.lists};
                     for (let i = 0; i < lists.items.length; i++) {
-                        if (lists.items[i].id === listId) {
+                        if (lists.items[i].id === this.state.tempListId) {
                             lists.items.splice(i, 1);
                             break;
                         }
+                        lists.defaultListId = lists.items[0].id
                     }
                     this.setState({
-                        lists
+                        lists,
+                        deleteList: !this.state.deleteList
                     })
                 } else {
                     localStorage.setItem('userId', null);
@@ -409,6 +454,45 @@ export default class Auth extends Component {
                 }
 
             }, res => console.log('error', res))
+    };
+
+    shareListHandler = () => {
+        axios.post('/api/share', {
+            "userId": localStorage.getItem('userId'),
+            "authToken": localStorage.getItem('authToken'),
+            "listId": this.state.tempListId,
+            "social": "string"
+        })
+            .then(res => {
+                console.log(res)
+            })
+    }
+
+    clickOutsideHandler = (event) => {
+        const block = document.getElementById('modal');
+        if (event.target === block) {
+            this.setState({
+                deleteList: false,
+                shareList: false
+            })
+        }
+    };
+
+    toggleModalHandler = (listId, listName, type) => {
+        if (type === 'delete') {
+            this.setState({
+                deleteList: !this.state.deleteList,
+                tempListId: listId,
+                tempListName: listName
+            });
+        }
+        if (type === 'share') {
+            this.setState({
+                shareList: !this.state.shareList,
+                tempListId: listId,
+                tempListName: listName
+            });
+        }
     };
 
     render() {
@@ -437,36 +521,66 @@ export default class Auth extends Component {
                 }, res => console.log('error', res)), 30000);
         }
 
+        let modal = null;
+
+        if (this.state.deleteList) {
+            modal =
+                <Modal clickOutside={this.clickOutsideHandler}>
+                    <p>Вы действительно хотите удалить список желаний <strong>"{this.state.tempListName}"?</strong></p>
+                    <Button onClick={this.deleteListHandler}>Удалить список</Button>
+                    <Button type='secondary' onClick={this.toggleModalHandler}>Отмена</Button>
+                </Modal>
+        }
+
+        if (this.state.shareList) {
+            modal =
+                <Modal clickOutside={this.clickOutsideHandler}>
+                    <p>Ссылка на ваш список:</p>
+                    <p>Расскажи о своих желаниях друзьям:</p>
+                    <FacebookProvider appId="563234647569569">
+                        <Share href="http://www.facebook.com">
+                            {({handleClick, loading}) => (
+                                <Button type="share" disabled={loading} onClick={handleClick}>Share</Button>
+                            )}
+                        </Share>
+                    </FacebookProvider>
+                </Modal>
+        }
+
         let authContent;
 
         if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== null) {
             authContent =
-                <div className={classes.Container}>
-                    <div>
-                        <Sidebar
-                            addList={this.addListHandler}
-                            onClick={this.selectListHandler}
-                            lists={this.state.lists}
-                        />
-                        <ListCard
-                            deleteList={this.deleteListHandler}
-                            onBlurListTitle={this.onBlurListTitleHandler}
-                            onChangeListTitle={this.onChangeListTitleHandler}
-                            showNewListTitleToggle={this.showNewListTitleToggleHandler}
-                            showNewListTitle={this.state.showNewListTitle}
-                            onPickColor={this.onPickColorHandler}
-                            background={this.state.background}
-                            uploadImg={this.uploadImgHandler}
-                            deleteWish={this.deleteWishHandler}
-                            addNewWish={this.addNewWishHandler}
-                            onChangeWishUrl={this.onChangeWishUrlHandler}
-                            onChangeWishName={this.onChangeWishNameHandler}
-                            showNewWish={this.state.showNewWish}
-                            showNewWishToggle={this.showNewWishToggle}
-                            lists={this.state.lists}
-                        />
+                <React.Fragment>
+                    <div className={classes.Container}>
+                        <div>
+                            <Sidebar
+                                addList={this.addListHandler}
+                                onClick={this.selectListHandler}
+                                lists={this.state.lists}
+                            />
+                            <ListCard
+                                shareList={this.toggleModalHandler}
+                                deleteList={this.toggleModalHandler}
+                                onBlurListTitle={this.onBlurListTitleHandler}
+                                onChangeListTitle={this.onChangeListTitleHandler}
+                                showNewListTitleToggle={this.showNewListTitleToggleHandler}
+                                showNewListTitle={this.state.showNewListTitle}
+                                onPickColor={this.onPickColorHandler}
+                                background={this.state.background}
+                                uploadImg={this.uploadImgHandler}
+                                deleteWish={this.deleteWishHandler}
+                                addNewWish={this.addNewWishHandler}
+                                onChangeWishUrl={this.onChangeWishUrlHandler}
+                                onChangeWishName={this.onChangeWishNameHandler}
+                                showNewWish={this.state.showNewWish}
+                                showNewWishToggle={this.showNewWishToggle}
+                                lists={this.state.lists}
+                            />
+                        </div>
                     </div>
-                </div>
+                    {modal}
+                </React.Fragment>
         } else {
             authContent =
                 <div className={classes.Auth}>
@@ -475,7 +589,7 @@ export default class Auth extends Component {
                         <p className={classes.AuthHeader}>Подскажите Вашим близким, друзьям, коллегам, чтобы Вы хотели
                             получить в подарок! Составьте свой
                             список и поделитесь им!</p>
-                        <Card>
+                        <Card id='card'>
                             <p>Авторизуйтесь с помощью соц.сетей и составьте свой список подарков!</p>
                             <FacebookLogin
                                 appId='563234647569569'
@@ -487,6 +601,12 @@ export default class Auth extends Component {
                                 cssClass={classes.fbLogin}
                                 textButton='FB'
                             />
+                            {/*<VK apiId={7244111}>*/}
+                            {/*    <Auth*/}
+                            {/*        elementId='card'*/}
+                            {/*        onAuth={this.responseVk}*/}
+                            {/*    />*/}
+                            {/*</VK>*/}
                         </Card>
                         <EventCounter
                             count={this.state.count}

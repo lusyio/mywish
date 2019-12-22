@@ -79,6 +79,11 @@
     min-width: unset;
 }
 
+.Button.share{
+    background: #2A61A1;
+    border-radius: 5px;
+}
+
 .Button.secondary {
     background: #B9B5B4;
     border-radius: 10px;

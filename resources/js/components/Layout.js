@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import classes from './Layout.module.css'
-import Auth from "./Auth/Auth";
+import Auth from "./Auth/Authorization";
 import Header from "./Navigation/Header/Header";
 import Footer from "./Navigation/Footer/Footer";
 

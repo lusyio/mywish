@@ -1,0 +1,41 @@
+.Modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(40, 40, 40, 0.2);
+    backdrop-filter: blur(15px);
+}
+
+.ModalContent {
+    margin: 15% auto;
+    width: 630px;
+    background: url('/images/bg3.jpg');
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.ModalContent > div {
+    padding: 53px 90px;
+    background: #FEFEFE;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.ModalContent > div > p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 35px;
+}
+
+.ModalContent > div > p > strong {
+    font-weight: bold;
+    display: block;
+}
+
