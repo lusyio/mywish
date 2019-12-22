@@ -4,6 +4,7 @@
     padding: 10px;
     background: darkred;
     border-radius: 15px;
+    position: relative;
 }
 
 .ListCard > .ListCardBody {

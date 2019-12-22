@@ -227,9 +227,11 @@ export default class Auth extends Component {
                 if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
                     const lists = {...this.state.lists};
                     const currentList = lists.items.find(item => item.id === listId);
-                    const currentWish = currentList.wishItems.find(wish => wish.id === id);
-                    for (const prop of Object.getOwnPropertyNames(currentWish)) {
-                        delete currentWish[prop];
+                    for (let i = 0; i < currentList.wishItems.length; i++) {
+                        if (currentList.wishItems[i].id === id) {
+                            currentList.wishItems.splice(i, 1);
+                            break;
+                        }
                     }
                     this.setState({
                         lists
@@ -383,6 +385,32 @@ export default class Auth extends Component {
         })
     };
 
+    deleteListHandler = (listId) => {
+        axios.post('/api/list/delete', {
+            "userId": localStorage.getItem('userId'),
+            "authToken": localStorage.getItem('authToken'),
+            "id": listId
+        })
+            .then(res => {
+                if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+                    const lists = {...this.state.lists};
+                    for (let i = 0; i < lists.items.length; i++) {
+                        if (lists.items[i].id === listId) {
+                            lists.items.splice(i, 1);
+                            break;
+                        }
+                    }
+                    this.setState({
+                        lists
+                    })
+                } else {
+                    localStorage.setItem('userId', null);
+                    localStorage.setItem('authToken', null);
+                }
+
+            }, res => console.log('error', res))
+    };
+
     render() {
         function compare(eventsIds, resIds) {
             return eventsIds.length === resIds.length && eventsIds.every((v, i) => v === resIds[i])
@@ -421,6 +449,7 @@ export default class Auth extends Component {
                             lists={this.state.lists}
                         />
                         <ListCard
+                            deleteList={this.deleteListHandler}
                             onBlurListTitle={this.onBlurListTitleHandler}
                             onChangeListTitle={this.onChangeListTitleHandler}
                             showNewListTitleToggle={this.showNewListTitleToggleHandler}

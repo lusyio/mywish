@@ -1,6 +1,7 @@
 .ListWidget {
     position: absolute;
     right: -125px;
+    top: 0;
     width: 85px;
     display: block;
     background: transparent;
