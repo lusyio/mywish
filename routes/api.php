@@ -169,9 +169,7 @@ Route::post('/item/delete', function (Request $request) {
     if (is_null($item) || is_null(\App\WishList::where('id', $item->wish_list_id)->where('user_id', $request->userId)->first())) {
         return json_encode(['error' => 'no lists']);
     }
-    if (Storage::disk('local')->exists($item->image_url)) {
-        Storage::delete($item->image_url);
-    }
+    $item->beforeDelete();
     $item->delete();
     return json_encode(['error' => '', 'status' => 'ok']);
 })->middleware(\App\Http\Middleware\CheckAuthToken::class);

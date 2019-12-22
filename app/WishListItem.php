@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class WishListItem extends Model
 {
@@ -23,5 +24,13 @@ class WishListItem extends Model
     public function list()
     {
         return $this->belongsTo('App\WishList');
+    }
+
+    public function beforeDelete()
+    {
+        $localPath = preg_replace('~^https://mywish.su/public/storage/images/~', 'public/images/', $this->image_url);
+        if (Storage::disk('local')->exists($localPath)) {
+            Storage::delete($localPath);
+        }
     }
 }
