@@ -62020,47 +62020,6 @@ function (_Component) {
       });
     });
 
-    _defineProperty(_assertThisInitialized(_this), "responseVk", function (response) {
-      console.log(response); // отправка данных авторизации
-
-      axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/auth', {
-        "social": 'fb',
-        "name": response.name,
-        "url": "",
-        "token": response.accessToken,
-        "socialUserId": response.userID
-      }).then(function (res) {
-        localStorage.setItem('userId', res.data.userId);
-        localStorage.setItem('authToken', res.data.authToken);
-
-        if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== null) {
-          axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/lists', {
-            'userId': localStorage.getItem('userId'),
-            'authToken': localStorage.getItem('authToken')
-          }).then(function (res) {
-            if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
-              var lists = _objectSpread({}, _this.state.lists);
-
-              lists.items = res.data.items;
-              lists.count = res.data.count;
-              lists.defaultListId = res.data.defaultListId;
-
-              _this.setState({
-                lists: lists
-              });
-            } else {
-              localStorage.setItem('userId', null);
-              localStorage.setItem('authToken', null);
-            }
-          }, function (res) {
-            return console.log('error', res);
-          });
-        }
-      }, function (res) {
-        return console.log('error', res);
-      });
-    });
-
     _defineProperty(_assertThisInitialized(_this), "selectListHandler", function (id) {
       var lists = _objectSpread({}, _this.state.lists);
 
@@ -64003,7 +63962,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/mastekator/Desktop/mywish/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/user/Desktop/mywish/resources/js/app.js */"./resources/js/app.js");
 
 
 /***/ })
