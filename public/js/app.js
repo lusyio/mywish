@@ -61999,31 +61999,6 @@ function (_Component) {
       return date + '.' + month + '.' + year + ' в ' + hour + ':' + min;
     });
 
-    _defineProperty(_assertThisInitialized(_this), "sortByDate", function (arr) {
-      arr.sort(function (a, b) {
-        var aFilterBy;
-        var bFilterBy;
-
-        if (a.createdAt > a.updatedAt) {
-          aFilterBy = a.createdAt;
-          aFilterBy = a.updatedAt;
-          return aFilterBy;
-        }
-
-        if (b.createdAt > b.updatedAt) {
-          bFilterBy = b.createdAt;
-          bFilterBy = b.updatedAt;
-          return bFilterBy;
-        }
-
-        if (a.aFilterBy > b.bFilterBy) {
-          return 1;
-        } else {
-          return -1;
-        }
-      });
-    });
-
     _defineProperty(_assertThisInitialized(_this), "responseFacebook", function (response) {
       console.log(response); // отправка данных авторизации
 
@@ -62045,7 +62020,9 @@ function (_Component) {
             if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
               var lists = _objectSpread({}, _this.state.lists);
 
-              lists.items = _this.sortByDate(res.data.items);
+              lists.items = res.data.items.sort(function (a, b) {
+                return a.updatedAt > b.updatedAt ? -1 : -1;
+              });
               lists.count = res.data.count;
               lists.defaultListId = res.data.defaultListId;
 
@@ -62239,7 +62216,9 @@ function (_Component) {
           var lists = _objectSpread({}, _this.state.lists);
 
           lists.items.push(res.data);
-          lists.items = _this.sortByDate(lists.items);
+          lists.items = lists.items.sort(function (a, b) {
+            return a.updatedAt > b.updatedAt ? -1 : -1;
+          });
 
           _this.setState({
             lists: lists
@@ -62434,7 +62413,9 @@ function (_Component) {
           if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
             var lists = _objectSpread({}, _this2.state.lists);
 
-            lists.items = res.data.items;
+            lists.items = res.data.items.sort(function (a, b) {
+              return a.updatedAt > b.updatedAt ? -1 : -1;
+            });
             lists.count = res.data.count;
             lists.defaultListId = res.data.defaultListId;
 
@@ -63465,9 +63446,9 @@ var Sidebar = function Sidebar(props) {
   var renderList;
 
   if (props.lists.count !== 0) {
-    renderList = props.lists.items.map(function (list, index) {
+    renderList = props.lists.items.map(function (list) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        key: index,
+        key: list.id,
         onClick: function onClick() {
           return props.onClick(list.id);
         }

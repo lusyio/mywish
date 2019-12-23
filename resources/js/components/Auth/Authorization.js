@@ -140,28 +140,6 @@ export default class Authorization extends Component {
         return date + '.' + month + '.' + year + ' в ' + hour + ':' + min;
     };
 
-    sortByDate = (arr) => {
-        arr.sort((a, b) => {
-            let aFilterBy;
-            let bFilterBy;
-            if (a.createdAt > a.updatedAt) {
-                aFilterBy = a.createdAt;
-                aFilterBy = a.updatedAt;
-                return aFilterBy
-            }
-            if (b.createdAt > b.updatedAt) {
-                bFilterBy = b.createdAt;
-                bFilterBy = b.updatedAt;
-                return bFilterBy
-            }
-            if (a.aFilterBy > b.bFilterBy) {
-                return 1
-            } else {
-                return -1
-            }
-        });
-    };
-
     responseFacebook = (response) => {
 
         console.log(response);
@@ -184,7 +162,7 @@ export default class Authorization extends Component {
                         .then(res => {
                             if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
                                 const lists = {...this.state.lists};
-                                lists.items = this.sortByDate(res.data.items);
+                                lists.items = res.data.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : -1);
                                 lists.count = res.data.count;
                                 lists.defaultListId = res.data.defaultListId;
                                 this.setState({
@@ -267,7 +245,7 @@ export default class Authorization extends Component {
                 .then(res => {
                     if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
                         const lists = {...this.state.lists};
-                        lists.items = res.data.items;
+                        lists.items = res.data.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : -1);
                         lists.count = res.data.count;
                         lists.defaultListId = res.data.defaultListId;
                         this.setState({
@@ -391,7 +369,7 @@ export default class Authorization extends Component {
                 if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
                     const lists = {...this.state.lists};
                     lists.items.push(res.data);
-                    lists.items = this.sortByDate(lists.items);
+                    lists.items = lists.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : -1);
                     this.setState({
                         lists
                     })
