@@ -2,7 +2,8 @@ import React, {Component} from 'react'
 import classes from './ListPreview.module.css'
 import axios from 'axios';
 import WishList from "../ListCard/WishList/WishList";
-import WishItem from "../ListCard/WishList/WishItem/WishItem";
+import Button from "../../UI/Button/Button";
+import {Link} from "react-router-dom";
 
 export default class ListPreview extends Component {
     state = {
@@ -17,21 +18,21 @@ export default class ListPreview extends Component {
             status: "string",
             wishList: {
                 id: 1,
-                name: "string",
+                name: "",
                 updatedAt: 1,
                 backgroundNumber: 1,
                 userId: 1,
-                userName: "string",
+                userName: "",
                 createdAt: 1,
-                link: "string",
+                link: "",
                 wishItems: [
                     {
                         id: 1,
-                        title: "string",
-                        url: "string",
+                        title: "",
+                        url: "",
                         order: 1,
                         listId: 1,
-                        picture: "string"
+                        picture: ""
                     }
                 ]
             }
@@ -39,8 +40,10 @@ export default class ListPreview extends Component {
     };
 
     componentDidMount() {
-        axios.get(`${location.pathname}`)
+        console.log(location.pathname)
+        axios.get(`/api/${location.pathname}`)
             .then(res => {
+                console.log(res.data)
                 const list = {...this.state.list};
                 list.status = res.data.status;
                 list.wishList = res.data.wishList;
@@ -51,19 +54,37 @@ export default class ListPreview extends Component {
     }
 
     render() {
-        return (
-            <div className={classes.ListPreview} style={{background: `url(${this.state.background[this.state.list.wishList.backgroundNumber]})`}}>
-                <div className={classes.ListPreviewBody}>
-                    <WishList
-                        widgetOff
-                        id={this.state.list.wishList.id}
-                        listId={this.state.list.wishList.id}
-                        key={this.state.list.wishList.id}
-                        wishItems={this.state.list.wishList.wishItems}
-                    />
+        let wishList;
+
+        if (this.state.list.wishList.wishItems.length !== 0) {
+            wishList =
+                <div className={classes.ListPreview}
+                     style={{background: `url(${this.state.background[this.state.list.wishList.backgroundNumber]})`}}>
+                    <div className={classes.ListPreviewBody}>
+                        <WishList
+                            widgetOff
+                            id={this.state.list.wishList.id}
+                            listId={this.state.list.wishList.id}
+                            key={this.state.list.wishList.id}
+                            wishItems={this.state.list.wishList.wishItems}
+                        />
+                    </div>
                 </div>
-            </div>
-        )
+
+        } else {
+            wishList =
+                <div className={classes.ListPreview}
+                     style={{background: `url(${this.state.background[this.state.list.wishList.backgroundNumber]})`}}>
+                    <div className={classes.ListPreviewBody}>
+                        <p>В этот список еще не добавили желания</p>
+                        <Link to={'/'}>
+                            <Button>Создать список желаний</Button>
+                        </Link>
+                    </div>
+                </div>
+        }
+
+        return wishList
     }
 }
 

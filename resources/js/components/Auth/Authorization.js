@@ -159,41 +159,41 @@ export default class Authorization extends Component {
             }, res => console.log('error', res));
     };
 
-    // responseVk = (response) => {
-    //     console.log(response);
-    //     // отправка данных авторизации
-    //     axios.post('/api/auth', {
-    //         "social": 'fb',
-    //         "name": response.name,
-    //         "url": "",
-    //         "token": response.accessToken,
-    //         "socialUserId": response.userID,
-    //     })
-    //         .then(res => {
-    //             localStorage.setItem('userId', res.data.userId);
-    //             localStorage.setItem('authToken', res.data.authToken);
-    //             if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== null) {
-    //                 axios.post('/api/lists', {
-    //                     'userId': localStorage.getItem('userId'),
-    //                     'authToken': localStorage.getItem('authToken')
-    //                 })
-    //                     .then(res => {
-    //                         if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
-    //                             const lists = {...this.state.lists};
-    //                             lists.items = res.data.items;
-    //                             lists.count = res.data.count;
-    //                             lists.defaultListId = res.data.defaultListId;
-    //                             this.setState({
-    //                                 lists
-    //                             })
-    //                         } else {
-    //                             localStorage.setItem('userId', null);
-    //                             localStorage.setItem('authToken', null);
-    //                         }
-    //                     }, res => console.log('error', res));
-    //             }
-    //         }, res => console.log('error', res));
-    // }
+    responseVk = (response) => {
+        console.log(response);
+        // отправка данных авторизации
+        axios.post('/api/auth', {
+            "social": 'fb',
+            "name": response.name,
+            "url": "",
+            "token": response.accessToken,
+            "socialUserId": response.userID,
+        })
+            .then(res => {
+                localStorage.setItem('userId', res.data.userId);
+                localStorage.setItem('authToken', res.data.authToken);
+                if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== null) {
+                    axios.post('/api/lists', {
+                        'userId': localStorage.getItem('userId'),
+                        'authToken': localStorage.getItem('authToken')
+                    })
+                        .then(res => {
+                            if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
+                                const lists = {...this.state.lists};
+                                lists.items = res.data.items;
+                                lists.count = res.data.count;
+                                lists.defaultListId = res.data.defaultListId;
+                                this.setState({
+                                    lists
+                                })
+                            } else {
+                                localStorage.setItem('userId', null);
+                                localStorage.setItem('authToken', null);
+                            }
+                        }, res => console.log('error', res));
+                }
+            }, res => console.log('error', res));
+    }
 
     selectListHandler = (id) => {
         const lists = {...this.state.lists};
@@ -635,7 +635,7 @@ export default class Authorization extends Component {
                     <Route path='/' exact>
                         {authContent}
                     </Route>
-                    <Route path='/list/:listId' component={ListPreview} />
+                    <Route path='/list/:link' component={ListPreview} />
                 </Switch>
             </BrowserRouter>
         )

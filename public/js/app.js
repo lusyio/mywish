@@ -54843,7 +54843,7 @@ if (false) {} else {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -62020,6 +62020,47 @@ function (_Component) {
       });
     });
 
+    _defineProperty(_assertThisInitialized(_this), "responseVk", function (response) {
+      console.log(response); // отправка данных авторизации
+
+      axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/auth', {
+        "social": 'fb',
+        "name": response.name,
+        "url": "",
+        "token": response.accessToken,
+        "socialUserId": response.userID
+      }).then(function (res) {
+        localStorage.setItem('userId', res.data.userId);
+        localStorage.setItem('authToken', res.data.authToken);
+
+        if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== null) {
+          axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/lists', {
+            'userId': localStorage.getItem('userId'),
+            'authToken': localStorage.getItem('authToken')
+          }).then(function (res) {
+            if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
+              var lists = _objectSpread({}, _this.state.lists);
+
+              lists.items = res.data.items;
+              lists.count = res.data.count;
+              lists.defaultListId = res.data.defaultListId;
+
+              _this.setState({
+                lists: lists
+              });
+            } else {
+              localStorage.setItem('userId', null);
+              localStorage.setItem('authToken', null);
+            }
+          }, function (res) {
+            return console.log('error', res);
+          });
+        }
+      }, function (res) {
+        return console.log('error', res);
+      });
+    });
+
     _defineProperty(_assertThisInitialized(_this), "selectListHandler", function (id) {
       var lists = _objectSpread({}, _this.state.lists);
 
@@ -62493,7 +62534,7 @@ function (_Component) {
         path: "/",
         exact: true
       }, authContent), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_12__["Route"], {
-        path: "/list/:listId",
+        path: "/list/:link",
         component: _ListPreview_ListPreview__WEBPACK_IMPORTED_MODULE_13__["default"]
       })));
     }
@@ -62827,7 +62868,7 @@ var ListCard = function ListCard(props) {
           type: "showNewWish",
           onClick: props.showNewWishToggle
         }, "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0435\u0449\u0435 \u0436\u0435\u043B\u0430\u043D\u0438\u0435")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListWidget_ListWidget__WEBPACK_IMPORTED_MODULE_6__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
-          to: "/list/".concat(list.id)
+          to: "/list/".concat(list.link)
         }, "\u041F\u0440\u0435\u0434\u043F\u0440\u043E\u0441\u043C\u043E\u0442\u0440"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
           onClick: function onClick() {
             return props.shareList(list.id, list.name, 'share');
@@ -63233,20 +63274,20 @@ function (_Component) {
         status: "string",
         wishList: {
           id: 1,
-          name: "string",
+          name: "",
           updatedAt: 1,
           backgroundNumber: 1,
           userId: 1,
-          userName: "string",
+          userName: "",
           createdAt: 1,
-          link: "string",
+          link: "",
           wishItems: [{
             id: 1,
-            title: "string",
-            url: "string",
+            title: "",
+            url: "",
             order: 1,
             listId: 1,
-            picture: "string"
+            picture: ""
           }]
         }
       }
@@ -63260,7 +63301,10 @@ function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("".concat(location.pathname)).then(function (res) {
+      console.log(location.pathname);
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/api/".concat(location.pathname)).then(function (res) {
+        console.log(res.data);
+
         var list = _objectSpread({}, _this2.state.list);
 
         list.status = res.data.status;
@@ -63276,6 +63320,9 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var wishList;
+      console.log(this.state.list.lenght); // if (this.state.list.lenght)
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: _ListPreview_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListPreview,
         style: {
