@@ -121,7 +121,7 @@ export default class Authorization extends Component {
                 localStorage.setItem('userId', res.data.userId);
                 localStorage.setItem('authToken', res.data.authToken);
                 if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== null) {
-                    axios.post('/api/lists', {
+                    trackPromise(axios.post('/api/lists', {
                         'userId': localStorage.getItem('userId'),
                         'authToken': localStorage.getItem('authToken')
                     })
@@ -138,7 +138,7 @@ export default class Authorization extends Component {
                                 localStorage.setItem('userId', null);
                                 localStorage.setItem('authToken', null);
                             }
-                        }, res => console.log('error', res));
+                        }, res => console.log('error', res)));
                 }
             }, res => console.log('error', res));
     }
@@ -315,7 +315,7 @@ export default class Authorization extends Component {
         this.setState({
             newBackgroundNumber: index
         });
-        trackPromise(axios.post('/api/list/update', {
+        axios.post('/api/list/update', {
             "userId": localStorage.getItem('userId'),
             "authToken": localStorage.getItem('authToken'),
             "id": listId,
@@ -334,7 +334,7 @@ export default class Authorization extends Component {
                     localStorage.setItem('userId', null);
                     localStorage.setItem('authToken', null);
                 }
-            }, (res) => console.log('error', res)))
+            }, (res) => console.log('error', res))
 
     };
 

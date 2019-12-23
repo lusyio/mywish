@@ -2150,7 +2150,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-ListPreview-__ListPreview-module___2rHUcJNCvmaTom0Q7maUM4 {\n    max-width: 690px;\n    width: 100%;\n    padding: 10px;\n    background: darkred;\n    border-radius: 15px;\n    position: relative;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___309ByROjKlPBq9-j5_7ZuO {\n    border-radius: 15px;\n    background: #FFFFFF;\n    padding: 64px 106px 58px 106px;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-ListPreview-__ListPreview-module___2rHUcJNCvmaTom0Q7maUM4 {\n    max-width: 690px;\n    width: 100%;\n    padding: 10px;\n    background: darkred;\n    border-radius: 15px;\n    position: relative;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___309ByROjKlPBq9-j5_7ZuO {\n    border-radius: 15px;\n    background: #FFFFFF;\n    padding: 64px 106px 58px 106px;\n    text-align: center;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___309ByROjKlPBq9-j5_7ZuO > img {\n    margin-bottom: 50px;\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100px;\n    height: 100px;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___309ByROjKlPBq9-j5_7ZuO > p {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 23px;\n    text-align: center;\n    color: #000000;\n    max-width: 220px;\n    margin-bottom: 50px;\n    margin-left: auto;\n    margin-right: auto;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -64427,6 +64427,17 @@ module.exports = "/images/Eye.svg?f342192f78123b492ca72d9e8640c942";
 
 /***/ }),
 
+/***/ "./public/svg/giftbox.svg":
+/*!********************************!*\
+  !*** ./public/svg/giftbox.svg ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/giftbox.svg?565eb09facef9ae12d968a6f12fe826d";
+
+/***/ }),
+
 /***/ "./public/svg/pencil.svg":
 /*!*******************************!*\
   !*** ./public/svg/pencil.svg ***!
@@ -64754,7 +64765,7 @@ function (_Component) {
         localStorage.setItem('authToken', res.data.authToken);
 
         if (localStorage.getItem('userId') !== null && localStorage.getItem('authToken') !== null) {
-          axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/lists', {
+          Object(react_promise_tracker__WEBPACK_IMPORTED_MODULE_14__["trackPromise"])(axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/lists', {
             'userId': localStorage.getItem('userId'),
             'authToken': localStorage.getItem('authToken')
           }).then(function (res) {
@@ -64774,7 +64785,7 @@ function (_Component) {
             }
           }, function (res) {
             return console.log('error', res);
-          });
+          }));
         }
       }, function (res) {
         return console.log('error', res);
@@ -64936,7 +64947,7 @@ function (_Component) {
         newBackgroundNumber: index
       });
 
-      Object(react_promise_tracker__WEBPACK_IMPORTED_MODULE_14__["trackPromise"])(axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/list/update', {
+      axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/list/update', {
         "userId": localStorage.getItem('userId'),
         "authToken": localStorage.getItem('authToken'),
         "id": listId,
@@ -64960,7 +64971,7 @@ function (_Component) {
         }
       }, function (res) {
         return console.log('error', res);
-      }));
+      });
     });
 
     _defineProperty(_assertThisInitialized(_this), "onBlurListTitleHandler", function (listId, name, bgId) {
@@ -66016,6 +66027,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ListCard_WishList_WishList__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../ListCard/WishList/WishList */ "./resources/js/components/Auth/ListCard/WishList/WishList.js");
 /* harmony import */ var _UI_Button_Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../UI/Button/Button */ "./resources/js/components/UI/Button/Button.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _public_svg_giftbox_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../public/svg/giftbox.svg */ "./public/svg/giftbox.svg");
+/* harmony import */ var _public_svg_giftbox_svg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_public_svg_giftbox_svg__WEBPACK_IMPORTED_MODULE_6__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -66039,6 +66052,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -66139,7 +66153,10 @@ function (_Component) {
           }
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: _ListPreview_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListPreviewBody
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0412 \u044D\u0442\u043E\u0442 \u0441\u043F\u0438\u0441\u043E\u043A \u0435\u0449\u0435 \u043D\u0435 \u0434\u043E\u0431\u0430\u0432\u0438\u043B\u0438 \u0436\u0435\u043B\u0430\u043D\u0438\u044F"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Link"], {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: _public_svg_giftbox_svg__WEBPACK_IMPORTED_MODULE_6___default.a,
+          alt: ""
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0412 \u044D\u0442\u043E\u0442 \u0441\u043F\u0438\u0441\u043E\u043A \u0435\u0449\u0435 \u043D\u0435 \u0434\u043E\u0431\u0430\u0432\u0438\u043B\u0438 \u0436\u0435\u043B\u0430\u043D\u0438\u044F"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Link"], {
           to: '/'
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], null, "\u0421\u043E\u0437\u0434\u0430\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A \u0436\u0435\u043B\u0430\u043D\u0438\u0439"))));
       }
@@ -66837,9 +66854,7 @@ var LoaderSpinner = function LoaderSpinner(props) {
     className: _LoaderSpinner_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.LoaderSpinnerBody
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_loader_spinner__WEBPACK_IMPORTED_MODULE_3___default.a, {
     type: "ThreeDots",
-    color: "#F2523A",
-    height: "100",
-    width: "100"
+    color: "#F2523A"
   })));
 };
 

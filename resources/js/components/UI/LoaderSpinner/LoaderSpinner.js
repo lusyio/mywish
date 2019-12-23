@@ -10,7 +10,7 @@ const LoaderSpinner = props => {
         promiseInProgress &&
         <div className={classes.LoaderSpinner}>
             <div className={classes.LoaderSpinnerBody}>
-                <Loader type="ThreeDots" color="#F2523A" height="100" width="100"/>
+                <Loader type="ThreeDots" color="#F2523A"/>
             </div>
         </div>
     )

@@ -4,6 +4,7 @@ import axios from 'axios';
 import WishList from "../ListCard/WishList/WishList";
 import Button from "../../UI/Button/Button";
 import {Link} from "react-router-dom";
+import  giftbox from '../../../../../public/svg/giftbox.svg'
 
 export default class ListPreview extends Component {
     state = {
@@ -74,6 +75,7 @@ export default class ListPreview extends Component {
                 <div className={classes.ListPreview}
                      style={{background: `url(${this.state.background[this.state.list.wishList.backgroundNumber]})`}}>
                     <div className={classes.ListPreviewBody}>
+                        <img src={giftbox} alt=""/>
                         <p>В этот список еще не добавили желания</p>
                         <Link to={'/'}>
                             <Button>Создать список желаний</Button>
