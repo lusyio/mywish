@@ -1,0 +1,28 @@
+.Label {
+    width: 142px;
+    height: 100px;
+    padding: 5px;
+    margin-right: 20px;
+    background: #ECECEC;
+    border-radius: 10px;
+    position: relative;
+}
+
+.Label:hover {
+    cursor: pointer;
+}
+
+.Label:hover > img {
+    transform: scale(1.3);
+}
+
+.Label > img {
+    transition: all 200ms;
+    position: absolute;
+    display: block;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}

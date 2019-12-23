@@ -6,3 +6,7 @@
     display: block;
     background: transparent;
 }
+
+.ListWidget > a {
+    text-decoration: none;
+}

@@ -13,34 +13,14 @@ import Modal from "../UI/Modal/Modal";
 import {FacebookProvider, Share} from 'react-facebook';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import ListPreview from "./ListPreview/ListPreview";
+import {trackPromise} from "react-promise-tracker";
+import LoaderSpinner from "../UI/LoaderSpinner/LoaderSpinner";
 
 export default class Authorization extends Component {
 
     state = {
-        count: '3',
-        events: [
-            {
-                id: 1,
-                userName: 'Дмитрий Ласковский',
-                wishListName: 'Хочу на новый новый год',
-                type: 'vk',
-                time: 1576658122
-            },
-            {
-                id: 2,
-                userName: 'Дмитрий Ласковский',
-                wishListName: 'Не хочу на новый год',
-                type: 'user',
-                time: 1576658122
-            },
-            {
-                id: 3,
-                userName: 'Дмитрий Ласковский',
-                wishListName: 'Хочу на новый год',
-                type: 'list',
-                time: 1576658122
-            },
-        ],
+        count: '',
+        events: [],
 
         deleteList: false,
         tempListId: null,
@@ -64,59 +44,9 @@ export default class Authorization extends Component {
         showNewListTitle: false,
 
         lists: {
-            defaultListId: 2,
-            count: 2,
-            items: [
-                {
-                    id: 1,
-                    name: 'Новый список1',
-                    updatedAt: 1213,
-                    background: 1,
-                    userId: 123,
-                    userName: "Иван петров",
-                    createdAt: 1200,
-                    backgroundNumber: 0,
-                    wishItems: [
-                        {
-                            id: 1,
-                            listId: 1,
-                            title: "Смартфон",
-                            url: "https://app.swaggerhub.com/apis-docs/igor0u/mywish/1.0.0-oas3#/default/post_lists",
-                        },
-                        {
-                            id: 2,
-                            listId: 1,
-                            title: "Новый смайртфон",
-                            url: "https://app.swaggerhub.com/apis-docs/igor0u/mywish/1.0.0-oas3#/default/post_lists",
-                        }
-                    ]
-                },
-                {
-                    id: 2,
-                    name: 'Новый список2',
-                    updatedAt: 1213,
-                    background: 1,
-                    userId: 123,
-                    userName: "Иван петров",
-                    createdAt: 1200,
-                    wishItems: [
-                        {
-                            id: 3,
-                            listId: 2,
-                            title: "Смартфон",
-                            url: "https://app.swaggerhub.com/apis-docs/igor0u/mywish/1.0.0-oas3#/default/post_lists",
-                            picture: 'https://ireplace.ru/images/watermarked/1/thumbnails/1308/1144/detailed/0/MMEF2_AV2_32wp-2p.jpg'
-                        },
-                        {
-                            id: 4,
-                            listId: 2,
-                            title: "Новый смайртфон",
-                            url: "https://app.swaggerhub.com/apis-docs/igor0u/mywish/1.0.0-oas3#/default/post_lists",
-                            picture: 'https://ireplace.ru/images/watermarked/1/thumbnails/1308/1144/detailed/0/MMEF2_AV2_32wp-2p.jpg'
-                        }
-                    ]
-                }
-            ]
+            defaultListId: null,
+            count: null,
+            items: []
         },
         file: null,
         name: '',
@@ -137,7 +67,7 @@ export default class Authorization extends Component {
         let hour = a.getHours();
         let min = a.getMinutes();
         let sec = a.getSeconds();
-        return date + '.' + month + '.' + year + ' в ' + hour + ':' + min;
+        return date + '.' + month + '.' + year + ' в ' + hour + ':' + (min.toString().match(/[0-9]/g).length < 2 ? 0 : '') + min;
     };
 
     responseFacebook = (response) => {
@@ -230,15 +160,15 @@ export default class Authorization extends Component {
     // Получаю начальные данные eventov. count и event записываю в соответствующие state
     componentDidMount() {
         if (localStorage.getItem('userId') === null && localStorage.getItem('authToken') === null) {
-            axios.get('/api/events')
+            trackPromise(axios.get('/api/events')
                 .then(res => {
                     this.setState({
                         count: res.data.count,
                         events: res.data.events
                     })
-                }, res => console.log('error', res))
+                }, res => console.log('error', res)))
         } else {
-            axios.post('/api/lists', {
+            trackPromise(axios.post('/api/lists', {
                 'userId': localStorage.getItem('userId'),
                 'authToken': localStorage.getItem('authToken')
             })
@@ -255,7 +185,7 @@ export default class Authorization extends Component {
                         localStorage.setItem('userId', null);
                         localStorage.setItem('authToken', null);
                     }
-                }, res => console.log('error', res));
+                }, res => console.log('error', res)));
         }
     }
 
@@ -281,7 +211,7 @@ export default class Authorization extends Component {
     };
 
     deleteWishHandler = (listId, id) => {
-        axios.post('/api/item/delete', {
+        trackPromise(axios.post('/api/item/delete', {
             userId: localStorage.getItem('userId'),
             authToken: localStorage.getItem('authToken'),
             id: id
@@ -304,12 +234,12 @@ export default class Authorization extends Component {
                     localStorage.setItem('authToken', null);
                 }
 
-            })
+            }))
     };
 
     addNewWishHandler = (listId) => {
         if (this.state.wishNameControl !== '') {
-            axios.post('/api/item/add', {
+            trackPromise(axios.post('/api/item/add', {
                 'userId': localStorage.getItem('userId'),
                 'authToken': localStorage.getItem('authToken'),
                 'listId': listId
@@ -328,7 +258,7 @@ export default class Authorization extends Component {
                         formData.append('url', this.state.wishUrlControl);
                         formData.append('picture', this.state.file);
 
-                        axios({
+                        trackPromise(axios({
                                 method: 'post',
                                 url: '/api/item/update',
                                 data: formData,
@@ -348,20 +278,20 @@ export default class Authorization extends Component {
                                     localStorage.setItem('userId', null);
                                     localStorage.setItem('authToken', null);
                                 }
-                            }, res => console.log('error', res))
+                            }, res => console.log('error', res)))
                     } else {
                         localStorage.setItem('userId', null);
                         localStorage.setItem('authToken', null);
                     }
 
-                }, res => console.log('error', res));
+                }, res => console.log('error', res)));
         } else {
             console.log('заполните поля навзания желания')
         }
     };
 
     addListHandler = () => {
-        axios.post('/api/list/add', {
+        trackPromise(axios.post('/api/list/add', {
             "userId": localStorage.getItem('userId'),
             "authToken": localStorage.getItem('authToken')
         })
@@ -378,14 +308,14 @@ export default class Authorization extends Component {
                     localStorage.setItem('userId', null);
                     localStorage.setItem('authToken', null);
                 }
-            }, (res) => console.log('error', res))
+            }, (res) => console.log('error', res)))
     };
 
     onPickColorHandler = (index, listId, name) => {
         this.setState({
             newBackgroundNumber: index
         });
-        axios.post('/api/list/update', {
+        trackPromise(axios.post('/api/list/update', {
             "userId": localStorage.getItem('userId'),
             "authToken": localStorage.getItem('authToken'),
             "id": listId,
@@ -404,13 +334,13 @@ export default class Authorization extends Component {
                     localStorage.setItem('userId', null);
                     localStorage.setItem('authToken', null);
                 }
-            }, (res) => console.log('error', res))
+            }, (res) => console.log('error', res)))
 
     };
 
     onBlurListTitleHandler = (listId, name, bgId) => {
         if (this.state.showNewListTitle) {
-            axios.post('/api/list/update', {
+            trackPromise(axios.post('/api/list/update', {
                 "userId": localStorage.getItem('userId'),
                 "authToken": localStorage.getItem('authToken'),
                 "id": listId,
@@ -430,7 +360,7 @@ export default class Authorization extends Component {
                         localStorage.setItem('userId', null);
                         localStorage.setItem('authToken', null);
                     }
-                }, (res) => console.log('error', res))
+                }, (res) => console.log('error', res)))
         }
     };
 
@@ -451,7 +381,7 @@ export default class Authorization extends Component {
     };
 
     deleteListHandler = () => {
-        axios.post('/api/list/delete', {
+        trackPromise(axios.post('/api/list/delete', {
             "userId": localStorage.getItem('userId'),
             "authToken": localStorage.getItem('authToken'),
             "id": this.state.tempListId
@@ -476,11 +406,11 @@ export default class Authorization extends Component {
                     localStorage.setItem('authToken', null);
                 }
 
-            }, res => console.log('error', res))
+            }, res => console.log('error', res)))
     };
 
     shareListHandler = () => {
-        axios.post('/api/share', {
+        trackPromise(axios.post('/api/share', {
             "userId": localStorage.getItem('userId'),
             "authToken": localStorage.getItem('authToken'),
             "listId": this.state.tempListId,
@@ -488,7 +418,7 @@ export default class Authorization extends Component {
         })
             .then(res => {
                 console.log(res)
-            })
+            }))
     }
 
     clickOutsideHandler = (event) => {
@@ -654,14 +584,17 @@ export default class Authorization extends Component {
         }
 
         return (
-            <BrowserRouter>
-                <Switch>
-                    <Route path='/' exact>
-                        {authContent}
-                    </Route>
-                    <Route path='/list/:link' component={ListPreview}/>
-                </Switch>
-            </BrowserRouter>
+            <React.Fragment>
+                <LoaderSpinner/>
+                <BrowserRouter>
+                    <Switch>
+                        <Route path='/' exact>
+                            {authContent}
+                        </Route>
+                        <Route path='/list/:link' component={ListPreview}/>
+                    </Switch>
+                </BrowserRouter>
+            </React.Fragment>
         )
     }
 }

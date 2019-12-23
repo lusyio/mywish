@@ -6,6 +6,10 @@ import ColorPicker from "./ColorPicker/ColorPicker";
 import Input from "../../UI/Input/Input";
 import ListWidget from "./ListWidget/ListWidget";
 import {Link} from "react-router-dom";
+import Eye from '../../../../../public/svg/Eye.svg'
+import share from '../../../../../public/svg/share.svg'
+import trash from '../../../../../public/svg/trash.svg'
+import plus from '../../../../../public/svg/plus.svg'
 
 const ListCard = props => {
     let cls = [
@@ -31,6 +35,7 @@ const ListCard = props => {
                             <div className={classes.ListCardBody}>
                                 {header}
                                 <ColorPicker
+                                    activeColor={list.backgroundNumber}
                                     name={list.name}
                                     listId={list.id}
                                     onPickColor={props.onPickColor}
@@ -54,15 +59,17 @@ const ListCard = props => {
                                     type='showNewWish'
                                     onClick={props.showNewWishToggle}
                                 >
+                                    <img src={plus}/>
                                     Добавить еще желание
                                 </Button>
                             </div>
                             <ListWidget>
-                                <Link to={`/list/${list.link}`}><Button type='listWidget'>Предпросмотр</Button></Link>
-                                <Button onClick={() => props.shareList(list.id, list.name, 'share', list.link)} type='listWidget'>Рассказать
+                                <Link to={`/list/${list.link}`}><Button type='listWidget'><img src={Eye}/> Предпросмотр</Button></Link>
+                                <Button onClick={() => props.shareList(list.id, list.name, 'share', list.link)}
+                                        type='listWidget'><img src={share}/>Рассказать
                                     друзьям</Button>
                                 <Button onClick={() => props.deleteList(list.id, list.name, 'delete', list.link)}
-                                        type='listWidget'>Удалить список</Button>
+                                        type='listWidget'><img src={trash}/>Удалить список</Button>
                             </ListWidget>
                         </div>
                     )

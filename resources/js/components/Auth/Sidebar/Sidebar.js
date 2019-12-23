@@ -11,7 +11,7 @@ const Sidebar = props => {
                 return (
                     <li key={list.id} onClick={() => props.onClick(list.id)}>
                         <a>{list.name}</a>
-                        <span>Список создан {props.timeConverter(list.createdAt)}</span>
+                        <span>Список обновлен {props.timeConverter(list.createdAt)}</span>
                     </li>
                 )
             })

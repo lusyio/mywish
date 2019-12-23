@@ -1,6 +1,7 @@
 .ListCard {
     max-width: 690px;
     width: 100%;
+    height: fit-content;
     padding: 10px;
     background: darkred;
     border-radius: 15px;

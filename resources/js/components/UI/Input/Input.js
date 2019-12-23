@@ -7,6 +7,8 @@ const Input = props =>{
 
     return(
         <input
+            placeholder={props.placeholder}
+            id={props.id}
             onFocus={props.onFocus}
             onBlur={props.onBlur}
             name={props.name}
