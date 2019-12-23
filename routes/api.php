@@ -92,7 +92,7 @@ Route::post('/auth', function (Request $request) {
 Route::post('/list/add', function (Request $request) {
     $user = \App\User::where('id', $request->userId)->first();
     $newList = new \App\WishList();
-    $newList->user_id = $request->userId;
+    $newList->user_id = (int) $request->userId;
     $newList->name = 'Новый список';
     $newList->background_id = 0;
     $newList->generateUrl();
