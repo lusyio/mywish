@@ -62021,7 +62021,7 @@ function (_Component) {
               var lists = _objectSpread({}, _this.state.lists);
 
               lists.items = res.data.items.sort(function (a, b) {
-                return a.updatedAt > b.updatedAt ? -1 : -1;
+                return a.updatedAt > b.updatedAt ? -1 : 1;
               });
               lists.count = res.data.count;
               lists.defaultListId = res.data.defaultListId;
@@ -62217,8 +62217,9 @@ function (_Component) {
 
           lists.items.push(res.data);
           lists.items = lists.items.sort(function (a, b) {
-            return a.updatedAt > b.updatedAt ? -1 : -1;
+            return a.updatedAt > b.updatedAt ? -1 : 1;
           });
+          lists.defaultListId = res.data.id;
 
           _this.setState({
             lists: lists
@@ -62327,10 +62328,12 @@ function (_Component) {
           for (var i = 0; i < lists.items.length; i++) {
             if (lists.items[i].id === _this.state.tempListId) {
               lists.items.splice(i, 1);
+              lists.items.sort(function (a, b) {
+                return a.updatedAt > b.updatedAt ? -1 : 1;
+              });
+              lists.defaultListId = lists.items[0].id;
               break;
             }
-
-            lists.defaultListId = lists.items[0].id;
           }
 
           _this.setState({
@@ -62414,7 +62417,7 @@ function (_Component) {
             var lists = _objectSpread({}, _this2.state.lists);
 
             lists.items = res.data.items.sort(function (a, b) {
-              return a.updatedAt > b.updatedAt ? -1 : -1;
+              return a.updatedAt > b.updatedAt ? -1 : 1;
             });
             lists.count = res.data.count;
             lists.defaultListId = res.data.defaultListId;

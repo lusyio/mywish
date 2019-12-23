@@ -162,7 +162,7 @@ export default class Authorization extends Component {
                         .then(res => {
                             if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
                                 const lists = {...this.state.lists};
-                                lists.items = res.data.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : -1);
+                                lists.items = res.data.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : 1);
                                 lists.count = res.data.count;
                                 lists.defaultListId = res.data.defaultListId;
                                 this.setState({
@@ -245,7 +245,7 @@ export default class Authorization extends Component {
                 .then(res => {
                     if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
                         const lists = {...this.state.lists};
-                        lists.items = res.data.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : -1);
+                        lists.items = res.data.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : 1);
                         lists.count = res.data.count;
                         lists.defaultListId = res.data.defaultListId;
                         this.setState({
@@ -369,7 +369,8 @@ export default class Authorization extends Component {
                 if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
                     const lists = {...this.state.lists};
                     lists.items.push(res.data);
-                    lists.items = lists.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : -1);
+                    lists.items = lists.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : 1);
+                    lists.defaultListId = res.data.id;
                     this.setState({
                         lists
                     })
@@ -461,9 +462,10 @@ export default class Authorization extends Component {
                     for (let i = 0; i < lists.items.length; i++) {
                         if (lists.items[i].id === this.state.tempListId) {
                             lists.items.splice(i, 1);
+                            lists.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : 1);
+                            lists.defaultListId = lists.items[0].id;
                             break;
                         }
-                        lists.defaultListId = lists.items[0].id
                     }
                     this.setState({
                         lists,
