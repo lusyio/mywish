@@ -61,7 +61,7 @@ const ListCard = props => {
                                 <Link to={`/list/${list.link}`}><Button type='listWidget'>Предпросмотр</Button></Link>
                                 <Button onClick={() => props.shareList(list.id, list.name, 'share', list.link)} type='listWidget'>Рассказать
                                     друзьям</Button>
-                                <Button onClick={() => props.deleteList(list.id, list.name, 'delete')}
+                                <Button onClick={() => props.deleteList(list.id, list.name, 'delete', list.link)}
                                         type='listWidget'>Удалить список</Button>
                             </ListWidget>
                         </div>

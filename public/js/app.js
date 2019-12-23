@@ -61980,6 +61980,50 @@ function (_Component) {
       email: ''
     });
 
+    _defineProperty(_assertThisInitialized(_this), "timeConverter", function (UNIX_timestamp, type) {
+      var a = new Date(UNIX_timestamp * 1000);
+      var months = ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'];
+      var year = a.getFullYear();
+      var month;
+
+      if (type === 'words') {
+        month = months[a.getMonth()];
+      } else {
+        month = a.getMonth();
+      }
+
+      var date = a.getDate();
+      var hour = a.getHours();
+      var min = a.getMinutes();
+      var sec = a.getSeconds();
+      return date + '.' + month + '.' + year + ' в ' + hour + ':' + min;
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "sortByDate", function (arr) {
+      arr.sort(function (a, b) {
+        var aFilterBy;
+        var bFilterBy;
+
+        if (a.createdAt > a.updatedAt) {
+          aFilterBy = a.createdAt;
+          aFilterBy = a.updatedAt;
+          return aFilterBy;
+        }
+
+        if (b.createdAt > b.updatedAt) {
+          bFilterBy = b.createdAt;
+          bFilterBy = b.updatedAt;
+          return bFilterBy;
+        }
+
+        if (a.aFilterBy > b.bFilterBy) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+    });
+
     _defineProperty(_assertThisInitialized(_this), "responseFacebook", function (response) {
       console.log(response); // отправка данных авторизации
 
@@ -62001,7 +62045,7 @@ function (_Component) {
             if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
               var lists = _objectSpread({}, _this.state.lists);
 
-              lists.items = res.data.items;
+              lists.items = _this.sortByDate(res.data.items);
               lists.count = res.data.count;
               lists.defaultListId = res.data.defaultListId;
 
@@ -62195,6 +62239,7 @@ function (_Component) {
           var lists = _objectSpread({}, _this.state.lists);
 
           lists.items.push(res.data);
+          lists.items = _this.sortByDate(lists.items);
 
           _this.setState({
             lists: lists
@@ -62451,7 +62496,9 @@ function (_Component) {
           onClick: this.deleteListHandler
         }, "\u0423\u0434\u0430\u043B\u0438\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
           type: "secondary",
-          onClick: this.toggleModalHandler
+          onClick: function onClick() {
+            return _this3.toggleModalHandler(_this3.state.tempListId, _this3.state.tempListName, 'delete');
+          }
         }, "\u041E\u0442\u043C\u0435\u043D\u0430"));
       }
 
@@ -62479,6 +62526,7 @@ function (_Component) {
         authContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: _Authorization_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Container
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_8__["default"], {
+          timeConverter: this.timeConverter,
           addList: this.addListHandler,
           onClick: this.selectListHandler,
           lists: this.state.lists
@@ -62735,7 +62783,8 @@ var ColorPicker = function ColorPicker(props) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       key: index,
       style: {
-        background: "url(".concat(color, ")")
+        background: "url(".concat(color, ")"),
+        backgroundSize: 'contain'
       }
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
       onClick: function onClick() {
@@ -62880,7 +62929,7 @@ var ListCard = function ListCard(props) {
           type: "listWidget"
         }, "\u0420\u0430\u0441\u0441\u043A\u0430\u0437\u0430\u0442\u044C \u0434\u0440\u0443\u0437\u044C\u044F\u043C"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
           onClick: function onClick() {
-            return props.deleteList(list.id, list.name, 'delete');
+            return props.deleteList(list.id, list.name, 'delete', list.link);
           },
           type: "listWidget"
         }, "\u0423\u0434\u0430\u043B\u0438\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A")));
@@ -63422,7 +63471,7 @@ var Sidebar = function Sidebar(props) {
         onClick: function onClick() {
           return props.onClick(list.id);
         }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, list.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u0421\u043F\u0438\u0441\u043E\u043A \u0441\u043E\u0437\u0434\u0430\u043D ", list.createdAt));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, list.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u0421\u043F\u0438\u0441\u043E\u043A \u0441\u043E\u0437\u0434\u0430\u043D ", props.timeConverter(list.createdAt)));
     });
   } else {
     renderList = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {

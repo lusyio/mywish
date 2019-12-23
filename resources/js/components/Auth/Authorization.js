@@ -123,6 +123,45 @@ export default class Authorization extends Component {
         email: '',
     };
 
+    timeConverter = (UNIX_timestamp, type) => {
+        const a = new Date(UNIX_timestamp * 1000);
+        let months = ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'];
+        let year = a.getFullYear();
+        let month;
+        if (type === 'words') {
+            month = months[a.getMonth()];
+        } else {
+            month = a.getMonth();
+        }
+        let date = a.getDate();
+        let hour = a.getHours();
+        let min = a.getMinutes();
+        let sec = a.getSeconds();
+        return date + '.' + month + '.' + year + ' в ' + hour + ':' + min;
+    };
+
+    sortByDate = (arr) => {
+        arr.sort((a, b) => {
+            let aFilterBy;
+            let bFilterBy;
+            if (a.createdAt > a.updatedAt) {
+                aFilterBy = a.createdAt;
+                aFilterBy = a.updatedAt;
+                return aFilterBy
+            }
+            if (b.createdAt > b.updatedAt) {
+                bFilterBy = b.createdAt;
+                bFilterBy = b.updatedAt;
+                return bFilterBy
+            }
+            if (a.aFilterBy > b.bFilterBy) {
+                return 1
+            } else {
+                return -1
+            }
+        });
+    };
+
     responseFacebook = (response) => {
 
         console.log(response);
@@ -145,7 +184,7 @@ export default class Authorization extends Component {
                         .then(res => {
                             if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
                                 const lists = {...this.state.lists};
-                                lists.items = res.data.items;
+                                lists.items = this.sortByDate(res.data.items);
                                 lists.count = res.data.count;
                                 lists.defaultListId = res.data.defaultListId;
                                 this.setState({
@@ -352,6 +391,7 @@ export default class Authorization extends Component {
                 if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
                     const lists = {...this.state.lists};
                     lists.items.push(res.data);
+                    lists.items = this.sortByDate(lists.items);
                     this.setState({
                         lists
                     })
@@ -486,7 +526,7 @@ export default class Authorization extends Component {
             this.setState({
                 deleteList: !this.state.deleteList,
                 tempListId: listId,
-                tempListName: listName
+                tempListName: listName,
             });
         }
         if (type === 'share') {
@@ -532,7 +572,8 @@ export default class Authorization extends Component {
                 <Modal clickOutside={this.clickOutsideHandler}>
                     <p>Вы действительно хотите удалить список желаний <strong>"{this.state.tempListName}"?</strong></p>
                     <Button onClick={this.deleteListHandler}>Удалить список</Button>
-                    <Button type='secondary' onClick={this.toggleModalHandler}>Отмена</Button>
+                    <Button type='secondary'
+                            onClick={() => this.toggleModalHandler(this.state.tempListId, this.state.tempListName, 'delete')}>Отмена</Button>
                 </Modal>
         }
 
@@ -559,6 +600,7 @@ export default class Authorization extends Component {
                     <div className={classes.Container}>
                         <div>
                             <Sidebar
+                                timeConverter={this.timeConverter}
                                 addList={this.addListHandler}
                                 onClick={this.selectListHandler}
                                 lists={this.state.lists}
