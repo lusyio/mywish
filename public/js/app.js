@@ -54843,7 +54843,7 @@ if (false) {} else {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -61922,6 +61922,7 @@ function (_Component) {
       wishNameControl: '',
       wishUrlControl: '',
       listNameControl: '',
+      tempLink: '',
       newBackgroundNumber: null,
       background: ['/images/bg1.jpg', '/images/bg2.jpg', '/images/bg3.jpg', '/images/bg4.jpg', '/images/bg5.jpg'],
       newWishId: null,
@@ -62343,7 +62344,7 @@ function (_Component) {
       }
     });
 
-    _defineProperty(_assertThisInitialized(_this), "toggleModalHandler", function (listId, listName, type) {
+    _defineProperty(_assertThisInitialized(_this), "toggleModalHandler", function (listId, listName, type, link) {
       if (type === 'delete') {
         _this.setState({
           deleteList: !_this.state.deleteList,
@@ -62356,7 +62357,8 @@ function (_Component) {
         _this.setState({
           shareList: !_this.state.shareList,
           tempListId: listId,
-          tempListName: listName
+          tempListName: listName,
+          tempLink: link
         });
       }
     });
@@ -62459,7 +62461,7 @@ function (_Component) {
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0421\u0441\u044B\u043B\u043A\u0430 \u043D\u0430 \u0432\u0430\u0448 \u0441\u043F\u0438\u0441\u043E\u043A:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0420\u0430\u0441\u0441\u043A\u0430\u0436\u0438 \u043E \u0441\u0432\u043E\u0438\u0445 \u0436\u0435\u043B\u0430\u043D\u0438\u044F\u0445 \u0434\u0440\u0443\u0437\u044C\u044F\u043C:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_facebook__WEBPACK_IMPORTED_MODULE_11__["FacebookProvider"], {
           appId: "563234647569569"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_facebook__WEBPACK_IMPORTED_MODULE_11__["Share"], {
-          href: "http://www.facebook.com"
+          href: "https://mywish.su/".concat(this.state.tempLink)
         }, function (_ref) {
           var handleClick = _ref.handleClick,
               loading = _ref.loading;
@@ -62467,7 +62469,7 @@ function (_Component) {
             type: "share",
             disabled: loading,
             onClick: handleClick
-          }, "Share");
+          }, "\u041F\u043E\u0434\u0435\u043B\u0438\u0442\u044C\u0441\u044F");
         })));
       }
 
@@ -62869,9 +62871,11 @@ var ListCard = function ListCard(props) {
           onClick: props.showNewWishToggle
         }, "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0435\u0449\u0435 \u0436\u0435\u043B\u0430\u043D\u0438\u0435")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListWidget_ListWidget__WEBPACK_IMPORTED_MODULE_6__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
           to: "/list/".concat(list.link)
-        }, "\u041F\u0440\u0435\u0434\u043F\u0440\u043E\u0441\u043C\u043E\u0442\u0440"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          type: "listWidget"
+        }, "\u041F\u0440\u0435\u0434\u043F\u0440\u043E\u0441\u043C\u043E\u0442\u0440")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
           onClick: function onClick() {
-            return props.shareList(list.id, list.name, 'share');
+            return props.shareList(list.id, list.name, 'share', list.link);
           },
           type: "listWidget"
         }, "\u0420\u0430\u0441\u0441\u043A\u0430\u0437\u0430\u0442\u044C \u0434\u0440\u0443\u0437\u044C\u044F\u043C"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -63219,7 +63223,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _ListCard_WishList_WishList__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../ListCard/WishList/WishList */ "./resources/js/components/Auth/ListCard/WishList/WishList.js");
-/* harmony import */ var _ListCard_WishList_WishItem_WishItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ListCard/WishList/WishItem/WishItem */ "./resources/js/components/Auth/ListCard/WishList/WishItem/WishItem.js");
+/* harmony import */ var _UI_Button_Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../UI/Button/Button */ "./resources/js/components/UI/Button/Button.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -63243,6 +63248,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -63301,10 +63307,7 @@ function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      console.log(location.pathname);
-      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/api/".concat(location.pathname)).then(function (res) {
-        console.log(res.data);
-
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/api".concat(location.pathname)).then(function (res) {
         var list = _objectSpread({}, _this2.state.list);
 
         list.status = res.data.status;
@@ -63321,22 +63324,36 @@ function (_Component) {
     key: "render",
     value: function render() {
       var wishList;
-      console.log(this.state.list.lenght); // if (this.state.list.lenght)
 
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: _ListPreview_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListPreview,
-        style: {
-          background: "url(".concat(this.state.background[this.state.list.wishList.backgroundNumber], ")")
-        }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: _ListPreview_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListPreviewBody
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListCard_WishList_WishList__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        widgetOff: true,
-        id: this.state.list.wishList.id,
-        listId: this.state.list.wishList.id,
-        key: this.state.list.wishList.id,
-        wishItems: this.state.list.wishList.wishItems
-      })));
+      if (this.state.list.wishList.wishItems.length !== 0) {
+        wishList = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: _ListPreview_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListPreview,
+          style: {
+            background: "url(".concat(this.state.background[this.state.list.wishList.backgroundNumber], ")")
+          }
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: _ListPreview_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListPreviewBody
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListCard_WishList_WishList__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          widgetOff: true,
+          id: this.state.list.wishList.id,
+          listId: this.state.list.wishList.id,
+          key: this.state.list.wishList.id,
+          wishItems: this.state.list.wishList.wishItems
+        })));
+      } else {
+        wishList = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: _ListPreview_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListPreview,
+          style: {
+            background: "url(".concat(this.state.background[this.state.list.wishList.backgroundNumber], ")")
+          }
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: _ListPreview_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListPreviewBody
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0412 \u044D\u0442\u043E\u0442 \u0441\u043F\u0438\u0441\u043E\u043A \u0435\u0449\u0435 \u043D\u0435 \u0434\u043E\u0431\u0430\u0432\u0438\u043B\u0438 \u0436\u0435\u043B\u0430\u043D\u0438\u044F"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Link"], {
+          to: '/'
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], null, "\u0421\u043E\u0437\u0434\u0430\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A \u0436\u0435\u043B\u0430\u043D\u0438\u0439"))));
+      }
+
+      return wishList;
     }
   }]);
 

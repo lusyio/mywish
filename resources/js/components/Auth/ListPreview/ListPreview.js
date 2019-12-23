@@ -40,10 +40,8 @@ export default class ListPreview extends Component {
     };
 
     componentDidMount() {
-        console.log(location.pathname)
-        axios.get(`/api/${location.pathname}`)
+        axios.get(`/api${location.pathname}`)
             .then(res => {
-                console.log(res.data)
                 const list = {...this.state.list};
                 list.status = res.data.status;
                 list.wishList = res.data.wishList;

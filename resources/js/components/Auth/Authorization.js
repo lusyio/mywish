@@ -49,6 +49,7 @@ export default class Authorization extends Component {
         wishNameControl: '',
         wishUrlControl: '',
         listNameControl: '',
+        tempLink: '',
         newBackgroundNumber: null,
         background: [
             '/images/bg1.jpg',
@@ -480,7 +481,7 @@ export default class Authorization extends Component {
         }
     };
 
-    toggleModalHandler = (listId, listName, type) => {
+    toggleModalHandler = (listId, listName, type, link) => {
         if (type === 'delete') {
             this.setState({
                 deleteList: !this.state.deleteList,
@@ -492,7 +493,8 @@ export default class Authorization extends Component {
             this.setState({
                 shareList: !this.state.shareList,
                 tempListId: listId,
-                tempListName: listName
+                tempListName: listName,
+                tempLink: link
             });
         }
     };
@@ -540,9 +542,9 @@ export default class Authorization extends Component {
                     <p>Ссылка на ваш список:</p>
                     <p>Расскажи о своих желаниях друзьям:</p>
                     <FacebookProvider appId="563234647569569">
-                        <Share href="http://www.facebook.com">
+                        <Share href={`https://mywish.su/${this.state.tempLink}`}>
                             {({handleClick, loading}) => (
-                                <Button type="share" disabled={loading} onClick={handleClick}>Share</Button>
+                                <Button type="share" disabled={loading} onClick={handleClick}>Поделиться</Button>
                             )}
                         </Share>
                     </FacebookProvider>
@@ -635,7 +637,7 @@ export default class Authorization extends Component {
                     <Route path='/' exact>
                         {authContent}
                     </Route>
-                    <Route path='/list/:link' component={ListPreview} />
+                    <Route path='/list/:link' component={ListPreview}/>
                 </Switch>
             </BrowserRouter>
         )
