@@ -2062,12 +2062,13 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME {\n    max-width: 690px;\n    width: 100%;\n    height: fit-content;\n    padding: 10px;\n    background: darkred;\n    border-radius: 15px;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME > .resources-js-components-Auth-ListCard-__ListCard-module___1N8mMA49NsMdLyLyZ3-MTN {\n    border-radius: 15px;\n    background: #FFFFFF;\n    padding: 64px 106px 58px 106px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME .resources-js-components-Auth-ListCard-__ListCard-module___2UEDZrcEy8tsnP_Ug3Q_5E{\n    font-weight: bold;\n    font-size: 36px;\n    text-align: center;\n    color: #000000;\n    margin-bottom: 35px;\n    display: block;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME.resources-js-components-Auth-ListCard-__ListCard-module___rEw1U5JhC0rWymBwgVXLd {\n    text-align: center;\n    background: url('/images/bg3.jpg');\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME {\n    max-width: 690px;\n    width: 100%;\n    height: fit-content;\n    padding: 10px;\n    background: darkred;\n    border-radius: 15px;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME > .resources-js-components-Auth-ListCard-__ListCard-module___1N8mMA49NsMdLyLyZ3-MTN {\n    border-radius: 15px;\n    background: #FFFFFF;\n    padding: 64px 106px 58px 106px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___1tMEFzF205nbAlXVZwXn0d{\n    border-radius: 15px;\n    background: #FFFFFF;\n    padding: 93px 106px 93px 106px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___1tMEFzF205nbAlXVZwXn0d > img{\n    margin-bottom: 50px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___1tMEFzF205nbAlXVZwXn0d p {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 23px;\n    text-align: center;\n    color: #000000;\n    margin-bottom: 40px;\n    max-width: 180px;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME .resources-js-components-Auth-ListCard-__ListCard-module___2UEDZrcEy8tsnP_Ug3Q_5E{\n    font-weight: bold;\n    font-size: 36px;\n    text-align: center;\n    color: #000000;\n    margin-bottom: 35px;\n    display: block;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME.resources-js-components-Auth-ListCard-__ListCard-module___rEw1U5JhC0rWymBwgVXLd {\n    text-align: center;\n    background: url('/images/bg3.jpg');\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"ListCard": "resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME",
 	"ListCardBody": "resources-js-components-Auth-ListCard-__ListCard-module___1N8mMA49NsMdLyLyZ3-MTN",
+	"ListCardBodyEmpty": "resources-js-components-Auth-ListCard-__ListCard-module___1tMEFzF205nbAlXVZwXn0d",
 	"CardHeader": "resources-js-components-Auth-ListCard-__ListCard-module___2UEDZrcEy8tsnP_Ug3Q_5E",
 	"Empty": "resources-js-components-Auth-ListCard-__ListCard-module___rEw1U5JhC0rWymBwgVXLd"
 };
@@ -2150,12 +2151,15 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-ListPreview-__ListPreview-module___2rHUcJNCvmaTom0Q7maUM4 {\n    max-width: 690px;\n    width: 100%;\n    padding: 10px;\n    background: darkred;\n    border-radius: 15px;\n    position: relative;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___309ByROjKlPBq9-j5_7ZuO {\n    border-radius: 15px;\n    background: #FFFFFF;\n    padding: 64px 106px 58px 106px;\n    text-align: center;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___309ByROjKlPBq9-j5_7ZuO > img {\n    margin-bottom: 50px;\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100px;\n    height: 100px;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___309ByROjKlPBq9-j5_7ZuO > p {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 23px;\n    text-align: center;\n    color: #000000;\n    max-width: 220px;\n    margin-bottom: 50px;\n    margin-left: auto;\n    margin-right: auto;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-ListPreview-__ListPreview-module___2rHUcJNCvmaTom0Q7maUM4 {\n    max-width: 690px;\n    width: 100%;\n    padding: 10px;\n    background: darkred;\n    border-radius: 15px;\n    position: relative;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___309ByROjKlPBq9-j5_7ZuO {\n    border-radius: 15px;\n    background: #FFFFFF;\n    padding: 64px 106px 58px 106px;\n    text-align: center;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___5lBXuj5IfvwjasLfsoj53 {\n    font-weight: bold;\n    font-size: 36px;\n    line-height: 24px;\n    text-align: center;\n    color: #FFFFFF;\n    margin-bottom: 45px;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___3LsV6gQgDnwlpcy3LzY-7n {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 24px;\n    text-align: center;\n    color: #FFFFFF;\n    margin-bottom: 40px;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___3LsV6gQgDnwlpcy3LzY-7n > strong {\n    font-weight: bold;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___3VOlDYPb5bMfayN9_97-O4 {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 24px;\n    text-align: center;\n    color: #B9B5B4;\n    margin-top: 40px;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___309ByROjKlPBq9-j5_7ZuO > img {\n    margin-bottom: 50px;\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100px;\n    height: 100px;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___309ByROjKlPBq9-j5_7ZuO > p {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 23px;\n    text-align: center;\n    color: #000000;\n    max-width: 220px;\n    margin-bottom: 50px;\n    margin-left: auto;\n    margin-right: auto;\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"ListPreview": "resources-js-components-Auth-ListPreview-__ListPreview-module___2rHUcJNCvmaTom0Q7maUM4",
-	"ListPreviewBody": "resources-js-components-Auth-ListPreview-__ListPreview-module___309ByROjKlPBq9-j5_7ZuO"
+	"ListPreviewBody": "resources-js-components-Auth-ListPreview-__ListPreview-module___309ByROjKlPBq9-j5_7ZuO",
+	"ListPreviewHeader": "resources-js-components-Auth-ListPreview-__ListPreview-module___5lBXuj5IfvwjasLfsoj53",
+	"ListPreviewParagraph": "resources-js-components-Auth-ListPreview-__ListPreview-module___3LsV6gQgDnwlpcy3LzY-7n",
+	"ListPreviewTime": "resources-js-components-Auth-ListPreview-__ListPreview-module___3VOlDYPb5bMfayN9_97-O4"
 };
 
 /***/ }),
@@ -64976,7 +64980,7 @@ function (_Component) {
 
     _defineProperty(_assertThisInitialized(_this), "onBlurListTitleHandler", function (listId, name, bgId) {
       if (_this.state.showNewListTitle) {
-        Object(react_promise_tracker__WEBPACK_IMPORTED_MODULE_14__["trackPromise"])(axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/list/update', {
+        axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/list/update', {
           "userId": localStorage.getItem('userId'),
           "authToken": localStorage.getItem('authToken'),
           "id": listId,
@@ -65001,7 +65005,7 @@ function (_Component) {
           }
         }, function (res) {
           return console.log('error', res);
-        }));
+        });
       }
     });
 
@@ -65047,7 +65051,7 @@ function (_Component) {
 
           _this.setState({
             lists: lists,
-            deleteList: !_this.state.deleteList
+            deleteList: false
           });
         } else {
           localStorage.setItem('userId', null);
@@ -65224,6 +65228,7 @@ function (_Component) {
           onClick: this.selectListHandler,
           lists: this.state.lists
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListCard_ListCard__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          addList: this.addListHandler,
           shareList: this.toggleModalHandler,
           deleteList: this.toggleModalHandler,
           onBlurListTitle: this.onBlurListTitleHandler,
@@ -65277,9 +65282,10 @@ function (_Component) {
         path: "/",
         exact: true
       }, authContent), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_12__["Route"], {
-        path: "/list/:link",
-        component: _ListPreview_ListPreview__WEBPACK_IMPORTED_MODULE_13__["default"]
-      }))));
+        path: "/list/:link"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListPreview_ListPreview__WEBPACK_IMPORTED_MODULE_13__["default"], {
+        timeConverter: this.timeConverter
+      })))));
     }
   }]);
 
@@ -65562,6 +65568,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _public_svg_trash_svg__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_public_svg_trash_svg__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var _public_svg_plus_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../../../public/svg/plus.svg */ "./public/svg/plus.svg");
 /* harmony import */ var _public_svg_plus_svg__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_public_svg_plus_svg__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _public_svg_giftbox_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../../../public/svg/giftbox.svg */ "./public/svg/giftbox.svg");
+/* harmony import */ var _public_svg_giftbox_svg__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_public_svg_giftbox_svg__WEBPACK_IMPORTED_MODULE_12__);
+
 
 
 
@@ -65579,7 +65588,7 @@ var ListCard = function ListCard(props) {
   var cls = [_ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListCard, _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Empty];
   var renderList;
 
-  if (props.lists.count !== 0) {
+  if (props.lists.items.length !== 0) {
     renderList = props.lists.items.map(function (list) {
       if (list.id === props.lists.defaultListId) {
         var header = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -65661,8 +65670,12 @@ var ListCard = function ListCard(props) {
     renderList = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: cls.join(' ')
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListCardBody
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0423 \u0432\u0430\u0441 \u0435\u0449\u0435 \u043D\u0435\u0442 \u043D\u0435 \u043E\u0434\u043D\u043E\u0433\u043E \u0441\u043F\u0438\u0441\u043A\u0430"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], null, "\u0421\u043E\u0437\u0434\u0430\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A")));
+      className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListCardBodyEmpty
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: _public_svg_giftbox_svg__WEBPACK_IMPORTED_MODULE_12___default.a
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0423 \u0432\u0430\u0441 \u0435\u0449\u0435 \u043D\u0435\u0442 \u043D\u0435 \u043E\u0434\u043D\u043E\u0433\u043E \u0441\u043F\u0438\u0441\u043A\u0430"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      onClick: props.addList
+    }, "\u0421\u043E\u0437\u0434\u0430\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A")));
   }
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, renderList);
@@ -66161,7 +66174,13 @@ function (_Component) {
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], null, "\u0421\u043E\u0437\u0434\u0430\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A \u0436\u0435\u043B\u0430\u043D\u0438\u0439"))));
       }
 
-      return wishList;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: _ListPreview_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListPreviewHeader
+      }, this.state.list.wishList.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: _ListPreview_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListPreviewParagraph
+      }, " \u0421\u043E\u0437\u0434\u0430\u0442\u0435\u043B\u044C \u0441\u043F\u0438\u0441\u043A\u0430 \u0436\u0435\u043B\u0430\u043D\u0438\u0439 - ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, this.state.list.wishList.userName)), wishList, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: _ListPreview_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListPreviewTime
+      }, "\u0421\u043F\u0438\u0441\u043E\u043A \u043E\u0431\u043D\u043E\u0432\u043B\u0435\u043D ", this.props.timeConverter(this.state.list.wishList.updatedAt)));
     }
   }]);
 
@@ -66223,7 +66242,7 @@ __webpack_require__.r(__webpack_exports__);
 var Sidebar = function Sidebar(props) {
   var renderList;
 
-  if (props.lists.count !== 0) {
+  if (props.lists.items.length !== 0) {
     renderList = props.lists.items.map(function (list) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         key: list.id,

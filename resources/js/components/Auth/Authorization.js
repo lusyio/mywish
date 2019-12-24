@@ -340,7 +340,7 @@ export default class Authorization extends Component {
 
     onBlurListTitleHandler = (listId, name, bgId) => {
         if (this.state.showNewListTitle) {
-            trackPromise(axios.post('/api/list/update', {
+            axios.post('/api/list/update', {
                 "userId": localStorage.getItem('userId'),
                 "authToken": localStorage.getItem('authToken'),
                 "id": listId,
@@ -360,7 +360,7 @@ export default class Authorization extends Component {
                         localStorage.setItem('userId', null);
                         localStorage.setItem('authToken', null);
                     }
-                }, (res) => console.log('error', res)))
+                }, (res) => console.log('error', res))
         }
     };
 
@@ -399,7 +399,7 @@ export default class Authorization extends Component {
                     }
                     this.setState({
                         lists,
-                        deleteList: !this.state.deleteList
+                        deleteList: false
                     })
                 } else {
                     localStorage.setItem('userId', null);
@@ -419,7 +419,7 @@ export default class Authorization extends Component {
             .then(res => {
                 console.log(res)
             }))
-    }
+    };
 
     clickOutsideHandler = (event) => {
         const block = document.getElementById('modal');
@@ -516,6 +516,7 @@ export default class Authorization extends Component {
                                 lists={this.state.lists}
                             />
                             <ListCard
+                                addList={this.addListHandler}
                                 shareList={this.toggleModalHandler}
                                 deleteList={this.toggleModalHandler}
                                 onBlurListTitle={this.onBlurListTitleHandler}
@@ -591,7 +592,9 @@ export default class Authorization extends Component {
                         <Route path='/' exact>
                             {authContent}
                         </Route>
-                        <Route path='/list/:link' component={ListPreview}/>
+                        <Route path='/list/:link'>
+                            <ListPreview timeConverter={this.timeConverter}/>
+                        </Route>
                     </Switch>
                 </BrowserRouter>
             </React.Fragment>

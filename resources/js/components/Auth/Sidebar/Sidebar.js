@@ -5,7 +5,7 @@ import Button from "../../UI/Button/Button";
 const Sidebar = props => {
     let renderList;
 
-    if (props.lists.count !== 0) {
+    if (props.lists.items.length !== 0) {
         renderList =
             props.lists.items.map((list ) => {
                 return (

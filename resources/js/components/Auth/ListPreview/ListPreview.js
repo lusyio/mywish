@@ -4,7 +4,7 @@ import axios from 'axios';
 import WishList from "../ListCard/WishList/WishList";
 import Button from "../../UI/Button/Button";
 import {Link} from "react-router-dom";
-import  giftbox from '../../../../../public/svg/giftbox.svg'
+import giftbox from '../../../../../public/svg/giftbox.svg'
 
 export default class ListPreview extends Component {
     state = {
@@ -82,9 +82,19 @@ export default class ListPreview extends Component {
                         </Link>
                     </div>
                 </div>
+
         }
 
-        return wishList
+        return (
+            <React.Fragment>
+                <h1 className={classes.ListPreviewHeader}>{this.state.list.wishList.name}</h1>
+                <p className={classes.ListPreviewParagraph}> Создатель списка желаний
+                    - <strong>{this.state.list.wishList.userName}</strong></p>
+                {wishList}
+                <p className={classes.ListPreviewTime}>Список
+                    обновлен {this.props.timeConverter(this.state.list.wishList.updatedAt)}</p>
+            </React.Fragment>
+        )
     }
 }
 

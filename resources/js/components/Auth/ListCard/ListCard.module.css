@@ -14,6 +14,28 @@
     padding: 64px 106px 58px 106px;
 }
 
+.ListCardBodyEmpty{
+    border-radius: 15px;
+    background: #FFFFFF;
+    padding: 93px 106px 93px 106px;
+}
+
+.ListCardBodyEmpty > img{
+    margin-bottom: 50px;
+}
+
+.ListCardBodyEmpty p {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 40px;
+    max-width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .ListCard .CardHeader{
     font-weight: bold;
     font-size: 36px;

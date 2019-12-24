@@ -10,6 +10,7 @@ import Eye from '../../../../../public/svg/Eye.svg'
 import share from '../../../../../public/svg/share.svg'
 import trash from '../../../../../public/svg/trash.svg'
 import plus from '../../../../../public/svg/plus.svg'
+import giftbox from '../../../../../public/svg/giftbox.svg'
 
 const ListCard = props => {
     let cls = [
@@ -18,7 +19,7 @@ const ListCard = props => {
     ];
     let renderList;
 
-    if (props.lists.count !== 0) {
+    if (props.lists.items.length !== 0) {
         renderList =
             props.lists.items.map((list) => {
                 if (list.id === props.lists.defaultListId) {
@@ -78,9 +79,10 @@ const ListCard = props => {
     } else {
         renderList =
             <div className={cls.join(' ')}>
-                <div className={classes.ListCardBody}>
+                <div className={classes.ListCardBodyEmpty}>
+                    <img src={giftbox}/>
                     <p>У вас еще нет не одного списка</p>
-                    <Button>Создать список</Button>
+                    <Button onClick={props.addList}>Создать список</Button>
                 </div>
             </div>
 

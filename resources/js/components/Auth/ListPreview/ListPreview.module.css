@@ -16,6 +16,37 @@
     text-align: center;
 }
 
+.ListPreviewHeader {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 45px;
+}
+
+.ListPreviewParagraph {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+
+.ListPreviewParagraph > strong {
+    font-weight: bold;
+}
+
+.ListPreviewTime {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #B9B5B4;
+    margin-top: 40px;
+}
+
 .ListPreviewBody > img {
     margin-bottom: 50px;
     display: block;
