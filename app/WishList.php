@@ -44,12 +44,20 @@ class WishList extends Model
             $item->beforeDelete();
             $item->delete();
         }
-
+        $events = $this->listEvents();
+        foreach ($events as $event) {
+            $event->delete();
+        }
     }
 
     public function listItems()
     {
         return $this->hasMany('App\WishListItem');
+    }
+
+    public function listEvents()
+    {
+        return $this->hasMany('App\Event');
     }
 
     public function user()
