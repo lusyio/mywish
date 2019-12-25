@@ -67,6 +67,9 @@ export default class ListPreview extends Component {
                             key={this.state.list.wishList.id}
                             wishItems={this.state.list.wishList.wishItems}
                         />
+                        <Link to={'/'}>
+                            <Button type='primary'>Создать список желаний</Button>
+                        </Link>
                     </div>
                 </div>
 
@@ -78,7 +81,7 @@ export default class ListPreview extends Component {
                         <img src={giftbox} alt=""/>
                         <p>В этот список еще не добавили желания</p>
                         <Link to={'/'}>
-                            <Button>Создать список желаний</Button>
+                            <Button type='primary'>Создать список желаний</Button>
                         </Link>
                     </div>
                 </div>

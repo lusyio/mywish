@@ -6,6 +6,7 @@
     background: darkred;
     border-radius: 15px;
     position: relative;
+    transition: background 135ms cubic-bezier(.4,0,.2,1);
 }
 
 .ListCard > .ListCardBody {

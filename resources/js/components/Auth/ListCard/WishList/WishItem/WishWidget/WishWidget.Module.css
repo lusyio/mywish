@@ -1,9 +1,9 @@
 .WishWidget {
     background: #F5F5F5;
     border-radius: 5px;
-    padding: 15px 5px;
+    padding: 12px 0;
     width: 35px !important;
     position: absolute;
-    right: -55px;
-    top: 0;
+    right: -45px;
+    top: 25px;
 }

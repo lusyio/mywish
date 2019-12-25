@@ -1,17 +1,19 @@
 import React from 'react'
 import classes from './Sidebar.module.css'
 import Button from "../../UI/Button/Button";
+import plus from '../../../../../public/svg/plus.svg'
 
 const Sidebar = props => {
     let renderList;
 
     if (props.lists.items.length !== 0) {
         renderList =
-            props.lists.items.map((list ) => {
+            props.lists.items.map((list) => {
                 return (
                     <li key={list.id} onClick={() => props.onClick(list.id)}>
                         <a>{list.name}</a>
-                        <span>Список обновлен {props.timeConverter(list.createdAt)}</span>
+                        <span>Список обновлен {props.timeConverter(list.updatedAt)}</span>
+                        <hr className={classes.hr}/>
                     </li>
                 )
             })
@@ -29,7 +31,11 @@ const Sidebar = props => {
             <ul>
                 {renderList}
                 <li>
-                    <Button onClick={props.addList} type='addListSidebar'>Добавить еще список</Button>
+                    <Button onClick={props.addList} type='addListSidebar'>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 7.61905H8.38095V0H7.61905V7.61905H0V8.38095H7.61905V16H8.38095V8.38095H16V7.61905Z" fill="#B9B5B4"/>
+                    </svg>
+                        Добавить еще список</Button>
                 </li>
             </ul>
         </nav>

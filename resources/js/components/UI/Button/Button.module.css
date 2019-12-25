@@ -30,7 +30,7 @@
 }
 
 .Button.showNewWish > img {
-    vertical-align: baseline;
+    vertical-align: bottom;
     margin-right: 15px;
 }
 
@@ -43,6 +43,19 @@
     font-size: 16px;
     line-height: 16px;
     color: #B9B5B4;
+}
+
+.Button.addListSidebar svg{
+    margin-right: 15px;
+    vertical-align: bottom;
+}
+
+.Button.addListSidebar:hover svg path{
+    fill: #B9B5B4;
+}
+
+.Button.addListSidebar:hover svg path{
+    fill: #FFFFFF;
 }
 
 .Button.listWidget {
@@ -101,7 +114,28 @@
     border-radius: 5px;
 }
 
+.Button.primary {
+    background: #F2523A;
+    transition: background 0.8s, box-shadow 135ms cubic-bezier(.4,0,.2,1);
+    border: none;
+    background-position: center !important;
+}
+
+.Button.primary:hover {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+    box-sizing: border-box;
+}
+
+.Button.secondary:hover {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+    box-sizing: border-box;
+}
+
 .Button.secondary {
+    margin-left: 25px;
+    border: none;
+    transition: background 0.8s, box-shadow 135ms cubic-bezier(.4,0,.2,1);
     background: #B9B5B4;
     border-radius: 10px;
+    background-position: center !important;
 }

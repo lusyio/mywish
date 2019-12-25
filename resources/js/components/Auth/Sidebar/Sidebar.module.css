@@ -6,6 +6,14 @@
     position: sticky;
 }
 
+.hr{
+    padding-top: 20px;
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid #393939;
+    width: 50%;
+}
+
 .SidebarHeader {
     font-size: 20px;
     line-height: 24px;
@@ -20,8 +28,6 @@
 }
 
 .Sidebar > ul > li {
-    border-bottom: 1px solid #393939;
-    padding-bottom: 20px;
     margin-bottom: 30px;
     cursor: pointer;
 }

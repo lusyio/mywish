@@ -82,7 +82,7 @@ const ListCard = props => {
                 <div className={classes.ListCardBodyEmpty}>
                     <img src={giftbox}/>
                     <p>У вас еще нет не одного списка</p>
-                    <Button onClick={props.addList}>Создать список</Button>
+                    <Button onClick={props.addList} type='primary'>Создать список</Button>
                 </div>
             </div>
 

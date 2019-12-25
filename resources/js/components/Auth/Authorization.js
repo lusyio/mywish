@@ -226,6 +226,8 @@ export default class Authorization extends Component {
                             break;
                         }
                     }
+                    currentList.updatedAt = res.data.updatedAt;
+                    lists.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : 1);
                     this.setState({
                         lists
                     })
@@ -270,6 +272,8 @@ export default class Authorization extends Component {
                                     const lists = {...this.state.lists};
                                     const currentList = lists.items.find(item => item.id === listId);
                                     currentList.wishItems.push(res.data);
+                                    currentList.updatedAt = res.data.updatedAt;
+                                    lists.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : 1);
                                     this.setState({
                                         lists,
                                         showNewWish: false
@@ -352,6 +356,8 @@ export default class Authorization extends Component {
                         const lists = {...this.state.lists};
                         const currentList = lists.items.find(item => item.id === listId);
                         currentList.name = res.data.name;
+                        currentList.updatedAt = res.data.updatedAt;
+                        lists.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : 1);
                         this.setState({
                             lists,
                             showNewListTitle: false
@@ -423,7 +429,7 @@ export default class Authorization extends Component {
 
     clickOutsideHandler = (event) => {
         const block = document.getElementById('modal');
-        if (event.target === block) {
+        if (event.target === block || event.target === block.firstChild) {
             this.setState({
                 deleteList: false,
                 shareList: false
@@ -481,7 +487,7 @@ export default class Authorization extends Component {
             modal =
                 <Modal clickOutside={this.clickOutsideHandler}>
                     <p>Вы действительно хотите удалить список желаний <strong>"{this.state.tempListName}"?</strong></p>
-                    <Button onClick={this.deleteListHandler}>Удалить список</Button>
+                    <Button type='primary' onClick={this.deleteListHandler}>Удалить список</Button>
                     <Button type='secondary'
                             onClick={() => this.toggleModalHandler(this.state.tempListId, this.state.tempListName, 'delete')}>Отмена</Button>
                 </Modal>
