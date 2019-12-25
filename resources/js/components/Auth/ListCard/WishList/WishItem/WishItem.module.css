@@ -39,4 +39,9 @@
     color: #BABABA;
     display: block;
     margin-bottom: 25px;
+    text-decoration: none;
+}
+
+.WishItem a:hover{
+    text-decoration: underline;
 }
