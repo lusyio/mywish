@@ -24,7 +24,7 @@ class WishList extends Model
             'updatedAt' => strtotime($this->updated_at),
             'backgroundNumber' => $this->background_id,
             'userId' => $this->user_id,
-            'userName' => $this->user->value('name'),
+            'userName' => $this->user()->value('name'),
             'createdAt' => strtotime($this->created_at),
             'link' => $this->url,
             'wishItems' => [],
@@ -44,7 +44,7 @@ class WishList extends Model
             $item->beforeDelete();
             $item->delete();
         }
-        $events = $this->listEvents();
+        $events = $this->listEvents;
         foreach ($events as $event) {
             $event->delete();
         }
