@@ -9,7 +9,7 @@ import axios from 'axios';
 import Sidebar from "./Sidebar/Sidebar";
 import ListCard from "./ListCard/ListCard";
 import Modal from "../UI/Modal/Modal";
-// import VK, {Auth, Share} from "react-vk";
+import VK, {Auth, Share as ShareVk} from "react-vk";
 import {FacebookProvider, Share} from 'react-facebook';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import ListPreview from "./ListPreview/ListPreview";
@@ -108,14 +108,13 @@ export default class Authorization extends Component {
     };
 
     responseVk = (response) => {
-        console.log(response);
         // отправка данных авторизации
         axios.post('/api/auth', {
-            "social": 'fb',
-            "name": response.name,
+            "social": 'vk',
+            "name": response.first_name + response.last_name,
             "url": "",
-            "token": response.accessToken,
-            "socialUserId": response.userID,
+            "token": response.hash,
+            "socialUserId": response.uid,
         })
             .then(res => {
                 localStorage.setItem('userId', res.data.userId);
@@ -572,12 +571,12 @@ export default class Authorization extends Component {
                                 cssClass={classes.fbLogin}
                                 textButton='FB'
                             />
-                            {/*<VK apiId={7244111}>*/}
-                            {/*    <Auth*/}
-                            {/*        elementId='card'*/}
-                            {/*        onAuth={this.responseVk}*/}
-                            {/*    />*/}
-                            {/*</VK>*/}
+                            <VK apiId='7244111'>
+                                <Auth
+                                    elementId='7244111'
+                                    options={{onAuth : this.responseVk}}
+                                />
+                            </VK>
                         </Card>
                         <EventCounter
                             count={this.state.count}
