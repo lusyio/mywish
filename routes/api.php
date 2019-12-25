@@ -172,7 +172,7 @@ Route::post('/item/delete', function (Request $request) {
     }
     $item->beforeDelete();
     $item->delete();
-    return json_encode(['error' => '', 'status' => 'ok']);
+    return json_encode(['error' => '', 'status' => 'ok', 'updatedAt' => time()]);
 })->middleware(\App\Http\Middleware\CheckAuthToken::class);
 
 Route::post('/lists', function (Request $request) {

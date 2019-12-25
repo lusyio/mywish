@@ -17,6 +17,7 @@ class WishListItem extends Model
             'order' => $this->order,
             'listId' => $this->wish_list_id,
             'picture' => $this->image_url,
+            'updatedAt' => strtotime($this->updated_at),
         ];
         return $result;
     }
