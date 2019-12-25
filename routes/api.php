@@ -238,3 +238,18 @@ Route::get('/events', function () {
     }
     return $result;
 });
+
+Route::get('/clear-cache', function() {
+    Artisan::call('cache:clear');
+    Artisan::call('route:clear');
+    return "Cache is cleared";
+});
+
+Route::post('/debug', function (Request $request) {
+    $list = \App\WishList::where('id', $request->listId)->first();
+    if (is_null($list)) {
+        return json_encode(['error' => 'no lists']);
+    }
+    var_dump($items);
+    return $request->listId;
+});
