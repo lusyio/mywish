@@ -58,16 +58,26 @@ const ListCard = props => {
                                     key={list.id}
                                     wishItems={list.wishItems}
                                 />
-                                <Button
-                                    type='showNewWish'
-                                    onClick={props.showNewWishToggle}
-                                >
-                                    <img src={plus}/>
-                                    Добавить еще желание
-                                </Button>
+                                {props.showNewWish ?
+                                    <Button
+                                        type='showNewWish'
+                                        onClick={() => props.addNewWish(list.id, props.newWishId)}
+                                    >
+                                        <img src={plus}/>
+                                        Добавить еще желание
+                                    </Button>
+                                    :
+                                    <Button
+                                        type='showNewWish'
+                                        onClick={props.showNewWishToggle}
+                                    >
+                                        <img src={plus}/>
+                                        Добавить еще желание
+                                    </Button>
+                                }
                             </div>
                             <ListWidget>
-                                <Link to={`/list/${list.link}`}><Button type='listWidget'>
+                                <Link target="_blank" to={`/list/${list.link}`}><Button type='listWidget'>
                                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <g clipPath="url(#clip0)">

@@ -135,8 +135,19 @@
 }
 
 .Button.share {
+    display: block;
     background: #2A61A1;
     border-radius: 5px;
+    margin-bottom: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.Button.share a{
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: white;
 }
 
 .Button.primary {

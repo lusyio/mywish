@@ -113,7 +113,7 @@ const WishItem = props => {
                     <div className={classes.WishItemImg} style={{background: `url(${pic}`}}> </div>
                     <div>
                         <p className={classes.Title}>{wishTitle}</p>
-                        <a href={props.url}>{wishLink}</a>
+                        <a target='_blank' href={props.url}>{wishLink}</a>
                     </div>
                     {widgetWish}
                 </div>

@@ -423,6 +423,7 @@ export default class Authorization extends Component {
     };
 
     shareListHandler = () => {
+        console.log('asdas')
         trackPromise(axios.post('/api/share', {
             "userId": localStorage.getItem('userId'),
             "authToken": localStorage.getItem('authToken'),
@@ -504,14 +505,22 @@ export default class Authorization extends Component {
             modal =
                 <Modal clickOutside={this.clickOutsideHandler}>
                     <p>Ссылка на ваш список:</p>
+                    <a href="https://mywish.su/${this.state.tempLink}">https://mywish.su/{this.state.tempLink}</a>
                     <p>Расскажи о своих желаниях друзьям:</p>
                     <FacebookProvider appId="563234647569569">
                         <Share href={`https://mywish.su/${this.state.tempLink}`}>
                             {({handleClick, loading}) => (
-                                <Button type="share" disabled={loading} onClick={handleClick}>Поделиться</Button>
+                                <Button type="share" disabled={loading} onClick={(event) => {
+                                    handleClick(event);
+                                    this.shareListHandler()
+                                }}>Поделиться</Button>
                             )}
                         </Share>
                     </FacebookProvider>
+                    <Button type='share' onClick={this.shareListHandler}>
+                        <ShareVk buttonOptions={{text: 'Поделиться'}}
+                                 shareOptions={{url: `https://mywish.su/${this.state.tempLink}`}}/>
+                    </Button>
                 </Modal>
         }
 
@@ -571,12 +580,16 @@ export default class Authorization extends Component {
                                 cssClass={classes.fbLogin}
                                 textButton='FB'
                             />
-                            <VK apiId='7244111'>
-                                <Auth
-                                    elementId='7244111'
-                                    options={{onAuth: this.responseVk}}
-                                />
-                            </VK>
+                            <div className={classes.AuthVkBtn}>
+                                <div className={classes.AuthVk}>
+                                    <VK apiId='7244111'>
+                                        <Auth
+                                            elementId='7244111'
+                                            options={{onAuth: this.responseVk}}
+                                        />
+                                    </VK>
+                                </div>
+                            </div>
                         </Card>
                         <EventCounter
                             count={this.state.count}
