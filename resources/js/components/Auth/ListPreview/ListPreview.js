@@ -5,6 +5,7 @@ import WishList from "../ListCard/WishList/WishList";
 import Button from "../../UI/Button/Button";
 import {Link} from "react-router-dom";
 import giftbox from '../../../../../public/svg/giftbox.svg'
+import error from '../../../../../public/svg/404.svg'
 
 export default class ListPreview extends Component {
     state = {
@@ -43,6 +44,7 @@ export default class ListPreview extends Component {
     componentDidMount() {
         axios.get(`/api${location.pathname}`)
             .then(res => {
+                console.log(res.data.status)
                 const list = {...this.state.list};
                 list.status = res.data.status;
                 list.wishList = res.data.wishList;
@@ -55,49 +57,71 @@ export default class ListPreview extends Component {
     render() {
         let wishList;
 
-        if (this.state.list.wishList.wishItems.length !== 0) {
-            wishList =
-                <div className={classes.ListPreview}
-                     style={{background: `url(${this.state.background[this.state.list.wishList.backgroundNumber]})`}}>
-                    <div className={classes.ListPreviewBody}>
-                        <WishList
-                            widgetOff
-                            id={this.state.list.wishList.id}
-                            listId={this.state.list.wishList.id}
-                            key={this.state.list.wishList.id}
-                            wishItems={this.state.list.wishList.wishItems}
-                        />
-                        <Link to={'/'}>
-                            <Button type='primary'>Создать список желаний</Button>
-                        </Link>
-                    </div>
-                </div>
+        let page;
 
+        if (this.state.list.status === 'ok') {
+            if (this.state.list.wishList.wishItems.length !== 0) {
+                wishList =
+                    <div className={classes.ListPreview}
+                         style={{background: `url(${this.state.background[this.state.list.wishList.backgroundNumber]})`}}>
+                        <div className={classes.ListPreviewBody}>
+                            <WishList
+                                widgetOff
+                                id={this.state.list.wishList.id}
+                                listId={this.state.list.wishList.id}
+                                key={this.state.list.wishList.id}
+                                wishItems={this.state.list.wishList.wishItems}
+                            />
+                            <Link to={'/'}>
+                                <Button type='primary'>Создать список желаний</Button>
+                            </Link>
+                        </div>
+                    </div>
+
+            } else {
+                wishList =
+                    <div className={classes.ListPreview}
+                         style={{background: `url(${this.state.background[this.state.list.wishList.backgroundNumber]})`}}>
+                        <div className={classes.ListPreviewBody}>
+                            <img src={giftbox} alt=""/>
+                            <p>В этот список еще не добавили желания</p>
+                            <Link to={'/'}>
+                                <Button type='primary'>Создать список желаний</Button>
+                            </Link>
+                        </div>
+                    </div>
+
+            }
+            page =
+                <React.Fragment>
+                    <h1 className={classes.ListPreviewHeader}>{this.state.list.wishList.name}</h1>
+                    <p className={classes.ListPreviewParagraph}> Создатель списка желаний
+                        - <strong>{this.state.list.wishList.userName}</strong></p>
+                    {wishList}
+                    <p className={classes.ListPreviewTime}>Список
+                        обновлен {this.props.timeConverter(this.state.list.wishList.updatedAt)}</p>
+                </React.Fragment>
         } else {
-            wishList =
-                <div className={classes.ListPreview}
-                     style={{background: `url(${this.state.background[this.state.list.wishList.backgroundNumber]})`}}>
-                    <div className={classes.ListPreviewBody}>
-                        <img src={giftbox} alt=""/>
-                        <p>В этот список еще не добавили желания</p>
+            let txt = 'Список был удален...';
+            if (this.state.list.status === 'none') {
+                txt = 'Такого списка не существует...'
+            }
+            page =
+                <React.Fragment>
+                    <div className={classes.ListPreviewError}>
+                        <img src={error} alt=""/>
+                        <p>{txt}</p>
+                        <p>Но ты можешь составить свой!</p>
                         <Link to={'/'}>
-                            <Button type='primary'>Создать список желаний</Button>
+                            <Button type='primary'>Попробовать</Button>
                         </Link>
                     </div>
-                </div>
+                </React.Fragment>
 
         }
 
-        return (
-            <React.Fragment>
-                <h1 className={classes.ListPreviewHeader}>{this.state.list.wishList.name}</h1>
-                <p className={classes.ListPreviewParagraph}> Создатель списка желаний
-                    - <strong>{this.state.list.wishList.userName}</strong></p>
-                {wishList}
-                <p className={classes.ListPreviewTime}>Список
-                    обновлен {this.props.timeConverter(this.state.list.wishList.updatedAt)}</p>
-            </React.Fragment>
-        )
+
+        return page
     }
 }
 

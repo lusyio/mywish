@@ -580,12 +580,16 @@ export default class Authorization extends Component {
                                 cssClass={classes.fbLogin}
                                 textButton='FB'
                             />
-                            <VK apiId='7244111'>
-                                <Auth
-                                    elementId='7244111'
-                                    options={{onAuth: this.responseVk}}
-                                />
-                            </VK>
+                            <div className={classes.AuthVkBtn}>
+                                <div className={classes.AuthVk}>
+                                    <VK apiId='7244111'>
+                                        <Auth
+                                            elementId='7244111'
+                                            options={{onAuth: this.responseVk}}
+                                        />
+                                    </VK>
+                                </div>
+                            </div>
                         </Card>
                         <EventCounter
                             count={this.state.count}
