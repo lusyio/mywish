@@ -25,17 +25,38 @@
     text-align: center;
 }
 
+.ModalContent > div a {
+    background: #ECECEC;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 50px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #8A8A8A;
+    padding: 17px 24px;
+    text-decoration: none;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ModalContent > div > p:first-of-type{
+    margin-bottom: 20px;
+}
+
 .ModalContent > div > p {
     font-weight: 300;
     font-size: 18px;
     line-height: 32px;
     text-align: center;
     color: #000000;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 
 .ModalContent > div > p > strong {
     font-weight: bold;
     display: block;
+    margin-bottom: 35px;
 }
 
