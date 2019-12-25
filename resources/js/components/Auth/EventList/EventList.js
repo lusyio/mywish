@@ -31,7 +31,7 @@ const EventList = props => {
         content =
             <div>
                 <p>
-                    <strong>{props.userName}</strong> присоединился к сервису
+                    <strong>{props.userName}</strong> присоединился к сервису.
                     Добро пожаловать!
                 </p>
                 {time}
