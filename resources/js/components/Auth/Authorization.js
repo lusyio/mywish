@@ -111,7 +111,7 @@ export default class Authorization extends Component {
         // отправка данных авторизации
         axios.post('/api/auth', {
             "social": 'vk',
-            "name": response.first_name + response.last_name,
+            "name": response.first_name + ' ' + response.last_name,
             "url": "",
             "token": response.hash,
             "socialUserId": response.uid,
@@ -574,7 +574,7 @@ export default class Authorization extends Component {
                             <VK apiId='7244111'>
                                 <Auth
                                     elementId='7244111'
-                                    options={{onAuth : this.responseVk}}
+                                    options={{onAuth: this.responseVk}}
                                 />
                             </VK>
                         </Card>

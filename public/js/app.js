@@ -3140,11 +3140,12 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../node_mod
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq {\n    display: flex;\n    max-width: 480px;\n    padding: 20px 10px 20px 0;\n    border-bottom: 1px solid #F0F0F0;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > div {\n    width: 100%;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq:last-of-type{\n    margin-bottom: 30px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > img {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    min-width: 110px;\n    height: 110px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0 {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 21px;\n    color: #000000;\n    padding-top: 25px;\n    margin-bottom: 10px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #BABABA;\n    display: block;\n    margin-bottom: 25px;\n    text-decoration: none;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a:hover{\n    text-decoration: underline;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq {\n    display: flex;\n    max-width: 480px;\n    padding: 20px 10px 20px 0;\n    border-bottom: 1px solid #F0F0F0;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > div {\n    width: 100%;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq:last-of-type {\n    margin-bottom: 30px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > img {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    min-width: 110px;\n    height: 110px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___1jeFlf2948I6zR6d1beGd {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    min-width: 110px;\n    height: 110px;\n    object-fit: cover;\n    border-radius: 3px;\n    background-repeat: no-repeat;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0 {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 21px;\n    color: #000000;\n    padding-top: 25px;\n    margin-bottom: 10px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #BABABA;\n    display: block;\n    margin-bottom: 25px;\n    text-decoration: none;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a:hover {\n    text-decoration: underline;\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"WishItem": "resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq",
+	"WishItemImg": "resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___1jeFlf2948I6zR6d1beGd",
 	"Title": "resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0"
 };
 
@@ -70447,7 +70448,7 @@ function (_Component) {
       // отправка данных авторизации
       axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/auth', {
         "social": 'vk',
-        "name": response.first_name + response.last_name,
+        "name": response.first_name + ' ' + response.last_name,
         "url": "",
         "token": response.hash,
         "socialUserId": response.uid
@@ -71729,10 +71730,12 @@ var WishItem = function WishItem(props) {
 
     renderWishItem = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItem
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      src: pic,
-      alt: props.title
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItemImg,
+      style: {
+        background: "url(".concat(pic)
+      }
+    }, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Title
     }, wishTitle), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       href: props.url
