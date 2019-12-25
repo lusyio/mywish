@@ -22,6 +22,9 @@
     line-height: 24px;
     text-align: center;
     color: #FFFFFF;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 45px;
 }
 
