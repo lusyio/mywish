@@ -373,10 +373,18 @@ export default class Authorization extends Component {
     onChangeListTitleHandler = (event, listId) => {
         const lists = {...this.state.lists};
         const currentList = lists.items.find(item => item.id === listId);
+        let listName;
+        if (event.target.value.trim() === '') {
+            listName = 'Новый список';
+            currentList.name = 'Новый список'
+        } else {
+            listName = event.target.value;
+            currentList.name = event.target.value;
+        }
         currentList.name = event.target.value;
         this.setState({
             lists,
-            listNameControl: event.target.value
+            listNameControl: listName
         })
     };
 
@@ -577,6 +585,7 @@ export default class Authorization extends Component {
                         {this.state.events.map((event) => {
                             return (
                                 <EventList
+                                    timeConverter={this.timeConverter}
                                     key={event.id}
                                     id={event.id}
                                     userName={event.userName}

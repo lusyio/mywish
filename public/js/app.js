@@ -3048,11 +3048,12 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A {\n    padding-bottom: 10px;\n    padding-top: 30px;\n    border-bottom: 1px solid #393939;\n    display: flex;\n    max-width: 612px;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A img{\n    margin-right: 38px;\n}\n\n.resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A > p {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 24px;\n    color: #FFFFFF;\n    margin-bottom: 5px;\n}\n\n.resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A > p > strong {\n    font-weight: bold;\n}\n\n.resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A > p > span {\n    font-weight: 300;\n    font-size: 12px;\n    line-height: 24px;\n    color: #B9B5B4;\n    display: block;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A {\n    padding-bottom: 10px;\n    padding-top: 30px;\n    border-bottom: 1px solid #393939;\n    display: flex;\n    max-width: 612px;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.resources-js-components-Auth-EventList-__EventList-module___2OSW_IANs_jPki3Ekip8N6 {\n    font-weight: 300;\n    font-size: 12px;\n    line-height: 24px;\n    color: #B9B5B4;\n    display: block;\n}\n\n.resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A img {\n    margin-right: 38px;\n    padding-bottom: 20px;\n}\n\n.resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A div > p {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 24px;\n    color: #FFFFFF;\n    margin-bottom: 5px;\n}\n\n.resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A div > p > strong {\n    font-weight: bold;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"EventList": "resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A"
+	"EventList": "resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A",
+	"EventListTime": "resources-js-components-Auth-EventList-__EventList-module___2OSW_IANs_jPki3Ekip8N6"
 };
 
 /***/ }),
@@ -3139,7 +3140,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../node_mod
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq {\n    display: flex;\n    max-width: 480px;\n    padding: 20px 10px 20px 0;\n    border-bottom: 1px solid #F0F0F0;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > div {\n    width: 100%;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq:last-of-type{\n    margin-bottom: 30px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > img {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    min-width: 110px;\n    height: 110px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0 {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 21px;\n    color: #000000;\n    padding-top: 25px;\n    padding-right: 60px;\n    margin-bottom: 10px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #BABABA;\n    display: block;\n    margin-bottom: 25px;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq {\n    display: flex;\n    max-width: 480px;\n    padding: 20px 10px 20px 0;\n    border-bottom: 1px solid #F0F0F0;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > div {\n    width: 100%;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq:last-of-type{\n    margin-bottom: 30px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > img {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    min-width: 110px;\n    height: 110px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0 {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 21px;\n    color: #000000;\n    padding-top: 25px;\n    margin-bottom: 10px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #BABABA;\n    display: block;\n    margin-bottom: 25px;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -3336,7 +3337,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1 {\n    font-weight: normal;\n    font-size: 14px;\n    line-height: 16px;\n    color: #FFFFFF;\n    background: #F2523A;\n    border-radius: 10px;\n    padding: 17px 32px;\n    min-width: 168px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1:hover {\n    cursor: pointer;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1:focus {\n    outline: none;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___3HSjOBpwWqEfyCyrwJ0e46 {\n    display: block;\n    margin: 30px auto 0;\n    background: transparent;\n    font-weight: 300;\n    font-size: 16px;\n    line-height: 16px;\n    color: #000000;\n    padding: 0;\n    border: 0;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___3HSjOBpwWqEfyCyrwJ0e46 > img {\n    vertical-align: bottom;\n    margin-right: 15px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5 {\n    display: block;\n    background: transparent;\n    padding: 0;\n    border: 0;\n    font-weight: 300;\n    font-size: 16px;\n    line-height: 16px;\n    color: #B9B5B4;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5 svg{\n    margin-right: 15px;\n    vertical-align: bottom;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5:hover svg path{\n    fill: #B9B5B4;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5:hover svg path{\n    fill: #FFFFFF;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1TYA-OIUfvo6APItS5mcui {\n    padding: 0;\n    border: none;\n    display: block;\n    background: transparent;\n    width: 85px;\n    min-width: unset;\n    font-weight: 300;\n    font-size: 12px;\n    line-height: 14px;\n    text-align: center;\n    color: #ECECEC;\n    margin-bottom: 30px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1TYA-OIUfvo6APItS5mcui > img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    margin-bottom: 8px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1wM9KuXPlFAE6qlnGd71BF {\n    width: 50px;\n    height: 50px;\n    background: transparent;\n    border: 0;\n    padding: 0;\n    margin: 0;\n    min-width: unset;\n    transition: 100ms;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5:hover {\n    color: #FFFFFF;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt {\n    color: #8A8A8A;\n    padding: 0;\n    border: none;\n    display: block;\n    background: transparent;\n    width: 35px;\n    min-width: unset;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt:not(:last-of-type) {\n    margin-bottom: 10px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___3gQ4CpZMakKKeRVyMJfmR5 {\n    background: #2A61A1;\n    border-radius: 5px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___2R_tkcz8_1dHsb-Kam1X_Z {\n    background: #F2523A;\n    transition: background 0.8s, box-shadow 135ms cubic-bezier(.4,0,.2,1);\n    border: none;\n    background-position: center !important;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___2R_tkcz8_1dHsb-Kam1X_Z:hover {\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);\n    box-sizing: border-box;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___25ICslRRtRBzhINllQO7p-:hover {\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);\n    box-sizing: border-box;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___25ICslRRtRBzhINllQO7p- {\n    margin-left: 25px;\n    border: none;\n    transition: background 0.8s, box-shadow 135ms cubic-bezier(.4,0,.2,1);\n    background: #B9B5B4;\n    border-radius: 10px;\n    background-position: center !important;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1 {\n    font-weight: normal;\n    font-size: 14px;\n    line-height: 16px;\n    color: #FFFFFF;\n    background: #F2523A;\n    border-radius: 10px;\n    padding: 17px 32px;\n    min-width: 168px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1:hover {\n    cursor: pointer;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1:focus {\n    outline: none;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___3HSjOBpwWqEfyCyrwJ0e46 {\n    display: block;\n    margin: 30px auto 0;\n    background: transparent;\n    font-weight: 300;\n    font-size: 16px;\n    line-height: 16px;\n    color: #000000;\n    padding: 0;\n    border: 0;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___3HSjOBpwWqEfyCyrwJ0e46 > img {\n    vertical-align: bottom;\n    margin-right: 15px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5 {\n    display: block;\n    background: transparent;\n    padding: 0;\n    border: 0;\n    font-weight: 300;\n    font-size: 16px;\n    line-height: 16px;\n    color: #B9B5B4;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5 svg {\n    margin-right: 15px;\n    vertical-align: bottom;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5:hover svg path {\n    fill: #B9B5B4;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5:hover svg path {\n    fill: #FFFFFF;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1TYA-OIUfvo6APItS5mcui svg {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    margin-bottom: 8px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1TYA-OIUfvo6APItS5mcui svg path {\n    fill: #8A8A8A;\n    transition: 150ms;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1TYA-OIUfvo6APItS5mcui:hover svg path {\n    fill: #F2523A;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1TYA-OIUfvo6APItS5mcui {\n    padding: 0;\n    border: none;\n    display: block;\n    background: transparent;\n    width: 85px;\n    min-width: unset;\n    font-weight: 300;\n    font-size: 12px;\n    line-height: 14px;\n    text-align: center;\n    color: #ECECEC;\n    margin-bottom: 30px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1TYA-OIUfvo6APItS5mcui > img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    margin-bottom: 8px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1wM9KuXPlFAE6qlnGd71BF {\n    width: 50px;\n    height: 50px;\n    background: transparent;\n    border: 0;\n    padding: 0;\n    margin: 0;\n    min-width: unset;\n    transition: 100ms;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5:hover {\n    color: #FFFFFF;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt {\n    color: #8A8A8A;\n    padding: 0;\n    border: none;\n    display: block;\n    background: transparent;\n    width: 35px;\n    min-width: unset;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt svg path {\n    fill: #8A8A8A;\n    transition: 150ms;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt:hover svg path {\n    fill: #000;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt:not(:last-of-type) {\n    margin-bottom: 10px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___3gQ4CpZMakKKeRVyMJfmR5 {\n    background: #2A61A1;\n    border-radius: 5px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___2R_tkcz8_1dHsb-Kam1X_Z {\n    background: #F2523A;\n    transition: background 0.8s, box-shadow 135ms cubic-bezier(.4, 0, .2, 1);\n    border: none;\n    background-position: center !important;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___2R_tkcz8_1dHsb-Kam1X_Z:hover {\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);\n    box-sizing: border-box;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___25ICslRRtRBzhINllQO7p-:hover {\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);\n    box-sizing: border-box;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___25ICslRRtRBzhINllQO7p- {\n    margin-left: 25px;\n    border: none;\n    transition: background 0.8s, box-shadow 135ms cubic-bezier(.4, 0, .2, 1);\n    background: #B9B5B4;\n    border-radius: 10px;\n    background-position: center !important;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -70092,17 +70093,6 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./public/svg/Eye.svg":
-/*!****************************!*\
-  !*** ./public/svg/Eye.svg ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/Eye.svg?f342192f78123b492ca72d9e8640c942";
-
-/***/ }),
-
 /***/ "./public/svg/emptyWishImg.svg":
 /*!*************************************!*\
   !*** ./public/svg/emptyWishImg.svg ***!
@@ -70111,6 +70101,17 @@ module.exports = "/images/Eye.svg?f342192f78123b492ca72d9e8640c942";
 /***/ (function(module, exports) {
 
 module.exports = "/images/emptyWishImg.svg?8d441da5560bdea24d74f02083c58a60";
+
+/***/ }),
+
+/***/ "./public/svg/giftEvent.svg":
+/*!**********************************!*\
+  !*** ./public/svg/giftEvent.svg ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/giftEvent.svg?42f220e7d924dcf5f78e36e00f1f6661";
 
 /***/ }),
 
@@ -70147,14 +70148,14 @@ module.exports = "/images/plusWish.svg?60742caea7495eea49749c811b6a433b";
 
 /***/ }),
 
-/***/ "./public/svg/share.svg":
-/*!******************************!*\
-  !*** ./public/svg/share.svg ***!
-  \******************************/
+/***/ "./public/svg/shareEvent.svg":
+/*!***********************************!*\
+  !*** ./public/svg/shareEvent.svg ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/share.svg?54861f980091ecf02b6af515e25cd5f3";
+module.exports = "/images/shareEvent.svg?69be84400f9ea617c8e96138e5cb0ce8";
 
 /***/ }),
 
@@ -70169,17 +70170,6 @@ module.exports = "/images/tick.svg?805f45d363275ea6a0b95426aaf57807";
 
 /***/ }),
 
-/***/ "./public/svg/trash.svg":
-/*!******************************!*\
-  !*** ./public/svg/trash.svg ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/trash.svg?60572067ce0e19512954fc9edb6cf20e";
-
-/***/ }),
-
 /***/ "./public/svg/trashWish.svg":
 /*!**********************************!*\
   !*** ./public/svg/trashWish.svg ***!
@@ -70188,6 +70178,17 @@ module.exports = "/images/trash.svg?60572067ce0e19512954fc9edb6cf20e";
 /***/ (function(module, exports) {
 
 module.exports = "/images/trashWish.svg?b65fa5c1e5dfc4b8c01187fd0cef10f8";
+
+/***/ }),
+
+/***/ "./public/svg/userEvent.svg":
+/*!**********************************!*\
+  !*** ./public/svg/userEvent.svg ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/userEvent.svg?2c4005c7d0a2c8487351a9d322dbaed2";
 
 /***/ }),
 
@@ -70700,11 +70701,21 @@ function (_Component) {
       var currentList = lists.items.find(function (item) {
         return item.id === listId;
       });
+      var listName;
+
+      if (event.target.value.trim() === '') {
+        listName = 'Новый список';
+        currentList.name = 'Новый список';
+      } else {
+        listName = event.target.value;
+        currentList.name = event.target.value;
+      }
+
       currentList.name = event.target.value;
 
       _this.setState({
         lists: lists,
-        listNameControl: event.target.value
+        listNameControl: listName
       });
     });
 
@@ -70954,6 +70965,7 @@ function (_Component) {
           count: this.state.count
         }), this.state.events.map(function (event) {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EventList_EventList__WEBPACK_IMPORTED_MODULE_5__["default"], {
+            timeConverter: _this3.timeConverter,
             key: event.id,
             id: event.id,
             userName: event.userName,
@@ -71081,29 +71093,52 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _EventList_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EventList.module.css */ "./resources/js/components/Auth/EventList/EventList.module.css");
 /* harmony import */ var _EventList_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_EventList_module_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _public_svg_userEvent_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../public/svg/userEvent.svg */ "./public/svg/userEvent.svg");
+/* harmony import */ var _public_svg_userEvent_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_svg_userEvent_svg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _public_svg_giftEvent_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../public/svg/giftEvent.svg */ "./public/svg/giftEvent.svg");
+/* harmony import */ var _public_svg_giftEvent_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_svg_giftEvent_svg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _public_svg_shareEvent_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../public/svg/shareEvent.svg */ "./public/svg/shareEvent.svg");
+/* harmony import */ var _public_svg_shareEvent_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_svg_shareEvent_svg__WEBPACK_IMPORTED_MODULE_4__);
 
- // import newUserImg from './newUser.svg'
-// import newWishImg from 'newWish.svg'
-// import shareImg from './share.svg'
+
+
+
+
 
 var EventList = function EventList(props) {
   var content = null;
   var image = null;
-  var time = props.time;
+  var time = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: _EventList_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.EventListTime
+  }, props.timeConverter(props.time));
+  var wishName = props.wishListName;
+
+  if (props.wishListName !== null && props.wishListName.length >= 38) {
+    wishName = props.wishListName.slice(0, 35) + '...';
+  }
 
   if (props.type === 'vk' || 'ok' || 'fb') {
-    // image = <img src={shareImg} alt={props.type}/>;
-    content = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0421\u043F\u0438\u0441\u043E\u043A \u043F\u043E\u0434\u0430\u0440\u043A\u043E\u0432 ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "\u201C", props.wishListName, "\u201D"), " \u043E\u043F\u0443\u0431\u043B\u0438\u043A\u043E\u0432\u0430\u043D \u0412\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u0435 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0435\u043C ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, props.userName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, time));
+    image = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: _public_svg_shareEvent_svg__WEBPACK_IMPORTED_MODULE_4___default.a,
+      alt: props.type
+    });
+    content = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0421\u043F\u0438\u0441\u043E\u043A \u043F\u043E\u0434\u0430\u0440\u043A\u043E\u0432 ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "\u201C", wishName, "\u201D"), " \u043E\u043F\u0443\u0431\u043B\u0438\u043A\u043E\u0432\u0430\u043D \u0412\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u0435 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0435\u043C ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, props.userName)), time);
   }
 
   if (props.type === 'user') {
-    // image = <img src={newUserImg} alt={props.type}/>;
-    content = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, props.userName), " \u043F\u0440\u0438\u0441\u043E\u0435\u0434\u0438\u043D\u0438\u043B\u0441\u044F \u043A \u0441\u0435\u0440\u0432\u0438\u0441\u0443 \u0414\u043E\u0431\u0440\u043E \u043F\u043E\u0436\u0430\u043B\u043E\u0432\u0430\u0442\u044C!", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, time));
+    image = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: _public_svg_userEvent_svg__WEBPACK_IMPORTED_MODULE_2___default.a,
+      alt: props.type
+    });
+    content = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, props.userName), " \u043F\u0440\u0438\u0441\u043E\u0435\u0434\u0438\u043D\u0438\u043B\u0441\u044F \u043A \u0441\u0435\u0440\u0432\u0438\u0441\u0443 \u0414\u043E\u0431\u0440\u043E \u043F\u043E\u0436\u0430\u043B\u043E\u0432\u0430\u0442\u044C!"), time);
   }
 
   if (props.type === 'list') {
-    // image = <img src={newWishImg} alt={props.type}/>;
-    content = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, props.userName), " \u0441\u043E\u0441\u0442\u0430\u0432\u0438\u043B \u043D\u043E\u0432\u044B\u0439 \u0441\u043F\u0438\u0441\u043E\u043A \u043F\u043E\u0434\u0430\u0440\u043A\u043E\u0432 ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "\u201C", props.wishListName, "\u201D"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, time));
+    image = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: _public_svg_giftEvent_svg__WEBPACK_IMPORTED_MODULE_3___default.a,
+      alt: props.type
+    });
+    content = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, props.userName), " \u0441\u043E\u0441\u0442\u0430\u0432\u0438\u043B \u043D\u043E\u0432\u044B\u0439 \u0441\u043F\u0438\u0441\u043E\u043A \u043F\u043E\u0434\u0430\u0440\u043A\u043E\u0432 ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "\u201C", wishName, "\u201D")), time);
   }
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -71246,19 +71281,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _UI_Input_Input__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../UI/Input/Input */ "./resources/js/components/UI/Input/Input.js");
 /* harmony import */ var _ListWidget_ListWidget__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ListWidget/ListWidget */ "./resources/js/components/Auth/ListCard/ListWidget/ListWidget.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _public_svg_Eye_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../../public/svg/Eye.svg */ "./public/svg/Eye.svg");
-/* harmony import */ var _public_svg_Eye_svg__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_public_svg_Eye_svg__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _public_svg_share_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../../public/svg/share.svg */ "./public/svg/share.svg");
-/* harmony import */ var _public_svg_share_svg__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_public_svg_share_svg__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _public_svg_trash_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../../public/svg/trash.svg */ "./public/svg/trash.svg");
-/* harmony import */ var _public_svg_trash_svg__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_public_svg_trash_svg__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _public_svg_plus_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../../../public/svg/plus.svg */ "./public/svg/plus.svg");
-/* harmony import */ var _public_svg_plus_svg__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_public_svg_plus_svg__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _public_svg_giftbox_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../../../public/svg/giftbox.svg */ "./public/svg/giftbox.svg");
-/* harmony import */ var _public_svg_giftbox_svg__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_public_svg_giftbox_svg__WEBPACK_IMPORTED_MODULE_12__);
-
-
-
+/* harmony import */ var _public_svg_plus_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../../public/svg/plus.svg */ "./public/svg/plus.svg");
+/* harmony import */ var _public_svg_plus_svg__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_public_svg_plus_svg__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _public_svg_giftbox_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../../public/svg/giftbox.svg */ "./public/svg/giftbox.svg");
+/* harmony import */ var _public_svg_giftbox_svg__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_public_svg_giftbox_svg__WEBPACK_IMPORTED_MODULE_9__);
 
 
 
@@ -71277,12 +71303,18 @@ var ListCard = function ListCard(props) {
   if (props.lists.items.length !== 0) {
     renderList = props.lists.items.map(function (list) {
       if (list.id === props.lists.defaultListId) {
+        var listName = list.name;
+
+        if (list.name.length >= 23) {
+          listName = list.name.slice(0, 20) + '...';
+        }
+
         var header = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
           onClick: function onClick(event) {
             return props.showNewListTitleToggle(event);
           },
           className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.CardHeader
-        }, list.name);
+        }, listName);
 
         if (props.showNewListTitle) {
           header = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Input_Input__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -71328,28 +71360,84 @@ var ListCard = function ListCard(props) {
           type: "showNewWish",
           onClick: props.showNewWishToggle
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-          src: _public_svg_plus_svg__WEBPACK_IMPORTED_MODULE_11___default.a
+          src: _public_svg_plus_svg__WEBPACK_IMPORTED_MODULE_8___default.a
         }), "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0435\u0449\u0435 \u0436\u0435\u043B\u0430\u043D\u0438\u0435")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListWidget_ListWidget__WEBPACK_IMPORTED_MODULE_6__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
           to: "/list/".concat(list.link)
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
           type: "listWidget"
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-          src: _public_svg_Eye_svg__WEBPACK_IMPORTED_MODULE_8___default.a
-        }), " \u041F\u0440\u0435\u0434\u043F\u0440\u043E\u0441\u043C\u043E\u0442\u0440")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+          width: "32",
+          height: "32",
+          viewBox: "0 0 32 32",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+          clipPath: "url(#clip0)"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+          d: "M12.6918 16.1831C12.448 15.9387 12.0518 15.9387 11.808 16.1831C11.5637 16.4269 11.5637 16.8231 11.808 17.0669C12.0518 17.3112 12.448 17.3112 12.6918 17.0669C12.9362 16.8231 12.9362 16.4269 12.6918 16.1831Z",
+          fill: "#8A8A8A"
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+          d: "M16 17.25C14.9661 17.25 14.125 18.0911 14.125 19.125C14.125 20.1589 14.9661 21 16 21C17.0339 21 17.875 20.1589 17.875 19.125C17.875 18.0911 17.0339 17.25 16 17.25ZM16 19.75C15.6554 19.75 15.375 19.4696 15.375 19.125C15.375 18.7804 15.6554 18.5 16 18.5C16.3446 18.5 16.625 18.7804 16.625 19.125C16.625 19.4696 16.3446 19.75 16 19.75Z",
+          fill: "#8A8A8A"
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+          d: "M16 14.125C15.3014 14.125 14.6258 14.2662 13.9923 14.5447C13.6763 14.6836 13.5327 15.0524 13.6716 15.3684C13.8104 15.6844 14.1792 15.8279 14.4952 15.6891C14.9693 15.4807 15.4756 15.375 16 15.375C18.0677 15.375 19.75 17.0573 19.75 19.125C19.75 21.1927 18.0677 22.875 16 22.875C13.9323 22.875 12.25 21.1927 12.25 19.125C12.25 19.1036 12.2499 19.0827 12.2504 19.0614C12.2584 18.7163 11.9852 18.4301 11.6401 18.4221C11.2945 18.4134 11.0088 18.6873 11.0008 19.0324C11.0001 19.0635 11 19.0939 11 19.125C11 21.882 13.243 24.125 16 24.125C18.757 24.125 21 21.882 21 19.125C21 16.368 18.757 14.125 16 14.125Z",
+          fill: "#8A8A8A"
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+          d: "M16 4.75C15.6548 4.75 15.375 5.02981 15.375 5.375V9.125C15.375 9.47019 15.6548 9.75 16 9.75C16.3452 9.75 16.625 9.47019 16.625 9.125V5.375C16.625 5.02981 16.3452 4.75 16 4.75Z",
+          fill: "#8A8A8A"
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+          d: "M9.0178 9.38361L6.36654 6.73236C6.12248 6.4883 5.72673 6.4883 5.48261 6.73236C5.23854 6.97643 5.23854 7.37217 5.48261 7.6163L8.13386 10.2675C8.37792 10.5116 8.77373 10.5117 9.0178 10.2675C9.26186 10.0235 9.26186 9.62774 9.0178 9.38361Z",
+          fill: "#8A8A8A"
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+          d: "M26.5178 6.73236C26.2737 6.4883 25.878 6.4883 25.6338 6.73236L22.9826 9.38361C22.7385 9.62767 22.7385 10.0234 22.9826 10.2675C23.2266 10.5116 23.6224 10.5117 23.8665 10.2675L26.5178 7.6163C26.7618 7.37224 26.7618 6.97649 26.5178 6.73236Z",
+          fill: "#8A8A8A"
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+          d: "M31.8434 19.2319C27.8731 14.7369 21.9779 11 16 11C10.0213 11 4.12612 14.7379 0.156557 19.2319C-0.071943 19.4906 -0.047443 19.8856 0.211244 20.1141C0.469994 20.3426 0.864995 20.3181 1.09343 20.0594C1.22662 19.9086 1.36306 19.7583 1.50124 19.609C4.58968 24.2755 10.1883 27.25 16 27.25C21.8117 27.25 27.4103 24.2755 30.4987 19.609C30.6369 19.7584 30.7734 19.9086 30.9066 20.0594C31.1343 20.3173 31.5292 20.3433 31.7887 20.1141C32.0474 19.8856 32.0719 19.4906 31.8434 19.2319ZM16 26C10.5053 26 5.22056 23.1451 2.39443 18.6887C4.62118 16.5068 9.76631 12.25 16 12.25C22.2337 12.25 27.3788 16.5068 29.6056 18.6887C26.7794 23.1451 21.4947 26 16 26Z",
+          fill: "#8A8A8A"
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("defs", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("clipPath", {
+          id: "clip0"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("rect", {
+          width: "32",
+          height: "32",
+          fill: "white"
+        })))), "\u041F\u0440\u0435\u0434\u043F\u0440\u043E\u0441\u043C\u043E\u0442\u0440")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
           onClick: function onClick() {
             return props.shareList(list.id, list.name, 'share', list.link);
           },
           type: "listWidget"
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-          src: _public_svg_share_svg__WEBPACK_IMPORTED_MODULE_9___default.a
-        }), "\u0420\u0430\u0441\u0441\u043A\u0430\u0437\u0430\u0442\u044C \u0434\u0440\u0443\u0437\u044C\u044F\u043C"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+          width: "32",
+          height: "32",
+          viewBox: "0 0 32 32",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+          d: "M31.8133 12.8851L20.7556 1.8275C20.5733 1.64519 20.2991 1.59069 20.0609 1.68937C19.8228 1.78806 19.6674 2.02056 19.6674 2.27831V8.29625H16.5609C12.1373 8.29625 7.9785 10.0189 4.85056 13.1468C1.72263 16.2747 0 20.4335 0 24.8571V29.7217C0 29.9848 0.161625 30.2208 0.406875 30.316C0.481813 30.3451 0.559937 30.3592 0.637312 30.3592C0.812937 30.3592 0.984875 30.2865 1.108 30.1517L6.91838 23.7928C10.0642 20.3501 14.5431 18.3755 19.2066 18.3755H19.6674V24.3935C19.6674 24.6514 19.8228 24.8837 20.0609 24.9824C20.2991 25.0812 20.5733 25.0266 20.7556 24.8443L31.8133 13.7866C31.9328 13.6671 32 13.5049 32 13.3358C32 13.1667 31.9328 13.0046 31.8133 12.8851ZM20.9424 22.8546V17.7381C20.9424 17.386 20.6569 17.1006 20.3049 17.1006H19.2066C14.1859 17.1006 9.364 19.2264 5.97731 22.9329L1.275 28.0791V24.8571C1.275 16.4284 8.13225 9.57119 16.561 9.57119H20.305C20.657 9.57119 20.9424 9.28581 20.9424 8.93375V3.81725L30.4611 13.3359L20.9424 22.8546Z",
+          fill: "#8A8A8A"
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+          d: "M15.9657 10.6454C15.792 10.6454 15.6164 10.6489 15.4438 10.6559C15.0921 10.67 14.8183 10.9667 14.8326 11.3184C14.8464 11.6615 15.1288 11.9303 15.4691 11.9303C15.4778 11.9303 15.4864 11.9301 15.4951 11.9297C15.6507 11.9234 15.809 11.9203 15.9657 11.9203C16.3177 11.9203 16.6031 11.6349 16.6031 11.2828C16.6031 10.9308 16.3177 10.6454 15.9657 10.6454Z",
+          fill: "#8A8A8A"
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+          d: "M13.8188 11.4551C13.7389 11.1123 13.3964 10.8991 13.0532 10.9791C11.3744 11.3706 9.81563 12.0878 8.42006 13.1109C8.13606 13.3191 8.07469 13.718 8.28281 14.0019C8.40769 14.1722 8.60119 14.2624 8.79744 14.2624C8.92825 14.2624 9.06025 14.2224 9.17388 14.139C10.4299 13.2182 11.8326 12.5728 13.3429 12.2205C13.6857 12.1407 13.8987 11.7979 13.8188 11.4551Z",
+          fill: "#8A8A8A"
+        })), "\u0420\u0430\u0441\u0441\u043A\u0430\u0437\u0430\u0442\u044C \u0434\u0440\u0443\u0437\u044C\u044F\u043C"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
           onClick: function onClick() {
             return props.deleteList(list.id, list.name, 'delete', list.link);
           },
           type: "listWidget"
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-          src: _public_svg_trash_svg__WEBPACK_IMPORTED_MODULE_10___default.a
-        }), "\u0423\u0434\u0430\u043B\u0438\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A")));
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+          width: "32",
+          height: "32",
+          viewBox: "0 0 32 32",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+          d: "M27.4215 2.60494H20.1773V0.637438C20.1773 0.285438 19.8919 0 19.5399 0H12.4597C12.1077 0 11.8223 0.285438 11.8223 0.637438V2.60494H4.57811C4.22605 2.60494 3.94067 2.89037 3.94067 3.24237V7.85112C3.94067 8.20312 4.22605 8.48856 4.57811 8.48856H5.54374V31.3625C5.54374 31.7145 5.82911 31.9999 6.18117 31.9999H25.8185C26.1705 31.9999 26.4559 31.7145 26.4559 31.3625V8.48862H27.4215C27.7735 8.48862 28.059 8.20319 28.059 7.85119V3.24244C28.059 2.89038 27.7735 2.60494 27.4215 2.60494ZM13.0972 1.27488H18.9024V2.60494H13.0972V1.27488ZM25.181 30.7251H20.1105V13.2614C20.1105 12.9094 19.825 12.624 19.473 12.624C19.121 12.624 18.8356 12.9094 18.8356 13.2614V30.7251H13.164V10.5897C13.164 10.2377 12.8786 9.95225 12.5265 9.95225C12.1745 9.95225 11.8891 10.2377 11.8891 10.5897V30.7251H6.81861V8.48862H25.181V30.7251ZM26.784 7.21369H5.21555V3.87981H26.784V7.21369Z",
+          fill: "#8A8A8A"
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+          d: "M19.4731 9.95224C19.1211 9.95224 18.8357 10.2377 18.8357 10.5897V11.0572C18.8357 11.4092 19.1211 11.6947 19.4731 11.6947C19.8251 11.6947 20.1106 11.4092 20.1106 11.0572V10.5897C20.1106 10.2377 19.8251 9.95224 19.4731 9.95224Z",
+          fill: "#8A8A8A"
+        })), "\u0423\u0434\u0430\u043B\u0438\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A")));
       }
     });
   } else {
@@ -71358,7 +71446,7 @@ var ListCard = function ListCard(props) {
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: _ListCard_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListCardBodyEmpty
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      src: _public_svg_giftbox_svg__WEBPACK_IMPORTED_MODULE_12___default.a
+      src: _public_svg_giftbox_svg__WEBPACK_IMPORTED_MODULE_9___default.a
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0423 \u0432\u0430\u0441 \u0435\u0449\u0435 \u043D\u0435\u0442 \u043D\u0435 \u043E\u0434\u043D\u043E\u0433\u043E \u0441\u043F\u0438\u0441\u043A\u0430"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
       onClick: props.addList,
       type: "primary"
@@ -71501,22 +71589,69 @@ var WishItem = function WishItem(props) {
       return props.addNewWish(props.listId, props.newWishId);
     },
     type: "widget"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: _public_svg_tick_svg__WEBPACK_IMPORTED_MODULE_6___default.a
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    width: "16",
+    height: "16",
+    viewBox: "0 0 16 16",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+    clipPath: "url(#clip0)"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M15.7657 2.35925C15.4533 2.04681 14.9468 2.04681 14.6343 2.35925L5.04983 11.9439L1.3657 8.25972C1.0533 7.94729 0.546797 7.94732 0.234328 8.25972C-0.0781094 8.57213 -0.0781094 9.07863 0.234328 9.39107L4.48414 13.6408C4.79645 13.9532 5.30333 13.953 5.61552 13.6408L15.7657 3.49063C16.0781 3.17822 16.0781 2.67169 15.7657 2.35925Z",
+    fill: "black"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("defs", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("clipPath", {
+    id: "clip0"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("rect", {
+    width: "16",
+    height: "16",
+    fill: "white"
+  }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     onClick: props.showNewWishToggle,
     type: "widget"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: _public_svg_trashWish_svg__WEBPACK_IMPORTED_MODULE_7___default.a
-  })));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    width: "16",
+    height: "16",
+    viewBox: "0 0 16 16",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M7.99995 13.8305C8.14964 13.8305 8.27113 13.7093 8.27113 13.5593V4.61018C8.27113 4.46021 8.14964 4.33899 7.99995 4.33899C7.85025 4.33899 7.72876 4.46021 7.72876 4.61018V13.5593C7.72876 13.7093 7.85025 13.8305 7.99995 13.8305Z",
+    fill: "black"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M5.28803 13.8305C5.43773 13.8305 5.55922 13.7093 5.55922 13.5593V4.61018C5.55922 4.46021 5.43773 4.33899 5.28803 4.33899C5.13834 4.33899 5.01685 4.46021 5.01685 4.61018V13.5593C5.01685 13.7093 5.13834 13.8305 5.28803 13.8305Z",
+    fill: "black"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M10.7119 13.8305C10.8616 13.8305 10.983 13.7093 10.983 13.5593V4.61018C10.983 4.46021 10.8616 4.33899 10.7119 4.33899C10.5622 4.33899 10.4407 4.46021 10.4407 4.61018V13.5593C10.4407 13.7093 10.5622 13.8305 10.7119 13.8305Z",
+    fill: "black"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M14.2372 1.62712H10.4287C10.3988 1.28814 10.2944 0.716475 9.93701 0.349559C9.71084 0.117695 9.42393 0 9.0844 0H6.37281C6.03329 0 5.74637 0.117695 5.5202 0.349559C5.16278 0.716475 5.05837 1.28814 5.02854 1.62712H1.76264C1.61295 1.62712 1.49146 1.74834 1.49146 1.89831C1.49146 2.04827 1.61295 2.16949 1.76264 2.16949H2.31613L2.83546 14.6498C2.84549 15.1167 3.1362 16 4.16644 16H11.8334C12.8637 16 13.1544 15.1167 13.1641 14.6555L13.6837 2.16949H14.2372C14.3869 2.16949 14.5084 2.04827 14.5084 1.89831C14.5084 1.74834 14.3869 1.62712 14.2372 1.62712ZM5.90962 0.727051C6.03112 0.602847 6.18271 0.542373 6.37281 0.542373H9.0844C9.27451 0.542373 9.4261 0.602847 9.54759 0.727051C9.7659 0.950237 9.85349 1.34292 9.88386 1.62712H5.57362C5.604 1.34292 5.69159 0.950237 5.90962 0.727051ZM12.622 14.6384C12.6204 14.7222 12.583 15.4576 11.8334 15.4576H4.16644C3.42501 15.4576 3.38054 14.7208 3.37756 14.6327L2.85878 2.16949H13.1408L12.622 14.6384Z",
+    fill: "black"
+  }))));
   var widgetWish = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishWidget_WishWidget__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     onClick: function onClick() {
       return props.deleteWish(props.listId, props.id);
     },
     type: "widget"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: _public_svg_trashWish_svg__WEBPACK_IMPORTED_MODULE_7___default.a
-  })));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    width: "16",
+    height: "16",
+    viewBox: "0 0 16 16",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M7.99995 13.8305C8.14964 13.8305 8.27113 13.7093 8.27113 13.5593V4.61018C8.27113 4.46021 8.14964 4.33899 7.99995 4.33899C7.85025 4.33899 7.72876 4.46021 7.72876 4.61018V13.5593C7.72876 13.7093 7.85025 13.8305 7.99995 13.8305Z",
+    fill: "black"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M5.28803 13.8305C5.43773 13.8305 5.55922 13.7093 5.55922 13.5593V4.61018C5.55922 4.46021 5.43773 4.33899 5.28803 4.33899C5.13834 4.33899 5.01685 4.46021 5.01685 4.61018V13.5593C5.01685 13.7093 5.13834 13.8305 5.28803 13.8305Z",
+    fill: "black"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M10.7119 13.8305C10.8616 13.8305 10.983 13.7093 10.983 13.5593V4.61018C10.983 4.46021 10.8616 4.33899 10.7119 4.33899C10.5622 4.33899 10.4407 4.46021 10.4407 4.61018V13.5593C10.4407 13.7093 10.5622 13.8305 10.7119 13.8305Z",
+    fill: "black"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M14.2372 1.62712H10.4287C10.3988 1.28814 10.2944 0.716475 9.93701 0.349559C9.71084 0.117695 9.42393 0 9.0844 0H6.37281C6.03329 0 5.74637 0.117695 5.5202 0.349559C5.16278 0.716475 5.05837 1.28814 5.02854 1.62712H1.76264C1.61295 1.62712 1.49146 1.74834 1.49146 1.89831C1.49146 2.04827 1.61295 2.16949 1.76264 2.16949H2.31613L2.83546 14.6498C2.84549 15.1167 3.1362 16 4.16644 16H11.8334C12.8637 16 13.1544 15.1167 13.1641 14.6555L13.6837 2.16949H14.2372C14.3869 2.16949 14.5084 2.04827 14.5084 1.89831C14.5084 1.74834 14.3869 1.62712 14.2372 1.62712ZM5.90962 0.727051C6.03112 0.602847 6.18271 0.542373 6.37281 0.542373H9.0844C9.27451 0.542373 9.4261 0.602847 9.54759 0.727051C9.7659 0.950237 9.85349 1.34292 9.88386 1.62712H5.57362C5.604 1.34292 5.69159 0.950237 5.90962 0.727051ZM12.622 14.6384C12.6204 14.7222 12.583 15.4576 11.8334 15.4576H4.16644C3.42501 15.4576 3.38054 14.7208 3.37756 14.6327L2.85878 2.16949H13.1408L12.622 14.6384Z",
+    fill: "black"
+  }))));
 
   if (props.widgetOff) {
     widgetAddNew = null;
@@ -71979,12 +72114,18 @@ var Sidebar = function Sidebar(props) {
 
   if (props.lists.items.length !== 0) {
     renderList = props.lists.items.map(function (list) {
+      var listName = list.name;
+
+      if (list.name.length >= 23) {
+        listName = list.name.slice(0, 20) + '...';
+      }
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         key: list.id,
         onClick: function onClick() {
           return props.onClick(list.id);
         }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, list.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u0421\u043F\u0438\u0441\u043E\u043A \u043E\u0431\u043D\u043E\u0432\u043B\u0435\u043D ", props.timeConverter(list.updatedAt)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, listName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u0421\u043F\u0438\u0441\u043E\u043A \u043E\u0431\u043D\u043E\u0432\u043B\u0435\u043D ", props.timeConverter(list.updatedAt)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
         className: _Sidebar_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.hr
       }));
     });

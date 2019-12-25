@@ -8,11 +8,20 @@
     margin-right: auto;
 }
 
-.EventList img{
-    margin-right: 38px;
+.EventListTime {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 24px;
+    color: #B9B5B4;
+    display: block;
 }
 
-.EventList > p {
+.EventList img {
+    margin-right: 38px;
+    padding-bottom: 20px;
+}
+
+.EventList div > p {
     font-weight: 300;
     font-size: 20px;
     line-height: 24px;
@@ -20,14 +29,6 @@
     margin-bottom: 5px;
 }
 
-.EventList > p > strong {
+.EventList div > p > strong {
     font-weight: bold;
-}
-
-.EventList > p > span {
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 24px;
-    color: #B9B5B4;
-    display: block;
 }

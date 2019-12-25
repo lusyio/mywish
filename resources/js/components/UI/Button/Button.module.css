@@ -45,17 +45,33 @@
     color: #B9B5B4;
 }
 
-.Button.addListSidebar svg{
+.Button.addListSidebar svg {
     margin-right: 15px;
     vertical-align: bottom;
 }
 
-.Button.addListSidebar:hover svg path{
+.Button.addListSidebar:hover svg path {
     fill: #B9B5B4;
 }
 
-.Button.addListSidebar:hover svg path{
+.Button.addListSidebar:hover svg path {
     fill: #FFFFFF;
+}
+
+.Button.listWidget svg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+}
+
+.Button.listWidget svg path {
+    fill: #8A8A8A;
+    transition: 150ms;
+}
+
+.Button.listWidget:hover svg path {
+    fill: #F2523A;
 }
 
 .Button.listWidget {
@@ -105,6 +121,15 @@
     min-width: unset;
 }
 
+.Button.widget svg path {
+    fill: #8A8A8A;
+    transition: 150ms;
+}
+
+.Button.widget:hover svg path {
+    fill: #000;
+}
+
 .Button.widget:not(:last-of-type) {
     margin-bottom: 10px;
 }
@@ -116,7 +141,7 @@
 
 .Button.primary {
     background: #F2523A;
-    transition: background 0.8s, box-shadow 135ms cubic-bezier(.4,0,.2,1);
+    transition: background 0.8s, box-shadow 135ms cubic-bezier(.4, 0, .2, 1);
     border: none;
     background-position: center !important;
 }
@@ -134,7 +159,7 @@
 .Button.secondary {
     margin-left: 25px;
     border: none;
-    transition: background 0.8s, box-shadow 135ms cubic-bezier(.4,0,.2,1);
+    transition: background 0.8s, box-shadow 135ms cubic-bezier(.4, 0, .2, 1);
     background: #B9B5B4;
     border-radius: 10px;
     background-position: center !important;
