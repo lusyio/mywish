@@ -22,7 +22,7 @@ const ListCard = props => {
                 if (list.id === props.lists.defaultListId) {
                     let listName = list.name;
                     if (list.name.length >= 23) {
-                        listName = list.name.slice(0, 20) + '...'
+                        listName = list.name.slice(0, 19) + '...'
                     }
                     let header = <p onClick={event => props.showNewListTitleToggle(event)}
                                     className={classes.CardHeader}>{listName}</p>

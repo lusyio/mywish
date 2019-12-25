@@ -71306,7 +71306,7 @@ var ListCard = function ListCard(props) {
         var listName = list.name;
 
         if (list.name.length >= 23) {
-          listName = list.name.slice(0, 20) + '...';
+          listName = list.name.slice(0, 19) + '...';
         }
 
         var header = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
