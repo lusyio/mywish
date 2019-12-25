@@ -71395,7 +71395,14 @@ var ListCard = function ListCard(props) {
           showNewWish: props.showNewWish,
           key: list.id,
           wishItems: list.wishItems
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        }), props.showNewWish ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          type: "showNewWish",
+          onClick: function onClick() {
+            return props.addNewWish(list.id, props.newWishId);
+          }
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: _public_svg_plus_svg__WEBPACK_IMPORTED_MODULE_8___default.a
+        }), "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0435\u0449\u0435 \u0436\u0435\u043B\u0430\u043D\u0438\u0435") : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
           type: "showNewWish",
           onClick: props.showNewWishToggle
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
