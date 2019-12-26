@@ -63188,7 +63188,7 @@ exports.usePromiseTracker = usePromiseTracker;
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -70406,7 +70406,7 @@ function (_Component) {
       if (type === 'words') {
         month = months[a.getMonth()];
       } else {
-        month = a.getMonth();
+        month = a.getMonth() + 1;
       }
 
       var date = a.getDate();
@@ -70800,7 +70800,6 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "shareListHandler", function () {
-      console.log(_this.state.tempLink);
       Object(react_promise_tracker__WEBPACK_IMPORTED_MODULE_15__["trackPromise"])(axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/share', {
         "userId": localStorage.getItem('userId'),
         "authToken": localStorage.getItem('authToken'),
@@ -70961,7 +70960,9 @@ function (_Component) {
           }, "\u041F\u043E\u0434\u0435\u043B\u0438\u0442\u044C\u0441\u044F");
         })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
           type: "share",
-          onClick: this.shareListHandler
+          onClick: function onClick() {
+            return _this3.shareListHandler();
+          }
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_vk__WEBPACK_IMPORTED_MODULE_11__["Share"], {
           buttonOptions: {
             text: 'Поделиться'
@@ -72067,20 +72068,20 @@ function (_Component) {
       list: {
         status: "string",
         wishList: {
-          id: 1,
+          id: null,
           name: "",
-          updatedAt: 1,
-          backgroundNumber: 1,
-          userId: 1,
+          updatedAt: null,
+          backgroundNumber: null,
+          userId: null,
           userName: "",
-          createdAt: 1,
+          createdAt: null,
           link: "",
           wishItems: [{
-            id: 1,
+            id: null,
             title: "",
             url: "",
-            order: 1,
-            listId: 1,
+            order: null,
+            listId: null,
             picture: ""
           }]
         }

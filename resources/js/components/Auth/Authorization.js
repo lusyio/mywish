@@ -62,7 +62,7 @@ export default class Authorization extends Component {
         if (type === 'words') {
             month = months[a.getMonth()];
         } else {
-            month = a.getMonth();
+            month = a.getMonth() + 1;
         }
         let date = a.getDate();
         let hour = a.getHours();
@@ -433,7 +433,6 @@ export default class Authorization extends Component {
     };
 
     shareListHandler = () => {
-        console.log(this.state.tempLink)
         trackPromise(axios.post('/api/share', {
             "userId": localStorage.getItem('userId'),
             "authToken": localStorage.getItem('authToken'),
@@ -528,7 +527,7 @@ export default class Authorization extends Component {
                             )}
                         </Share>
                     </FacebookProvider>
-                    <Button type='share' onClick={this.shareListHandler}>
+                    <Button type='share' onClick={() => this.shareListHandler()}>
                         <ShareVk buttonOptions={{text: 'Поделиться'}}
                                  shareOptions={{url: `https://mywish.su/${this.state.tempLink}`}}/>
                     </Button>
