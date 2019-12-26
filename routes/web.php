@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/logout', function () {
+    return view('logout');
+});
+
 Route::get('/{any}', function () {
     return view('index');
 })->where('any', '.*');
