@@ -16,7 +16,7 @@ const EventList = props => {
     }
 
     if (props.type === 'vk' || 'ok' || 'fb') {
-        let socialName = '';
+        let socialName;
         if (props.type === 'vk') {
             socialName = 'ВКонтакте'
         }else if (props.type === 'fb') {
@@ -55,6 +55,8 @@ const EventList = props => {
                 {time}
             </div>
     }
+
+
 
     return (
         <React.Fragment>

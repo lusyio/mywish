@@ -32,3 +32,18 @@
 .EventList div > p > strong {
     font-weight: bold;
 }
+
+@media screen
+and (max-width: 768px) {
+    .EventList {
+        padding: 15px 0;
+    }
+
+    .EventList div > p {
+        font-size: 14px;
+    }
+
+    .EventList img {
+        display: none;
+    }
+}

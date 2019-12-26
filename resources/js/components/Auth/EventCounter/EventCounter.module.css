@@ -6,3 +6,16 @@
     color: #CC9969;
     margin-bottom: 60px;
 }
+
+.EventCounterMobile {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #CC9969;
+    margin-bottom: 45px;
+}
+
+.EventCounterMobile strong {
+    font-weight: bold;
+}

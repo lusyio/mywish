@@ -1,5 +1,5 @@
 .Card {
-    background: #c4c4c4;
+    background: url('/images/bg3.jpg');
     border-radius: 15px;
     padding: 10px;
     margin-bottom: 80px;
@@ -20,3 +20,26 @@
     color: #000000;
     margin-bottom: 30px;
 }
+
+@media screen
+and (max-width: 768px) {
+    .Card {
+        padding: 5px;
+        margin-bottom: 40px;
+    }
+
+    .Card > div {
+        background: #FFFFFF;
+        padding: 26px 40px;
+    }
+
+    .Card > div > p {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+        color: #000000;
+        margin-bottom: 20px;
+    }
+}
+

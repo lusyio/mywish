@@ -11,8 +11,11 @@
 }
 
 .AuthVk iframe {
+    opacity: 0.00001;
     margin-top: -94px;
     margin-left: -216px;
+    position: relative;
+    z-index: 5;
 }
 
 .AuthVkBtn {
@@ -27,12 +30,26 @@
     vertical-align: bottom;
 }
 
+.AuthVk:before {
+    content: 'ВК';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    rigth: 0;
+    margin: auto;
+    top: 48%;
+    z-index: 0;
+    color: white;
+}
+
 .AuthVk {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 16px;
-    height: 25px;
+    width: 100%;
+    height: 100%;
     display: inline-block;
     overflow: hidden;
     vertical-align: middle;
@@ -64,6 +81,19 @@
     color: #fff;
 }
 
+.authContentHeaderMobile {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+
+.authContentHeaderMobile strong {
+    font-weight: bold;
+}
+
 .Container {
     display: flex;
     justify-content: center;
@@ -76,3 +106,40 @@
     max-width: 1015px;
     display: flex;
 }
+
+@media screen
+and (max-width: 768px) {
+    .Auth .fbLogin {
+        padding: 10px;
+        border-radius: 5px;
+        width: 54px;
+        height: 54px;
+        font-size: 18px;
+    }
+
+    .AuthVkBtn {
+        background: #5181b8;
+        border-radius: 5px;
+        display: inline-block;
+        overflow: hidden;
+        width: 54px;
+        height: 54px;
+        margin-left: 20px;
+        vertical-align: bottom;
+        padding: 0;
+    }
+
+    .AuthVk iframe {
+        opacity: 0.00001;
+        margin-top: -111px;
+        margin-left: -216px;
+        position: relative;
+        z-index: 5;
+        transform: scale(1.7);
+    }
+
+    .AuthVk:before {
+        top: 71%;
+    }
+}
+

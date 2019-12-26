@@ -514,7 +514,8 @@ export default class Authorization extends Component {
             modal =
                 <Modal clickOutside={this.clickOutsideHandler}>
                     <p>Ссылка на ваш список:</p>
-                    <a href={"https://mywish.su/list/" + this.state.tempLink} target="_blank">https://mywish.su/list/{this.state.tempLink}</a>
+                    <a href={"https://mywish.su/list/" + this.state.tempLink}
+                       target="_blank">https://mywish.su/list/{this.state.tempLink}</a>
                     <p>Расскажи о своих желаниях друзьям:</p>
                     <FacebookProvider appId="563234647569569">
                         <Share href={"https://mywish.su/list/" + this.state.tempLink}>
@@ -528,7 +529,10 @@ export default class Authorization extends Component {
                     </FacebookProvider>
                     <Button type='share' onClick={() => this.shareListHandler('vk')}>
                         <ShareVk buttonOptions={{text: 'Поделиться в ВК'}}
-                                 shareOptions={{url: "https://mywish.su/list/" + this.state.tempLink, title: this.state.tempListName}}/>
+                                 shareOptions={{
+                                     url: "https://mywish.su/list/" + this.state.tempLink,
+                                     title: this.state.tempListName
+                                 }}/>
                     </Button>
                 </Modal>
 
@@ -576,13 +580,25 @@ export default class Authorization extends Component {
                     {modal}
                 </React.Fragment>
         } else {
-            authContent =
-                <div className={classes.Auth}>
-                    <div>
+            let authContentHeaderMobile;
+            if (window.innerWidth <= 768) {
+                authContentHeaderMobile =
+                    <React.Fragment>
+                        <p className={classes.authContentHeaderMobile}><strong>MyWish</strong> составь свой список желаний и поделись им с друзьями</p>
+                    </React.Fragment>
+            } else {
+                authContentHeaderMobile =
+                    <React.Fragment>
                         <p className={classes.AuthHeader}>MyWish - это сервис для составления списка желаний</p>
                         <p className={classes.AuthHeader}>Подскажите Вашим близким, друзьям, коллегам, чтобы Вы хотели
                             получить в подарок! Составьте свой
                             список и поделитесь им!</p>
+                    </React.Fragment>
+            }
+            authContent =
+                <div className={classes.Auth}>
+                    <div>
+                        {authContentHeaderMobile}
                         <Card id='card'>
                             <p>Авторизуйтесь с помощью соц.сетей и составьте свой список подарков!</p>
                             <FacebookLogin

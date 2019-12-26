@@ -3003,7 +3003,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg {\n    display: flex;\n    justify-content: center;\n    flex-grow: 1;\n    width: 100%;\n}\n\n.resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg > div {\n    width: 100%;\n    max-width: 720px;\n}\n\n.resources-js-components-Auth-__Authorization-module___kVYkTu-c5cyAxjMxQ4Djg iframe {\n    margin-top: -94px;\n    margin-left: -216px;\n}\n\n.resources-js-components-Auth-__Authorization-module___YLZKXj6RVhtWsq5Zy-BZ {\n    background: #5181b8;\n    padding: 5px;\n    border-radius: 5px;\n    display: inline-block;\n    overflow: hidden;\n    width: 30px;\n    height: 30px;\n    margin-left: 20px;\n    vertical-align: bottom;\n}\n\n.resources-js-components-Auth-__Authorization-module___kVYkTu-c5cyAxjMxQ4Djg {\n    position: relative;\n    margin-left: auto;\n    margin-right: auto;\n    width: 16px;\n    height: 25px;\n    display: inline-block;\n    overflow: hidden;\n    vertical-align: middle;\n}\n\n.resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg > div > h1 {\n    text-align: center;\n}\n\n.resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg .resources-js-components-Auth-__Authorization-module___aBkGzeBGA517wIE_OiFUv {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 24px;\n    text-align: center;\n    color: #FFFFFF;\n}\n\n.resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg .resources-js-components-Auth-__Authorization-module___aBkGzeBGA517wIE_OiFUv:last-of-type {\n    margin-bottom: 70px;\n}\n\n.resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg .resources-js-components-Auth-__Authorization-module___1mDPm0m9DLEr-FHbW8V5NT {\n    border: 0;\n    background: #2A61A1;\n    border-radius: 5px;\n    width: 40px;\n    height: 40px;\n    cursor: pointer;\n    color: #fff;\n}\n\n.resources-js-components-Auth-__Authorization-module___2rcECEOmlVCTZ7wu5UVKp5 {\n    display: flex;\n    justify-content: center;\n    flex-grow: 1;\n    width: 100%;\n}\n\n.resources-js-components-Auth-__Authorization-module___2rcECEOmlVCTZ7wu5UVKp5 > div {\n    width: 100%;\n    max-width: 1015px;\n    display: flex;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg {\n    display: flex;\n    justify-content: center;\n    flex-grow: 1;\n    width: 100%;\n}\n\n.resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg > div {\n    width: 100%;\n    max-width: 720px;\n}\n\n.resources-js-components-Auth-__Authorization-module___kVYkTu-c5cyAxjMxQ4Djg iframe {\n    opacity: 0.00001;\n    margin-top: -94px;\n    margin-left: -216px;\n    position: relative;\n    z-index: 5;\n}\n\n.resources-js-components-Auth-__Authorization-module___YLZKXj6RVhtWsq5Zy-BZ {\n    background: #5181b8;\n    padding: 5px;\n    border-radius: 5px;\n    display: inline-block;\n    overflow: hidden;\n    width: 30px;\n    height: 30px;\n    margin-left: 20px;\n    vertical-align: bottom;\n}\n\n.resources-js-components-Auth-__Authorization-module___kVYkTu-c5cyAxjMxQ4Djg:before {\n    content: '\\412\\41A';\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    left: 0;\n    bottom: 0;\n    rigth: 0;\n    margin: auto;\n    top: 48%;\n    z-index: 0;\n    color: white;\n}\n\n.resources-js-components-Auth-__Authorization-module___kVYkTu-c5cyAxjMxQ4Djg {\n    position: relative;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    height: 100%;\n    display: inline-block;\n    overflow: hidden;\n    vertical-align: middle;\n}\n\n.resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg > div > h1 {\n    text-align: center;\n}\n\n.resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg .resources-js-components-Auth-__Authorization-module___aBkGzeBGA517wIE_OiFUv {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 24px;\n    text-align: center;\n    color: #FFFFFF;\n}\n\n.resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg .resources-js-components-Auth-__Authorization-module___aBkGzeBGA517wIE_OiFUv:last-of-type {\n    margin-bottom: 70px;\n}\n\n.resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg .resources-js-components-Auth-__Authorization-module___1mDPm0m9DLEr-FHbW8V5NT {\n    border: 0;\n    background: #2A61A1;\n    border-radius: 5px;\n    width: 40px;\n    height: 40px;\n    cursor: pointer;\n    color: #fff;\n}\n\n.resources-js-components-Auth-__Authorization-module___fVQ5OJpym2tz2sMiVrPMo {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 32px;\n    text-align: center;\n    color: #FFFFFF;\n    margin-bottom: 40px;\n}\n\n.resources-js-components-Auth-__Authorization-module___fVQ5OJpym2tz2sMiVrPMo strong {\n    font-weight: bold;\n}\n\n.resources-js-components-Auth-__Authorization-module___2rcECEOmlVCTZ7wu5UVKp5 {\n    display: flex;\n    justify-content: center;\n    flex-grow: 1;\n    width: 100%;\n}\n\n.resources-js-components-Auth-__Authorization-module___2rcECEOmlVCTZ7wu5UVKp5 > div {\n    width: 100%;\n    max-width: 1015px;\n    display: flex;\n}\n\n@media screen\nand (max-width: 768px) {\n    .resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg .resources-js-components-Auth-__Authorization-module___1mDPm0m9DLEr-FHbW8V5NT {\n        padding: 10px;\n        border-radius: 5px;\n        width: 54px;\n        height: 54px;\n        font-size: 18px;\n    }\n\n    .resources-js-components-Auth-__Authorization-module___YLZKXj6RVhtWsq5Zy-BZ {\n        background: #5181b8;\n        border-radius: 5px;\n        display: inline-block;\n        overflow: hidden;\n        width: 54px;\n        height: 54px;\n        margin-left: 20px;\n        vertical-align: bottom;\n        padding: 0;\n    }\n\n    .resources-js-components-Auth-__Authorization-module___kVYkTu-c5cyAxjMxQ4Djg iframe {\n        opacity: 0.00001;\n        margin-top: -111px;\n        margin-left: -216px;\n        position: relative;\n        z-index: 5;\n        transform: scale(1.7);\n    }\n\n    .resources-js-components-Auth-__Authorization-module___kVYkTu-c5cyAxjMxQ4Djg:before {\n        top: 71%;\n    }\n}\n\n", ""]);
 
 // exports
 exports.locals = {
@@ -3012,6 +3012,7 @@ exports.locals = {
 	"AuthVkBtn": "resources-js-components-Auth-__Authorization-module___YLZKXj6RVhtWsq5Zy-BZ",
 	"AuthHeader": "resources-js-components-Auth-__Authorization-module___aBkGzeBGA517wIE_OiFUv",
 	"fbLogin": "resources-js-components-Auth-__Authorization-module___1mDPm0m9DLEr-FHbW8V5NT",
+	"authContentHeaderMobile": "resources-js-components-Auth-__Authorization-module___fVQ5OJpym2tz2sMiVrPMo",
 	"Container": "resources-js-components-Auth-__Authorization-module___2rcECEOmlVCTZ7wu5UVKp5"
 };
 
@@ -3029,11 +3030,12 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-EventCounter-__EventCounter-module___2-s_zJpolB0uCDMMy1xhUD {\n    font-weight: bold;\n    font-size: 20px;\n    line-height: 24px;\n    text-align: center;\n    color: #CC9969;\n    margin-bottom: 60px;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-EventCounter-__EventCounter-module___2-s_zJpolB0uCDMMy1xhUD {\n    font-weight: bold;\n    font-size: 20px;\n    line-height: 24px;\n    text-align: center;\n    color: #CC9969;\n    margin-bottom: 60px;\n}\n\n.resources-js-components-Auth-EventCounter-__EventCounter-module___1DQqaniklr9Cl83df9nDLj {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 24px;\n    text-align: center;\n    color: #CC9969;\n    margin-bottom: 45px;\n}\n\n.resources-js-components-Auth-EventCounter-__EventCounter-module___1DQqaniklr9Cl83df9nDLj strong {\n    font-weight: bold;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"EventCounter": "resources-js-components-Auth-EventCounter-__EventCounter-module___2-s_zJpolB0uCDMMy1xhUD"
+	"EventCounter": "resources-js-components-Auth-EventCounter-__EventCounter-module___2-s_zJpolB0uCDMMy1xhUD",
+	"EventCounterMobile": "resources-js-components-Auth-EventCounter-__EventCounter-module___1DQqaniklr9Cl83df9nDLj"
 };
 
 /***/ }),
@@ -3050,7 +3052,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A {\n    padding-bottom: 10px;\n    padding-top: 30px;\n    border-bottom: 1px solid #393939;\n    display: flex;\n    max-width: 612px;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.resources-js-components-Auth-EventList-__EventList-module___2OSW_IANs_jPki3Ekip8N6 {\n    font-weight: 300;\n    font-size: 12px;\n    line-height: 24px;\n    color: #B9B5B4;\n    display: block;\n}\n\n.resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A img {\n    margin-right: 38px;\n    padding-bottom: 20px;\n}\n\n.resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A div > p {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 24px;\n    color: #FFFFFF;\n    margin-bottom: 5px;\n}\n\n.resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A div > p > strong {\n    font-weight: bold;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A {\n    padding-bottom: 10px;\n    padding-top: 30px;\n    border-bottom: 1px solid #393939;\n    display: flex;\n    max-width: 612px;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.resources-js-components-Auth-EventList-__EventList-module___2OSW_IANs_jPki3Ekip8N6 {\n    font-weight: 300;\n    font-size: 12px;\n    line-height: 24px;\n    color: #B9B5B4;\n    display: block;\n}\n\n.resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A img {\n    margin-right: 38px;\n    padding-bottom: 20px;\n}\n\n.resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A div > p {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 24px;\n    color: #FFFFFF;\n    margin-bottom: 5px;\n}\n\n.resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A div > p > strong {\n    font-weight: bold;\n}\n\n@media screen\nand (max-width: 768px) {\n    .resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A {\n        padding: 15px 0;\n    }\n\n    .resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A div > p {\n        font-size: 14px;\n    }\n\n    .resources-js-components-Auth-EventList-__EventList-module___3uXCcDNWAHAo1JHG3Us76A img {\n        display: none;\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -3257,7 +3259,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".resources-js-components-Card-__Card-module___2VHT8TCozCqf-tIZD7cyVF {\n    background: #c4c4c4;\n    border-radius: 15px;\n    padding: 10px;\n    margin-bottom: 80px;\n}\n\n.resources-js-components-Card-__Card-module___2VHT8TCozCqf-tIZD7cyVF > div {\n    background: #FFFFFF;\n    padding: 35px 100px;\n    text-align: center;\n    border-radius: 15px;\n}\n\n.resources-js-components-Card-__Card-module___2VHT8TCozCqf-tIZD7cyVF > div > p {\n    font-weight: bold;\n    font-size: 20px;\n    line-height: 24px;\n    text-align: center;\n    color: #000000;\n    margin-bottom: 30px;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Card-__Card-module___2VHT8TCozCqf-tIZD7cyVF {\n    background: url('/images/bg3.jpg');\n    border-radius: 15px;\n    padding: 10px;\n    margin-bottom: 80px;\n}\n\n.resources-js-components-Card-__Card-module___2VHT8TCozCqf-tIZD7cyVF > div {\n    background: #FFFFFF;\n    padding: 35px 100px;\n    text-align: center;\n    border-radius: 15px;\n}\n\n.resources-js-components-Card-__Card-module___2VHT8TCozCqf-tIZD7cyVF > div > p {\n    font-weight: bold;\n    font-size: 20px;\n    line-height: 24px;\n    text-align: center;\n    color: #000000;\n    margin-bottom: 30px;\n}\n\n@media screen\nand (max-width: 768px) {\n    .resources-js-components-Card-__Card-module___2VHT8TCozCqf-tIZD7cyVF {\n        padding: 5px;\n        margin-bottom: 40px;\n    }\n\n    .resources-js-components-Card-__Card-module___2VHT8TCozCqf-tIZD7cyVF > div {\n        background: #FFFFFF;\n        padding: 26px 40px;\n    }\n\n    .resources-js-components-Card-__Card-module___2VHT8TCozCqf-tIZD7cyVF > div > p {\n        font-weight: 300;\n        font-size: 18px;\n        line-height: 24px;\n        text-align: center;\n        color: #000000;\n        margin-bottom: 20px;\n    }\n}\n\n", ""]);
 
 // exports
 exports.locals = {
@@ -3278,7 +3280,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".resources-js-components-__Layout-module___31qtXvQPIVwI_HzHzsk5HP {\n    min-height: 100vh;\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    font-family: 'Roboto', sans-serif;\n    background: url('/imgbg.jpg');\n}\n\n.resources-js-components-__Layout-module___31qtXvQPIVwI_HzHzsk5HP main {\n    display: flex;\n    flex-direction: column;\n    flex-grow: 1;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-__Layout-module___31qtXvQPIVwI_HzHzsk5HP {\n    min-height: 100vh;\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    font-family: 'Roboto', sans-serif;\n    background: url('/imgbg.jpg');\n}\n\n.resources-js-components-__Layout-module___31qtXvQPIVwI_HzHzsk5HP main {\n    display: flex;\n    flex-direction: column;\n    flex-grow: 1;\n}\n\n@media screen\nand (max-width: 768px) {\n    .resources-js-components-__Layout-module___31qtXvQPIVwI_HzHzsk5HP main {\n        padding-left: 25px;\n        padding-right: 25px;\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -3320,7 +3322,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-Navigation-Header-__Header-module___1pjCNrEZ0XOp4TvVDaheN {\n    padding-top: 55px;\n    padding-bottom: 55px;\n    width: 100%;\n    text-align: center;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Navigation-Header-__Header-module___1pjCNrEZ0XOp4TvVDaheN {\n    padding-top: 55px;\n    padding-bottom: 55px;\n    width: 100%;\n    text-align: center;\n}\n\n@media screen\nand (max-width: 768px) {\n    .resources-js-components-Navigation-Header-__Header-module___1pjCNrEZ0XOp4TvVDaheN{\n        padding-top: 30px;\n        padding-bottom: 25px;\n    }\n\n    .resources-js-components-Navigation-Header-__Header-module___1pjCNrEZ0XOp4TvVDaheN svg {\n        height: 45px;\n        width: 78px;\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -71007,13 +71009,23 @@ function (_Component) {
           lists: this.state.lists
         }))), modal);
       } else {
+        var authContentHeaderMobile;
+
+        if (window.innerWidth <= 768) {
+          authContentHeaderMobile = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+            className: _Authorization_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.authContentHeaderMobile
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "MyWish"), " \u0441\u043E\u0441\u0442\u0430\u0432\u044C \u0441\u0432\u043E\u0439 \u0441\u043F\u0438\u0441\u043E\u043A \u0436\u0435\u043B\u0430\u043D\u0438\u0439 \u0438 \u043F\u043E\u0434\u0435\u043B\u0438\u0441\u044C \u0438\u043C \u0441 \u0434\u0440\u0443\u0437\u044C\u044F\u043C\u0438"));
+        } else {
+          authContentHeaderMobile = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+            className: _Authorization_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.AuthHeader
+          }, "MyWish - \u044D\u0442\u043E \u0441\u0435\u0440\u0432\u0438\u0441 \u0434\u043B\u044F \u0441\u043E\u0441\u0442\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0441\u043F\u0438\u0441\u043A\u0430 \u0436\u0435\u043B\u0430\u043D\u0438\u0439"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+            className: _Authorization_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.AuthHeader
+          }, "\u041F\u043E\u0434\u0441\u043A\u0430\u0436\u0438\u0442\u0435 \u0412\u0430\u0448\u0438\u043C \u0431\u043B\u0438\u0437\u043A\u0438\u043C, \u0434\u0440\u0443\u0437\u044C\u044F\u043C, \u043A\u043E\u043B\u043B\u0435\u0433\u0430\u043C, \u0447\u0442\u043E\u0431\u044B \u0412\u044B \u0445\u043E\u0442\u0435\u043B\u0438 \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0432 \u043F\u043E\u0434\u0430\u0440\u043E\u043A! \u0421\u043E\u0441\u0442\u0430\u0432\u044C\u0442\u0435 \u0441\u0432\u043E\u0439 \u0441\u043F\u0438\u0441\u043E\u043A \u0438 \u043F\u043E\u0434\u0435\u043B\u0438\u0442\u0435\u0441\u044C \u0438\u043C!"));
+        }
+
         authContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: _Authorization_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Auth
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-          className: _Authorization_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.AuthHeader
-        }, "MyWish - \u044D\u0442\u043E \u0441\u0435\u0440\u0432\u0438\u0441 \u0434\u043B\u044F \u0441\u043E\u0441\u0442\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0441\u043F\u0438\u0441\u043A\u0430 \u0436\u0435\u043B\u0430\u043D\u0438\u0439"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-          className: _Authorization_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.AuthHeader
-        }, "\u041F\u043E\u0434\u0441\u043A\u0430\u0436\u0438\u0442\u0435 \u0412\u0430\u0448\u0438\u043C \u0431\u043B\u0438\u0437\u043A\u0438\u043C, \u0434\u0440\u0443\u0437\u044C\u044F\u043C, \u043A\u043E\u043B\u043B\u0435\u0433\u0430\u043C, \u0447\u0442\u043E\u0431\u044B \u0412\u044B \u0445\u043E\u0442\u0435\u043B\u0438 \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0432 \u043F\u043E\u0434\u0430\u0440\u043E\u043A! \u0421\u043E\u0441\u0442\u0430\u0432\u044C\u0442\u0435 \u0441\u0432\u043E\u0439 \u0441\u043F\u0438\u0441\u043E\u043A \u0438 \u043F\u043E\u0434\u0435\u043B\u0438\u0442\u0435\u0441\u044C \u0438\u043C!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Card_Card__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, authContentHeaderMobile, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Card_Card__WEBPACK_IMPORTED_MODULE_4__["default"], {
           id: "card"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u0443\u0439\u0442\u0435\u0441\u044C \u0441 \u043F\u043E\u043C\u043E\u0449\u044C\u044E \u0441\u043E\u0446.\u0441\u0435\u0442\u0435\u0439 \u0438 \u0441\u043E\u0441\u0442\u0430\u0432\u044C\u0442\u0435 \u0441\u0432\u043E\u0439 \u0441\u043F\u0438\u0441\u043E\u043A \u043F\u043E\u0434\u0430\u0440\u043A\u043E\u0432!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_facebook_login__WEBPACK_IMPORTED_MODULE_3___default.a, {
           appId: "563234647569569",
@@ -71115,9 +71127,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var EventCounter = function EventCounter(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: _EventCounter_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.EventCounter
-  }, props.count, " \u0441\u043F\u0438\u0441\u043A\u043E\u0432 \u0436\u0435\u043B\u0430\u043D\u0438\u0439 \u0443\u0436\u0435 \u0432 \u0441\u0435\u0440\u0432\u0438\u0441\u0435 MyWish");
+  var counter;
+
+  if (window.innerWidth <= 768) {
+    counter = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: _EventCounter_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.EventCounterMobile
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, props.count), " \u0441\u043F\u0438\u0441\u043A\u043E\u0432 \u0436\u0435\u043B\u0430\u043D\u0438\u0439 \u0443\u0436\u0435 \u0432 \u0441\u0435\u0440\u0432\u0438\u0441\u0435 MyWish");
+  } else {
+    counter = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: _EventCounter_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.EventCounter
+    }, props.count, " \u0441\u043F\u0438\u0441\u043A\u043E\u0432 \u0436\u0435\u043B\u0430\u043D\u0438\u0439 \u0443\u0436\u0435 \u0432 \u0441\u0435\u0440\u0432\u0438\u0441\u0435 MyWish");
+  }
+
+  return counter;
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (EventCounter);
@@ -71192,11 +71214,21 @@ var EventList = function EventList(props) {
   }
 
   if (props.type === 'vk' || 'ok' || 'fb') {
+    var socialName;
+
+    if (props.type === 'vk') {
+      socialName = 'ВКонтакте';
+    } else if (props.type === 'fb') {
+      socialName = 'в Facebook';
+    } else {
+      socialName = 'в Одноклассниках';
+    }
+
     image = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: _public_svg_shareEvent_svg__WEBPACK_IMPORTED_MODULE_4___default.a,
       alt: props.type
     });
-    content = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0421\u043F\u0438\u0441\u043E\u043A \u043F\u043E\u0434\u0430\u0440\u043A\u043E\u0432 ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "\u201C", wishName, "\u201D"), " \u043E\u043F\u0443\u0431\u043B\u0438\u043A\u043E\u0432\u0430\u043D \u0412\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u0435 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0435\u043C ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, props.userName)), time);
+    content = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0421\u043F\u0438\u0441\u043E\u043A \u043F\u043E\u0434\u0430\u0440\u043A\u043E\u0432 ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "\u201C", wishName, "\u201D"), " \u043E\u043F\u0443\u0431\u043B\u0438\u043A\u043E\u0432\u0430\u043D ", socialName, " \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0435\u043C ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, props.userName)), time);
   }
 
   if (props.type === 'user') {
