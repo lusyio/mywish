@@ -86,7 +86,7 @@ const WishItem = props => {
                         :
                         <Label htmlFor={htmlFor}>
                             <img src={plusWish}/>
-                            <Input id={htmlFor} onChange={event => props.uploadImg(event, props.id)} type='file'/>
+                            <Input id={htmlFor} onChange={event => props.uploadImg(event, props.listId)} type='file'/>
                         </Label>
                     }
                     <div>

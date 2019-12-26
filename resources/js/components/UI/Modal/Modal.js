@@ -6,7 +6,7 @@ import {Animated} from "react-animated-css";
 const Modal = props => {
     return (
         <div id='modal' onClick={(event) => props.clickOutside(event)} className={classes.Modal}>
-            <Animated animationIn="fadeInDown" animationOut="fadeOut" isVisible={true}>
+            <Animated animationInDuration='500' animationIn="fadeInDown" animationOut="fadeOut" isVisible={true}>
                 <div className={classes.ModalContent}>
                     <div>
                         {props.children}
