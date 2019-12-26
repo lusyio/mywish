@@ -512,10 +512,10 @@ export default class Authorization extends Component {
             modal =
                 <Modal clickOutside={this.clickOutsideHandler}>
                     <p>Ссылка на ваш список:</p>
-                    <a href={"https://mywish.su/" + this.state.tempLink} target="_blank">https://mywish.su/{this.state.tempLink}</a>
+                    <a href={"https://mywish.su/list/" + this.state.tempLink} target="_blank">https://mywish.su/list/{this.state.tempLink}</a>
                     <p>Расскажи о своих желаниях друзьям:</p>
                     <FacebookProvider appId="563234647569569">
-                        <Share href={"https://mywish.su/" + this.state.tempLink}>
+                        <Share href={"https://mywish.su/list/" + this.state.tempLink}>
                             {({handleClick, loading}) => (
                                 <Button type="share" disabled={loading} onClick={(event) => {
                                     handleClick(event);
