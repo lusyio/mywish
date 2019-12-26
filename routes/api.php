@@ -94,9 +94,16 @@ Route::post('/list/add', function (Request $request) {
     $user = \App\User::where('id', $request->userId)->first();
     $newList = new \App\WishList();
     $newList->user_id = (int) $request->userId;
-    $newList->name = 'Новый список';
+    $newList->name = 'Мой список желаний';
     $newList->background_id = 0;
     $newList->generateUrl();
+    $newList->save();
+    $event = new \App\Event();
+    $event->action = 'list';
+    $event->user_id = $request->userId;
+    $event->wish_list_id = $newList->id;
+    $event->save();
+    $newList->title_changed = 1;
     $newList->save();
     return json_encode($newList->getResponse());
 })->middleware(\App\Http\Middleware\CheckAuthToken::class);
@@ -112,22 +119,13 @@ Route::post('/list/update', function (Request $request) {
         $addEvent = false;
     }
     $list->name = $request->name;
-    if (is_null($list->name)) {
-        $list->name = '';
+    if (is_null($list->name) || $list->name == '') {
+        $list->name = 'Мой список желаний';
     } else {
         $list->name = trim($list->name);
     }
     $list->background_id = $request->backgroundNumber;
     $list->save();
-    if (($list->name != 'Новый список' && $list->name != 'Ваш первый список') && $addEvent) {
-        $event = new \App\Event();
-        $event->action = 'list';
-        $event->user_id = $request->userId;
-        $event->wish_list_id = $list->id;
-        $event->save();
-        $list->title_changed = 1;
-        $list->save();
-    }
     return json_encode($list->getResponse());
 })->middleware(\App\Http\Middleware\CheckAuthToken::class);
 
