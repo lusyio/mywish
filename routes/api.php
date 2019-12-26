@@ -161,12 +161,10 @@ Route::post('/item/update', function (Request $request) {
     if (is_null($item) || is_null($list)) {
         return json_encode(['error' => 'no lists']);
     }
-    $item->name = $request->name;
-    if (is_null($item->name)) {
-        $item->name = '';
+    if (is_null($request->name) || trim($request->name) == '') {
+        $item->name = 'Без названия';
     } else {
-        $item->name = trim($item->name);
-
+        $item->name = trim($request->name);
     }
     if (!is_null($request->file('picture'))) {
         $item->image_url = preg_replace('~/public/images/~', '/public/storage/images/', asset($request->file('picture')->store('public/images')));

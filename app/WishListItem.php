@@ -10,10 +10,19 @@ class WishListItem extends Model
     //
     public function getResponse()
     {
+        if (is_null($this->url) || $this->url == '') {
+            $url = '';
+        } elseif (preg_match('~^https?:\/\/([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$~', $this->url)) {
+            $url = $this->url;
+        } elseif (preg_match('~([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$~', $this->url)) {
+            $url = 'http://' . $this->url;
+        } else {
+            $url = '';
+        }
         $result = [
             'id' => $this->id,
             'title' => $this->name,
-            'url' => $this->url,
+            'url' => $url,
             'order' => $this->order,
             'listId' => $this->wish_list_id,
             'picture' => $this->image_url,
