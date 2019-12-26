@@ -203,25 +203,20 @@ export default class Authorization extends Component {
 
     uploadImgHandler = event => {
         event.preventDefault();
-        this.setState(
-            {
-                file: event.target.files[0]
-            }
-        );
         const formData = new FormData();
         formData.append('userId', localStorage.getItem('userId'));
         formData.append('authToken', localStorage.getItem('authToken'));
         formData.append('id', this.state.newWishId);
         formData.append('name', '');
         formData.append('url', '');
-        formData.append('picture', this.state.file);
+        formData.append('picture', event.target.files[0]);
         trackPromise(axios({
             method: 'post',
             url: '/api/item/update',
             data: formData,
             headers: {'Content-Type': 'multipart/form-data'}
         })
-            .then((res) => {
+            .then(res => {
                 this.setState(
                     {
                         tempFile : res.data.picture

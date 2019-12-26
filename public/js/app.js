@@ -63188,7 +63188,7 @@ exports.usePromiseTracker = usePromiseTracker;
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -70375,6 +70375,7 @@ function (_Component) {
       deleteList: false,
       tempListId: null,
       tempListName: '',
+      tempFile: null,
       shareList: false,
       wishNameControl: '',
       wishUrlControl: '',
@@ -70528,11 +70529,30 @@ function (_Component) {
 
     _defineProperty(_assertThisInitialized(_this), "uploadImgHandler", function (event) {
       event.preventDefault();
-      axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/item/update', {});
 
       _this.setState({
         file: event.target.files[0]
       });
+
+      var formData = new FormData();
+      formData.append('userId', localStorage.getItem('userId'));
+      formData.append('authToken', localStorage.getItem('authToken'));
+      formData.append('id', _this.state.newWishId);
+      formData.append('name', '');
+      formData.append('url', '');
+      formData.append('picture', _this.state.file);
+      Object(react_promise_tracker__WEBPACK_IMPORTED_MODULE_15__["trackPromise"])(axios__WEBPACK_IMPORTED_MODULE_7___default()({
+        method: 'post',
+        url: '/api/item/update',
+        data: formData,
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      }).then(function (res) {
+        _this.setState({
+          tempFile: res.data.picture
+        });
+      }));
     });
 
     _defineProperty(_assertThisInitialized(_this), "deleteWishHandler", function (listId, id) {
@@ -70588,7 +70608,7 @@ function (_Component) {
             formData.append('id', _this.state.newWishId);
             formData.append('name', _this.state.wishNameControl);
             formData.append('url', _this.state.wishUrlControl);
-            formData.append('picture', _this.state.file);
+            formData.append('picture', '');
             Object(react_promise_tracker__WEBPACK_IMPORTED_MODULE_15__["trackPromise"])(axios__WEBPACK_IMPORTED_MODULE_7___default()({
               method: 'post',
               url: '/api/item/update',
@@ -70603,6 +70623,7 @@ function (_Component) {
                 var currentList = lists.items.find(function (item) {
                   return item.id === listId;
                 });
+                res.data.picture = _this.state.tempFile;
                 currentList.wishItems.push(res.data);
                 currentList.updatedAt = res.data.updatedAt;
                 lists.items.sort(function (a, b) {
@@ -70972,6 +70993,7 @@ function (_Component) {
           onClick: this.selectListHandler,
           lists: this.state.lists
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListCard_ListCard__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          tempFile: this.state.tempFile,
           addList: this.addListHandler,
           shareList: this.toggleModalHandler,
           deleteList: this.toggleModalHandler,
@@ -71402,6 +71424,7 @@ var ListCard = function ListCard(props) {
           onPickColor: props.onPickColor,
           background: props.background
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishList_WishList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          tempFile: props.tempFile,
           widgetOff: props.widgetOff,
           uploadImg: props.uploadImg,
           deleteWish: props.deleteWish,
@@ -71729,14 +71752,19 @@ var WishItem = function WishItem(props) {
   if (props.type === 'addNew') {
     renderWishItem = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItem
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Label_Label__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    }, props.tempFile ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItemImg,
+      style: {
+        background: "url(".concat(props.tempFile)
+      }
+    }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Label_Label__WEBPACK_IMPORTED_MODULE_5__["default"], {
       htmlFor: htmlFor
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: _public_svg_plusWish_svg__WEBPACK_IMPORTED_MODULE_8___default.a
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Input_Input__WEBPACK_IMPORTED_MODULE_2__["default"], {
       id: htmlFor,
       onChange: function onChange(event) {
-        return props.uploadImg(event);
+        return props.uploadImg(event, props.id);
       },
       type: "file"
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Input_Input__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -71777,7 +71805,9 @@ var WishItem = function WishItem(props) {
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItemImg,
       style: {
-        background: "url(".concat(pic)
+        background: "url(".concat(pic),
+        backgroundSize: "cover",
+        border: '1px solid whitesmoke'
       }
     }, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Title
@@ -71916,6 +71946,7 @@ var WishList = function WishList(props) {
     });
   }));
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, renderWishItems, props.showNewWish ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishItem_WishItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    tempFile: props.tempFile,
     key: "edit",
     uploadImg: props.uploadImg,
     id: props.newWishId,

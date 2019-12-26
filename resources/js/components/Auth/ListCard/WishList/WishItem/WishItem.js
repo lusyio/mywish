@@ -79,7 +79,7 @@ const WishItem = props => {
         renderWishItem =
             <React.Fragment>
                 <div className={classes.WishItem}>
-                    {props.tempFile ?
+                    {props.tempFile !== null ?
                         <div className={classes.WishItemImg} style={{background: `url(${props.tempFile}`}}>
 
                         </div>
