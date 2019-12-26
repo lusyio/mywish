@@ -7,7 +7,7 @@ import Footer from "./Navigation/Footer/Footer";
 export default class Layout extends Component {
     render() {
         return (
-            <div className={classes.Layout}>
+            <div id='Layout' className={classes.Layout}>
                 <Header/>
                 <main>
                     <Auth/>

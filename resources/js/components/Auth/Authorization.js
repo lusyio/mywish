@@ -472,6 +472,7 @@ export default class Authorization extends Component {
         }
     };
 
+
     render() {
         function compare(eventsIds, resIds) {
             return eventsIds.length === resIds.length && eventsIds.every((v, i) => v === resIds[i])
@@ -501,6 +502,8 @@ export default class Authorization extends Component {
         let modal = null;
 
         if (this.state.deleteList) {
+            window.document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+            console.log(window.document.getElementsByTagName('body')[0])
             modal =
                 <Modal clickOutside={this.clickOutsideHandler}>
                     <p>Вы действительно хотите удалить список желаний <strong>"{this.state.tempListName}"?</strong></p>
@@ -508,9 +511,9 @@ export default class Authorization extends Component {
                     <Button type='secondary'
                             onClick={() => this.toggleModalHandler(this.state.tempListId, this.state.tempListName, 'delete')}>Отмена</Button>
                 </Modal>
-        }
-
-        if (this.state.shareList) {
+        } else if (this.state.shareList) {
+            window.document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+            console.log(window.document.getElementsByTagName('body')[0])
             modal =
                 <Modal clickOutside={this.clickOutsideHandler}>
                     <p>Ссылка на ваш список:</p>
@@ -531,7 +534,12 @@ export default class Authorization extends Component {
                                  shareOptions={{url: `https://mywish.su/${this.state.tempLink}`}}/>
                     </Button>
                 </Modal>
+
+        } else {
+            window.document.getElementsByTagName('body')[0].style.overflow = 'auto';
+            console.log(window.document.getElementsByTagName('body')[0])
         }
+
 
         let authContent;
 

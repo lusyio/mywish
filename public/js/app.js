@@ -3435,7 +3435,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-UI-Modal-__Modal-module___3MOYLd1i3Y4B-tsFurB9Z9 {\n    position: fixed;\n    z-index: 10;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    overflow: auto;\n    background: rgba(40, 40, 40, 0.2);\n    backdrop-filter: blur(15px);\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI {\n    margin: 15% auto;\n    width: 630px;\n    background: url('/images/bg3.jpg');\n    padding: 10px;\n    border-radius: 15px;\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI > div {\n    padding: 53px 90px;\n    background: #FEFEFE;\n    border-radius: 15px;\n    text-align: center;\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI > div a {\n    background: #ECECEC;\n    border-radius: 10px;\n    display: block;\n    margin-bottom: 50px;\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #8A8A8A;\n    padding: 17px 24px;\n    text-decoration: none;\n    width: fit-content;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI > div > p:first-of-type{\n    margin-bottom: 20px;\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI > div > p {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 32px;\n    text-align: center;\n    color: #000000;\n    margin-bottom: 25px;\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI > div > p > strong {\n    font-weight: bold;\n    display: block;\n    margin-bottom: 35px;\n}\n\n", ""]);
+exports.push([module.i, ".resources-js-components-UI-Modal-__Modal-module___3MOYLd1i3Y4B-tsFurB9Z9 {\n    position: fixed;\n    z-index: 10;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    overflow: hidden;\n    background: rgba(40, 40, 40, 0.2);\n    backdrop-filter: blur(15px);\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI {\n    margin: 15% auto;\n    width: 630px;\n    background: url('/images/bg3.jpg');\n    padding: 10px;\n    border-radius: 15px;\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI > div {\n    padding: 53px 90px;\n    background: #FEFEFE;\n    border-radius: 15px;\n    text-align: center;\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI > div a {\n    background: #ECECEC;\n    border-radius: 10px;\n    display: block;\n    margin-bottom: 50px;\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #8A8A8A;\n    padding: 17px 24px;\n    text-decoration: none;\n    width: fit-content;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI > div > p:first-of-type{\n    margin-bottom: 20px;\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI > div > p {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 32px;\n    text-align: center;\n    color: #000000;\n    margin-bottom: 25px;\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI > div > p > strong {\n    font-weight: bold;\n    display: block;\n    margin-bottom: 35px;\n}\n\n", ""]);
 
 // exports
 exports.locals = {
@@ -70924,6 +70924,8 @@ function (_Component) {
       var modal = null;
 
       if (this.state.deleteList) {
+        window.document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+        console.log(window.document.getElementsByTagName('body')[0]);
         modal = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Modal_Modal__WEBPACK_IMPORTED_MODULE_10__["default"], {
           clickOutside: this.clickOutsideHandler
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0412\u044B \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E \u0445\u043E\u0442\u0438\u0442\u0435 \u0443\u0434\u0430\u043B\u0438\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A \u0436\u0435\u043B\u0430\u043D\u0438\u0439 ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "\"", this.state.tempListName, "\"?")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -70935,9 +70937,9 @@ function (_Component) {
             return _this3.toggleModalHandler(_this3.state.tempListId, _this3.state.tempListName, 'delete');
           }
         }, "\u041E\u0442\u043C\u0435\u043D\u0430"));
-      }
-
-      if (this.state.shareList) {
+      } else if (this.state.shareList) {
+        window.document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+        console.log(window.document.getElementsByTagName('body')[0]);
         modal = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Modal_Modal__WEBPACK_IMPORTED_MODULE_10__["default"], {
           clickOutside: this.clickOutsideHandler
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0421\u0441\u044B\u043B\u043A\u0430 \u043D\u0430 \u0432\u0430\u0448 \u0441\u043F\u0438\u0441\u043E\u043A:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -70969,6 +70971,9 @@ function (_Component) {
             url: "https://mywish.su/".concat(this.state.tempLink)
           }
         })));
+      } else {
+        window.document.getElementsByTagName('body')[0].style.overflow = 'auto';
+        console.log(window.document.getElementsByTagName('body')[0]);
       }
 
       var authContent;
@@ -72431,6 +72436,7 @@ function (_Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "Layout",
         className: _Layout_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Layout
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navigation_Header_Header__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Auth_Authorization__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navigation_Footer_Footer__WEBPACK_IMPORTED_MODULE_4__["default"], null));
     }
@@ -72960,8 +72966,8 @@ var Modal = function Modal(props) {
     },
     className: _Modal_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Modal
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_animated_css__WEBPACK_IMPORTED_MODULE_3__["Animated"], {
-    animationInDuration: "500",
     animationIn: "fadeInDown",
+    animationInDuration: 500,
     animationOut: "fadeOut",
     isVisible: true
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
