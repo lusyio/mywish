@@ -6,6 +6,7 @@
     background: #ECECEC;
     border-radius: 10px;
     position: relative;
+    border: 1px solid whitesmoke;
 }
 
 .Label:hover {

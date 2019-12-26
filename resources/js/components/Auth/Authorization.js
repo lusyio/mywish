@@ -383,8 +383,8 @@ export default class Authorization extends Component {
         const currentList = lists.items.find(item => item.id === listId);
         let listName;
         if (event.target.value.trim() === '') {
-            listName = 'Новый список';
-            currentList.name = 'Новый список'
+            listName = 'Мой список желаний';
+            currentList.name = 'Мой список желаний'
         } else {
             listName = event.target.value;
             currentList.name = event.target.value;

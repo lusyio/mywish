@@ -3142,7 +3142,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../node_mod
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq {\n    display: flex;\n    max-width: 480px;\n    padding: 20px 10px 20px 0;\n    border-bottom: 1px solid #F0F0F0;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > div {\n    width: 100%;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq:last-of-type {\n    margin-bottom: 30px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > img {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    min-width: 110px;\n    height: 110px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___1jeFlf2948I6zR6d1beGd {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    max-width: 110px;\n    height: 110px;\n    object-fit: cover;\n    border-radius: 3px;\n    background-position: center !important;\n    background-repeat: no-repeat !important;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0 {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 21px;\n    color: #000000;\n    padding-top: 25px;\n    margin-bottom: 10px;\n    text-align: left;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #BABABA;\n    display: block;\n    margin-bottom: 25px;\n    text-decoration: none;\n    text-align: left;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a:hover {\n    text-decoration: underline;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq {\n    display: flex;\n    max-width: 480px;\n    padding: 20px 10px 20px 0;\n    border-bottom: 1px solid #F0F0F0;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > div {\n    width: 100%;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq:last-of-type {\n    margin-bottom: 30px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > img {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    min-width: 110px;\n    height: 110px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___1jeFlf2948I6zR6d1beGd {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    max-width: 110px;\n    height: 110px;\n    object-fit: cover;\n    background-position: center !important;\n    background-repeat: no-repeat !important;\n    background-size: cover;\n    border: 1px solid whitesmoke;\n    border-radius: 10px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0 {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 21px;\n    color: #000000;\n    padding-top: 25px;\n    margin-bottom: 10px;\n    text-align: left;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #BABABA;\n    display: block;\n    margin-bottom: 25px;\n    text-decoration: none;\n    text-align: left;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a:hover {\n    text-decoration: underline;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -3392,7 +3392,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-UI-Label-__Label-module___2-YpfdMZ2AkTxKG5-8AUUr {\n    width: 142px;\n    height: 100px;\n    padding: 5px;\n    margin-right: 20px;\n    background: #ECECEC;\n    border-radius: 10px;\n    position: relative;\n}\n\n.resources-js-components-UI-Label-__Label-module___2-YpfdMZ2AkTxKG5-8AUUr:hover {\n    cursor: pointer;\n}\n\n.resources-js-components-UI-Label-__Label-module___2-YpfdMZ2AkTxKG5-8AUUr:hover > img {\n    transform: scale(1.3);\n}\n\n.resources-js-components-UI-Label-__Label-module___2-YpfdMZ2AkTxKG5-8AUUr > img {\n    transition: all 200ms;\n    position: absolute;\n    display: block;\n    margin: auto;\n    left: 0;\n    right: 0;\n    top: 0;\n    bottom: 0;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-UI-Label-__Label-module___2-YpfdMZ2AkTxKG5-8AUUr {\n    width: 142px;\n    height: 100px;\n    padding: 5px;\n    margin-right: 20px;\n    background: #ECECEC;\n    border-radius: 10px;\n    position: relative;\n    border: 1px solid whitesmoke;\n}\n\n.resources-js-components-UI-Label-__Label-module___2-YpfdMZ2AkTxKG5-8AUUr:hover {\n    cursor: pointer;\n}\n\n.resources-js-components-UI-Label-__Label-module___2-YpfdMZ2AkTxKG5-8AUUr:hover > img {\n    transform: scale(1.3);\n}\n\n.resources-js-components-UI-Label-__Label-module___2-YpfdMZ2AkTxKG5-8AUUr > img {\n    transition: all 200ms;\n    position: absolute;\n    display: block;\n    margin: auto;\n    left: 0;\n    right: 0;\n    top: 0;\n    bottom: 0;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -70744,8 +70744,8 @@ function (_Component) {
       var listName;
 
       if (event.target.value.trim() === '') {
-        listName = 'Новый список';
-        currentList.name = 'Новый список';
+        listName = 'Мой список желаний';
+        currentList.name = 'Мой список желаний';
       } else {
         listName = event.target.value;
         currentList.name = event.target.value;
@@ -71799,11 +71799,9 @@ var WishItem = function WishItem(props) {
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItemImg,
       style: {
-        background: "url(".concat(pic),
-        backgroundSize: "cover",
-        border: '1px solid whitesmoke'
+        backgroundImage: "url(".concat(pic)
       }
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    }, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Title
     }, wishTitle), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       target: "_blank",
