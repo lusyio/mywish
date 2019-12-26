@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -152,12 +153,14 @@ Route::post('/item/add', function (Request $request) {
     $item->url = '';
     $item->order = 0;
     $item->save();
+    $list->touch();
     return json_encode($item->getResponse());
 })->middleware(\App\Http\Middleware\CheckAuthToken::class);
 
 Route::post('/item/update', function (Request $request) {
     $item = \App\WishListItem::where('id', $request->id)->first();
-    if (is_null($item) || is_null(\App\WishList::where('id', $item->wish_list_id)->where('user_id', $request->userId)->first())) {
+    $list = \App\WishList::where('id', $item->wish_list_id)->where('user_id', $request->userId)->first();
+    if (is_null($item) || is_null($list)) {
         return json_encode(['error' => 'no lists']);
     }
     $item->name = $request->name;
@@ -172,16 +175,19 @@ Route::post('/item/update', function (Request $request) {
     }
     $item->url = trim($request->url);
     $item->save();
+    $list->touch();
     return json_encode($item->getResponse());
 })->middleware(\App\Http\Middleware\CheckAuthToken::class);
 
 Route::post('/item/delete', function (Request $request) {
     $item = \App\WishListItem::where('id', $request->id)->first();
-    if (is_null($item) || is_null(\App\WishList::where('id', $item->wish_list_id)->where('user_id', $request->userId)->first())) {
+    $list = \App\WishList::where('id', $item->wish_list_id)->where('user_id', $request->userId)->first();
+    if (is_null($item) || is_null($list)) {
         return json_encode(['error' => 'no lists']);
     }
     $item->beforeDelete();
     $item->delete();
+    $list->touch();
     return json_encode(['error' => '', 'status' => 'ok', 'updatedAt' => time()]);
 })->middleware(\App\Http\Middleware\CheckAuthToken::class);
 
