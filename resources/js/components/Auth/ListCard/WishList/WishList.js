@@ -26,6 +26,7 @@ const WishList = props => {
             {renderWishItems}
             {props.showNewWish ?
                 <WishItem
+                    tempFile={props.tempFile}
                     key='edit'
                     uploadImg={props.uploadImg}
                     id={props.newWishId}

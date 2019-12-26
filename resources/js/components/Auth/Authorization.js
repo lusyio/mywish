@@ -25,6 +25,7 @@ export default class Authorization extends Component {
         deleteList: false,
         tempListId: null,
         tempListName: '',
+        tempFile: null,
         shareList: false,
         wishNameControl: '',
         wishUrlControl: '',
@@ -99,8 +100,8 @@ export default class Authorization extends Component {
                                     lists
                                 })
                             } else {
-                                localStorage.setItem('userId', null);
-                                localStorage.setItem('authToken', null);
+                                localStorage.removeItem('userId');
+                                localStorage.removeItem('authToken');
                             }
                         }, res => console.log('error', res));
                 }
@@ -134,8 +135,8 @@ export default class Authorization extends Component {
                                     lists
                                 })
                             } else {
-                                localStorage.setItem('userId', null);
-                                localStorage.setItem('authToken', null);
+                                localStorage.removeItem('userId');
+                                localStorage.removeItem('authToken');
                             }
                         }, res => console.log('error', res)));
                 }
@@ -152,7 +153,7 @@ export default class Authorization extends Component {
 
     showNewWishToggle = () => {
         this.setState({
-            showNewWish: !this.state.showNewWish
+            showNewWish: !this.state.showNewWish,
         })
     };
 
@@ -181,8 +182,8 @@ export default class Authorization extends Component {
                             lists
                         })
                     } else {
-                        localStorage.setItem('userId', null);
-                        localStorage.setItem('authToken', null);
+                        localStorage.removeItem('userId');
+                        localStorage.removeItem('authToken');
                     }
                 }, res => console.log('error', res)));
         }
@@ -200,13 +201,42 @@ export default class Authorization extends Component {
         })
     };
 
-    uploadImgHandler = event => {
+    uploadImgHandler = (event, listId) => {
         event.preventDefault();
-        this.setState(
-            {
-                file: event.target.files[0]
-            }
-        )
+        this.setState({
+            file: event.target.files[0]
+        });
+        axios.post('/api/item/add', {
+            'userId': localStorage.getItem('userId'),
+            'authToken': localStorage.getItem('authToken'),
+            'listId': listId
+        })
+            .then((res) => {
+                this.setState({
+                    newWishId: res.data.id
+                });
+                const formData = new FormData();
+                formData.append('userId', localStorage.getItem('userId'));
+                formData.append('authToken', localStorage.getItem('authToken'));
+                formData.append('id', this.state.newWishId);
+                formData.append('name', '');
+                formData.append('url', '');
+                formData.append('picture', this.state.file);
+                trackPromise(axios({
+                    method: 'post',
+                    url: '/api/item/update',
+                    data: formData,
+                    headers: {'Content-Type': 'multipart/form-data'}
+                })
+                    .then(res => {
+                        this.setState(
+                            {
+                                tempFile: res.data.picture
+                            }
+                        )
+                    }));
+            }, res => console.log('error', res));
+
     };
 
     deleteWishHandler = (listId, id) => {
@@ -231,66 +261,47 @@ export default class Authorization extends Component {
                         lists
                     })
                 } else {
-                    localStorage.setItem('userId', null);
-                    localStorage.setItem('authToken', null);
+                    localStorage.removeItem('userId');
+                    localStorage.removeItem('authToken');
                 }
 
             }))
     };
 
     addNewWishHandler = (listId) => {
-        if (this.state.wishNameControl !== '') {
-            trackPromise(axios.post('/api/item/add', {
-                'userId': localStorage.getItem('userId'),
-                'authToken': localStorage.getItem('authToken'),
-                'listId': listId
-            })
-                .then((res) => {
+        console.log(this.state.newWishId)
+        const formData = new FormData();
+        formData.append('userId', localStorage.getItem('userId'));
+        formData.append('authToken', localStorage.getItem('authToken'));
+        formData.append('id', this.state.newWishId);
+        formData.append('name', this.state.wishNameControl);
+        formData.append('url', this.state.wishUrlControl);
+        formData.append('picture', '');
 
-                    if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
-                        this.setState({
-                            newWishId: res.data.id
-                        });
-                        const formData = new FormData();
-                        formData.append('userId', localStorage.getItem('userId'));
-                        formData.append('authToken', localStorage.getItem('authToken'));
-                        formData.append('id', this.state.newWishId);
-                        formData.append('name', this.state.wishNameControl);
-                        formData.append('url', this.state.wishUrlControl);
-                        formData.append('picture', this.state.file);
-
-                        trackPromise(axios({
-                                method: 'post',
-                                url: '/api/item/update',
-                                data: formData,
-                                headers: {'Content-Type': 'multipart/form-data'}
-                            },
-                        )
-                            .then((res) => {
-                                if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
-                                    const lists = {...this.state.lists};
-                                    const currentList = lists.items.find(item => item.id === listId);
-                                    currentList.wishItems.push(res.data);
-                                    currentList.updatedAt = res.data.updatedAt;
-                                    lists.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : 1);
-                                    this.setState({
-                                        lists,
-                                        showNewWish: false
-                                    });
-                                } else {
-                                    localStorage.setItem('userId', null);
-                                    localStorage.setItem('authToken', null);
-                                }
-                            }, res => console.log('error', res)))
-                    } else {
-                        localStorage.setItem('userId', null);
-                        localStorage.setItem('authToken', null);
-                    }
-
-                }, res => console.log('error', res)));
-        } else {
-            console.log('заполните поля навзания желания')
-        }
+        trackPromise(axios({
+                method: 'post',
+                url: '/api/item/update',
+                data: formData,
+                headers: {'Content-Type': 'multipart/form-data'}
+            },
+        )
+            .then((res) => {
+                if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+                    const lists = {...this.state.lists};
+                    const currentList = lists.items.find(item => item.id === listId);
+                    res.data.picture = this.state.tempFile;
+                    currentList.wishItems.push(res.data);
+                    currentList.updatedAt = res.data.updatedAt;
+                    lists.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : 1);
+                    this.setState({
+                        lists,
+                        showNewWish: false
+                    });
+                } else {
+                    localStorage.removeItem('userId');
+                    localStorage.removeItem('authToken');
+                }
+            }, res => console.log('error', res)))
     };
 
     addListHandler = () => {
@@ -308,8 +319,8 @@ export default class Authorization extends Component {
                         lists
                     })
                 } else {
-                    localStorage.setItem('userId', null);
-                    localStorage.setItem('authToken', null);
+                    localStorage.removeItem('userId');
+                    localStorage.removeItem('authToken');
                 }
             }, (res) => console.log('error', res)))
     };
@@ -334,8 +345,8 @@ export default class Authorization extends Component {
                         lists
                     })
                 } else {
-                    localStorage.setItem('userId', null);
-                    localStorage.setItem('authToken', null);
+                    localStorage.removeItem('userId');
+                    localStorage.removeItem('authToken');
                 }
             }, (res) => console.log('error', res))
 
@@ -362,8 +373,8 @@ export default class Authorization extends Component {
                             showNewListTitle: false
                         })
                     } else {
-                        localStorage.setItem('userId', null);
-                        localStorage.setItem('authToken', null);
+                        localStorage.removeItem('userId');
+                        localStorage.removeItem('authToken');
                     }
                 }, (res) => console.log('error', res))
         }
@@ -415,8 +426,8 @@ export default class Authorization extends Component {
                         deleteList: false
                     })
                 } else {
-                    localStorage.setItem('userId', null);
-                    localStorage.setItem('authToken', null);
+                    localStorage.removeItem('userId');
+                    localStorage.removeItem('authToken');
                 }
 
             }, res => console.log('error', res)))
@@ -538,6 +549,8 @@ export default class Authorization extends Component {
                                 lists={this.state.lists}
                             />
                             <ListCard
+                                newWishId={this.state.newWishId}
+                                tempFile={this.state.tempFile}
                                 addList={this.addListHandler}
                                 shareList={this.toggleModalHandler}
                                 deleteList={this.toggleModalHandler}

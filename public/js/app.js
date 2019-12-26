@@ -70375,6 +70375,7 @@ function (_Component) {
       deleteList: false,
       tempListId: null,
       tempListName: '',
+      tempFile: null,
       shareList: false,
       wishNameControl: '',
       wishUrlControl: '',
@@ -70446,8 +70447,8 @@ function (_Component) {
                 lists: lists
               });
             } else {
-              localStorage.setItem('userId', null);
-              localStorage.setItem('authToken', null);
+              localStorage.removeItem('userId');
+              localStorage.removeItem('authToken');
             }
           }, function (res) {
             return console.log('error', res);
@@ -70486,8 +70487,8 @@ function (_Component) {
                 lists: lists
               });
             } else {
-              localStorage.setItem('userId', null);
-              localStorage.setItem('authToken', null);
+              localStorage.removeItem('userId');
+              localStorage.removeItem('authToken');
             }
           }, function (res) {
             return console.log('error', res);
@@ -70526,11 +70527,43 @@ function (_Component) {
       });
     });
 
-    _defineProperty(_assertThisInitialized(_this), "uploadImgHandler", function (event) {
+    _defineProperty(_assertThisInitialized(_this), "uploadImgHandler", function (event, listId) {
       event.preventDefault();
 
       _this.setState({
         file: event.target.files[0]
+      });
+
+      axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/item/add', {
+        'userId': localStorage.getItem('userId'),
+        'authToken': localStorage.getItem('authToken'),
+        'listId': listId
+      }).then(function (res) {
+        _this.setState({
+          newWishId: res.data.id
+        });
+
+        var formData = new FormData();
+        formData.append('userId', localStorage.getItem('userId'));
+        formData.append('authToken', localStorage.getItem('authToken'));
+        formData.append('id', _this.state.newWishId);
+        formData.append('name', '');
+        formData.append('url', '');
+        formData.append('picture', _this.state.file);
+        Object(react_promise_tracker__WEBPACK_IMPORTED_MODULE_15__["trackPromise"])(axios__WEBPACK_IMPORTED_MODULE_7___default()({
+          method: 'post',
+          url: '/api/item/update',
+          data: formData,
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+        }).then(function (res) {
+          _this.setState({
+            tempFile: res.data.picture
+          });
+        }));
+      }, function (res) {
+        return console.log('error', res);
       });
     });
 
@@ -70563,72 +70596,53 @@ function (_Component) {
             lists: lists
           });
         } else {
-          localStorage.setItem('userId', null);
-          localStorage.setItem('authToken', null);
+          localStorage.removeItem('userId');
+          localStorage.removeItem('authToken');
         }
       }));
     });
 
     _defineProperty(_assertThisInitialized(_this), "addNewWishHandler", function (listId) {
-      if (_this.state.wishNameControl !== '') {
-        Object(react_promise_tracker__WEBPACK_IMPORTED_MODULE_15__["trackPromise"])(axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/item/add', {
-          'userId': localStorage.getItem('userId'),
-          'authToken': localStorage.getItem('authToken'),
-          'listId': listId
-        }).then(function (res) {
-          if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
-            _this.setState({
-              newWishId: res.data.id
-            });
+      console.log(_this.state.newWishId);
+      var formData = new FormData();
+      formData.append('userId', localStorage.getItem('userId'));
+      formData.append('authToken', localStorage.getItem('authToken'));
+      formData.append('id', _this.state.newWishId);
+      formData.append('name', _this.state.wishNameControl);
+      formData.append('url', _this.state.wishUrlControl);
+      formData.append('picture', '');
+      Object(react_promise_tracker__WEBPACK_IMPORTED_MODULE_15__["trackPromise"])(axios__WEBPACK_IMPORTED_MODULE_7___default()({
+        method: 'post',
+        url: '/api/item/update',
+        data: formData,
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      }).then(function (res) {
+        if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+          var lists = _objectSpread({}, _this.state.lists);
 
-            var formData = new FormData();
-            formData.append('userId', localStorage.getItem('userId'));
-            formData.append('authToken', localStorage.getItem('authToken'));
-            formData.append('id', _this.state.newWishId);
-            formData.append('name', _this.state.wishNameControl);
-            formData.append('url', _this.state.wishUrlControl);
-            formData.append('picture', _this.state.file);
-            Object(react_promise_tracker__WEBPACK_IMPORTED_MODULE_15__["trackPromise"])(axios__WEBPACK_IMPORTED_MODULE_7___default()({
-              method: 'post',
-              url: '/api/item/update',
-              data: formData,
-              headers: {
-                'Content-Type': 'multipart/form-data'
-              }
-            }).then(function (res) {
-              if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
-                var lists = _objectSpread({}, _this.state.lists);
+          var currentList = lists.items.find(function (item) {
+            return item.id === listId;
+          });
+          res.data.picture = _this.state.tempFile;
+          currentList.wishItems.push(res.data);
+          currentList.updatedAt = res.data.updatedAt;
+          lists.items.sort(function (a, b) {
+            return a.updatedAt > b.updatedAt ? -1 : 1;
+          });
 
-                var currentList = lists.items.find(function (item) {
-                  return item.id === listId;
-                });
-                currentList.wishItems.push(res.data);
-                currentList.updatedAt = res.data.updatedAt;
-                lists.items.sort(function (a, b) {
-                  return a.updatedAt > b.updatedAt ? -1 : 1;
-                });
-
-                _this.setState({
-                  lists: lists,
-                  showNewWish: false
-                });
-              } else {
-                localStorage.setItem('userId', null);
-                localStorage.setItem('authToken', null);
-              }
-            }, function (res) {
-              return console.log('error', res);
-            }));
-          } else {
-            localStorage.setItem('userId', null);
-            localStorage.setItem('authToken', null);
-          }
-        }, function (res) {
-          return console.log('error', res);
-        }));
-      } else {
-        console.log('заполните поля навзания желания');
-      }
+          _this.setState({
+            lists: lists,
+            showNewWish: false
+          });
+        } else {
+          localStorage.removeItem('userId');
+          localStorage.removeItem('authToken');
+        }
+      }, function (res) {
+        return console.log('error', res);
+      }));
     });
 
     _defineProperty(_assertThisInitialized(_this), "addListHandler", function () {
@@ -70649,8 +70663,8 @@ function (_Component) {
             lists: lists
           });
         } else {
-          localStorage.setItem('userId', null);
-          localStorage.setItem('authToken', null);
+          localStorage.removeItem('userId');
+          localStorage.removeItem('authToken');
         }
       }, function (res) {
         return console.log('error', res);
@@ -70681,8 +70695,8 @@ function (_Component) {
             lists: lists
           });
         } else {
-          localStorage.setItem('userId', null);
-          localStorage.setItem('authToken', null);
+          localStorage.removeItem('userId');
+          localStorage.removeItem('authToken');
         }
       }, function (res) {
         return console.log('error', res);
@@ -70715,8 +70729,8 @@ function (_Component) {
               showNewListTitle: false
             });
           } else {
-            localStorage.setItem('userId', null);
-            localStorage.setItem('authToken', null);
+            localStorage.removeItem('userId');
+            localStorage.removeItem('authToken');
           }
         }, function (res) {
           return console.log('error', res);
@@ -70779,8 +70793,8 @@ function (_Component) {
             deleteList: false
           });
         } else {
-          localStorage.setItem('userId', null);
-          localStorage.setItem('authToken', null);
+          localStorage.removeItem('userId');
+          localStorage.removeItem('authToken');
         }
       }, function (res) {
         return console.log('error', res);
@@ -70865,8 +70879,8 @@ function (_Component) {
               lists: lists
             });
           } else {
-            localStorage.setItem('userId', null);
-            localStorage.setItem('authToken', null);
+            localStorage.removeItem('userId');
+            localStorage.removeItem('authToken');
           }
         }, function (res) {
           return console.log('error', res);
@@ -70971,6 +70985,8 @@ function (_Component) {
           onClick: this.selectListHandler,
           lists: this.state.lists
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListCard_ListCard__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          newWishId: this.state.newWishId,
+          tempFile: this.state.tempFile,
           addList: this.addListHandler,
           shareList: this.toggleModalHandler,
           deleteList: this.toggleModalHandler,
@@ -71401,6 +71417,7 @@ var ListCard = function ListCard(props) {
           onPickColor: props.onPickColor,
           background: props.background
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishList_WishList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          tempFile: props.tempFile,
           widgetOff: props.widgetOff,
           uploadImg: props.uploadImg,
           deleteWish: props.deleteWish,
@@ -71728,14 +71745,19 @@ var WishItem = function WishItem(props) {
   if (props.type === 'addNew') {
     renderWishItem = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItem
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Label_Label__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    }, props.tempFile !== null ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItemImg,
+      style: {
+        background: "url(".concat(props.tempFile)
+      }
+    }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Label_Label__WEBPACK_IMPORTED_MODULE_5__["default"], {
       htmlFor: htmlFor
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: _public_svg_plusWish_svg__WEBPACK_IMPORTED_MODULE_8___default.a
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Input_Input__WEBPACK_IMPORTED_MODULE_2__["default"], {
       id: htmlFor,
       onChange: function onChange(event) {
-        return props.uploadImg(event);
+        return props.uploadImg(event, props.listId);
       },
       type: "file"
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Input_Input__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -71776,7 +71798,9 @@ var WishItem = function WishItem(props) {
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItemImg,
       style: {
-        background: "url(".concat(pic)
+        background: "url(".concat(pic),
+        backgroundSize: "cover",
+        border: '1px solid whitesmoke'
       }
     }, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Title
@@ -71915,6 +71939,7 @@ var WishList = function WishList(props) {
     });
   }));
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, renderWishItems, props.showNewWish ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishItem_WishItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    tempFile: props.tempFile,
     key: "edit",
     uploadImg: props.uploadImg,
     id: props.newWishId,
@@ -72936,6 +72961,7 @@ var Modal = function Modal(props) {
     },
     className: _Modal_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Modal
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_animated_css__WEBPACK_IMPORTED_MODULE_3__["Animated"], {
+    animationInDuration: "500",
     animationIn: "fadeInDown",
     animationOut: "fadeOut",
     isVisible: true
@@ -72985,7 +73011,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/mastekator/Desktop/mywish/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/user/Desktop/mywish/resources/js/app.js */"./resources/js/app.js");
 
 
 /***/ })

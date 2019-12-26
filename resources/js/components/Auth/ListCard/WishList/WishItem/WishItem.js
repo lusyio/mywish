@@ -79,10 +79,16 @@ const WishItem = props => {
         renderWishItem =
             <React.Fragment>
                 <div className={classes.WishItem}>
-                    <Label htmlFor={htmlFor}>
-                        <img src={plusWish}/>
-                        <Input id={htmlFor} onChange={event => props.uploadImg(event)} type='file'/>
-                    </Label>
+                    {props.tempFile !== null ?
+                        <div className={classes.WishItemImg} style={{background: `url(${props.tempFile}`}}>
+
+                        </div>
+                        :
+                        <Label htmlFor={htmlFor}>
+                            <img src={plusWish}/>
+                            <Input id={htmlFor} onChange={event => props.uploadImg(event, props.listId)} type='file'/>
+                        </Label>
+                    }
                     <div>
                         <Input placeholder='Название желания, н-р: Apple iPhone XS ' maxLength='100'
                                onChange={event => props.onChangeWishName(event)}/>
