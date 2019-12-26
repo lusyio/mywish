@@ -220,7 +220,7 @@ Route::get('/list/{link}', function ($link) {
 });
 
 Route::post('/share', function (Request $request) {
-    $list = \App\WishList::where('id', $request->id)->where('user_id', $request->userId)->first();
+    $list = \App\WishList::where('id', $request->listId)->where('user_id', $request->userId)->first();
     if (is_null($list)) {
         return json_encode(['error' => 'no lists']);
     }
@@ -234,7 +234,7 @@ Route::post('/share', function (Request $request) {
         $event->user_id = $request->userId;
         $event->wish_list_id = $list->id;
     }
-    $event->save();
+    $event->touch();
     return json_encode(['error' => '', 'status' => 'ok']);
 })->middleware(\App\Http\Middleware\CheckAuthToken::class);
 

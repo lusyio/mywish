@@ -16,12 +16,19 @@ const EventList = props => {
     }
 
     if (props.type === 'vk' || 'ok' || 'fb') {
+        let socialName = '';
+        if (props.type === 'vk') {
+            socialName = 'ВКонтакте'
+        }else if (props.type === 'fb') {
+            socialName = 'в Facebook'
+        } else {
+            socialName = 'в Одноклассниках'
+        }
         image = <img src={shareImg} alt={props.type}/>;
         content =
             <div>
                 <p>
-                    Список подарков <strong>“{wishName}”</strong> опубликован ВКонтакте
-                    пользователем <strong>{props.userName}</strong>
+                    Список подарков <strong>“{wishName}”</strong> опубликован {socialName} пользователем <strong>{props.userName}</strong>
                 </p>
                 {time}
             </div>
