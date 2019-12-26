@@ -3072,7 +3072,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../node_module
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H {\n    max-width: 320px;\n    margin: 0 auto 60px auto;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___ZZnLgCZCKhEMXzaeM28Ir > .resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___hTvuaqPVjBpsfumYm1hTQ {\n    margin-right: 15px;\n    margin-bottom: 15px;\n    border-radius: 10px;\n    width: 50px;\n    height: 50px;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___36nDjJY5djL8fOOu2XMAeG {\n    border: 2px solid #D5D5D5;\n    box-sizing: border-box;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___36nDjJY5djL8fOOu2XMAeG:before {\n    content: '';\n    width: 100%;\n    height: 100%;\n    display: block;\n    background: url('/svg/check-symbol.svg') center no-repeat;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___ZZnLgCZCKhEMXzaeM28Ir > .resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___hTvuaqPVjBpsfumYm1hTQ:nth-of-type(5) {\n    margin-right: 0;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H > .resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___ZZnLgCZCKhEMXzaeM28Ir {\n    display: flex;\n    flex-wrap: wrap;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H > p {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #000000;\n    margin-bottom: 30px;\n    text-align: center;\n    display: block;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H {\n    max-width: 320px;\n    margin: 0 auto 60px auto;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___ZZnLgCZCKhEMXzaeM28Ir > .resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___hTvuaqPVjBpsfumYm1hTQ {\n    margin-right: 15px;\n    margin-bottom: 15px;\n    border-radius: 10px;\n    width: 50px;\n    height: 50px;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___36nDjJY5djL8fOOu2XMAeG {\n    border: 2px solid #D5D5D5;\n    box-sizing: border-box;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___36nDjJY5djL8fOOu2XMAeG:before {\n    content: '';\n    width: 100%;\n    height: 100%;\n    display: block;\n    position: absolute;\n    background: url('/svg/check-symbol.svg') center no-repeat;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___ZZnLgCZCKhEMXzaeM28Ir > .resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___hTvuaqPVjBpsfumYm1hTQ:nth-of-type(5) {\n    margin-right: 0;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H > .resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___ZZnLgCZCKhEMXzaeM28Ir {\n    display: flex;\n    flex-wrap: wrap;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H > p {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #000000;\n    margin-bottom: 30px;\n    text-align: center;\n    display: block;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -63188,7 +63188,7 @@ exports.usePromiseTracker = usePromiseTracker;
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -70309,11 +70309,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_promise_tracker__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-promise-tracker */ "./node_modules/react-promise-tracker/lib/index.js");
 /* harmony import */ var react_promise_tracker__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(react_promise_tracker__WEBPACK_IMPORTED_MODULE_15__);
 /* harmony import */ var _UI_LoaderSpinner_LoaderSpinner__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../UI/LoaderSpinner/LoaderSpinner */ "./resources/js/components/UI/LoaderSpinner/LoaderSpinner.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -70417,8 +70417,7 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "responseFacebook", function (response) {
-      console.log(response); // отправка данных авторизации
-
+      // отправка данных авторизации
       axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/auth', {
         "social": 'fb',
         "name": response.name,
@@ -70434,7 +70433,7 @@ function (_Component) {
             'userId': localStorage.getItem('userId'),
             'authToken': localStorage.getItem('authToken')
           }).then(function (res) {
-            if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
+            if (res.data.error !== '' || _typeof(res.data['error']) !== undefined) {
               var lists = _objectSpread({}, _this.state.lists);
 
               lists.items = res.data.items.sort(function (a, b) {
@@ -70476,7 +70475,7 @@ function (_Component) {
             'userId': localStorage.getItem('userId'),
             'authToken': localStorage.getItem('authToken')
           }).then(function (res) {
-            if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
+            if (res.data.error !== '' || _typeof(res.data['error']) !== undefined) {
               var lists = _objectSpread({}, _this.state.lists);
 
               lists.items = res.data.items;
@@ -70570,7 +70569,7 @@ function (_Component) {
         authToken: localStorage.getItem('authToken'),
         id: id
       }).then(function (res) {
-        if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+        if (res.data.error !== '' || _typeof(res.data['error']) !== undefined) {
           var lists = _objectSpread({}, _this.state.lists);
 
           var currentList = lists.items.find(function (item) {
@@ -70600,7 +70599,6 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "addNewWishHandler", function (listId) {
-      console.log(_this.state.newWishId);
       var formData = new FormData();
       formData.append('userId', localStorage.getItem('userId'));
       formData.append('authToken', localStorage.getItem('authToken'));
@@ -70616,7 +70614,7 @@ function (_Component) {
           'Content-Type': 'multipart/form-data'
         }
       }).then(function (res) {
-        if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+        if (res.data.error !== '' || _typeof(res.data['error']) !== undefined) {
           var lists = _objectSpread({}, _this.state.lists);
 
           var currentList = lists.items.find(function (item) {
@@ -70648,7 +70646,7 @@ function (_Component) {
         "userId": localStorage.getItem('userId'),
         "authToken": localStorage.getItem('authToken')
       }).then(function (res) {
-        if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+        if (res.data.error !== '' || _typeof(res.data['error']) !== undefined) {
           var lists = _objectSpread({}, _this.state.lists);
 
           lists.items.push(res.data);
@@ -70681,7 +70679,7 @@ function (_Component) {
         "name": name,
         "backgroundNumber": index
       }).then(function (res) {
-        if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+        if (res.data.error !== '' || _typeof(res.data['error']) !== undefined) {
           var lists = _objectSpread({}, _this.state.lists);
 
           var currentList = lists.items.find(function (item) {
@@ -70710,7 +70708,7 @@ function (_Component) {
           "name": _this.state.listNameControl,
           "backgroundNumber": bgId
         }).then(function (res) {
-          if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+          if (res.data.error !== '' || _typeof(res.data['error']) !== undefined) {
             var lists = _objectSpread({}, _this.state.lists);
 
             var currentList = lists.items.find(function (item) {
@@ -70772,7 +70770,7 @@ function (_Component) {
         "authToken": localStorage.getItem('authToken'),
         "id": _this.state.tempListId
       }).then(function (res) {
-        if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+        if (res.data.error !== '' || _typeof(res.data['error']) !== undefined) {
           var lists = _objectSpread({}, _this.state.lists);
 
           for (var i = 0; i < lists.items.length; i++) {
@@ -70799,15 +70797,13 @@ function (_Component) {
       }));
     });
 
-    _defineProperty(_assertThisInitialized(_this), "shareListHandler", function () {
+    _defineProperty(_assertThisInitialized(_this), "shareListHandler", function (social) {
       Object(react_promise_tracker__WEBPACK_IMPORTED_MODULE_15__["trackPromise"])(axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/share', {
         "userId": localStorage.getItem('userId'),
         "authToken": localStorage.getItem('authToken'),
         "listId": _this.state.tempListId,
-        "social": "string"
-      }).then(function (res) {
-        console.log(res);
-      }));
+        "social": social
+      }).then(function (res) {}));
     });
 
     _defineProperty(_assertThisInitialized(_this), "clickOutsideHandler", function (event) {
@@ -70863,7 +70859,7 @@ function (_Component) {
           'userId': localStorage.getItem('userId'),
           'authToken': localStorage.getItem('authToken')
         }).then(function (res) {
-          if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
+          if (res.data.error !== '' || _typeof(res.data['error']) !== undefined) {
             var lists = _objectSpread({}, _this2.state.lists);
 
             lists.items = res.data.items.sort(function (a, b) {
@@ -70941,11 +70937,12 @@ function (_Component) {
         modal = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Modal_Modal__WEBPACK_IMPORTED_MODULE_10__["default"], {
           clickOutside: this.clickOutsideHandler
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0421\u0441\u044B\u043B\u043A\u0430 \u043D\u0430 \u0432\u0430\u0448 \u0441\u043F\u0438\u0441\u043E\u043A:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          href: "https://mywish.su/${this.state.tempLink}"
+          href: "https://mywish.su/" + this.state.tempLink,
+          target: "_blank"
         }, "https://mywish.su/", this.state.tempLink), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0420\u0430\u0441\u0441\u043A\u0430\u0436\u0438 \u043E \u0441\u0432\u043E\u0438\u0445 \u0436\u0435\u043B\u0430\u043D\u0438\u044F\u0445 \u0434\u0440\u0443\u0437\u044C\u044F\u043C:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_facebook__WEBPACK_IMPORTED_MODULE_12__["FacebookProvider"], {
           appId: "563234647569569"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_facebook__WEBPACK_IMPORTED_MODULE_12__["Share"], {
-          href: "https://mywish.su/".concat(this.state.tempLink)
+          href: "https://mywish.su/" + this.state.tempLink
         }, function (_ref) {
           var handleClick = _ref.handleClick,
               loading = _ref.loading;
@@ -70955,20 +70952,21 @@ function (_Component) {
             onClick: function onClick(event) {
               handleClick(event);
 
-              _this3.shareListHandler();
+              _this3.shareListHandler('fb');
             }
-          }, "\u041F\u043E\u0434\u0435\u043B\u0438\u0442\u044C\u0441\u044F");
+          }, "\u041F\u043E\u0434\u0435\u043B\u0438\u0442\u044C\u0441\u044F \u0432 Facebook");
         })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
           type: "share",
           onClick: function onClick() {
-            return _this3.shareListHandler();
+            return _this3.shareListHandler('vk');
           }
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_vk__WEBPACK_IMPORTED_MODULE_11__["Share"], {
           buttonOptions: {
-            text: 'Поделиться'
+            text: 'Поделиться в ВК'
           },
           shareOptions: {
-            url: "https://mywish.su/".concat(this.state.tempLink)
+            url: "https://mywish.su/list/" + this.state.tempLink,
+            title: this.state.tempListName
           }
         })));
       } else {
@@ -72097,8 +72095,6 @@ function (_Component) {
       var _this2 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/api".concat(location.pathname)).then(function (res) {
-        console.log(res.data.status);
-
         var list = _objectSpread({}, _this2.state.list);
 
         list.status = res.data.status;
@@ -72119,6 +72115,8 @@ function (_Component) {
 
       if (this.state.list.status === 'ok') {
         if (this.state.list.wishList.wishItems.length !== 0) {
+          window.document.title = this.state.list.wishList.name;
+          window.document.getElementsByTagName("META")[7].content = "Список желаний от пользователя" + ' ' + this.state.list.wishList.userName;
           wishList = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
             className: _ListPreview_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.ListPreview,
             style: {

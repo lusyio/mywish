@@ -89,7 +89,7 @@ export default class Authorization extends Component {
                         'authToken': localStorage.getItem('authToken')
                     })
                         .then(res => {
-                            if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
+                            if (res.data.error !== '' || typeof res.data['error'] !== undefined) {
                                 const lists = {...this.state.lists};
                                 lists.items = res.data.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : 1);
                                 lists.count = res.data.count;
@@ -124,7 +124,7 @@ export default class Authorization extends Component {
                         'authToken': localStorage.getItem('authToken')
                     })
                         .then(res => {
-                            if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
+                            if (res.data.error !== '' || typeof res.data['error'] !== undefined) {
                                 const lists = {...this.state.lists};
                                 lists.items = res.data.items;
                                 lists.count = res.data.count;
@@ -183,7 +183,7 @@ export default class Authorization extends Component {
                 'authToken': localStorage.getItem('authToken')
             })
                 .then(res => {
-                    if (typeof res.data['error'] !== "undefined" || res.data.error !== '') {
+                    if (res.data.error !== '' || typeof res.data['error'] !== undefined) {
                         const lists = {...this.state.lists};
                         lists.items = res.data.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : 1);
                         lists.count = res.data.count;
@@ -242,7 +242,7 @@ export default class Authorization extends Component {
             id: id
         })
             .then(res => {
-                if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+                if (res.data.error !== '' || typeof res.data['error'] !== undefined) {
                     const lists = {...this.state.lists};
                     const currentList = lists.items.find(item => item.id === listId);
                     for (let i = 0; i < currentList.wishItems.length; i++) {
@@ -281,7 +281,7 @@ export default class Authorization extends Component {
             },
         )
             .then((res) => {
-                if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+                if (res.data.error !== '' || typeof res.data['error'] !== undefined) {
                     const lists = {...this.state.lists};
                     const currentList = lists.items.find(item => item.id === listId);
                     res.data.picture = this.state.tempFile;
@@ -306,7 +306,7 @@ export default class Authorization extends Component {
             "authToken": localStorage.getItem('authToken')
         })
             .then((res) => {
-                if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+                if (res.data.error !== '' || typeof res.data['error'] !== undefined) {
                     const lists = {...this.state.lists};
                     lists.items.push(res.data);
                     lists.items = lists.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : 1);
@@ -333,7 +333,7 @@ export default class Authorization extends Component {
             "backgroundNumber": index
         })
             .then((res) => {
-                if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+                if (res.data.error !== '' || typeof res.data['error'] !== undefined) {
                     const lists = {...this.state.lists};
                     const currentList = lists.items.find(item => item.id === listId);
                     currentList.backgroundNumber = res.data.backgroundNumber;
@@ -358,7 +358,7 @@ export default class Authorization extends Component {
                 "backgroundNumber": bgId
             })
                 .then((res) => {
-                    if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+                    if (res.data.error !== '' || typeof res.data['error'] !== undefined) {
                         const lists = {...this.state.lists};
                         const currentList = lists.items.find(item => item.id === listId);
                         currentList.name = res.data.name;
@@ -407,7 +407,7 @@ export default class Authorization extends Component {
             "id": this.state.tempListId
         })
             .then(res => {
-                if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
+                if (res.data.error !== '' || typeof res.data['error'] !== undefined) {
                     const lists = {...this.state.lists};
                     for (let i = 0; i < lists.items.length; i++) {
                         if (lists.items[i].id === this.state.tempListId) {

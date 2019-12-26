@@ -22,7 +22,7 @@ export default class ListPreview extends Component {
                 id: null,
                 name: "",
                 updatedAt: null,
-                backgroundNumber:null,
+                backgroundNumber: null,
                 userId: null,
                 userName: "",
                 createdAt: null,
@@ -44,7 +44,6 @@ export default class ListPreview extends Component {
     componentDidMount() {
         axios.get(`/api${location.pathname}`)
             .then(res => {
-                console.log(res.data.status)
                 const list = {...this.state.list};
                 list.status = res.data.status;
                 list.wishList = res.data.wishList;
@@ -61,6 +60,8 @@ export default class ListPreview extends Component {
 
         if (this.state.list.status === 'ok') {
             if (this.state.list.wishList.wishItems.length !== 0) {
+                window.document.title = this.state.list.wishList.name;
+                window.document.getElementsByTagName("META")[7].content = "Список желаний от пользователя" + ' ' + this.state.list.wishList.userName
                 wishList =
                     <div className={classes.ListPreview}
                          style={{background: `url(${this.state.background[this.state.list.wishList.backgroundNumber]})`}}>
