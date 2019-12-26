@@ -110,7 +110,7 @@ const WishItem = props => {
         renderWishItem =
             <React.Fragment>
                 <div className={classes.WishItem}>
-                    <div className={classes.WishItemImg} style={{background: `url(${pic}`}}> </div>
+                    <div className={classes.WishItemImg} style={{background: `url(${pic}`, backgroundSize: `cover`, border: '1px solid whitesmoke'}}> </div>
                     <div>
                         <p className={classes.Title}>{wishTitle}</p>
                         <a target='_blank' href={props.url}>{wishLink}</a>
