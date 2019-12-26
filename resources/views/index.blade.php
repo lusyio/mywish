@@ -8,8 +8,8 @@
         <meta property="og:title" content="{{ $ogTitle }}"/>
         <meta property="og:image" content="https://mywish.su/public/images/og.jpg"/>
         <meta property="og:url" content= "{{$ogUrl}}" />
-        <title>MyWish - мой список желаний!</title>
-        <meta name="description" content="Составь свой виш лист или список желаний в сервисе MyWish">
+        <title>{{$title}}</title>
+        <meta name="description" content="{{$description}}">
         <link rel="shortcut icon" href="{{ public_path('/favicon.ico') }}" type="image/x-icon"/>
         <link rel="icon" href="{{ public_path('/favicon.ico') }}" type="image/x-icon"/>
         <script src="https://apis.google.com/js/platform.js" type="text/javascript"></script>
