@@ -151,7 +151,19 @@ export default class Authorization extends Component {
         });
     };
 
-    showNewWishToggle = () => {
+    showNewWishToggle = (listId, type) => {
+        if (type === 'add') {
+            axios.post('/api/item/add', {
+                'userId': localStorage.getItem('userId'),
+                'authToken': localStorage.getItem('authToken'),
+                'listId': listId
+            })
+                .then((res) => {
+                    this.setState({
+                        newWishId: res.data.id
+                    });
+                }, res => console.log('error', res));
+        }
         this.setState({
             showNewWish: !this.state.showNewWish,
         })
@@ -201,42 +213,31 @@ export default class Authorization extends Component {
         })
     };
 
-    uploadImgHandler = (event, listId) => {
+    uploadImgHandler = (event) => {
         event.preventDefault();
         this.setState({
             file: event.target.files[0]
         });
-        axios.post('/api/item/add', {
-            'userId': localStorage.getItem('userId'),
-            'authToken': localStorage.getItem('authToken'),
-            'listId': listId
+        const formData = new FormData();
+        formData.append('userId', localStorage.getItem('userId'));
+        formData.append('authToken', localStorage.getItem('authToken'));
+        formData.append('id', this.state.newWishId);
+        formData.append('name', '');
+        formData.append('url', '');
+        formData.append('picture', this.state.file);
+        trackPromise(axios({
+            method: 'post',
+            url: '/api/item/update',
+            data: formData,
+            headers: {'Content-Type': 'multipart/form-data'}
         })
-            .then((res) => {
-                this.setState({
-                    newWishId: res.data.id
-                });
-                const formData = new FormData();
-                formData.append('userId', localStorage.getItem('userId'));
-                formData.append('authToken', localStorage.getItem('authToken'));
-                formData.append('id', this.state.newWishId);
-                formData.append('name', '');
-                formData.append('url', '');
-                formData.append('picture', this.state.file);
-                trackPromise(axios({
-                    method: 'post',
-                    url: '/api/item/update',
-                    data: formData,
-                    headers: {'Content-Type': 'multipart/form-data'}
-                })
-                    .then(res => {
-                        this.setState(
-                            {
-                                tempFile: res.data.picture
-                            }
-                        )
-                    }));
-            }, res => console.log('error', res));
-
+            .then(res => {
+                this.setState(
+                    {
+                        tempFile: res.data.picture
+                    }
+                )
+            }));
     };
 
     deleteWishHandler = (listId, id) => {

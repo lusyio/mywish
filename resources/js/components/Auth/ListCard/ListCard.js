@@ -70,7 +70,7 @@ const ListCard = props => {
                                     :
                                     <Button
                                         type='showNewWish'
-                                        onClick={props.showNewWishToggle}
+                                        onClick={() => props.showNewWishToggle(list.id, 'add')}
                                     >
                                         <img src={plus}/>
                                         Добавить еще желание
