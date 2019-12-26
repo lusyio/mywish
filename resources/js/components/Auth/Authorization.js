@@ -293,7 +293,8 @@ export default class Authorization extends Component {
                     lists.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : 1);
                     this.setState({
                         lists,
-                        showNewWish: false
+                        showNewWish: false,
+                        tempFile: ''
                     });
                 } else {
                     localStorage.removeItem('userId');
@@ -432,7 +433,7 @@ export default class Authorization extends Component {
     };
 
     shareListHandler = () => {
-        console.log('asdas')
+        console.log(this.state.tempLink)
         trackPromise(axios.post('/api/share', {
             "userId": localStorage.getItem('userId'),
             "authToken": localStorage.getItem('authToken'),
@@ -503,7 +504,6 @@ export default class Authorization extends Component {
 
         if (this.state.deleteList) {
             window.document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-            console.log(window.document.getElementsByTagName('body')[0])
             modal =
                 <Modal clickOutside={this.clickOutsideHandler}>
                     <p>Вы действительно хотите удалить список желаний <strong>"{this.state.tempListName}"?</strong></p>
@@ -513,7 +513,6 @@ export default class Authorization extends Component {
                 </Modal>
         } else if (this.state.shareList) {
             window.document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-            console.log(window.document.getElementsByTagName('body')[0])
             modal =
                 <Modal clickOutside={this.clickOutsideHandler}>
                     <p>Ссылка на ваш список:</p>
@@ -537,7 +536,6 @@ export default class Authorization extends Component {
 
         } else {
             window.document.getElementsByTagName('body')[0].style.overflow = 'auto';
-            console.log(window.document.getElementsByTagName('body')[0])
         }
 
 
