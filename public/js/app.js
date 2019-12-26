@@ -70375,7 +70375,7 @@ function (_Component) {
       deleteList: false,
       tempListId: null,
       tempListName: '',
-      tempFile: null,
+      tempFile: '',
       shareList: false,
       wishNameControl: '',
       wishUrlControl: '',
@@ -70543,18 +70543,13 @@ function (_Component) {
 
     _defineProperty(_assertThisInitialized(_this), "uploadImgHandler", function (event) {
       event.preventDefault();
-
-      _this.setState({
-        file: event.target.files[0]
-      });
-
       var formData = new FormData();
       formData.append('userId', localStorage.getItem('userId'));
       formData.append('authToken', localStorage.getItem('authToken'));
       formData.append('id', _this.state.newWishId);
       formData.append('name', '');
       formData.append('url', '');
-      formData.append('picture', _this.state.file);
+      formData.append('picture', event.target.files[0]);
       Object(react_promise_tracker__WEBPACK_IMPORTED_MODULE_15__["trackPromise"])(axios__WEBPACK_IMPORTED_MODULE_7___default()({
         method: 'post',
         url: '/api/item/update',
@@ -71751,22 +71746,22 @@ var WishItem = function WishItem(props) {
   if (props.type === 'addNew') {
     renderWishItem = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItem
-    }, props.tempFile !== null ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItemImg,
-      style: {
-        background: "url(".concat(props.tempFile)
-      }
-    }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Label_Label__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    }, props.tempFile === null || props.tempFile === '' || props.tempFile === undefined ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Label_Label__WEBPACK_IMPORTED_MODULE_5__["default"], {
       htmlFor: htmlFor
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: _public_svg_plusWish_svg__WEBPACK_IMPORTED_MODULE_8___default.a
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Input_Input__WEBPACK_IMPORTED_MODULE_2__["default"], {
       id: htmlFor,
       onChange: function onChange(event) {
-        return props.uploadImg(event);
+        return props.uploadImg(event, props.listId);
       },
       type: "file"
-    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Input_Input__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItemImg,
+      style: {
+        background: "url(".concat(props.tempFile)
+      }
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Input_Input__WEBPACK_IMPORTED_MODULE_2__["default"], {
       placeholder: "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u0436\u0435\u043B\u0430\u043D\u0438\u044F, \u043D-\u0440: Apple iPhone XS ",
       maxLength: "100",
       onChange: function onChange(event) {
@@ -71782,7 +71777,7 @@ var WishItem = function WishItem(props) {
   } else {
     var pic;
 
-    if (props.picture === '') {
+    if (props.picture === '' || props.picture === null || props.picture === undefined) {
       pic = _public_svg_emptyWishImg_svg__WEBPACK_IMPORTED_MODULE_9___default.a;
     } else {
       pic = props.picture;
@@ -71808,7 +71803,7 @@ var WishItem = function WishItem(props) {
         backgroundSize: "cover",
         border: '1px solid whitesmoke'
       }
-    }, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.Title
     }, wishTitle), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       target: "_blank",

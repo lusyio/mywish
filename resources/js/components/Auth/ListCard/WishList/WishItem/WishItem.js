@@ -79,15 +79,15 @@ const WishItem = props => {
         renderWishItem =
             <React.Fragment>
                 <div className={classes.WishItem}>
-                    {props.tempFile !== null ?
+                    {props.tempFile === null || props.tempFile === '' || props.tempFile === undefined ?
+                        <Label htmlFor={htmlFor}>
+                            <img src={plusWish}/>
+                            <Input id={htmlFor} onChange={event => props.uploadImg(event, props.listId)} type='file'/>
+                        </Label>
+                        :
                         <div className={classes.WishItemImg} style={{background: `url(${props.tempFile}`}}>
 
                         </div>
-                        :
-                        <Label htmlFor={htmlFor}>
-                            <img src={plusWish}/>
-                            <Input id={htmlFor} onChange={event => props.uploadImg(event)} type='file'/>
-                        </Label>
                     }
                     <div>
                         <Input placeholder='Название желания, н-р: Apple iPhone XS ' maxLength='100'
@@ -100,7 +100,7 @@ const WishItem = props => {
             </React.Fragment>
     } else {
         let pic;
-        if (props.picture === '') {
+        if (props.picture === '' || props.picture === null || props.picture === undefined) {
             pic = emptyWishImg
         } else {
             pic = props.picture
@@ -116,7 +116,11 @@ const WishItem = props => {
         renderWishItem =
             <React.Fragment>
                 <div className={classes.WishItem}>
-                    <div className={classes.WishItemImg} style={{background: `url(${pic}`, backgroundSize: `cover`, border: '1px solid whitesmoke'}}> </div>
+                    <div className={classes.WishItemImg} style={{
+                        background: `url(${pic}`,
+                        backgroundSize: `cover`,
+                        border: '1px solid whitesmoke'
+                    }}></div>
                     <div>
                         <p className={classes.Title}>{wishTitle}</p>
                         <a target='_blank' href={props.url}>{wishLink}</a>
