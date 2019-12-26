@@ -72,8 +72,6 @@ export default class Authorization extends Component {
     };
 
     responseFacebook = (response) => {
-
-        console.log(response);
         // отправка данных авторизации
         axios.post('/api/auth', {
             "social": 'fb',
@@ -267,7 +265,6 @@ export default class Authorization extends Component {
     };
 
     addNewWishHandler = (listId) => {
-        console.log(this.state.newWishId)
         const formData = new FormData();
         formData.append('userId', localStorage.getItem('userId'));
         formData.append('authToken', localStorage.getItem('authToken'));
@@ -432,15 +429,15 @@ export default class Authorization extends Component {
             }, res => console.log('error', res)))
     };
 
-    shareListHandler = () => {
+    shareListHandler = (social) => {
         trackPromise(axios.post('/api/share', {
             "userId": localStorage.getItem('userId'),
             "authToken": localStorage.getItem('authToken'),
             "listId": this.state.tempListId,
-            "social": "string"
+            "social": social
         })
             .then(res => {
-                console.log(res)
+
             }))
     };
 
@@ -522,12 +519,12 @@ export default class Authorization extends Component {
                             {({handleClick, loading}) => (
                                 <Button type="share" disabled={loading} onClick={(event) => {
                                     handleClick(event);
-                                    this.shareListHandler()
+                                    this.shareListHandler('fb')
                                 }}>Поделиться</Button>
                             )}
                         </Share>
                     </FacebookProvider>
-                    <Button type='share' onClick={() => this.shareListHandler()}>
+                    <Button type='share' onClick={() => this.shareListHandler('vk')}>
                         <ShareVk buttonOptions={{text: 'Поделиться'}}
                                  shareOptions={{url: `https://mywish.su/${this.state.tempLink}`}}/>
                     </Button>
