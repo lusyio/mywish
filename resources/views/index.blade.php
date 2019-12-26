@@ -5,6 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="referrer" content="no-referrer" />
+        <meta property="og:title" content="{{ $ogTitle }}"/>
+        <meta property="og:image" content="https://mywish.su/public/images/og.jpg"/>
+        <meta property="og:url" content= "{{$ogUrl}}" />
+        <title>MyWish - составь свой список желаний!</title>
         <script src="https://apis.google.com/js/platform.js" type="text/javascript"></script>
         <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
     </head>

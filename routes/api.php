@@ -253,3 +253,7 @@ Route::post('/debug', function (Request $request) {
     var_dump($items);
     return $request->listId;
 });
+
+Route::get('/fetch', function () {
+    return OpenGraph::fetch();
+});
