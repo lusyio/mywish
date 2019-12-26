@@ -291,7 +291,9 @@ export default class Authorization extends Component {
                     this.setState({
                         lists,
                         showNewWish: false,
-                        tempFile: ''
+                        tempFile: '',
+                        wishNameControl: '',
+                        wishUrlControl: ''
                     });
                 } else {
                     localStorage.removeItem('userId');
