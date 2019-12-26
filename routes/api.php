@@ -111,6 +111,11 @@ Route::post('/list/update', function (Request $request) {
         $addEvent = false;
     }
     $list->name = $request->name;
+    if (is_null($list->name)) {
+        $list->name = '';
+    } else {
+        $list->name = trim($list->name);
+    }
     $list->background_id = $request->backgroundNumber;
     $list->save();
     if (($list->name != 'Новый список' && $list->name != 'Ваш первый список') && $addEvent) {
@@ -156,11 +161,16 @@ Route::post('/item/update', function (Request $request) {
         return json_encode(['error' => 'no lists']);
     }
     $item->name = $request->name;
+    if (is_null($item->name)) {
+        $item->name = '';
+    } else {
+        $item->name = trim($item->name);
+
+    }
     if (!is_null($request->file('picture'))) {
         $item->image_url = preg_replace('~/public/images/~', '/public/storage/images/', asset($request->file('picture')->store('public/images')));
     }
-    $item->url = $request->url;
-    $item->image_url;
+    $item->url = trim($request->url);
     $item->save();
     return json_encode($item->getResponse());
 })->middleware(\App\Http\Middleware\CheckAuthToken::class);
