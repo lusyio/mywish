@@ -62,7 +62,7 @@ export default class Authorization extends Component {
         if (type === 'words') {
             month = months[a.getMonth()];
         } else {
-            month = a.getMonth();
+            month = a.getMonth() + 1;
         }
         let date = a.getDate();
         let hour = a.getHours();
@@ -293,7 +293,8 @@ export default class Authorization extends Component {
                     lists.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : 1);
                     this.setState({
                         lists,
-                        showNewWish: false
+                        showNewWish: false,
+                        tempFile: ''
                     });
                 } else {
                     localStorage.removeItem('userId');
@@ -432,7 +433,6 @@ export default class Authorization extends Component {
     };
 
     shareListHandler = () => {
-        console.log('asdas')
         trackPromise(axios.post('/api/share', {
             "userId": localStorage.getItem('userId'),
             "authToken": localStorage.getItem('authToken'),
@@ -503,7 +503,6 @@ export default class Authorization extends Component {
 
         if (this.state.deleteList) {
             window.document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-            console.log(window.document.getElementsByTagName('body')[0])
             modal =
                 <Modal clickOutside={this.clickOutsideHandler}>
                     <p>Вы действительно хотите удалить список желаний <strong>"{this.state.tempListName}"?</strong></p>
@@ -513,31 +512,29 @@ export default class Authorization extends Component {
                 </Modal>
         } else if (this.state.shareList) {
             window.document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-            console.log(window.document.getElementsByTagName('body')[0])
             modal =
                 <Modal clickOutside={this.clickOutsideHandler}>
                     <p>Ссылка на ваш список:</p>
-                    <a href={"https://mywish.su/" + this.state.tempLink} target="_blank">https://mywish.su/{this.state.tempLink}</a>
+                    <a href="https://mywish.su/${this.state.tempLink}">https://mywish.su/{this.state.tempLink}</a>
                     <p>Расскажи о своих желаниях друзьям:</p>
                     <FacebookProvider appId="563234647569569">
-                        <Share href={"https://mywish.su/" + this.state.tempLink}>
+                        <Share href={`https://mywish.su/${this.state.tempLink}`}>
                             {({handleClick, loading}) => (
                                 <Button type="share" disabled={loading} onClick={(event) => {
                                     handleClick(event);
                                     this.shareListHandler()
-                                }}>Поделиться в Facebook</Button>
+                                }}>Поделиться</Button>
                             )}
                         </Share>
                     </FacebookProvider>
-                    <Button type='share' onClick={this.shareListHandler}>
-                        <ShareVk buttonOptions={{text: 'Поделиться в ВК'}}
-                                 shareOptions={{url: "https://mywish.su/list/" + this.state.tempLink, title: this.state.tempListName}}/>
+                    <Button type='share' onClick={() => this.shareListHandler()}>
+                        <ShareVk buttonOptions={{text: 'Поделиться'}}
+                                 shareOptions={{url: `https://mywish.su/${this.state.tempLink}`}}/>
                     </Button>
                 </Modal>
 
         } else {
             window.document.getElementsByTagName('body')[0].style.overflow = 'auto';
-            console.log(window.document.getElementsByTagName('body')[0])
         }
 
 

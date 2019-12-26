@@ -19,21 +19,21 @@ export default class ListPreview extends Component {
         list: {
             status: "string",
             wishList: {
-                id: 1,
+                id: null,
                 name: "",
-                updatedAt: 1,
-                backgroundNumber: 1,
-                userId: 1,
+                updatedAt: null,
+                backgroundNumber:null,
+                userId: null,
                 userName: "",
-                createdAt: 1,
+                createdAt: null,
                 link: "",
                 wishItems: [
                     {
-                        id: 1,
+                        id: null,
                         title: "",
                         url: "",
-                        order: 1,
-                        listId: 1,
+                        order: null,
+                        listId: null,
                         picture: ""
                     }
                 ]

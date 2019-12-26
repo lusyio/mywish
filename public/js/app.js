@@ -3142,7 +3142,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../node_mod
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq {\n    display: flex;\n    max-width: 480px;\n    padding: 20px 10px 20px 0;\n    border-bottom: 1px solid #F0F0F0;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > div {\n    width: 100%;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq:last-of-type {\n    margin-bottom: 30px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > img {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    min-width: 110px;\n    height: 110px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___1jeFlf2948I6zR6d1beGd {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    max-width: 110px;\n    height: 110px;\n    object-fit: cover;\n    background-position: center !important;\n    background-repeat: no-repeat !important;\n    background-size: cover;\n    border: 1px solid whitesmoke;\n    border-radius: 10px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0 {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 21px;\n    color: #000000;\n    padding-top: 25px;\n    margin-bottom: 10px;\n    text-align: left;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #BABABA;\n    display: block;\n    margin-bottom: 25px;\n    text-decoration: none;\n    text-align: left;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a:hover {\n    text-decoration: underline;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq {\n    display: flex;\n    max-width: 480px;\n    padding: 20px 10px 20px 0;\n    border-bottom: 1px solid #F0F0F0;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > div {\n    width: 100%;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq:last-of-type {\n    margin-bottom: 30px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > img {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    min-width: 110px;\n    height: 110px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___1jeFlf2948I6zR6d1beGd {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    max-width: 110px;\n    height: 110px;\n    object-fit: cover;\n    background-position: center !important;\n    background-repeat: no-repeat !important;\n    background-size: cover !important;\n    border: 1px solid whitesmoke;\n    border-radius: 10px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0 {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 21px;\n    color: #000000;\n    padding-top: 25px;\n    margin-bottom: 10px;\n    text-align: left;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #BABABA;\n    display: block;\n    margin-bottom: 25px;\n    text-decoration: none;\n    text-align: left;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a:hover {\n    text-decoration: underline;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -63188,7 +63188,7 @@ exports.usePromiseTracker = usePromiseTracker;
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -70406,7 +70406,7 @@ function (_Component) {
       if (type === 'words') {
         month = months[a.getMonth()];
       } else {
-        month = a.getMonth();
+        month = a.getMonth() + 1;
       }
 
       var date = a.getDate();
@@ -70631,7 +70631,8 @@ function (_Component) {
 
           _this.setState({
             lists: lists,
-            showNewWish: false
+            showNewWish: false,
+            tempFile: ''
           });
         } else {
           localStorage.removeItem('userId');
@@ -70799,7 +70800,6 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "shareListHandler", function () {
-      console.log('asdas');
       Object(react_promise_tracker__WEBPACK_IMPORTED_MODULE_15__["trackPromise"])(axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/share', {
         "userId": localStorage.getItem('userId'),
         "authToken": localStorage.getItem('authToken'),
@@ -70925,7 +70925,6 @@ function (_Component) {
 
       if (this.state.deleteList) {
         window.document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-        console.log(window.document.getElementsByTagName('body')[0]);
         modal = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Modal_Modal__WEBPACK_IMPORTED_MODULE_10__["default"], {
           clickOutside: this.clickOutsideHandler
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0412\u044B \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E \u0445\u043E\u0442\u0438\u0442\u0435 \u0443\u0434\u0430\u043B\u0438\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A \u0436\u0435\u043B\u0430\u043D\u0438\u0439 ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "\"", this.state.tempListName, "\"?")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -70939,7 +70938,6 @@ function (_Component) {
         }, "\u041E\u0442\u043C\u0435\u043D\u0430"));
       } else if (this.state.shareList) {
         window.document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-        console.log(window.document.getElementsByTagName('body')[0]);
         modal = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Modal_Modal__WEBPACK_IMPORTED_MODULE_10__["default"], {
           clickOutside: this.clickOutsideHandler
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0421\u0441\u044B\u043B\u043A\u0430 \u043D\u0430 \u0432\u0430\u0448 \u0441\u043F\u0438\u0441\u043E\u043A:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -70962,7 +70960,9 @@ function (_Component) {
           }, "\u041F\u043E\u0434\u0435\u043B\u0438\u0442\u044C\u0441\u044F");
         })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
           type: "share",
-          onClick: this.shareListHandler
+          onClick: function onClick() {
+            return _this3.shareListHandler();
+          }
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_vk__WEBPACK_IMPORTED_MODULE_11__["Share"], {
           buttonOptions: {
             text: 'Поделиться'
@@ -70973,7 +70973,6 @@ function (_Component) {
         })));
       } else {
         window.document.getElementsByTagName('body')[0].style.overflow = 'auto';
-        console.log(window.document.getElementsByTagName('body')[0]);
       }
 
       var authContent;
@@ -72069,20 +72068,20 @@ function (_Component) {
       list: {
         status: "string",
         wishList: {
-          id: 1,
+          id: null,
           name: "",
-          updatedAt: 1,
-          backgroundNumber: 1,
-          userId: 1,
+          updatedAt: null,
+          backgroundNumber: null,
+          userId: null,
           userName: "",
-          createdAt: 1,
+          createdAt: null,
           link: "",
           wishItems: [{
-            id: 1,
+            id: null,
             title: "",
             url: "",
-            order: 1,
-            listId: 1,
+            order: null,
+            listId: null,
             picture: ""
           }]
         }
