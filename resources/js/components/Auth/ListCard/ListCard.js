@@ -45,6 +45,7 @@ const ListCard = props => {
                                     background={props.background}
                                 />
                                 <WishList
+                                    tempFile={props.tempFile}
                                     widgetOff={props.widgetOff}
                                     uploadImg={props.uploadImg}
                                     deleteWish={props.deleteWish}

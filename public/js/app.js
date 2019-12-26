@@ -70528,6 +70528,7 @@ function (_Component) {
 
     _defineProperty(_assertThisInitialized(_this), "uploadImgHandler", function (event) {
       event.preventDefault();
+      axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/item/update', {});
 
       _this.setState({
         file: event.target.files[0]
@@ -72985,7 +72986,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/mastekator/Desktop/mywish/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/user/Desktop/mywish/resources/js/app.js */"./resources/js/app.js");
 
 
 /***/ })

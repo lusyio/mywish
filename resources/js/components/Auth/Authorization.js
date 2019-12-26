@@ -25,6 +25,7 @@ export default class Authorization extends Component {
         deleteList: false,
         tempListId: null,
         tempListName: '',
+        tempFile: null,
         shareList: false,
         wishNameControl: '',
         wishUrlControl: '',
@@ -206,7 +207,28 @@ export default class Authorization extends Component {
             {
                 file: event.target.files[0]
             }
-        )
+        );
+        const formData = new FormData();
+        formData.append('userId', localStorage.getItem('userId'));
+        formData.append('authToken', localStorage.getItem('authToken'));
+        formData.append('id', this.state.newWishId);
+        formData.append('name', '');
+        formData.append('url', '');
+        formData.append('picture', this.state.file);
+        trackPromise(axios({
+            method: 'post',
+            url: '/api/item/update',
+            data: formData,
+            headers: {'Content-Type': 'multipart/form-data'}
+        })
+            .then((res) => {
+                this.setState(
+                    {
+                        tempFile : res.data.picture
+                    }
+                )
+            }))
+
     };
 
     deleteWishHandler = (listId, id) => {
@@ -257,7 +279,7 @@ export default class Authorization extends Component {
                         formData.append('id', this.state.newWishId);
                         formData.append('name', this.state.wishNameControl);
                         formData.append('url', this.state.wishUrlControl);
-                        formData.append('picture', this.state.file);
+                        formData.append('picture', '');
 
                         trackPromise(axios({
                                 method: 'post',
@@ -270,6 +292,7 @@ export default class Authorization extends Component {
                                 if (res.data.error !== '' || typeof res.data['error'] !== "undefined") {
                                     const lists = {...this.state.lists};
                                     const currentList = lists.items.find(item => item.id === listId);
+                                    res.data.picture = this.state.tempFile;
                                     currentList.wishItems.push(res.data);
                                     currentList.updatedAt = res.data.updatedAt;
                                     lists.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : 1);
@@ -538,6 +561,7 @@ export default class Authorization extends Component {
                                 lists={this.state.lists}
                             />
                             <ListCard
+                                tempFile={this.state.tempFile}
                                 addList={this.addListHandler}
                                 shareList={this.toggleModalHandler}
                                 deleteList={this.toggleModalHandler}
