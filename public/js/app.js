@@ -3142,7 +3142,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../node_mod
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq {\n    display: flex;\n    max-width: 480px;\n    padding: 20px 10px 20px 0;\n    border-bottom: 1px solid #F0F0F0;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > div {\n    width: 100%;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq:last-of-type {\n    margin-bottom: 30px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > img {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    min-width: 110px;\n    height: 110px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___1jeFlf2948I6zR6d1beGd {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    max-width: 110px;\n    height: 110px;\n    object-fit: cover;\n    border-radius: 3px;\n    background-position: center !important;\n    background-repeat: no-repeat !important;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0 {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 21px;\n    color: #000000;\n    padding-top: 25px;\n    margin-bottom: 10px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #BABABA;\n    display: block;\n    margin-bottom: 25px;\n    text-decoration: none;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a:hover {\n    text-decoration: underline;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq {\n    display: flex;\n    max-width: 480px;\n    padding: 20px 10px 20px 0;\n    border-bottom: 1px solid #F0F0F0;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > div {\n    width: 100%;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq:last-of-type {\n    margin-bottom: 30px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > img {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    min-width: 110px;\n    height: 110px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___1jeFlf2948I6zR6d1beGd {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    max-width: 110px;\n    height: 110px;\n    object-fit: cover;\n    border-radius: 3px;\n    background-position: center !important;\n    background-repeat: no-repeat !important;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0 {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 21px;\n    color: #000000;\n    padding-top: 25px;\n    margin-bottom: 10px;\n    text-align: left;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #BABABA;\n    display: block;\n    margin-bottom: 25px;\n    text-decoration: none;\n    text-align: left;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a:hover {\n    text-decoration: underline;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -70509,7 +70509,21 @@ function (_Component) {
       });
     });
 
-    _defineProperty(_assertThisInitialized(_this), "showNewWishToggle", function () {
+    _defineProperty(_assertThisInitialized(_this), "showNewWishToggle", function (listId, type) {
+      if (type === 'add') {
+        axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/item/add', {
+          'userId': localStorage.getItem('userId'),
+          'authToken': localStorage.getItem('authToken'),
+          'listId': listId
+        }).then(function (res) {
+          _this.setState({
+            newWishId: res.data.id
+          });
+        }, function (res) {
+          return console.log('error', res);
+        });
+      }
+
       _this.setState({
         showNewWish: !_this.state.showNewWish
       });
@@ -70527,44 +70541,32 @@ function (_Component) {
       });
     });
 
-    _defineProperty(_assertThisInitialized(_this), "uploadImgHandler", function (event, listId) {
+    _defineProperty(_assertThisInitialized(_this), "uploadImgHandler", function (event) {
       event.preventDefault();
 
       _this.setState({
         file: event.target.files[0]
       });
 
-      axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/item/add', {
-        'userId': localStorage.getItem('userId'),
-        'authToken': localStorage.getItem('authToken'),
-        'listId': listId
+      var formData = new FormData();
+      formData.append('userId', localStorage.getItem('userId'));
+      formData.append('authToken', localStorage.getItem('authToken'));
+      formData.append('id', _this.state.newWishId);
+      formData.append('name', '');
+      formData.append('url', '');
+      formData.append('picture', _this.state.file);
+      Object(react_promise_tracker__WEBPACK_IMPORTED_MODULE_15__["trackPromise"])(axios__WEBPACK_IMPORTED_MODULE_7___default()({
+        method: 'post',
+        url: '/api/item/update',
+        data: formData,
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
       }).then(function (res) {
         _this.setState({
-          newWishId: res.data.id
+          tempFile: res.data.picture
         });
-
-        var formData = new FormData();
-        formData.append('userId', localStorage.getItem('userId'));
-        formData.append('authToken', localStorage.getItem('authToken'));
-        formData.append('id', _this.state.newWishId);
-        formData.append('name', '');
-        formData.append('url', '');
-        formData.append('picture', _this.state.file);
-        Object(react_promise_tracker__WEBPACK_IMPORTED_MODULE_15__["trackPromise"])(axios__WEBPACK_IMPORTED_MODULE_7___default()({
-          method: 'post',
-          url: '/api/item/update',
-          data: formData,
-          headers: {
-            'Content-Type': 'multipart/form-data'
-          }
-        }).then(function (res) {
-          _this.setState({
-            tempFile: res.data.picture
-          });
-        }));
-      }, function (res) {
-        return console.log('error', res);
-      });
+      }));
     });
 
     _defineProperty(_assertThisInitialized(_this), "deleteWishHandler", function (listId, id) {
@@ -71439,7 +71441,9 @@ var ListCard = function ListCard(props) {
           src: _public_svg_plus_svg__WEBPACK_IMPORTED_MODULE_8___default.a
         }), "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0435\u0449\u0435 \u0436\u0435\u043B\u0430\u043D\u0438\u0435") : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
           type: "showNewWish",
-          onClick: props.showNewWishToggle
+          onClick: function onClick() {
+            return props.showNewWishToggle(list.id, 'add');
+          }
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           src: _public_svg_plus_svg__WEBPACK_IMPORTED_MODULE_8___default.a
         }), "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0435\u0449\u0435 \u0436\u0435\u043B\u0430\u043D\u0438\u0435")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListWidget_ListWidget__WEBPACK_IMPORTED_MODULE_6__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
@@ -71689,7 +71693,9 @@ var WishItem = function WishItem(props) {
     height: "16",
     fill: "white"
   }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    onClick: props.showNewWishToggle,
+    onClick: function onClick() {
+      return props.showNewWishToggle(props.listId, '');
+    },
     type: "widget"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     width: "16",
@@ -71757,7 +71763,7 @@ var WishItem = function WishItem(props) {
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Input_Input__WEBPACK_IMPORTED_MODULE_2__["default"], {
       id: htmlFor,
       onChange: function onChange(event) {
-        return props.uploadImg(event, props.listId);
+        return props.uploadImg(event);
       },
       type: "file"
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Input_Input__WEBPACK_IMPORTED_MODULE_2__["default"], {
