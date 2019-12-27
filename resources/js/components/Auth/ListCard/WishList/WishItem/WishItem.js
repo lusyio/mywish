@@ -77,7 +77,10 @@ const WishItem = props => {
 
     const clsItem = [classes.WishItem, classes.WishItemAdd];
 
+    let clsImg = [classes.WishItemImg];
+
     if (props.type === 'addNew') {
+        let clsImg = [classes.WishItemImg, classes.WishItemImgMobile];
         renderWishItem =
             <React.Fragment>
                 <div className={clsItem.join(' ')}>
@@ -87,7 +90,7 @@ const WishItem = props => {
                             <Input id={htmlFor} onChange={event => props.uploadImg(event, props.listId)} type='file'/>
                         </Label>
                         :
-                        <div className={classes.WishItemImg} style={{background: `url(${props.tempFile}`}}>
+                        <div className={clsImg.join(' ')} style={{background: `url(${props.tempFile}`}}>
 
                         </div>
                     }

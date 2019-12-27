@@ -3144,13 +3144,14 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../node_mod
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq {\n    display: flex;\n    max-width: 100%;\n    width: 100%;\n    padding: 20px 10px 20px 0;\n    border-bottom: 1px solid #F0F0F0;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq:hover div:last-of-type{\n    display: block;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > div {\n    width: 100%;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq:last-of-type {\n    margin-bottom: 30px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > img {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    min-width: 110px;\n    height: 110px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___1jeFlf2948I6zR6d1beGd {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    max-width: 110px;\n    height: 110px;\n    object-fit: cover;\n    background-position: center !important;\n    background-repeat: no-repeat !important;\n    background-size: cover !important;\n    border: 1px solid whitesmoke;\n    border-radius: 10px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0 {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 21px;\n    color: #000000;\n    padding-top: 25px;\n    margin-bottom: 10px;\n    text-align: left;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #BABABA;\n    display: block;\n    margin-bottom: 25px;\n    text-decoration: none;\n    text-align: left;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a:hover {\n    text-decoration: underline;\n}\n\n@media screen\nand (max-width: 768px) {\n    .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___1jeFlf2948I6zR6d1beGd {\n        margin-right: 14px;\n        width: 70px;\n        max-width: 70px;\n        height: 70px;\n    }\n\n    .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq{\n        width: 100%;\n    }\n\n    .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0 {\n        font-size: 12px;\n        line-height: 14px;\n        padding-top: 5px;\n        margin-bottom: 5px;\n        text-align: left;\n    }\n\n    .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a {\n        font-weight: 300;\n        font-size: 9px;\n        line-height: 11px;\n    }\n\n    .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___6yAY7t7HOwf90liiHGJ9I {\n        display: block;\n    }\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq {\n    display: flex;\n    max-width: 100%;\n    width: 100%;\n    padding: 20px 10px 20px 0;\n    border-bottom: 1px solid #F0F0F0;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq:hover div:last-of-type {\n    display: block;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > div {\n    width: 100%;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq:last-of-type {\n    margin-bottom: 30px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > img {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    min-width: 110px;\n    height: 110px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___1jeFlf2948I6zR6d1beGd {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    max-width: 110px;\n    height: 110px;\n    object-fit: cover;\n    background-position: center !important;\n    background-repeat: no-repeat !important;\n    background-size: cover !important;\n    border: 1px solid whitesmoke;\n    border-radius: 10px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0 {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 21px;\n    color: #000000;\n    padding-top: 25px;\n    margin-bottom: 10px;\n    text-align: left;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #BABABA;\n    display: block;\n    margin-bottom: 25px;\n    text-decoration: none;\n    text-align: left;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a:hover {\n    text-decoration: underline;\n}\n\n@media screen\nand (max-width: 768px) {\n    .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___1jeFlf2948I6zR6d1beGd {\n        margin-right: 14px;\n        width: 70px;\n        max-width: 70px;\n        height: 70px;\n    }\n\n    .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___W5RdqO0jssNT3DPJpYCTQ {\n        width: 110px;\n        height: 110px;\n        padding: 5px;\n        margin-left: auto;\n        margin-right: auto;\n        margin-bottom: 17px;\n        display: block;\n        min-width: 110px;\n    }\n\n    .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq {\n        width: 100%;\n    }\n\n    .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0 {\n        font-size: 12px;\n        line-height: 14px;\n        padding-top: 5px;\n        margin-bottom: 5px;\n        text-align: left;\n    }\n\n    .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a {\n        font-weight: 300;\n        font-size: 9px;\n        line-height: 11px;\n    }\n\n    .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___6yAY7t7HOwf90liiHGJ9I {\n        display: block;\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"WishItem": "resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq",
 	"WishItemImg": "resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___1jeFlf2948I6zR6d1beGd",
 	"Title": "resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0",
+	"WishItemImgMobile": "resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___W5RdqO0jssNT3DPJpYCTQ",
 	"WishItemAdd": "resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___6yAY7t7HOwf90liiHGJ9I"
 };
 
@@ -63192,7 +63193,7 @@ exports.usePromiseTracker = usePromiseTracker;
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -70520,6 +70521,10 @@ function (_Component) {
           'userId': localStorage.getItem('userId'),
           'authToken': localStorage.getItem('authToken'),
           'id': _this.state.newWishId
+        }).then(function () {
+          _this.setState({
+            tempFile: ''
+          });
         });
       }
 
@@ -71814,8 +71819,10 @@ var WishItem = function WishItem(props) {
 
   var htmlFor = "".concat(props.type, "-").concat(Math.random() * 100);
   var clsItem = [_WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItem, _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItemAdd];
+  var clsImg = [_WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItemImg];
 
   if (props.type === 'addNew') {
+    var _clsImg = [_WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItemImg, _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItemImgMobile];
     renderWishItem = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: clsItem.join(' ')
     }, props.tempFile === null || props.tempFile === '' || props.tempFile === undefined ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Label_Label__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -71829,7 +71836,7 @@ var WishItem = function WishItem(props) {
       },
       type: "file"
     })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItemImg,
+      className: _clsImg.join(' '),
       style: {
         background: "url(".concat(props.tempFile)
       }

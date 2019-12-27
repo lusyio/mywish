@@ -157,6 +157,10 @@ export default class Authorization extends Component {
                 'userId': localStorage.getItem('userId'),
                 'authToken': localStorage.getItem('authToken'),
                 'id': this.state.newWishId
+            }).then(() => {
+                this.setState({
+                    tempFile: '',
+                })
             })
         }
         if (type === 'add') {
