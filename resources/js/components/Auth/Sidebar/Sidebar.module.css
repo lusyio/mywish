@@ -55,7 +55,7 @@
 }
 
 .Sidebar > ul > li:hover > span {
-    color: #757575;
+    color: #B9B5B4;
 }
 
 .Sidebar > ul > li.active > a {
@@ -71,7 +71,7 @@
     font-weight: 300;
     font-size: 14px;
     line-height: 24px;
-    color: #B9B5B4;
+    color: #757575;
     transition: 100ms;
 }
 

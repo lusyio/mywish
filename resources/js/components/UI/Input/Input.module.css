@@ -57,3 +57,11 @@ label > .Input[type='file'] {
     z-index: 5;
 }
 
+
+@media screen
+and (max-width: 768px) {
+    .Input.inputHeader {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+}

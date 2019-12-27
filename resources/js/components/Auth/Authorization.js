@@ -151,12 +151,12 @@ export default class Authorization extends Component {
         });
     };
 
-    showNewWishToggle = (listId, type, id) => {
-        if (type === 'type') {
+    showNewWishToggle = (listId, type) => {
+        if (type === 'delete') {
             axios.post('/api/item/delete', {
                 'userId': localStorage.getItem('userId'),
                 'authToken': localStorage.getItem('authToken'),
-                'id': id
+                'id': this.state.newWishId
             })
         }
         if (type === 'add') {
