@@ -10,8 +10,8 @@
         <meta property="og:url" content= "{{$ogUrl}}" />
         <title>{{$title}}</title>
         <meta name="description" content="{{$description}}">
-        <link rel="shortcut icon" href="{{ public_path('/favicon.ico') }}" type="image/x-icon"/>
-        <link rel="icon" href="{{ public_path('/favicon.ico') }}" type="image/x-icon"/>
+        <link rel="shortcut icon" href="https://mywish.su/public/favicon.ico" type="image/x-icon"/>
+        <link rel="icon" href="https://mywish.su/public/favicon.ico" type="image/x-icon"/>
         <script src="https://apis.google.com/js/platform.js" type="text/javascript"></script>
         <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
     </head>
