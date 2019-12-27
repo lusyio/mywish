@@ -45,3 +45,32 @@
     text-align: center;
     display: block;
 }
+
+@media screen
+and (max-width: 768px) {
+    .ColorPickerBody > .ColorBg {
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .ColorPicker > .ColorPickerBody {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .ColorPicker > p {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+    .ColorPicker {
+        max-width: 100%;
+        margin: 0 auto 17px auto;
+    }
+}
+
+

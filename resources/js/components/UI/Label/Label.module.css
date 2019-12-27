@@ -27,3 +27,16 @@
     top: 0;
     bottom: 0;
 }
+
+@media screen
+and (max-width: 768px) {
+    .Label {
+        width: 110px;
+        height: 110px;
+        padding: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 17px;
+        display: block;
+    }
+}

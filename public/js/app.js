@@ -3003,7 +3003,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg {\n    display: flex;\n    justify-content: center;\n    flex-grow: 1;\n    width: 100%;\n}\n\n.resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg > div {\n    width: 100%;\n    max-width: 720px;\n}\n\n.resources-js-components-Auth-__Authorization-module___kVYkTu-c5cyAxjMxQ4Djg iframe {\n    opacity: 0.00001;\n    margin-top: -94px;\n    margin-left: -216px;\n    position: relative;\n    z-index: 5;\n}\n\n.resources-js-components-Auth-__Authorization-module___YLZKXj6RVhtWsq5Zy-BZ {\n    background: #5181b8;\n    padding: 5px;\n    border-radius: 5px;\n    display: inline-block;\n    overflow: hidden;\n    width: 30px;\n    height: 30px;\n    margin-left: 20px;\n    vertical-align: bottom;\n}\n\n.resources-js-components-Auth-__Authorization-module___kVYkTu-c5cyAxjMxQ4Djg:before {\n    content: '\\412\\41A';\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    left: 0;\n    bottom: 0;\n    rigth: 0;\n    margin: auto;\n    top: 48%;\n    z-index: 0;\n    color: white;\n}\n\n.resources-js-components-Auth-__Authorization-module___kVYkTu-c5cyAxjMxQ4Djg {\n    position: relative;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    height: 100%;\n    display: inline-block;\n    overflow: hidden;\n    vertical-align: middle;\n}\n\n.resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg > div > h1 {\n    text-align: center;\n}\n\n.resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg .resources-js-components-Auth-__Authorization-module___aBkGzeBGA517wIE_OiFUv {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 24px;\n    text-align: center;\n    color: #FFFFFF;\n}\n\n.resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg .resources-js-components-Auth-__Authorization-module___aBkGzeBGA517wIE_OiFUv:last-of-type {\n    margin-bottom: 70px;\n}\n\n.resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg .resources-js-components-Auth-__Authorization-module___1mDPm0m9DLEr-FHbW8V5NT {\n    border: 0;\n    background: #2A61A1;\n    border-radius: 5px;\n    width: 40px;\n    height: 40px;\n    cursor: pointer;\n    color: #fff;\n}\n\n.resources-js-components-Auth-__Authorization-module___fVQ5OJpym2tz2sMiVrPMo {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 32px;\n    text-align: center;\n    color: #FFFFFF;\n    margin-bottom: 40px;\n}\n\n.resources-js-components-Auth-__Authorization-module___fVQ5OJpym2tz2sMiVrPMo strong {\n    font-weight: bold;\n}\n\n.resources-js-components-Auth-__Authorization-module___2rcECEOmlVCTZ7wu5UVKp5 {\n    display: flex;\n    justify-content: center;\n    flex-grow: 1;\n    width: 100%;\n}\n\n.resources-js-components-Auth-__Authorization-module___2rcECEOmlVCTZ7wu5UVKp5 > div {\n    width: 100%;\n    max-width: 1015px;\n    display: flex;\n}\n\n@media screen\nand (max-width: 768px) {\n    .resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg .resources-js-components-Auth-__Authorization-module___1mDPm0m9DLEr-FHbW8V5NT {\n        padding: 10px;\n        border-radius: 5px;\n        width: 54px;\n        height: 54px;\n        font-size: 18px;\n    }\n\n    .resources-js-components-Auth-__Authorization-module___YLZKXj6RVhtWsq5Zy-BZ {\n        background: #5181b8;\n        border-radius: 5px;\n        display: inline-block;\n        overflow: hidden;\n        width: 54px;\n        height: 54px;\n        margin-left: 20px;\n        vertical-align: bottom;\n        padding: 0;\n    }\n\n    .resources-js-components-Auth-__Authorization-module___kVYkTu-c5cyAxjMxQ4Djg iframe {\n        opacity: 0.00001;\n        margin-top: -111px;\n        margin-left: -216px;\n        position: relative;\n        z-index: 5;\n        transform: scale(1.7);\n    }\n\n    .resources-js-components-Auth-__Authorization-module___kVYkTu-c5cyAxjMxQ4Djg:before {\n        top: 71%;\n    }\n}\n\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg {\n    display: flex;\n    justify-content: center;\n    flex-grow: 1;\n    width: 100%;\n}\n\n.resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg > div {\n    width: 100%;\n    max-width: 720px;\n}\n\n.resources-js-components-Auth-__Authorization-module___kVYkTu-c5cyAxjMxQ4Djg iframe {\n    opacity: 0.00001;\n    margin-top: -94px;\n    margin-left: -216px;\n    position: relative;\n    z-index: 5;\n}\n\n.resources-js-components-Auth-__Authorization-module___YLZKXj6RVhtWsq5Zy-BZ {\n    background: #5181b8;\n    padding: 5px;\n    border-radius: 5px;\n    display: inline-block;\n    overflow: hidden;\n    width: 30px;\n    height: 30px;\n    margin-left: 20px;\n    vertical-align: bottom;\n}\n\n.resources-js-components-Auth-__Authorization-module___kVYkTu-c5cyAxjMxQ4Djg:before {\n    content: '';\n    background-image: url(\"/images/vk.svg\");\n    background-repeat: no-repeat;\n    background-position-x: center;\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    left: 0;\n    bottom: 0;\n    rigth: 0;\n    margin: auto;\n    top: 48%;\n    z-index: 0;\n    color: white;\n}\n\n.resources-js-components-Auth-__Authorization-module___kVYkTu-c5cyAxjMxQ4Djg {\n    position: relative;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    height: 100%;\n    display: inline-block;\n    overflow: hidden;\n    vertical-align: middle;\n}\n\n.resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg > div > h1 {\n    text-align: center;\n}\n\n.resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg .resources-js-components-Auth-__Authorization-module___aBkGzeBGA517wIE_OiFUv {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 24px;\n    text-align: center;\n    color: #FFFFFF;\n}\n\n.resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg .resources-js-components-Auth-__Authorization-module___aBkGzeBGA517wIE_OiFUv:last-of-type {\n    margin-bottom: 70px;\n}\n\n.resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg .resources-js-components-Auth-__Authorization-module___1mDPm0m9DLEr-FHbW8V5NT {\n    border: 0;\n    background: #2A61A1;\n    border-radius: 5px;\n    width: 40px;\n    height: 40px;\n    cursor: pointer;\n    color: #fff;\n    font-size: 17px;\n    position: relative;\n    vertical-align: bottom;\n}\n\n.resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg .resources-js-components-Auth-__Authorization-module___1mDPm0m9DLEr-FHbW8V5NT:before {\n    content: '';\n    background-image: url(\"/images/fb.svg\");\n    background-repeat: no-repeat;\n    background-position-x: center;\n    position: absolute;\n    background-size: 40%;\n    width: 100%;\n    height: 100%;\n    left: 0;\n    bottom: 0;\n    margin: auto;\n    top: 18%;\n    z-index: 0;\n    color: white;\n}\n\n.resources-js-components-Auth-__Authorization-module___fVQ5OJpym2tz2sMiVrPMo {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 32px;\n    text-align: center;\n    color: #FFFFFF;\n    margin-bottom: 40px;\n}\n\n.resources-js-components-Auth-__Authorization-module___fVQ5OJpym2tz2sMiVrPMo strong {\n    font-weight: bold;\n}\n\n.resources-js-components-Auth-__Authorization-module___2rcECEOmlVCTZ7wu5UVKp5 {\n    display: flex;\n    justify-content: center;\n    flex-grow: 1;\n    width: 100%;\n}\n\n.resources-js-components-Auth-__Authorization-module___2rcECEOmlVCTZ7wu5UVKp5 > div {\n    width: 100%;\n    max-width: 1015px;\n    display: flex;\n}\n\n@media screen\nand (max-width: 768px) {\n    .resources-js-components-Auth-__Authorization-module___1IGMkeMguh7T6LGiE4hGEg .resources-js-components-Auth-__Authorization-module___1mDPm0m9DLEr-FHbW8V5NT {\n        padding: 10px;\n        border-radius: 5px;\n        width: 54px;\n        height: 54px;\n        font-size: 18px;\n    }\n\n    .resources-js-components-Auth-__Authorization-module___YLZKXj6RVhtWsq5Zy-BZ {\n        background: #5181b8;\n        border-radius: 5px;\n        display: inline-block;\n        overflow: hidden;\n        width: 54px;\n        height: 54px;\n        margin-left: 20px;\n        vertical-align: bottom;\n        padding: 0;\n    }\n\n    .resources-js-components-Auth-__Authorization-module___kVYkTu-c5cyAxjMxQ4Djg iframe {\n        opacity: 0.00001;\n        margin-top: -111px;\n        margin-left: -216px;\n        position: relative;\n        z-index: 5;\n        transform: scale(1.7);\n    }\n\n    .resources-js-components-Auth-__Authorization-module___kVYkTu-c5cyAxjMxQ4Djg:before {\n        top: 71%;\n    }\n\n    .resources-js-components-Auth-__Authorization-module___2rcECEOmlVCTZ7wu5UVKp5 > div {\n        width: 100%;\n        max-width: 100%;\n        display: block;\n    }\n}\n\n", ""]);
 
 // exports
 exports.locals = {
@@ -3074,7 +3074,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../node_module
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H {\n    max-width: 320px;\n    margin: 0 auto 60px auto;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___ZZnLgCZCKhEMXzaeM28Ir > .resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___hTvuaqPVjBpsfumYm1hTQ {\n    margin-right: 15px;\n    margin-bottom: 15px;\n    border-radius: 10px;\n    width: 50px;\n    height: 50px;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___36nDjJY5djL8fOOu2XMAeG {\n    border: 2px solid #D5D5D5;\n    box-sizing: border-box;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___36nDjJY5djL8fOOu2XMAeG:before {\n    content: '';\n    width: 100%;\n    height: 100%;\n    display: block;\n    position: absolute;\n    background: url('/svg/check-symbol.svg') center no-repeat;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___ZZnLgCZCKhEMXzaeM28Ir > .resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___hTvuaqPVjBpsfumYm1hTQ:nth-of-type(5) {\n    margin-right: 0;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H > .resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___ZZnLgCZCKhEMXzaeM28Ir {\n    display: flex;\n    flex-wrap: wrap;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H > p {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #000000;\n    margin-bottom: 30px;\n    text-align: center;\n    display: block;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H {\n    max-width: 320px;\n    margin: 0 auto 60px auto;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___ZZnLgCZCKhEMXzaeM28Ir > .resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___hTvuaqPVjBpsfumYm1hTQ {\n    margin-right: 15px;\n    margin-bottom: 15px;\n    border-radius: 10px;\n    width: 50px;\n    height: 50px;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___36nDjJY5djL8fOOu2XMAeG {\n    border: 2px solid #D5D5D5;\n    box-sizing: border-box;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___36nDjJY5djL8fOOu2XMAeG:before {\n    content: '';\n    width: 100%;\n    height: 100%;\n    display: block;\n    position: absolute;\n    background: url('/svg/check-symbol.svg') center no-repeat;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___ZZnLgCZCKhEMXzaeM28Ir > .resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___hTvuaqPVjBpsfumYm1hTQ:nth-of-type(5) {\n    margin-right: 0;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H > .resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___ZZnLgCZCKhEMXzaeM28Ir {\n    display: flex;\n    flex-wrap: wrap;\n}\n\n.resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H > p {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #000000;\n    margin-bottom: 30px;\n    text-align: center;\n    display: block;\n}\n\n@media screen\nand (max-width: 768px) {\n    .resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___ZZnLgCZCKhEMXzaeM28Ir > .resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___hTvuaqPVjBpsfumYm1hTQ {\n        margin-right: 10px;\n        margin-bottom: 10px;\n        border-radius: 10px;\n        width: 35px;\n        height: 35px;\n    }\n\n    .resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H > .resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___ZZnLgCZCKhEMXzaeM28Ir {\n        display: flex;\n        flex-wrap: wrap;\n        justify-content: center;\n    }\n\n    .resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H > p {\n        font-size: 12px;\n        margin-bottom: 15px;\n    }\n\n    .resources-js-components-Auth-ListCard-ColorPicker-__ColorPicker-module___37Izz1Nz8yCv4KpCG1Is4H {\n        max-width: 100%;\n        margin: 0 auto 17px auto;\n    }\n}\n\n\n", ""]);
 
 // exports
 exports.locals = {
@@ -3098,7 +3098,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME {\n    max-width: 690px;\n    width: 100%;\n    height: fit-content;\n    padding: 10px;\n    background: darkred;\n    border-radius: 15px;\n    position: relative;\n    transition: background 135ms cubic-bezier(.4,0,.2,1);\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME > .resources-js-components-Auth-ListCard-__ListCard-module___1N8mMA49NsMdLyLyZ3-MTN {\n    border-radius: 15px;\n    background: #FFFFFF;\n    padding: 64px 106px 58px 106px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___1tMEFzF205nbAlXVZwXn0d{\n    border-radius: 15px;\n    background: #FFFFFF;\n    padding: 93px 106px 93px 106px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___1tMEFzF205nbAlXVZwXn0d > img{\n    margin-bottom: 50px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___1tMEFzF205nbAlXVZwXn0d p {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 23px;\n    text-align: center;\n    color: #000000;\n    margin-bottom: 40px;\n    max-width: 180px;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME .resources-js-components-Auth-ListCard-__ListCard-module___2UEDZrcEy8tsnP_Ug3Q_5E{\n    font-weight: bold;\n    font-size: 36px;\n    text-align: center;\n    color: #000000;\n    margin-bottom: 35px;\n    display: block;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME.resources-js-components-Auth-ListCard-__ListCard-module___rEw1U5JhC0rWymBwgVXLd {\n    text-align: center;\n    background: url('/images/bg3.jpg');\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME {\n    max-width: 690px;\n    width: 100%;\n    height: fit-content;\n    padding: 10px;\n    background: darkred;\n    border-radius: 15px;\n    position: relative;\n    transition: background 135ms cubic-bezier(.4, 0, .2, 1);\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME > .resources-js-components-Auth-ListCard-__ListCard-module___1N8mMA49NsMdLyLyZ3-MTN {\n    border-radius: 15px;\n    background: #FFFFFF;\n    padding: 64px 106px 58px 106px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___1tMEFzF205nbAlXVZwXn0d {\n    border-radius: 15px;\n    background: #FFFFFF;\n    padding: 93px 106px 93px 106px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___1tMEFzF205nbAlXVZwXn0d > img {\n    margin-bottom: 50px;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___1tMEFzF205nbAlXVZwXn0d p {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 23px;\n    text-align: center;\n    color: #000000;\n    margin-bottom: 40px;\n    max-width: 180px;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME .resources-js-components-Auth-ListCard-__ListCard-module___2UEDZrcEy8tsnP_Ug3Q_5E {\n    font-weight: bold;\n    font-size: 36px;\n    text-align: center;\n    color: #000000;\n    margin-bottom: 35px;\n    display: block;\n    width: fit-content;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME .resources-js-components-Auth-ListCard-__ListCard-module___2UEDZrcEy8tsnP_Ug3Q_5E:hover{\n    border-bottom: 1px solid #d5d5d5;\n    cursor: pointer;\n}\n\n.resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME.resources-js-components-Auth-ListCard-__ListCard-module___rEw1U5JhC0rWymBwgVXLd {\n    text-align: center;\n    background: url('/images/bg3.jpg');\n}\n\n@media screen\nand (max-width: 768px) {\n    .resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME {\n        padding: 5px;\n        box-sizing: border-box;\n    }\n\n    .resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME > .resources-js-components-Auth-ListCard-__ListCard-module___1N8mMA49NsMdLyLyZ3-MTN {\n        padding: 25px 20px 58px 20px;\n    }\n\n    .resources-js-components-Auth-ListCard-__ListCard-module___2-w3a0W8bJqTNhEv55XgME .resources-js-components-Auth-ListCard-__ListCard-module___2UEDZrcEy8tsnP_Ug3Q_5E {\n        font-size: 18px;\n        margin-bottom: 15px;\n    }\n\n    .resources-js-components-Auth-ListCard-__ListCard-module___1tMEFzF205nbAlXVZwXn0d {\n        padding: 23px 20px 20px 20px;\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -3123,7 +3123,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../node_module
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-ListCard-ListWidget-__ListWidget-module___1MpW6MyLF2aph3y_SZLJdi {\n    position: absolute;\n    right: -125px;\n    top: 0;\n    width: 85px;\n    display: block;\n    background: transparent;\n}\n\n.resources-js-components-Auth-ListCard-ListWidget-__ListWidget-module___1MpW6MyLF2aph3y_SZLJdi > a {\n    text-decoration: none;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-ListCard-ListWidget-__ListWidget-module___1MpW6MyLF2aph3y_SZLJdi {\n    position: absolute;\n    right: -125px;\n    top: 0;\n    width: 85px;\n    display: block;\n    background: transparent;\n}\n\n.resources-js-components-Auth-ListCard-ListWidget-__ListWidget-module___1MpW6MyLF2aph3y_SZLJdi > a {\n    text-decoration: none;\n}\n\n@media screen\nand (max-width: 768px) {\n    .resources-js-components-Auth-ListCard-ListWidget-__ListWidget-module___1MpW6MyLF2aph3y_SZLJdi {\n        left: 9%;\n        bottom: -90px;\n        display: flex;\n        margin-bottom: 0;\n        top: unset;\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -3144,13 +3144,14 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../node_mod
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq {\n    display: flex;\n    max-width: 480px;\n    padding: 20px 10px 20px 0;\n    border-bottom: 1px solid #F0F0F0;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > div {\n    width: 100%;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq:last-of-type {\n    margin-bottom: 30px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > img {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    min-width: 110px;\n    height: 110px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___1jeFlf2948I6zR6d1beGd {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    max-width: 110px;\n    height: 110px;\n    object-fit: cover;\n    background-position: center !important;\n    background-repeat: no-repeat !important;\n    background-size: cover !important;\n    border: 1px solid whitesmoke;\n    border-radius: 10px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0 {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 21px;\n    color: #000000;\n    padding-top: 25px;\n    margin-bottom: 10px;\n    text-align: left;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #BABABA;\n    display: block;\n    margin-bottom: 25px;\n    text-decoration: none;\n    text-align: left;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a:hover {\n    text-decoration: underline;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq {\n    display: flex;\n    max-width: 480px;\n    padding: 20px 10px 20px 0;\n    border-bottom: 1px solid #F0F0F0;\n    position: relative;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq:hover div:last-of-type{\n    display: block;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > div {\n    width: 100%;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq:last-of-type {\n    margin-bottom: 30px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq > img {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    min-width: 110px;\n    height: 110px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___1jeFlf2948I6zR6d1beGd {\n    padding: 5px;\n    padding-left: 0;\n    margin-right: 20px;\n    width: 110px;\n    max-width: 110px;\n    height: 110px;\n    object-fit: cover;\n    background-position: center !important;\n    background-repeat: no-repeat !important;\n    background-size: cover !important;\n    border: 1px solid whitesmoke;\n    border-radius: 10px;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0 {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 21px;\n    color: #000000;\n    padding-top: 25px;\n    margin-bottom: 10px;\n    text-align: left;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #BABABA;\n    display: block;\n    margin-bottom: 25px;\n    text-decoration: none;\n    text-align: left;\n}\n\n.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a:hover {\n    text-decoration: underline;\n}\n\n@media screen\nand (max-width: 768px) {\n    .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___1jeFlf2948I6zR6d1beGd {\n        margin-right: 14px;\n        width: 70px;\n        max-width: 70px;\n        height: 70px;\n    }\n\n    .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq{\n        width: 100%;\n    }\n\n    .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0 {\n        font-size: 12px;\n        line-height: 14px;\n        padding-top: 5px;\n        margin-bottom: 5px;\n        text-align: left;\n    }\n\n    .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq a {\n        font-weight: 300;\n        font-size: 9px;\n        line-height: 11px;\n    }\n\n    .resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq.resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___6yAY7t7HOwf90liiHGJ9I {\n        display: block;\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"WishItem": "resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___3By-FVdD8xhB4bk460ePzq",
 	"WishItemImg": "resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___1jeFlf2948I6zR6d1beGd",
-	"Title": "resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0"
+	"Title": "resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___2NPeeUHQ90saXQWk9NxnI0",
+	"WishItemAdd": "resources-js-components-Auth-ListCard-WishList-WishItem-__WishItem-module___6yAY7t7HOwf90liiHGJ9I"
 };
 
 /***/ }),
@@ -3167,7 +3168,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../../node_
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-ListCard-WishList-WishItem-WishWidget-__WishWidget-Module___39C7Cofu3fj7geZMgFYL3t {\n    background: #F5F5F5;\n    border-radius: 5px;\n    padding: 12px 0;\n    width: 35px !important;\n    position: absolute;\n    right: -45px;\n    top: 25px;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-ListCard-WishList-WishItem-WishWidget-__WishWidget-Module___39C7Cofu3fj7geZMgFYL3t {\n    background: #F5F5F5;\n    border-radius: 5px;\n    padding: 12px 0;\n    width: 35px !important;\n    position: absolute;\n    right: -35px;\n    top: 25px;\n    display: none;\n}\n\n@media screen\nand (max-width: 768px) {\n    .resources-js-components-Auth-ListCard-WishList-WishItem-WishWidget-__WishWidget-Module___39C7Cofu3fj7geZMgFYL3t {\n        background: #F5F5F5;\n        border-radius: 5px;\n        padding: 2px 0;\n        width: 22px !important;\n        position: absolute;\n        right: 0;\n        top: 10px;\n        display: block;\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -3209,7 +3210,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-ListPreview-__ListPreview-module___2rHUcJNCvmaTom0Q7maUM4 {\n    max-width: 690px;\n    width: 100%;\n    padding: 10px;\n    background: darkred;\n    border-radius: 15px;\n    position: relative;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___309ByROjKlPBq9-j5_7ZuO {\n    border-radius: 15px;\n    background: #FFFFFF;\n    padding: 64px 106px 58px 106px;\n    text-align: center;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___36KU2PDru41g5Jm4RWC6Bk {\n    text-align: center;\n    max-width: 690px;\n    width: 100%;\n    padding: 10px;\n    background: transparent;\n    border-radius: 15px;\n    position: relative;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___36KU2PDru41g5Jm4RWC6Bk img {\n    margin-bottom: 68px;\n    margin-top: 30px;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___36KU2PDru41g5Jm4RWC6Bk p:first-of-type {\n    font-weight: 300;\n    font-size: 48px;\n    line-height: 24px;\n    text-align: center;\n    color: #FFFFFF;\n    margin-bottom: 50px;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___36KU2PDru41g5Jm4RWC6Bk p {\n    font-weight: bold;\n    font-size: 24px;\n    line-height: 24px;\n    text-align: center;\n    color: #FFFFFF;\n    margin-bottom: 30px;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___5lBXuj5IfvwjasLfsoj53 {\n    font-weight: bold;\n    font-size: 36px;\n    line-height: 24px;\n    text-align: center;\n    color: #FFFFFF;\n    max-width: 900px;\n    margin-left: auto;\n    margin-right: auto;\n    margin-bottom: 45px;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___3LsV6gQgDnwlpcy3LzY-7n {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 24px;\n    text-align: center;\n    color: #FFFFFF;\n    margin-bottom: 40px;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___3LsV6gQgDnwlpcy3LzY-7n > strong {\n    font-weight: bold;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___3VOlDYPb5bMfayN9_97-O4 {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 24px;\n    text-align: center;\n    color: #B9B5B4;\n    margin-top: 40px;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___309ByROjKlPBq9-j5_7ZuO > img {\n    margin-bottom: 50px;\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100px;\n    height: 100px;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___309ByROjKlPBq9-j5_7ZuO > p {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 23px;\n    text-align: center;\n    color: #000000;\n    max-width: 220px;\n    margin-bottom: 50px;\n    margin-left: auto;\n    margin-right: auto;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-ListPreview-__ListPreview-module___2rHUcJNCvmaTom0Q7maUM4 {\n    max-width: 690px;\n    width: 100%;\n    padding: 10px;\n    background: darkred;\n    border-radius: 15px;\n    position: relative;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___309ByROjKlPBq9-j5_7ZuO {\n    border-radius: 15px;\n    background: #FFFFFF;\n    padding: 64px 106px 58px 106px;\n    text-align: center;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___36KU2PDru41g5Jm4RWC6Bk {\n    text-align: center;\n    max-width: 690px;\n    width: 100%;\n    padding: 10px;\n    background: transparent;\n    border-radius: 15px;\n    position: relative;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___36KU2PDru41g5Jm4RWC6Bk img {\n    margin-bottom: 68px;\n    margin-top: 30px;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___36KU2PDru41g5Jm4RWC6Bk p:first-of-type {\n    font-weight: 300;\n    font-size: 48px;\n    line-height: 24px;\n    text-align: center;\n    color: #FFFFFF;\n    margin-bottom: 50px;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___36KU2PDru41g5Jm4RWC6Bk p {\n    font-weight: bold;\n    font-size: 24px;\n    line-height: 24px;\n    text-align: center;\n    color: #FFFFFF;\n    margin-bottom: 30px;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___5lBXuj5IfvwjasLfsoj53 {\n    font-weight: bold;\n    font-size: 36px;\n    line-height: 24px;\n    text-align: center;\n    color: #FFFFFF;\n    max-width: 900px;\n    margin-left: auto;\n    margin-right: auto;\n    margin-bottom: 45px;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___3LsV6gQgDnwlpcy3LzY-7n {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 24px;\n    text-align: center;\n    color: #FFFFFF;\n    margin-bottom: 40px;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___3LsV6gQgDnwlpcy3LzY-7n > strong {\n    font-weight: bold;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___3VOlDYPb5bMfayN9_97-O4 {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 24px;\n    text-align: center;\n    color: #B9B5B4;\n    margin-top: 40px;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___309ByROjKlPBq9-j5_7ZuO > img {\n    margin-bottom: 50px;\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100px;\n    height: 100px;\n}\n\n.resources-js-components-Auth-ListPreview-__ListPreview-module___309ByROjKlPBq9-j5_7ZuO > p {\n    font-weight: 300;\n    font-size: 20px;\n    line-height: 23px;\n    text-align: center;\n    color: #000000;\n    max-width: 220px;\n    margin-bottom: 50px;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n@media screen\nand (max-width: 768px) {\n    .resources-js-components-Auth-ListPreview-__ListPreview-module___5lBXuj5IfvwjasLfsoj53 {\n        font-weight: bold;\n        font-size: 24px;\n        line-height: 24px;\n        text-align: center;\n        color: #FFFFFF;\n        width: 100%;\n        box-sizing: border-box;\n        max-width: 100%;\n        margin-left: auto;\n        margin-right: auto;\n        margin-bottom: 20px;\n    }\n\n    .resources-js-components-Auth-ListPreview-__ListPreview-module___3LsV6gQgDnwlpcy3LzY-7n {\n        font-weight: 300;\n        font-size: 14px;\n        line-height: 24px;\n        text-align: center;\n        color: #FFFFFF;\n        margin-bottom: 20px;\n    }\n\n    .resources-js-components-Auth-ListPreview-__ListPreview-module___2rHUcJNCvmaTom0Q7maUM4 {\n        max-width: 100%;\n        width: 100%;\n        box-sizing: border-box;\n        padding: 5px;\n    }\n\n    .resources-js-components-Auth-ListPreview-__ListPreview-module___309ByROjKlPBq9-j5_7ZuO {\n        padding: 23px 20px 20px 20px;\n    }\n\n    .resources-js-components-Auth-ListPreview-__ListPreview-module___3VOlDYPb5bMfayN9_97-O4 {\n        font-weight: 300;\n        font-size: 14px;\n        line-height: 24px;\n        text-align: center;\n        color: #B9B5B4;\n        margin-top: 20px;\n    }\n\n    .resources-js-components-Auth-ListPreview-__ListPreview-module___36KU2PDru41g5Jm4RWC6Bk p:first-of-type {\n        font-size: 24px;\n        margin-bottom: 30px;\n    }\n\n    .resources-js-components-Auth-ListPreview-__ListPreview-module___36KU2PDru41g5Jm4RWC6Bk p {\n        font-size: 18px;\n        margin-bottom: 20px;\n    }\n\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -3235,14 +3236,15 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c {\n    max-width: 270px;\n    width: 100%;\n    margin-right: 50px;\n    padding-top: 50px;\n    position: sticky;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___3ov4cAuLGYpMBguBYNGAO8{\n    padding-top: 20px;\n    margin: 0;\n    border: none;\n    border-bottom: 1px solid #393939;\n    width: 50%;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___1ORKKbI7U6o6o2c4pA8fzC {\n    font-size: 20px;\n    line-height: 24px;\n    color: #CC9969;\n    margin-bottom: 35px;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c > ul {\n    list-style: none;\n    padding: 0;\n    margin: 0;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c > ul > li {\n    margin-bottom: 30px;\n    cursor: pointer;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c .resources-js-components-Auth-Sidebar-__Sidebar-module___2Ma-rtndPRxup_rW3JWOZ {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 21px;\n    color: #FFFFFF;\n    margin-bottom: 0;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c > ul > li > a {\n    font-weight: bold;\n    font-size: 24px;\n    line-height: 24px;\n    color: #FFFFFF;\n    margin-bottom: 8px;\n    display: block;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c > ul > li > span {\n    display: block;\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 24px;\n    color: #B9B5B4;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c {\n    max-width: 270px;\n    width: 100%;\n    margin-right: 50px;\n    padding-top: 50px;\n    position: sticky;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___3ov4cAuLGYpMBguBYNGAO8 {\n    padding-top: 20px;\n    margin: 0;\n    border: none;\n    border-bottom: 1px solid #393939;\n    width: 50%;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___1ORKKbI7U6o6o2c4pA8fzC {\n    font-size: 20px;\n    line-height: 24px;\n    color: #CC9969;\n    margin-bottom: 35px;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c > ul {\n    list-style: none;\n    padding: 0;\n    margin: 0;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c > ul > li {\n    margin-bottom: 30px;\n    cursor: pointer;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c .resources-js-components-Auth-Sidebar-__Sidebar-module___2Ma-rtndPRxup_rW3JWOZ {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 21px;\n    color: #FFFFFF;\n    margin-bottom: 0;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c > ul > li > a {\n    color: #B9B5B4;\n    font-weight: bold;\n    font-size: 24px;\n    line-height: 24px;\n    margin-bottom: 8px;\n    display: block;\n    transition: 100ms;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c > ul > li:hover > a {\n    color: #FFFFFF;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c > ul > li:hover > span {\n    color: #757575;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c > ul > li.resources-js-components-Auth-Sidebar-__Sidebar-module___1jh61Jvx_fUrgPixWfGSMV > a {\n    font-weight: bold;\n    font-size: 24px;\n    line-height: 24px;\n    color: #FFFFFF;\n    margin-bottom: 8px;\n    display: block;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c > ul > li > span {\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 24px;\n    color: #B9B5B4;\n    transition: 100ms;\n}\n\n.resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c > ul > li.resources-js-components-Auth-Sidebar-__Sidebar-module___1jh61Jvx_fUrgPixWfGSMV > span {\n    display: block;\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 24px;\n    color: #B9B5B4;\n}\n\n@media screen\nand (max-width: 768px) {\n    .resources-js-components-Auth-Sidebar-__Sidebar-module___1ORKKbI7U6o6o2c4pA8fzC {\n        font-size: 18px;\n        color: #CC9969;\n        margin-bottom: 20px;\n    }\n\n    .resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c > ul > li > a {\n        font-size: 18px;\n    }\n\n    .resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c > ul > li > span {\n        display: block;\n        font-weight: 300;\n        font-size: 12px;\n        color: #B9B5B4;\n    }\n\n    .resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c > ul > li {\n        margin-bottom: 20px;\n    }\n\n    .resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c {\n        max-width: 270px;\n        width: 100%;\n        margin-right: 0;\n        padding-top: 0;\n        position: sticky;\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"Sidebar": "resources-js-components-Auth-Sidebar-__Sidebar-module___3MPUrEseYKHXtbcZ0oMb5c",
 	"hr": "resources-js-components-Auth-Sidebar-__Sidebar-module___3ov4cAuLGYpMBguBYNGAO8",
 	"SidebarHeader": "resources-js-components-Auth-Sidebar-__Sidebar-module___1ORKKbI7U6o6o2c4pA8fzC",
-	"Empty": "resources-js-components-Auth-Sidebar-__Sidebar-module___2Ma-rtndPRxup_rW3JWOZ"
+	"Empty": "resources-js-components-Auth-Sidebar-__Sidebar-module___2Ma-rtndPRxup_rW3JWOZ",
+	"active": "resources-js-components-Auth-Sidebar-__Sidebar-module___1jh61Jvx_fUrgPixWfGSMV"
 };
 
 /***/ }),
@@ -3301,7 +3303,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-Navigation-Footer-__Footer-module___2EYC0uxLBtBORJrn_nCNKX {\n    padding-bottom: 38px;\n    padding-top: 100px;\n    text-align: center;\n    width: 100%;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Navigation-Footer-__Footer-module___2EYC0uxLBtBORJrn_nCNKX {\n    padding-bottom: 38px;\n    padding-top: 100px;\n    text-align: center;\n    width: 100%;\n}\n\n\n@media screen\nand (max-width: 768px) {\n    .resources-js-components-Navigation-Footer-__Footer-module___2EYC0uxLBtBORJrn_nCNKX {\n        padding-top: 115px;\n    }\n\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -3322,7 +3324,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-Navigation-Header-__Header-module___1pjCNrEZ0XOp4TvVDaheN {\n    padding-top: 55px;\n    padding-bottom: 55px;\n    width: 100%;\n    text-align: center;\n}\n\n@media screen\nand (max-width: 768px) {\n    .resources-js-components-Navigation-Header-__Header-module___1pjCNrEZ0XOp4TvVDaheN{\n        padding-top: 30px;\n        padding-bottom: 25px;\n    }\n\n    .resources-js-components-Navigation-Header-__Header-module___1pjCNrEZ0XOp4TvVDaheN svg {\n        height: 45px;\n        width: 78px;\n    }\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-Navigation-Header-__Header-module___1pjCNrEZ0XOp4TvVDaheN {\n    padding-top: 55px;\n    padding-bottom: 55px;\n    width: 100%;\n    text-align: center;\n}\n\n.resources-js-components-Navigation-Header-__Header-module___1pjCNrEZ0XOp4TvVDaheN svg {\n    transition: 200ms;\n}\n\n.resources-js-components-Navigation-Header-__Header-module___1pjCNrEZ0XOp4TvVDaheN svg:hover {\n    transform: translateY(-2px);\n}\n\n@media screen\nand (max-width: 768px) {\n    .resources-js-components-Navigation-Header-__Header-module___1pjCNrEZ0XOp4TvVDaheN {\n        padding-top: 30px;\n        padding-bottom: 25px;\n    }\n\n    .resources-js-components-Navigation-Header-__Header-module___1pjCNrEZ0XOp4TvVDaheN svg {\n        height: 45px;\n        width: 78px;\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -3343,7 +3345,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1 {\n    font-weight: normal;\n    font-size: 14px;\n    line-height: 16px;\n    color: #FFFFFF;\n    background: #F2523A;\n    border-radius: 10px;\n    padding: 17px 32px;\n    min-width: 168px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1:hover {\n    cursor: pointer;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1:focus {\n    outline: none;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___3HSjOBpwWqEfyCyrwJ0e46 {\n    display: block;\n    margin: 30px auto 0;\n    background: transparent;\n    font-weight: 300;\n    font-size: 16px;\n    line-height: 16px;\n    color: #000000;\n    padding: 0;\n    border: 0;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___3HSjOBpwWqEfyCyrwJ0e46 > img {\n    vertical-align: bottom;\n    margin-right: 15px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5 {\n    display: block;\n    background: transparent;\n    padding: 0;\n    border: 0;\n    font-weight: 300;\n    font-size: 16px;\n    line-height: 16px;\n    color: #B9B5B4;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5 svg {\n    margin-right: 15px;\n    vertical-align: bottom;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5:hover svg path {\n    fill: #B9B5B4;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5:hover svg path {\n    fill: #FFFFFF;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1TYA-OIUfvo6APItS5mcui svg {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    margin-bottom: 8px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1TYA-OIUfvo6APItS5mcui svg path {\n    fill: #8A8A8A;\n    transition: 150ms;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1TYA-OIUfvo6APItS5mcui:hover svg path {\n    fill: #F2523A;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1TYA-OIUfvo6APItS5mcui {\n    padding: 0;\n    border: none;\n    display: block;\n    background: transparent;\n    width: 85px;\n    min-width: unset;\n    font-weight: 300;\n    font-size: 12px;\n    line-height: 14px;\n    text-align: center;\n    color: #ECECEC;\n    margin-bottom: 30px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1TYA-OIUfvo6APItS5mcui > img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    margin-bottom: 8px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1wM9KuXPlFAE6qlnGd71BF {\n    width: 50px;\n    height: 50px;\n    background: transparent;\n    border: 0;\n    padding: 0;\n    margin: 0;\n    min-width: unset;\n    transition: 100ms;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5:hover {\n    color: #FFFFFF;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt {\n    color: #8A8A8A;\n    padding: 0;\n    border: none;\n    display: block;\n    background: transparent;\n    width: 35px;\n    min-width: unset;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt svg path {\n    fill: #8A8A8A;\n    transition: 150ms;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt:hover svg path {\n    fill: #000;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt:not(:last-of-type) {\n    margin-bottom: 10px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___3gQ4CpZMakKKeRVyMJfmR5 {\n    display: block;\n    background: #2A61A1;\n    border-radius: 5px;\n    margin-bottom: 15px;\n    margin-right: auto;\n    margin-left: auto;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___3gQ4CpZMakKKeRVyMJfmR5 a{\n    margin: 0;\n    padding: 0;\n    background: transparent;\n    color: white;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___2R_tkcz8_1dHsb-Kam1X_Z {\n    background: #F2523A;\n    transition: background 0.8s, box-shadow 135ms cubic-bezier(.4, 0, .2, 1);\n    border: none;\n    background-position: center !important;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___2R_tkcz8_1dHsb-Kam1X_Z:hover {\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);\n    box-sizing: border-box;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___25ICslRRtRBzhINllQO7p-:hover {\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);\n    box-sizing: border-box;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___25ICslRRtRBzhINllQO7p- {\n    margin-left: 25px;\n    border: none;\n    transition: background 0.8s, box-shadow 135ms cubic-bezier(.4, 0, .2, 1);\n    background: #B9B5B4;\n    border-radius: 10px;\n    background-position: center !important;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1 {\n    font-weight: normal;\n    font-size: 14px;\n    line-height: 16px;\n    color: #FFFFFF;\n    background: #F2523A;\n    border-radius: 10px;\n    padding: 17px 32px;\n    min-width: 168px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1:hover {\n    cursor: pointer;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1:focus {\n    outline: none;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___3HSjOBpwWqEfyCyrwJ0e46 {\n    font-weight: 400;\n    display: block;\n    margin: 30px auto 0;\n    background: transparent;\n    font-size: 16px;\n    line-height: 16px;\n    color: #000000;\n    padding: 0;\n    border: 0;\n    transition: 100ms;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___3HSjOBpwWqEfyCyrwJ0e46:hover{\n    color: #F2523A;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___3HSjOBpwWqEfyCyrwJ0e46:hover svg path{\n    fill: #F2523A;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___3HSjOBpwWqEfyCyrwJ0e46 svg path{\n    transition: 100ms;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___3HSjOBpwWqEfyCyrwJ0e46 > svg {\n    vertical-align: bottom;\n    margin-right: 15px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5 {\n    display: block;\n    background: transparent;\n    padding: 0;\n    border: 0;\n    font-weight: 300;\n    font-size: 16px;\n    line-height: 16px;\n    color: #B9B5B4;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5 svg {\n    margin-right: 15px;\n    vertical-align: bottom;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5:hover svg path {\n    fill: #B9B5B4;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5:hover svg path {\n    fill: #FFFFFF;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1TYA-OIUfvo6APItS5mcui svg {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    margin-bottom: 8px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1TYA-OIUfvo6APItS5mcui svg path {\n    fill: #8A8A8A;\n    transition: 150ms;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1TYA-OIUfvo6APItS5mcui:hover svg path {\n    fill: #F2523A;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1TYA-OIUfvo6APItS5mcui {\n    padding: 0;\n    border: none;\n    display: block;\n    background: transparent;\n    width: 85px;\n    min-width: unset;\n    font-weight: 300;\n    font-size: 12px;\n    line-height: 14px;\n    text-align: center;\n    color: #ECECEC;\n    margin-bottom: 30px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1TYA-OIUfvo6APItS5mcui > img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    margin-bottom: 8px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1wM9KuXPlFAE6qlnGd71BF {\n    width: 50px;\n    height: 50px;\n    background: transparent;\n    border: 0;\n    padding: 0;\n    margin: 0;\n    min-width: unset;\n    transition: 100ms;\n    border: 0px solid #D5D5D5;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1wM9KuXPlFAE6qlnGd71BF:hover{\n    border: 2px solid #D5D5D5;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5:hover {\n    color: #FFFFFF;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt {\n    color: #8A8A8A;\n    padding: 0;\n    border: none;\n    display: block;\n    background: transparent;\n    width: 35px;\n    min-width: unset;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt svg path {\n    fill: #8A8A8A;\n    transition: 150ms;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt:hover svg path {\n    fill: #000;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt:not(:last-of-type) {\n    margin-bottom: 10px;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___3gQ4CpZMakKKeRVyMJfmR5 {\n    display: block;\n    background: #2A61A1;\n    border-radius: 5px;\n    margin-bottom: 15px;\n    margin-right: auto;\n    margin-left: auto;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___3gQ4CpZMakKKeRVyMJfmR5 a {\n    margin: 0;\n    padding: 0;\n    background: transparent;\n    color: white;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___2R_tkcz8_1dHsb-Kam1X_Z {\n    background: #F2523A;\n    transition: background 0.8s, box-shadow 135ms cubic-bezier(.4, 0, .2, 1);\n    border: none;\n    background-position: center !important;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___2R_tkcz8_1dHsb-Kam1X_Z:hover {\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);\n    box-sizing: border-box;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___25ICslRRtRBzhINllQO7p-:hover {\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);\n    box-sizing: border-box;\n}\n\n.resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___25ICslRRtRBzhINllQO7p- {\n    margin-left: 25px;\n    border: none;\n    transition: background 0.8s, box-shadow 135ms cubic-bezier(.4, 0, .2, 1);\n    background: #B9B5B4;\n    border-radius: 10px;\n    background-position: center !important;\n}\n\n@media screen\nand (max-width: 768px) {\n    .resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___jKoJlkcsKLY1KY4T4u1H5 {\n        margin-bottom: 40px;\n    }\n\n    .resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1wM9KuXPlFAE6qlnGd71BF {\n        width: 32px;\n        height: 32px;\n        background: transparent;\n        border: 0;\n        padding: 0;\n        margin: 0;\n        min-width: unset;\n        transition: 100ms;\n    }\n\n    .resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt {\n        color: #8A8A8A;\n        border: none;\n        display: block;\n        background: transparent;\n        width: 22px;\n        min-width: unset;\n    }\n\n    .resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1NHupIsKN9LjqdgVHkKIIt svg {\n        height: 12px;\n        width: 12px;\n    }\n\n    .resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___1TYA-OIUfvo6APItS5mcui {\n        margin-bottom: 0;\n        margin-right: 30px;\n    }\n\n    .resources-js-components-UI-Button-__Button-module___3VpQkt-M8ytOtm7RxSU5b1.resources-js-components-UI-Button-__Button-module___25ICslRRtRBzhINllQO7p- {\n        margin-top: 20px;\n        margin-left: 0;\n        border: none;\n        transition: background 0.8s, box-shadow 135ms cubic-bezier(.4, 0, .2, 1);\n        background: #B9B5B4;\n        border-radius: 10px;\n        background-position: center !important;\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -3372,7 +3374,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J {\n    background: #ECECEC;\n    border-radius: 10px;\n    padding: 17px 23px;\n    margin-bottom: 10px;\n    display: block;\n    box-shadow: none;\n    width: 100%;\n    border: none;\n    box-sizing: border-box;\n    height: 50px;\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #8A8A8A;\n}\n\n.resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J::placeholder {\n    font-weight: 300;\n    font-size: 14px;\n    color: #8A8A8A;\n}\n\n.resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J:focus {\n    box-shadow: none;\n    outline: none;\n}\n\nlabel > .resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J[type='file'] {\n    visibility: hidden;\n    width: 0;\n    height: 0;\n}\n\n.resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J.resources-js-components-UI-Input-__Input-module___k6u9IdcVxGwczdg0tTWV5 {\n    background: transparent;\n    font-weight: bold;\n    font-size: 36px;\n    text-align: center;\n    color: #000000;\n    margin-bottom: 35px;\n    padding: 0;\n    height: unset;\n}\n\n.resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J[type='radio'] {\n    visibility: hidden;\n    width: 50px;\n    height: 50px;\n    margin: 0;\n    position: relative;\n    z-index: 5;\n}\n\n", ""]);
+exports.push([module.i, ".resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J {\n    background: #ECECEC;\n    border-radius: 10px;\n    padding: 17px 23px;\n    margin-bottom: 10px;\n    display: block;\n    box-shadow: none;\n    width: 100%;\n    border: none;\n    box-sizing: border-box;\n    height: 50px;\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #8A8A8A;\n}\n\n.resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J::placeholder {\n    font-weight: 300;\n    font-size: 14px;\n    color: #8A8A8A;\n}\n\n.resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J:focus {\n    box-shadow: none;\n    outline: none;\n}\n\nlabel > .resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J[type='file'] {\n    visibility: hidden;\n    width: 0;\n    height: 0;\n}\n\n.resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J.resources-js-components-UI-Input-__Input-module___k6u9IdcVxGwczdg0tTWV5 {\n    background: transparent;\n    font-weight: bold;\n    font-size: 36px;\n    text-align: center;\n    color: #000000;\n    margin-bottom: 35px;\n    padding: 0;\n    height: unset;\n    border-radius: 0;\n    width: fit-content;\n    border-bottom: 1px solid #d5d5d5;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.resources-js-components-UI-Input-__Input-module___XahZcty41PStWnY_lSK1J[type='radio'] {\n    visibility: hidden;\n    width: 50px;\n    height: 50px;\n    margin: 0;\n    position: relative;\n    z-index: 5;\n}\n\n", ""]);
 
 // exports
 exports.locals = {
@@ -3394,7 +3396,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-UI-Label-__Label-module___2-YpfdMZ2AkTxKG5-8AUUr {\n    width: 142px;\n    height: 100px;\n    padding: 5px;\n    margin-right: 20px;\n    background: #ECECEC;\n    border-radius: 10px;\n    position: relative;\n    border: 1px solid whitesmoke;\n}\n\n.resources-js-components-UI-Label-__Label-module___2-YpfdMZ2AkTxKG5-8AUUr:hover {\n    cursor: pointer;\n}\n\n.resources-js-components-UI-Label-__Label-module___2-YpfdMZ2AkTxKG5-8AUUr:hover > img {\n    transform: scale(1.3);\n}\n\n.resources-js-components-UI-Label-__Label-module___2-YpfdMZ2AkTxKG5-8AUUr > img {\n    transition: all 200ms;\n    position: absolute;\n    display: block;\n    margin: auto;\n    left: 0;\n    right: 0;\n    top: 0;\n    bottom: 0;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-UI-Label-__Label-module___2-YpfdMZ2AkTxKG5-8AUUr {\n    width: 142px;\n    height: 100px;\n    padding: 5px;\n    margin-right: 20px;\n    background: #ECECEC;\n    border-radius: 10px;\n    position: relative;\n    border: 1px solid whitesmoke;\n}\n\n.resources-js-components-UI-Label-__Label-module___2-YpfdMZ2AkTxKG5-8AUUr:hover {\n    cursor: pointer;\n}\n\n.resources-js-components-UI-Label-__Label-module___2-YpfdMZ2AkTxKG5-8AUUr:hover > img {\n    transform: scale(1.3);\n}\n\n.resources-js-components-UI-Label-__Label-module___2-YpfdMZ2AkTxKG5-8AUUr > img {\n    transition: all 200ms;\n    position: absolute;\n    display: block;\n    margin: auto;\n    left: 0;\n    right: 0;\n    top: 0;\n    bottom: 0;\n}\n\n@media screen\nand (max-width: 768px) {\n    .resources-js-components-UI-Label-__Label-module___2-YpfdMZ2AkTxKG5-8AUUr {\n        width: 110px;\n        height: 110px;\n        padding: 5px;\n        margin-left: auto;\n        margin-right: auto;\n        margin-bottom: 17px;\n        display: block;\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -3415,7 +3417,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-UI-LoaderSpinner-__LoaderSpinner-module___3u57gO1PgTOTRKQlW3pSGc {\n    position: fixed;\n    z-index: 100;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    overflow: auto;\n    background: rgba(40, 40, 40, 0.2);\n    backdrop-filter: blur(15px);\n}\n\n.resources-js-components-UI-LoaderSpinner-__LoaderSpinner-module___3u57gO1PgTOTRKQlW3pSGc .resources-js-components-UI-LoaderSpinner-__LoaderSpinner-module___3OePwoB0e-hid6obeBVmFY {\n    text-align: center;\n    margin: 15% auto;\n    width: 630px;\n    padding: 10px;\n    border-radius: 15px;\n}\n", ""]);
+exports.push([module.i, ".resources-js-components-UI-LoaderSpinner-__LoaderSpinner-module___3u57gO1PgTOTRKQlW3pSGc {\n    position: fixed;\n    z-index: 100;\n    left: 0;\n    top: 0;\n    width: 100vw;\n    height: 100vh;\n    overflow: auto;\n    background: rgba(40, 40, 40, 0.2);\n    backdrop-filter: blur(15px);\n}\n\n.resources-js-components-UI-LoaderSpinner-__LoaderSpinner-module___3u57gO1PgTOTRKQlW3pSGc .resources-js-components-UI-LoaderSpinner-__LoaderSpinner-module___3OePwoB0e-hid6obeBVmFY {\n    text-align: center;\n    margin: 15% auto;\n    width: 630px;\n    padding: 10px;\n    border-radius: 15px;\n}\n\n@media screen\nand (max-width: 768px) {\n    .resources-js-components-UI-LoaderSpinner-__LoaderSpinner-module___3u57gO1PgTOTRKQlW3pSGc .resources-js-components-UI-LoaderSpinner-__LoaderSpinner-module___3OePwoB0e-hid6obeBVmFY{\n        width: 80%;\n        margin: 60% auto;\n        box-sizing: border-box;\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -3437,7 +3439,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".resources-js-components-UI-Modal-__Modal-module___3MOYLd1i3Y4B-tsFurB9Z9 {\n    position: fixed;\n    z-index: 10;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    overflow: hidden;\n    background: rgba(40, 40, 40, 0.2);\n    backdrop-filter: blur(15px);\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI {\n    margin: 15% auto;\n    width: 630px;\n    background: url('/images/bg3.jpg');\n    padding: 10px;\n    border-radius: 15px;\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI > div {\n    padding: 53px 90px;\n    background: #FEFEFE;\n    border-radius: 15px;\n    text-align: center;\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI > div a {\n    background: #ECECEC;\n    border-radius: 10px;\n    display: block;\n    margin-bottom: 50px;\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #8A8A8A;\n    padding: 17px 24px;\n    text-decoration: none;\n    width: fit-content;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI > div > p:first-of-type{\n    margin-bottom: 20px;\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI > div > p {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 32px;\n    text-align: center;\n    color: #000000;\n    margin-bottom: 25px;\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI > div > p > strong {\n    font-weight: bold;\n    display: block;\n    margin-bottom: 35px;\n}\n\n", ""]);
+exports.push([module.i, ".resources-js-components-UI-Modal-__Modal-module___3MOYLd1i3Y4B-tsFurB9Z9 {\n    position: fixed;\n    z-index: 10;\n    left: 0;\n    top: 0;\n    width: 100vw;\n    height: 100vh;\n    overflow: hidden;\n    background: rgba(40, 40, 40, 0.2);\n    backdrop-filter: blur(15px);\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI {\n    margin: 15% auto;\n    width: 630px;\n    background: url('/images/bg3.jpg');\n    padding: 10px;\n    border-radius: 15px;\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI > div {\n    padding: 53px 90px;\n    background: #FEFEFE;\n    border-radius: 15px;\n    text-align: center;\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI > div a {\n    background: #ECECEC;\n    border-radius: 10px;\n    display: block;\n    margin-bottom: 50px;\n    font-weight: 300;\n    font-size: 14px;\n    line-height: 16px;\n    color: #8A8A8A;\n    padding: 17px 24px;\n    text-decoration: none;\n    width: fit-content;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI > div > p:first-of-type {\n    margin-bottom: 20px;\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI > div > p {\n    font-weight: 300;\n    font-size: 18px;\n    line-height: 32px;\n    text-align: center;\n    color: #000000;\n    margin-bottom: 25px;\n}\n\n.resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI > div > p > strong {\n    font-weight: bold;\n    display: block;\n    margin-bottom: 35px;\n}\n\n@media screen\nand (max-width: 768px) {\n\n    .resources-js-components-UI-Modal-__Modal-module___3MOYLd1i3Y4B-tsFurB9Z9 {\n        padding: 0px 10px;\n        box-sizing: border-box;\n    }\n\n    .resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI {\n        margin: 15% auto;\n        width: 100%;\n        box-sizing: border-box;\n        padding: 5px;\n    }\n\n    .resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI > div {\n        padding: 53px 30px;\n        background: #FEFEFE;\n        border-radius: 15px;\n        text-align: center;\n    }\n\n    .resources-js-components-UI-Modal-__Modal-module___yQxdbBYkBo6F9AhsPYLcI > div a {\n        background: #ECECEC;\n        border-radius: 10px;\n        display: block;\n        margin-bottom: 50px;\n        font-weight: 300;\n        font-size: 14px;\n        line-height: 16px;\n        color: #8A8A8A;\n        box-sizing: border-box;\n        max-width: 100%;\n        padding: 17px 24px;\n        overflow: hidden;\n        text-decoration: none;\n        width: fit-content;\n        margin-left: auto;\n        margin-right: auto;\n    }\n}\n\n", ""]);
 
 // exports
 exports.locals = {
@@ -70311,11 +70313,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_promise_tracker__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-promise-tracker */ "./node_modules/react-promise-tracker/lib/index.js");
 /* harmony import */ var react_promise_tracker__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(react_promise_tracker__WEBPACK_IMPORTED_MODULE_15__);
 /* harmony import */ var _UI_LoaderSpinner_LoaderSpinner__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../UI/LoaderSpinner/LoaderSpinner */ "./resources/js/components/UI/LoaderSpinner/LoaderSpinner.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -70435,7 +70437,11 @@ function (_Component) {
             'userId': localStorage.getItem('userId'),
             'authToken': localStorage.getItem('authToken')
           }).then(function (res) {
-            if (res.data.error !== '' || _typeof(res.data['error']) !== undefined) {
+            if (res.data.hasOwnProperty('error') && res.data.error !== '') {
+              localStorage.removeItem('userId');
+              localStorage.removeItem('authToken');
+              location.reload();
+            } else {
               var lists = _objectSpread({}, _this.state.lists);
 
               lists.items = res.data.items.sort(function (a, b) {
@@ -70447,9 +70453,6 @@ function (_Component) {
               _this.setState({
                 lists: lists
               });
-            } else {
-              localStorage.removeItem('userId');
-              localStorage.removeItem('authToken');
             }
           }, function (res) {
             return console.log('error', res);
@@ -70477,7 +70480,11 @@ function (_Component) {
             'userId': localStorage.getItem('userId'),
             'authToken': localStorage.getItem('authToken')
           }).then(function (res) {
-            if (res.data.error !== '' || _typeof(res.data['error']) !== undefined) {
+            if (res.data.hasOwnProperty('error') && res.data.error !== '') {
+              localStorage.removeItem('userId');
+              localStorage.removeItem('authToken');
+              location.reload();
+            } else {
               var lists = _objectSpread({}, _this.state.lists);
 
               lists.items = res.data.items;
@@ -70487,9 +70494,6 @@ function (_Component) {
               _this.setState({
                 lists: lists
               });
-            } else {
-              localStorage.removeItem('userId');
-              localStorage.removeItem('authToken');
             }
           }, function (res) {
             return console.log('error', res);
@@ -70510,7 +70514,15 @@ function (_Component) {
       });
     });
 
-    _defineProperty(_assertThisInitialized(_this), "showNewWishToggle", function (listId, type) {
+    _defineProperty(_assertThisInitialized(_this), "showNewWishToggle", function (listId, type, id) {
+      if (type === 'type') {
+        axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/item/delete', {
+          'userId': localStorage.getItem('userId'),
+          'authToken': localStorage.getItem('authToken'),
+          'id': id
+        });
+      }
+
       if (type === 'add') {
         axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('/api/item/add', {
           'userId': localStorage.getItem('userId'),
@@ -70571,7 +70583,11 @@ function (_Component) {
         authToken: localStorage.getItem('authToken'),
         id: id
       }).then(function (res) {
-        if (res.data.error !== '' || _typeof(res.data['error']) !== undefined) {
+        if (res.data.hasOwnProperty('error') && res.data.error !== '') {
+          localStorage.removeItem('userId');
+          localStorage.removeItem('authToken');
+          location.reload();
+        } else {
           var lists = _objectSpread({}, _this.state.lists);
 
           var currentList = lists.items.find(function (item) {
@@ -70593,9 +70609,6 @@ function (_Component) {
           _this.setState({
             lists: lists
           });
-        } else {
-          localStorage.removeItem('userId');
-          localStorage.removeItem('authToken');
         }
       }));
     });
@@ -70616,7 +70629,11 @@ function (_Component) {
           'Content-Type': 'multipart/form-data'
         }
       }).then(function (res) {
-        if (res.data.error !== '' || _typeof(res.data['error']) !== undefined) {
+        if (res.data.hasOwnProperty('error') && res.data.error !== '') {
+          localStorage.removeItem('userId');
+          localStorage.removeItem('authToken');
+          location.reload();
+        } else {
           var lists = _objectSpread({}, _this.state.lists);
 
           var currentList = lists.items.find(function (item) {
@@ -70636,9 +70653,6 @@ function (_Component) {
             wishNameControl: '',
             wishUrlControl: ''
           });
-        } else {
-          localStorage.removeItem('userId');
-          localStorage.removeItem('authToken');
         }
       }, function (res) {
         return console.log('error', res);
@@ -70650,7 +70664,11 @@ function (_Component) {
         "userId": localStorage.getItem('userId'),
         "authToken": localStorage.getItem('authToken')
       }).then(function (res) {
-        if (res.data.error !== '' || _typeof(res.data['error']) !== undefined) {
+        if (res.data.hasOwnProperty('error') && res.data.error !== '') {
+          localStorage.removeItem('userId');
+          localStorage.removeItem('authToken');
+          location.reload();
+        } else {
           var lists = _objectSpread({}, _this.state.lists);
 
           lists.items.push(res.data);
@@ -70662,9 +70680,6 @@ function (_Component) {
           _this.setState({
             lists: lists
           });
-        } else {
-          localStorage.removeItem('userId');
-          localStorage.removeItem('authToken');
         }
       }, function (res) {
         return console.log('error', res);
@@ -70683,7 +70698,11 @@ function (_Component) {
         "name": name,
         "backgroundNumber": index
       }).then(function (res) {
-        if (res.data.error !== '' || _typeof(res.data['error']) !== undefined) {
+        if (res.data.hasOwnProperty('error') && res.data.error !== '') {
+          localStorage.removeItem('userId');
+          localStorage.removeItem('authToken');
+          location.reload();
+        } else {
           var lists = _objectSpread({}, _this.state.lists);
 
           var currentList = lists.items.find(function (item) {
@@ -70694,9 +70713,6 @@ function (_Component) {
           _this.setState({
             lists: lists
           });
-        } else {
-          localStorage.removeItem('userId');
-          localStorage.removeItem('authToken');
         }
       }, function (res) {
         return console.log('error', res);
@@ -70712,7 +70728,11 @@ function (_Component) {
           "name": _this.state.listNameControl,
           "backgroundNumber": bgId
         }).then(function (res) {
-          if (res.data.error !== '' || _typeof(res.data['error']) !== undefined) {
+          if (res.data.hasOwnProperty('error') && res.data.error !== '') {
+            localStorage.removeItem('userId');
+            localStorage.removeItem('authToken');
+            location.reload();
+          } else {
             var lists = _objectSpread({}, _this.state.lists);
 
             var currentList = lists.items.find(function (item) {
@@ -70728,9 +70748,6 @@ function (_Component) {
               lists: lists,
               showNewListTitle: false
             });
-          } else {
-            localStorage.removeItem('userId');
-            localStorage.removeItem('authToken');
           }
         }, function (res) {
           return console.log('error', res);
@@ -70774,7 +70791,11 @@ function (_Component) {
         "authToken": localStorage.getItem('authToken'),
         "id": _this.state.tempListId
       }).then(function (res) {
-        if (res.data.error !== '' || _typeof(res.data['error']) !== undefined) {
+        if (res.data.hasOwnProperty('error') && res.data.error !== '') {
+          localStorage.removeItem('userId');
+          localStorage.removeItem('authToken');
+          location.reload();
+        } else {
           var lists = _objectSpread({}, _this.state.lists);
 
           for (var i = 0; i < lists.items.length; i++) {
@@ -70792,9 +70813,6 @@ function (_Component) {
             lists: lists,
             deleteList: false
           });
-        } else {
-          localStorage.removeItem('userId');
-          localStorage.removeItem('authToken');
         }
       }, function (res) {
         return console.log('error', res);
@@ -70863,7 +70881,11 @@ function (_Component) {
           'userId': localStorage.getItem('userId'),
           'authToken': localStorage.getItem('authToken')
         }).then(function (res) {
-          if (res.data.error !== '' || _typeof(res.data['error']) !== undefined) {
+          if (res.data.hasOwnProperty('error') && res.data.error !== '') {
+            localStorage.removeItem('userId');
+            localStorage.removeItem('authToken');
+            location.reload();
+          } else {
             var lists = _objectSpread({}, _this2.state.lists);
 
             lists.items = res.data.items.sort(function (a, b) {
@@ -70875,9 +70897,6 @@ function (_Component) {
             _this2.setState({
               lists: lists
             });
-          } else {
-            localStorage.removeItem('userId');
-            localStorage.removeItem('authToken');
           }
         }, function (res) {
           return console.log('error', res);
@@ -70988,6 +71007,7 @@ function (_Component) {
           onClick: this.selectListHandler,
           lists: this.state.lists
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListCard_ListCard__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          tempListId: this.state.tempListId,
           newWishId: this.state.newWishId,
           tempFile: this.state.tempFile,
           addList: this.addListHandler,
@@ -71035,7 +71055,7 @@ function (_Component) {
           fields: "name,email",
           callback: this.responseFacebook,
           cssClass: _Authorization_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.fbLogin,
-          textButton: "FB"
+          textButton: ""
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: _Authorization_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.AuthVkBtn
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -71450,6 +71470,7 @@ var ListCard = function ListCard(props) {
           onPickColor: props.onPickColor,
           background: props.background
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishList_WishList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          tempListId: props.tempListId,
           tempFile: props.tempFile,
           widgetOff: props.widgetOff,
           uploadImg: props.uploadImg,
@@ -71468,16 +71489,30 @@ var ListCard = function ListCard(props) {
           onClick: function onClick() {
             return props.addNewWish(list.id, props.newWishId);
           }
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-          src: _public_svg_plus_svg__WEBPACK_IMPORTED_MODULE_8___default.a
-        }), "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0435\u0449\u0435 \u0436\u0435\u043B\u0430\u043D\u0438\u0435") : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+          width: "16",
+          height: "16",
+          viewBox: "0 0 16 16",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+          d: "M16 7.61905H8.38095V0H7.61905V7.61905H0V8.38095H7.61905V16H8.38095V8.38095H16V7.61905Z",
+          fill: "black"
+        })), "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0436\u0435\u043B\u0430\u043D\u0438\u0435") : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
           type: "showNewWish",
           onClick: function onClick() {
-            return props.showNewWishToggle(list.id, 'add');
+            return props.showNewWishToggle(list.id, 'add', '');
           }
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-          src: _public_svg_plus_svg__WEBPACK_IMPORTED_MODULE_8___default.a
-        }), "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0435\u0449\u0435 \u0436\u0435\u043B\u0430\u043D\u0438\u0435")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListWidget_ListWidget__WEBPACK_IMPORTED_MODULE_6__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+          width: "16",
+          height: "16",
+          viewBox: "0 0 16 16",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+          d: "M16 7.61905H8.38095V0H7.61905V7.61905H0V8.38095H7.61905V16H8.38095V8.38095H16V7.61905Z",
+          fill: "black"
+        })), "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0436\u0435\u043B\u0430\u043D\u0438\u0435")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListWidget_ListWidget__WEBPACK_IMPORTED_MODULE_6__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
           target: "_blank",
           to: "/list/".concat(list.link)
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -71725,7 +71760,7 @@ var WishItem = function WishItem(props) {
     fill: "white"
   }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     onClick: function onClick() {
-      return props.showNewWishToggle(props.listId, '');
+      return props.showNewWishToggle(props.listId, 'delete', props.tempListId);
     },
     type: "widget"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
@@ -71778,10 +71813,11 @@ var WishItem = function WishItem(props) {
   }
 
   var htmlFor = "".concat(props.type, "-").concat(Math.random() * 100);
+  var clsItem = [_WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItem, _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItemAdd];
 
   if (props.type === 'addNew') {
     renderWishItem = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: _WishItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.WishItem
+      className: clsItem.join(' ')
     }, props.tempFile === null || props.tempFile === '' || props.tempFile === undefined ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UI_Label_Label__WEBPACK_IMPORTED_MODULE_5__["default"], {
       htmlFor: htmlFor
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -71974,6 +72010,7 @@ var WishList = function WishList(props) {
     });
   }));
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, renderWishItems, props.showNewWish ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WishItem_WishItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    tempListId: props.tempListId,
     tempFile: props.tempFile,
     key: "edit",
     uploadImg: props.uploadImg,
@@ -72286,7 +72323,14 @@ var Sidebar = function Sidebar(props) {
         listName = list.name.slice(0, 20) + '...';
       }
 
+      var cls = [];
+
+      if (props.lists.defaultListId === list.id) {
+        cls = [_Sidebar_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.active];
+      }
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: cls.join(' '),
         key: list.id,
         onClick: function onClick() {
           return props.onClick(list.id);
@@ -72317,7 +72361,7 @@ var Sidebar = function Sidebar(props) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     d: "M16 7.61905H8.38095V0H7.61905V7.61905H0V8.38095H7.61905V16H8.38095V8.38095H16V7.61905Z",
     fill: "#B9B5B4"
-  })), "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0435\u0449\u0435 \u0441\u043F\u0438\u0441\u043E\u043A"))));
+  })), "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043D\u043E\u0432\u044B\u0439 \u0441\u043F\u0438\u0441\u043E\u043A"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Sidebar);

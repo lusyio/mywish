@@ -41,6 +41,11 @@ label > .Input[type='file'] {
     margin-bottom: 35px;
     padding: 0;
     height: unset;
+    border-radius: 0;
+    width: fit-content;
+    border-bottom: 1px solid #d5d5d5;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .Input[type='radio'] {

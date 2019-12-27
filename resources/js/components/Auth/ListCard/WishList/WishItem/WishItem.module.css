@@ -6,6 +6,10 @@
     position: relative;
 }
 
+.WishItem:hover div:last-of-type{
+    display: block;
+}
+
 .WishItem > div {
     width: 100%;
 }
@@ -61,4 +65,36 @@
 
 .WishItem a:hover {
     text-decoration: underline;
+}
+
+@media screen
+and (max-width: 768px) {
+    .WishItemImg {
+        margin-right: 14px;
+        width: 70px;
+        max-width: 70px;
+        height: 70px;
+    }
+
+    .WishItem{
+        width: 100%;
+    }
+
+    .WishItem .Title {
+        font-size: 12px;
+        line-height: 14px;
+        padding-top: 5px;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    .WishItem a {
+        font-weight: 300;
+        font-size: 9px;
+        line-height: 11px;
+    }
+
+    .WishItem.WishItemAdd {
+        display: block;
+    }
 }

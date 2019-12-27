@@ -4,3 +4,12 @@
     text-align: center;
     width: 100%;
 }
+
+
+@media screen
+and (max-width: 768px) {
+    .Footer {
+        padding-top: 115px;
+    }
+
+}

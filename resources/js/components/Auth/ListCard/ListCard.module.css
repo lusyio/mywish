@@ -6,7 +6,7 @@
     background: darkred;
     border-radius: 15px;
     position: relative;
-    transition: background 135ms cubic-bezier(.4,0,.2,1);
+    transition: background 135ms cubic-bezier(.4, 0, .2, 1);
 }
 
 .ListCard > .ListCardBody {
@@ -15,13 +15,13 @@
     padding: 64px 106px 58px 106px;
 }
 
-.ListCardBodyEmpty{
+.ListCardBodyEmpty {
     border-radius: 15px;
     background: #FFFFFF;
     padding: 93px 106px 93px 106px;
 }
 
-.ListCardBodyEmpty > img{
+.ListCardBodyEmpty > img {
     margin-bottom: 50px;
 }
 
@@ -37,16 +37,45 @@
     margin-right: auto;
 }
 
-.ListCard .CardHeader{
+.ListCard .CardHeader {
     font-weight: bold;
     font-size: 36px;
     text-align: center;
     color: #000000;
     margin-bottom: 35px;
     display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ListCard .CardHeader:hover{
+    border-bottom: 1px solid #d5d5d5;
+    cursor: pointer;
 }
 
 .ListCard.Empty {
     text-align: center;
     background: url('/images/bg3.jpg');
+}
+
+@media screen
+and (max-width: 768px) {
+    .ListCard {
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .ListCard > .ListCardBody {
+        padding: 25px 20px 58px 20px;
+    }
+
+    .ListCard .CardHeader {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .ListCardBodyEmpty {
+        padding: 23px 20px 20px 20px;
+    }
 }

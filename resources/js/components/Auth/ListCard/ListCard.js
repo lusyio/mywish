@@ -45,6 +45,7 @@ const ListCard = props => {
                                     background={props.background}
                                 />
                                 <WishList
+                                    tempListId={props.tempListId}
                                     tempFile={props.tempFile}
                                     widgetOff={props.widgetOff}
                                     uploadImg={props.uploadImg}
@@ -64,16 +65,20 @@ const ListCard = props => {
                                         type='showNewWish'
                                         onClick={() => props.addNewWish(list.id, props.newWishId)}
                                     >
-                                        <img src={plus}/>
-                                        Добавить еще желание
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16 7.61905H8.38095V0H7.61905V7.61905H0V8.38095H7.61905V16H8.38095V8.38095H16V7.61905Z" fill="black"/>
+                                        </svg>
+                                        Добавить желание
                                     </Button>
                                     :
                                     <Button
                                         type='showNewWish'
-                                        onClick={() => props.showNewWishToggle(list.id, 'add')}
+                                        onClick={() => props.showNewWishToggle(list.id, 'add', '')}
                                     >
-                                        <img src={plus}/>
-                                        Добавить еще желание
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16 7.61905H8.38095V0H7.61905V7.61905H0V8.38095H7.61905V16H8.38095V8.38095H16V7.61905Z" fill="black"/>
+                                        </svg>
+                                        Добавить желание
                                     </Button>
                                 }
                             </div>

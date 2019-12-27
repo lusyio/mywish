@@ -89,7 +89,11 @@ export default class Authorization extends Component {
                         'authToken': localStorage.getItem('authToken')
                     })
                         .then(res => {
-                            if (res.data.error !== '' || typeof res.data['error'] !== undefined) {
+                            if (res.data.hasOwnProperty('error') && res.data.error !== '') {
+                                localStorage.removeItem('userId');
+                                localStorage.removeItem('authToken');
+                                location.reload()
+                            } else {
                                 const lists = {...this.state.lists};
                                 lists.items = res.data.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : 1);
                                 lists.count = res.data.count;
@@ -97,9 +101,6 @@ export default class Authorization extends Component {
                                 this.setState({
                                     lists
                                 })
-                            } else {
-                                localStorage.removeItem('userId');
-                                localStorage.removeItem('authToken');
                             }
                         }, res => console.log('error', res));
                 }
@@ -124,7 +125,11 @@ export default class Authorization extends Component {
                         'authToken': localStorage.getItem('authToken')
                     })
                         .then(res => {
-                            if (res.data.error !== '' || typeof res.data['error'] !== undefined) {
+                            if (res.data.hasOwnProperty('error') && res.data.error !== '') {
+                                localStorage.removeItem('userId');
+                                localStorage.removeItem('authToken');
+                                location.reload()
+                            } else {
                                 const lists = {...this.state.lists};
                                 lists.items = res.data.items;
                                 lists.count = res.data.count;
@@ -132,9 +137,6 @@ export default class Authorization extends Component {
                                 this.setState({
                                     lists
                                 })
-                            } else {
-                                localStorage.removeItem('userId');
-                                localStorage.removeItem('authToken');
                             }
                         }, res => console.log('error', res)));
                 }
@@ -149,7 +151,14 @@ export default class Authorization extends Component {
         });
     };
 
-    showNewWishToggle = (listId, type) => {
+    showNewWishToggle = (listId, type, id) => {
+        if (type === 'type') {
+            axios.post('/api/item/delete', {
+                'userId': localStorage.getItem('userId'),
+                'authToken': localStorage.getItem('authToken'),
+                'id': id
+            })
+        }
         if (type === 'add') {
             axios.post('/api/item/add', {
                 'userId': localStorage.getItem('userId'),
@@ -183,7 +192,11 @@ export default class Authorization extends Component {
                 'authToken': localStorage.getItem('authToken')
             })
                 .then(res => {
-                    if (res.data.error !== '' || typeof res.data['error'] !== undefined) {
+                    if (res.data.hasOwnProperty('error') && res.data.error !== '') {
+                        localStorage.removeItem('userId');
+                        localStorage.removeItem('authToken');
+                        location.reload()
+                    } else {
                         const lists = {...this.state.lists};
                         lists.items = res.data.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : 1);
                         lists.count = res.data.count;
@@ -191,9 +204,6 @@ export default class Authorization extends Component {
                         this.setState({
                             lists
                         })
-                    } else {
-                        localStorage.removeItem('userId');
-                        localStorage.removeItem('authToken');
                     }
                 }, res => console.log('error', res)));
         }
@@ -242,7 +252,11 @@ export default class Authorization extends Component {
             id: id
         })
             .then(res => {
-                if (res.data.error !== '' || typeof res.data['error'] !== undefined) {
+                if (res.data.hasOwnProperty('error') && res.data.error !== '') {
+                    localStorage.removeItem('userId');
+                    localStorage.removeItem('authToken');
+                    location.reload()
+                } else {
                     const lists = {...this.state.lists};
                     const currentList = lists.items.find(item => item.id === listId);
                     for (let i = 0; i < currentList.wishItems.length; i++) {
@@ -256,11 +270,7 @@ export default class Authorization extends Component {
                     this.setState({
                         lists
                     })
-                } else {
-                    localStorage.removeItem('userId');
-                    localStorage.removeItem('authToken');
                 }
-
             }))
     };
 
@@ -281,7 +291,11 @@ export default class Authorization extends Component {
             },
         )
             .then((res) => {
-                if (res.data.error !== '' || typeof res.data['error'] !== undefined) {
+                if (res.data.hasOwnProperty('error') && res.data.error !== '') {
+                    localStorage.removeItem('userId');
+                    localStorage.removeItem('authToken');
+                    location.reload()
+                } else {
                     const lists = {...this.state.lists};
                     const currentList = lists.items.find(item => item.id === listId);
                     res.data.picture = this.state.tempFile;
@@ -295,9 +309,6 @@ export default class Authorization extends Component {
                         wishNameControl: '',
                         wishUrlControl: ''
                     });
-                } else {
-                    localStorage.removeItem('userId');
-                    localStorage.removeItem('authToken');
                 }
             }, res => console.log('error', res)))
     };
@@ -308,7 +319,11 @@ export default class Authorization extends Component {
             "authToken": localStorage.getItem('authToken')
         })
             .then((res) => {
-                if (res.data.error !== '' || typeof res.data['error'] !== undefined) {
+                if (res.data.hasOwnProperty('error') && res.data.error !== '') {
+                    localStorage.removeItem('userId');
+                    localStorage.removeItem('authToken');
+                    location.reload()
+                } else {
                     const lists = {...this.state.lists};
                     lists.items.push(res.data);
                     lists.items = lists.items.sort((a, b) => a.updatedAt > b.updatedAt ? -1 : 1);
@@ -316,9 +331,6 @@ export default class Authorization extends Component {
                     this.setState({
                         lists
                     })
-                } else {
-                    localStorage.removeItem('userId');
-                    localStorage.removeItem('authToken');
                 }
             }, (res) => console.log('error', res)))
     };
@@ -335,16 +347,17 @@ export default class Authorization extends Component {
             "backgroundNumber": index
         })
             .then((res) => {
-                if (res.data.error !== '' || typeof res.data['error'] !== undefined) {
+                if (res.data.hasOwnProperty('error') && res.data.error !== '') {
+                    localStorage.removeItem('userId');
+                    localStorage.removeItem('authToken');
+                    location.reload()
+                } else {
                     const lists = {...this.state.lists};
                     const currentList = lists.items.find(item => item.id === listId);
                     currentList.backgroundNumber = res.data.backgroundNumber;
                     this.setState({
                         lists
                     })
-                } else {
-                    localStorage.removeItem('userId');
-                    localStorage.removeItem('authToken');
                 }
             }, (res) => console.log('error', res))
 
@@ -360,7 +373,11 @@ export default class Authorization extends Component {
                 "backgroundNumber": bgId
             })
                 .then((res) => {
-                    if (res.data.error !== '' || typeof res.data['error'] !== undefined) {
+                    if (res.data.hasOwnProperty('error') && res.data.error !== '') {
+                        localStorage.removeItem('userId');
+                        localStorage.removeItem('authToken');
+                        location.reload()
+                    } else {
                         const lists = {...this.state.lists};
                         const currentList = lists.items.find(item => item.id === listId);
                         currentList.name = res.data.name;
@@ -370,9 +387,6 @@ export default class Authorization extends Component {
                             lists,
                             showNewListTitle: false
                         })
-                    } else {
-                        localStorage.removeItem('userId');
-                        localStorage.removeItem('authToken');
                     }
                 }, (res) => console.log('error', res))
         }
@@ -409,7 +423,11 @@ export default class Authorization extends Component {
             "id": this.state.tempListId
         })
             .then(res => {
-                if (res.data.error !== '' || typeof res.data['error'] !== undefined) {
+                if (res.data.hasOwnProperty('error') && res.data.error !== '') {
+                    localStorage.removeItem('userId');
+                    localStorage.removeItem('authToken');
+                    location.reload()
+                } else {
                     const lists = {...this.state.lists};
                     for (let i = 0; i < lists.items.length; i++) {
                         if (lists.items[i].id === this.state.tempListId) {
@@ -423,9 +441,6 @@ export default class Authorization extends Component {
                         lists,
                         deleteList: false
                     })
-                } else {
-                    localStorage.removeItem('userId');
-                    localStorage.removeItem('authToken');
                 }
 
             }, res => console.log('error', res)))
@@ -555,6 +570,7 @@ export default class Authorization extends Component {
                                 lists={this.state.lists}
                             />
                             <ListCard
+                                tempListId={this.state.tempListId}
                                 newWishId={this.state.newWishId}
                                 tempFile={this.state.tempFile}
                                 addList={this.addListHandler}
@@ -584,7 +600,8 @@ export default class Authorization extends Component {
             if (window.innerWidth <= 768) {
                 authContentHeaderMobile =
                     <React.Fragment>
-                        <p className={classes.authContentHeaderMobile}><strong>MyWish</strong> составь свой список желаний и поделись им с друзьями</p>
+                        <p className={classes.authContentHeaderMobile}><strong>MyWish</strong> составь свой список
+                            желаний и поделись им с друзьями</p>
                     </React.Fragment>
             } else {
                 authContentHeaderMobile =
@@ -609,7 +626,7 @@ export default class Authorization extends Component {
                                 fields="name,email"
                                 callback={this.responseFacebook}
                                 cssClass={classes.fbLogin}
-                                textButton='FB'
+                                textButton=''
                             />
                             <div className={classes.AuthVkBtn}>
                                 <div className={classes.AuthVk}>

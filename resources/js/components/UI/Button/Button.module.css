@@ -18,18 +18,31 @@
 }
 
 .Button.showNewWish {
+    font-weight: 400;
     display: block;
     margin: 30px auto 0;
     background: transparent;
-    font-weight: 300;
     font-size: 16px;
     line-height: 16px;
     color: #000000;
     padding: 0;
     border: 0;
+    transition: 100ms;
 }
 
-.Button.showNewWish > img {
+.Button.showNewWish:hover{
+    color: #F2523A;
+}
+
+.Button.showNewWish:hover svg path{
+    fill: #F2523A;
+}
+
+.Button.showNewWish svg path{
+    transition: 100ms;
+}
+
+.Button.showNewWish > svg {
     vertical-align: bottom;
     margin-right: 15px;
 }
@@ -105,6 +118,11 @@
     margin: 0;
     min-width: unset;
     transition: 100ms;
+    border: 0px solid #D5D5D5;
+}
+
+.Button.colorPicker:hover{
+    border: 2px solid #D5D5D5;
 }
 
 .Button.addListSidebar:hover {
@@ -143,7 +161,7 @@
     margin-left: auto;
 }
 
-.Button.share a{
+.Button.share a {
     margin: 0;
     padding: 0;
     background: transparent;
@@ -174,4 +192,51 @@
     background: #B9B5B4;
     border-radius: 10px;
     background-position: center !important;
+}
+
+@media screen
+and (max-width: 768px) {
+    .Button.addListSidebar {
+        margin-bottom: 40px;
+    }
+
+    .Button.colorPicker {
+        width: 32px;
+        height: 32px;
+        background: transparent;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        min-width: unset;
+        transition: 100ms;
+    }
+
+    .Button.widget {
+        color: #8A8A8A;
+        border: none;
+        display: block;
+        background: transparent;
+        width: 22px;
+        min-width: unset;
+    }
+
+    .Button.widget svg {
+        height: 12px;
+        width: 12px;
+    }
+
+    .Button.listWidget {
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
+
+    .Button.secondary {
+        margin-top: 20px;
+        margin-left: 0;
+        border: none;
+        transition: background 0.8s, box-shadow 135ms cubic-bezier(.4, 0, .2, 1);
+        background: #B9B5B4;
+        border-radius: 10px;
+        background-position: center !important;
+    }
 }

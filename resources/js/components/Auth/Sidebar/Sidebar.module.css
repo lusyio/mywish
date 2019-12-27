@@ -6,7 +6,7 @@
     position: sticky;
 }
 
-.hr{
+.hr {
     padding-top: 20px;
     margin: 0;
     border: none;
@@ -41,6 +41,24 @@
 }
 
 .Sidebar > ul > li > a {
+    color: #B9B5B4;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 8px;
+    display: block;
+    transition: 100ms;
+}
+
+.Sidebar > ul > li:hover > a {
+    color: #FFFFFF;
+}
+
+.Sidebar > ul > li:hover > span {
+    color: #757575;
+}
+
+.Sidebar > ul > li.active > a {
     font-weight: bold;
     font-size: 24px;
     line-height: 24px;
@@ -50,9 +68,49 @@
 }
 
 .Sidebar > ul > li > span {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: #B9B5B4;
+    transition: 100ms;
+}
+
+.Sidebar > ul > li.active > span {
     display: block;
     font-weight: 300;
     font-size: 14px;
     line-height: 24px;
     color: #B9B5B4;
+}
+
+@media screen
+and (max-width: 768px) {
+    .SidebarHeader {
+        font-size: 18px;
+        color: #CC9969;
+        margin-bottom: 20px;
+    }
+
+    .Sidebar > ul > li > a {
+        font-size: 18px;
+    }
+
+    .Sidebar > ul > li > span {
+        display: block;
+        font-weight: 300;
+        font-size: 12px;
+        color: #B9B5B4;
+    }
+
+    .Sidebar > ul > li {
+        margin-bottom: 20px;
+    }
+
+    .Sidebar {
+        max-width: 270px;
+        width: 100%;
+        margin-right: 0;
+        padding-top: 0;
+        position: sticky;
+    }
 }

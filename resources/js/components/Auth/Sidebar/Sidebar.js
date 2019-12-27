@@ -13,8 +13,12 @@ const Sidebar = props => {
                 if (list.name.length >= 23) {
                     listName = list.name.slice(0, 20) + '...'
                 }
+                let cls = [];
+                if (props.lists.defaultListId === list.id) {
+                    cls = [classes.active]
+                }
                 return (
-                    <li key={list.id} onClick={() => props.onClick(list.id)}>
+                    <li className={cls.join(' ')} key={list.id} onClick={() => props.onClick(list.id)}>
                         <a>{listName}</a>
                         <span>Список обновлен {props.timeConverter(list.updatedAt)}</span>
                         <hr className={classes.hr}/>
@@ -41,7 +45,7 @@ const Sidebar = props => {
                                 d="M16 7.61905H8.38095V0H7.61905V7.61905H0V8.38095H7.61905V16H8.38095V8.38095H16V7.61905Z"
                                 fill="#B9B5B4"/>
                         </svg>
-                        Добавить еще список</Button>
+                        Добавить новый список</Button>
                 </li>
             </ul>
         </nav>

@@ -10,3 +10,14 @@
 .ListWidget > a {
     text-decoration: none;
 }
+
+@media screen
+and (max-width: 768px) {
+    .ListWidget {
+        left: 9%;
+        bottom: -90px;
+        display: flex;
+        margin-bottom: 0;
+        top: unset;
+    }
+}

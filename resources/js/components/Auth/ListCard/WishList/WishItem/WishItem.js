@@ -30,7 +30,7 @@ const WishItem = props => {
                     </defs>
                 </svg>
             </Button>
-            <Button onClick={() => props.showNewWishToggle(props.listId, '')} type='widget'>
+            <Button onClick={() => props.showNewWishToggle(props.listId, 'delete', props.tempListId)} type='widget'>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M7.99995 13.8305C8.14964 13.8305 8.27113 13.7093 8.27113 13.5593V4.61018C8.27113 4.46021 8.14964 4.33899 7.99995 4.33899C7.85025 4.33899 7.72876 4.46021 7.72876 4.61018V13.5593C7.72876 13.7093 7.85025 13.8305 7.99995 13.8305Z"
@@ -75,10 +75,12 @@ const WishItem = props => {
 
     const htmlFor = `${props.type}-${Math.random() * 100}`;
 
+    const clsItem = [classes.WishItem, classes.WishItemAdd];
+
     if (props.type === 'addNew') {
         renderWishItem =
             <React.Fragment>
-                <div className={classes.WishItem}>
+                <div className={clsItem.join(' ')}>
                     {props.tempFile === null || props.tempFile === '' || props.tempFile === undefined ?
                         <Label htmlFor={htmlFor}>
                             <img src={plusWish}/>

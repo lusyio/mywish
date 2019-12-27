@@ -3,8 +3,8 @@
     z-index: 10;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
     background: rgba(40, 40, 40, 0.2);
     backdrop-filter: blur(15px);
@@ -41,7 +41,7 @@
     margin-right: auto;
 }
 
-.ModalContent > div > p:first-of-type{
+.ModalContent > div > p:first-of-type {
     margin-bottom: 20px;
 }
 
@@ -58,5 +58,47 @@
     font-weight: bold;
     display: block;
     margin-bottom: 35px;
+}
+
+@media screen
+and (max-width: 768px) {
+
+    .Modal {
+        padding: 0px 10px;
+        box-sizing: border-box;
+    }
+
+    .ModalContent {
+        margin: 15% auto;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 5px;
+    }
+
+    .ModalContent > div {
+        padding: 53px 30px;
+        background: #FEFEFE;
+        border-radius: 15px;
+        text-align: center;
+    }
+
+    .ModalContent > div a {
+        background: #ECECEC;
+        border-radius: 10px;
+        display: block;
+        margin-bottom: 50px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 16px;
+        color: #8A8A8A;
+        box-sizing: border-box;
+        max-width: 100%;
+        padding: 17px 24px;
+        overflow: hidden;
+        text-decoration: none;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 

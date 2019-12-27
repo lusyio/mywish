@@ -5,9 +5,17 @@
     text-align: center;
 }
 
+.Header svg {
+    transition: 200ms;
+}
+
+.Header svg:hover {
+    transform: translateY(-2px);
+}
+
 @media screen
 and (max-width: 768px) {
-    .Header{
+    .Header {
         padding-top: 30px;
         padding-bottom: 25px;
     }
