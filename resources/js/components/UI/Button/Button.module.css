@@ -200,6 +200,9 @@ and (max-width: 768px) {
         margin-bottom: 40px;
     }
 
+    .Button.colorPicker:hover{
+        border: none;
+    }
     .Button.colorPicker {
         width: 32px;
         height: 32px;
